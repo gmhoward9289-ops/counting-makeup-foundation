@@ -1,0 +1,37 @@
+/* tokens.css — the Plumwater scheme (chosen 2026-08-17)
+ *
+ * Mauve & plum recolor of Blackwater (parent: portal/swamp-tokens.css) for
+ * foundation.swamplink.com. Reference only, not a runtime dependency: each page
+ * inlines these values in its own token block (single-file pages stay single-file).
+ * When changing the scheme, change it here first, then re-apply everywhere.
+ *
+ * Rules inherited from Blackwater, all verified 2026-08-17 (WCAG AA, 32 pairs):
+ *  - exactly three text tiers; --muted is the contrast floor (tightest pair here:
+ *    muted/sunken light, 4.97:1). Never fix "too heavy" with a paler color.
+ *  - never dim text with opacity.
+ *  - status colors keep their Blackwater hexes and semantics; never decorative.
+ *  - --petal replaces --firefly (warm highlight: links/CTA only).
+ */
+
+:root {
+  --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+  --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+  --accent: #8a3b66; --accent-soft: #f2dfe9;
+  --petal: #9a4f2a; --petal-soft: #f4e3d4;
+  --ok: #175b4f; --ok-bg: #dfeeea;
+  --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+  --bad: #983434; --bad-bg: #f6e2e2;
+  --none: #6e5d69; --none-bg: #eae4e8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141014; --panel: #1d171c; --sunken: #171217;
+    --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+    --accent: #c77ba4; --accent-soft: #331f2b;
+    --petal: #dfa26b; --petal-soft: #34241a;
+    --ok: #6fc4b1; --ok-bg: #15302b;
+    --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+    --bad: #ee8f8f; --bad-bg: #361c1c;
+    --none: #9a8a94; --none-bg: #241d22;
+  }
+}

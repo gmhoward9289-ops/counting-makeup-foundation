@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Foundation — what's actually in my makeup?</title>
+<meta name="description" content="Sourced research on the cosmetics industry: ingredients, prices, and claims — every figure cited to a primary source.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif;
+    margin: 0; padding: 2rem 1.25rem 4rem;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+
+  header .eyebrow {
+    font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem;
+  }
+  header h1 { margin: 0 0 .5rem; font-size: 2.1rem; letter-spacing: -.01em; text-wrap: balance; }
+  header h1 .wordmark { color: var(--accent); }
+  header p.lede { margin: 0; color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
+
+  .status {
+    display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem;
+    font-size: .74rem; letter-spacing: .04em; text-transform: uppercase;
+    padding: .2rem .6rem; border-radius: 3px;
+    color: var(--warn); background: var(--warn-bg); border: 1px solid var(--warn-line);
+  }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem;
+  }
+  .card h2 { margin: 0; font-size: 1.05rem; color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .card .method { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--none); margin-top: auto; padding-top: .5rem; }
+
+  .promise {
+    background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; color: var(--muted); font-size: .95rem;
+  }
+  .promise strong { color: var(--ink); }
+  .promise a { color: var(--petal); }
+
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted); font-size: .85rem; }
+  footer a { color: var(--petal); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">A swamplink research property</p>
+    <h1><span class="wordmark">Foundation</span> — what's actually in my makeup?</h1>
+    <p class="lede">Sourced research on the cosmetics industry. Similar products, different
+    brands, side by side: the ingredients, the prices, and the claims — with every figure
+    cited to a primary source.</p>
+    <span class="status">Research in progress — first corpus underway</span>
+  </header>
+
+  <section class="cards" aria-label="The four questions">
+    <div class="card">
+      <h2>What's in my makeup?</h2>
+      <p>INCI ingredient lists compared across brands selling the same kind of product.
+      What's shared, what actually differs, and where a formula is mostly the same thing
+      in different packaging.</p>
+      <p class="method">Source: INCI declarations · EU CosIng</p>
+    </div>
+    <div class="card">
+      <h2>Is it really better?</h2>
+      <p>Does a $60 foundation differ from a $12 one where it counts? Formula-by-formula
+      comparison across price tiers, not marketing copy.</p>
+      <p class="method">Source: ingredient corpus · published tests</p>
+    </div>
+    <div class="card">
+      <h2>What am I paying for?</h2>
+      <p>Cost-to-make versus retail price: bottom-up ingredient cost estimates paired with
+      gross margins from public filings. Estimates are always labeled as estimates.</p>
+      <p class="method">Source: annual filings · supplier pricing</p>
+    </div>
+    <div class="card">
+      <h2>Was it sourced ethically?</h2>
+      <p>Sourcing claims and the standards behind them — which certifications actually
+      bind, and what they do and don't cover.</p>
+      <p class="method">Source: certification bodies · disclosures</p>
+    </div>
+  </section>
+
+  <section class="promise">
+    <strong>The rule of the house:</strong> every number links to where it came from — a
+    regulator, a filing, a database of record — the same discipline as
+    <a href="https://wings.swamplink.com/">wings</a>. No figure without a citation, no
+    citation without checking it says what we claim it says.
+  </section>
+
+  <footer>
+    <div class="family">
+      <span>Foundation · a Nicole project</span>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
