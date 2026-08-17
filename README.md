@@ -36,4 +36,5 @@ self-contained `site/<slug>/index.html` with tokens inlined. Deploy is a git pus
 `swamplink:/srv/git/nicole-project-cosmetics.git`; a post-receive hook publishes
 `site/` to `/var/www/foundation`.
 
-Private repo (see `.repo-visibility`). Remote: swamplink only — not on GitHub.
+Public repo (see `.repo-visibility`), like wings: GitHub for collaboration,
+swamplink for deploy.
