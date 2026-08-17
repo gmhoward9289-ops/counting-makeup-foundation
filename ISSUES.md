@@ -1,6 +1,9 @@
 # Issues
 
-Private repo — no GitHub tracker; issues live here per the estate convention.
+Now public: the live tracker is
+https://github.com/gmhoward9289-ops/nicole-project-cosmetics/issues — the entries
+below are the founding backlog (2026-08-17), kept as the record of the original
+brief. File new work on GitHub.
 
 ## 2026-08-17 — feat: INCI ingredient comparison across brands
 
