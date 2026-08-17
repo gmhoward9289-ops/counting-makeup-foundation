@@ -1,0 +1,11 @@
+# George owns everything until Nicole's account exists; then she is added
+# here and to the repo as a collaborator. Combined with branch protection
+# requiring Code Owner review, no outside contribution reaches the default
+# branch without approval.
+*   @gmhoward9289-ops
+
+# Called out explicitly so the intent survives someone loosening the
+# catch-all above: the corpus and the token spec are the project's
+# credibility and identity.
+/data/            @gmhoward9289-ops
+/site/tokens.css  @gmhoward9289-ops

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Built databases — regenerated from schema + seed data (chicken-wings pattern)
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+.DS_Store
+Thumbs.db
