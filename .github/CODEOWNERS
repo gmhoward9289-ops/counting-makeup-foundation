@@ -1,7 +1,6 @@
-# George owns everything until Nicole's account exists; then she is added
-# here and to the repo as a collaborator. Combined with branch protection
-# requiring Code Owner review, no outside contribution reaches the default
-# branch without approval.
+# George owns everything. Combined with branch protection requiring Code Owner
+# review, no outside contribution reaches the default branch without approval.
+# Add collaborators here as they are granted access.
 *   @gmhoward9289-ops
 
 # Called out explicitly so the intent survives someone loosening the

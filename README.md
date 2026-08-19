@@ -1,8 +1,8 @@
 # Foundation
 
-Nicole's research project: apply the counting-chicken-wings sourced-research model to
-the cosmetics industry. Site: **https://foundation.swamplink.com/** (sibling of
-wings.swamplink.com — same discipline, different shelf).
+A swamplink research property: the counting-chicken-wings sourced-research model,
+applied to the cosmetics industry. Site: **https://foundation.swamplink.com/**
+(sibling of wings.swamplink.com — same discipline, different shelf).
 
 Named *Foundation* the same way wings was named: one word, the product itself. It also
 carries the second meaning for free — foundational research, what a claim stands on.
@@ -33,8 +33,8 @@ keep their Blackwater values and semantics — they are never decorative.
 
 Chandler-style: `site/` is deployed verbatim (no build step); each page is a
 self-contained `site/<slug>/index.html` with tokens inlined. Deploy is a git push to
-`swamplink:/srv/git/nicole-project-cosmetics.git`; a post-receive hook publishes
-`site/` to `/var/www/foundation`.
+`lynx:/srv/git/counting-makeup-foundation.git`; a post-receive hook publishes
+`site/` to `/var/www/foundation` on lynx.
 
 Public repo (see `.repo-visibility`), like wings: GitHub for collaboration,
 swamplink for deploy.
