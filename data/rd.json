@@ -1,0 +1,60 @@
+{
+  "Coty": {
+    "fiscal_year_end": "2025-06-30",
+    "revenue_usd": 5892900000,
+    "rd_usd": 123000000,
+    "rd_pct_of_revenue": 2.09,
+    "source": {
+      "type": "SEC Form 10-K (XBRL company facts)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "cik": "0001024305",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001024305&type=10-K"
+    }
+  },
+  "Est\u00e9e Lauder Companies": {
+    "fiscal_year_end": "2025-06-30",
+    "rd_usd": 316000000,
+    "revenue_usd": 14326000000,
+    "rd_pct_of_revenue": 2.21,
+    "source": {
+      "type": "SEC Form 10-K, Note to the financial statements (hand-read, not a discrete XBRL tag)",
+      "publisher": "The Est\u00e9e Lauder Companies Inc.",
+      "cik": "0001001250",
+      "url": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000041/el-20260630.htm",
+      "note": "Est\u00e9e Lauder last tagged ResearchAndDevelopmentExpense as a discrete XBRL fact for fiscal 2014. Every year since, the dollar figure is still disclosed in prose in the 'Research and Development' note ('Research and development expenses of $316 million... in fiscal 2026, 2025 and 2024, respectively') but folded into Selling, general and administrative expenses on the face of the income statement, so it cannot be pulled structurally. Hand-read from the FY2026 10-K, which restates the FY2025 figure used here to align with the FY2025 revenue this project already cites for Est\u00e9e Lauder's gross margin."
+    }
+  },
+  "e.l.f. Beauty": {
+    "rd_usd": null,
+    "source": {
+      "type": "not available",
+      "note": "e.l.f. Beauty's 10-K reports no discrete research and development line, in prose or in XBRL. Product development cost is folded into Selling, general and administrative expenses with no separate disclosure of the amount."
+    }
+  },
+  "L'Or\u00e9al": {
+    "fiscal_year_end": "2025-12-31",
+    "rd_eur": 1380600000,
+    "revenue_eur": 44052000000,
+    "rd_pct_of_revenue": 3.1,
+    "source": {
+      "type": "Annual results press release, consolidated profit and loss account",
+      "publisher": "L'Or\u00e9al (loreal-finance.com)",
+      "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+      "note": "Reported by L'Or\u00e9al as 'Research & Innovation' (R&I) expenses, -1,380.6, 3.1% of sales, described as stable versus the prior year. L'Or\u00e9al is the only company in this comparison that reports R&D as its own headline line on the P&L rather than folding it into SG&A -- worth noting because it means L'Or\u00e9al's figure is the most directly comparable to what the other rows had to be assembled or excluded for."
+    }
+  },
+  "LVMH": {
+    "rd_eur": null,
+    "source": {
+      "type": "not available",
+      "note": "LVMH does not disclose a group-wide research and development expenditure figure in its annual results release or Universal Registration Document. R&D at LVMH sits inside its Maisons -- Perfumes & Cosmetics is one of five reporting segments -- and is not broken out as its own line or segment note, the same limitation this project already records for LVMH's segment-level gross margin."
+    }
+  },
+  "Revlon": {
+    "rd_usd": null,
+    "source": {
+      "type": "not available",
+      "note": "Revlon filed for Chapter 11 in 2022 and emerged in 2023 as a private company. It no longer files a 10-K, so no current primary R&D figure exists."
+    }
+  }
+}
