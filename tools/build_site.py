@@ -123,6 +123,7 @@ PAGES = [
     ("/banned/", "What's banned"),
     ("/sourcing/", "Where it came from"),
     ("/mocra/", "Who's watching"),
+    ("/development/", "How long it takes"),
 ]
 
 
@@ -179,6 +180,10 @@ def load():
 def load_regulatory():
     j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
     return j("regulatory.json"), j("sourcing.json"), j("regulatory-analysis.json")
+
+
+def load_development():
+    return json.loads((ROOT / "data" / "development.json").read_text(encoding="utf-8"))
 
 
 def longdate(iso):
@@ -1331,6 +1336,95 @@ def build_mocra(reg, ra):
         body, current="/mocra/"))
 
 
+# --------------------------------------------------------------- development
+def build_development(dev):
+    """Issue #11 -- development/testing effort. Color, not a pillar: see
+    data/development.json's own description of why this page is thin on
+    purpose."""
+    us = dev["us_otc_stability"]
+    eu = dev["eu_stability_guidance"]
+    poll = dev["concept_to_launch_poll"]
+
+    us_reqs = "".join("<li>%s</li>" % escape(x) for x in us["requirements"])
+    eu_reqs = "".join("<li>%s</li>" % escape(x) for x in eu["requirements"])
+
+    body = f"""
+  <section>
+    <h2>The number that isn't public</h2>
+    <div class="caveat"><p><strong>How many prototypes, how many failed batches, how many
+    months a specific formula took — no manufacturer in this corpus discloses that, and
+    it could not be found sourced anywhere else either.</strong> That number lives inside
+    a company's R&amp;D function and never reaches a filing, an annual report or a
+    standard. Anything claiming a precise iteration count for the industry is not
+    reporting a fact; it is guessing. This page does not guess.</p></div>
+
+    <p>What it does instead is answer a narrower, checkable question: what is a
+    manufacturer legally required to prove about a formula's stability before that
+    formula may ship, and how is that requirement structured. That's not the same
+    question as "how many tries did it take" — but it is the part of development time
+    that a regulator, not a marketing brief, actually controls, and it is the same
+    reasoning MoCRA's own <a href="/mocra/">safety-substantiation duty</a> rests on:
+    a company must be able to show its work, even though the work itself stays
+    private.</p>
+  </section>
+
+  <section>
+    <h2>What has to be proven before a US OTC drug can ship</h2>
+    <div class="finding"><p><strong>{escape(us['cite'])} is the rule that actually binds
+    these twelve products.</strong> {escape(us['applies_because'])}</p></div>
+    <ul class="tight">{us_reqs}</ul>
+    <p class="note">Source: {cite(us['source'], us['cite'] + ' — ' + us['title'])}.
+    {escape(us['source']['note'])}</p>
+    <p>The load-bearing clause is the one about accelerated data: a company can launch on
+    a projected shelf life while real-time testing is still running, but only as a
+    <em>tentative</em> date that must later be verified. That's the mechanism that lets a
+    product with a two-year claimed shelf life ship well under two years after formulation
+    is finalized, without skipping the real-time study — the real-time data just keeps
+    running in the background after launch.</p>
+  </section>
+
+  <section>
+    <h2>What the EU requires of every cosmetic, drug claim or not</h2>
+    <div class="finding"><p>{eu['title']} requires a documented stability assessment for
+    every cosmetic product placed on the EU market, drug claim or not. {escape(eu['quote'])}</p></div>
+    <ul class="tight">{eu_reqs}</ul>
+    <p class="note">Source: {cite(eu['source'], eu['cite'])}. {escape(eu['source']['note'])}</p>
+    <p>The EU rule is broader than the US one in scope — it covers all twelve products in
+    this corpus, not just the OTC-drug half of what those products' SPF claims trigger —
+    and it is explicit about testing in the real market packaging rather than a neutral
+    reference container, because packaging interactions are themselves a stability
+    variable.</p>
+  </section>
+
+  <section>
+    <h2>The one public timeline figure, and why it's labeled color</h2>
+    <div class="panel">
+      <p>{poll['less_than_12_months_pct']}% less than 12 months ·
+      <strong>{poll['twelve_to_eighteen_months_pct']}% said 12–18 months</strong> ·
+      {poll['more_than_18_months_pct']}% more than 18 months</p>
+      <p class="note">{cite(poll['source'], 'Cosmetics & Toiletries reader poll, ' + poll['published'])}</p>
+    </div>
+    <div class="caveat"><p><strong>{escape(poll['caveat'])}</strong></p></div>
+    <p>It's included anyway because it's the only concept-to-launch timeline figure found
+    with an attributable publisher and date — and because, read against the two stability
+    rules above, the 12–18 month plurality is not surprising. A product claiming a
+    multi-year shelf life needs months of accelerated data before it can even launch on a
+    tentative date, and that requirement alone accounts for most of the low end of the
+    range.</p>
+  </section>
+"""
+    write("development", page(
+        "How long it takes — Foundation",
+        "What a manufacturer has to prove about a formula's stability before it can "
+        "ship, sourced from US and EU regulation — the part of development time a "
+        "filing can actually confirm.",
+        "How long it takes",
+        "Iteration counts are not disclosed by anyone in this corpus. What is public is "
+        "what has to be proven before a formula can ship — this page sources that "
+        "instead of guessing the rest.",
+        body, current="/development/"))
+
+
 def margins_sort(m):
     return sorted(m.items(), key=lambda kv: -(kv[1].get("gross_margin_pct") or -1))
 
@@ -1338,6 +1432,7 @@ def margins_sort(m):
 def main():
     corpus, analysis, cq, prices = load()
     reg, src, ra = load_regulatory()
+    dev = load_development()
     build_ingredients(corpus, analysis, prices)
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
@@ -1346,6 +1441,7 @@ def main():
     build_banned(reg, ra)
     build_sourcing(src, ra)
     build_mocra(reg, ra)
+    build_development(dev)
     build_disclaimer()
 
 
