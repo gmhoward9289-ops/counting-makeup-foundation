@@ -118,6 +118,7 @@ PAGES = [
     ("/ingredients/", "What's in it"),
     ("/complexity/", "Is it better"),
     ("/price/", "What you pay for"),
+    ("/rd/", "Does R&D pay off"),
     ("/ownership/", "Who makes it"),
     ("/banned/", "What's banned"),
     ("/sourcing/", "Where it came from"),
@@ -737,6 +738,92 @@ def build_price(cq):
 
 
 
+# ------------------------------------------------------------------------ rd
+def build_rd(cq):
+    c12 = cq["issue_12_rd_vs_quality"]
+    rows = c12["per_company"]
+    disclosed = [r for r in rows if r["rd_pct_of_revenue"] is not None]
+    undisclosed = [r for r in rows if r["rd_pct_of_revenue"] is None]
+
+    def row(r):
+        pct = "%.2f%%" % r["rd_pct_of_revenue"] if r["rd_pct_of_revenue"] is not None else "—"
+        fy = r["rd_fiscal_year_end"] or "—"
+        return (
+            "<tr><td>{p}</td><td class='num'>{n}</td><td class='num'>{pct}</td>"
+            "<td class='note'>{fy}</td><td class='num'>{spf}</td><td class='num'>{ab}</td>"
+            "<td class='num'>{al}</td><td class='num'>{ic}</td></tr>"
+        ).format(
+            p=escape(r["parent_company"]), n=r["n_products"], pct=pct, fy=fy,
+            spf=r["mean_spf"] if r["mean_spf"] is not None else "—",
+            ab=r["mean_actives_above_line"], al=r["mean_allergens"],
+            ic=r["mean_ingredient_count"] if r["mean_ingredient_count"] is not None else "—")
+
+    table = "".join(row(r) for r in sorted(
+        rows, key=lambda r: (r["rd_pct_of_revenue"] is None, -(r["rd_pct_of_revenue"] or 0))))
+
+    sources = "".join(
+        "<li><strong>%s</strong> — %s</li>" % (escape(r["parent_company"]), cite(r["rd_source"]))
+        for r in rows)
+
+    body = f"""
+  <section>
+    <h2>Who discloses R&amp;D at all</h2>
+    <p>{escape(c12['rd_definition'])}</p>
+    <div class="finding"><p><strong>Half the companies behind this corpus disclose no R&amp;D
+    figure whatsoever — not e.l.f. Beauty, not LVMH, not Revlon.</strong> Only Coty, Estée Lauder
+    and L'Oréal publish a number a reader can actually cite, and even Estée Lauder's only survives
+    in prose in a footnote, not as a structured financial-statement fact.</p></div>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Parent company</th><th class="num">Products in corpus</th>
+          <th class="num">R&amp;D / revenue</th><th>Fiscal year</th>
+          <th class="num">Mean SPF</th><th class="num">Mean actives above 1% line</th>
+          <th class="num">Mean allergens</th><th class="num">Mean ingredient count</th></tr></thead>
+        <tbody>{table}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Quality columns are the exact same formulation-derived
+    proxy used throughout this site, averaged per company across its products in this corpus — see
+    <a href="/price/">price against quality</a> for the full definition.</p>
+  </section>
+
+  <section>
+    <h2>Does more R&amp;D buy a better formula?</h2>
+    <div class="finding"><p><strong>No visible relationship, at n=3.</strong> Ranked by R&amp;D as
+    a share of revenue: Coty (2.09%), Estée Lauder (2.21%), L'Oréal (3.10%). Ranked by the
+    formulation-quality proxy, the order scrambles completely — Coty's single product carries the
+    most declared fragrance allergens and zero actives above the 1% line, while Estée Lauder's
+    products average the fewest allergens and the most actives above that line, sitting in the
+    middle of the R&amp;D ranking. Spending more on research is not visibly buying a cleaner or
+    more concentrated formula in this corpus.</p></div>
+
+    <h3>Sources for each R&amp;D figure</h3>
+    <div class="sunken"><ul class="tight">{sources}</ul></div>
+  </section>
+
+  <section>
+    <div class="caveat"><p><strong>Read this page skeptically.</strong> Three companies with a
+    disclosed figure is not a sample size that can establish or rule out a correlation — it is
+    barely enough to plot. R&amp;D-as-percent-of-revenue is company-wide, covering every category
+    each company sells (skincare, fragrance, haircare, and in L'Oréal and LVMH's case, far beyond
+    beauty), not R&amp;D spent on foundation specifically, which no company breaks out. And the
+    quality proxy on this page is exactly what it is everywhere else on this site: formulation
+    read off an FDA filing, never a review score, a dermatologist rating, or a reformulation-
+    frequency count — the axis the original request for this page asked for, and which this
+    project does not use.</p></div>
+  </section>
+"""
+    write("rd", page(
+        "Does R&D spend buy quality? — Foundation",
+        "Public-company R&D expense, paired against this project's formulation-derived quality "
+        "proxy. Most companies in this corpus disclose no R&D figure at all.",
+        "Does R&D spend buy quality?",
+        "Half the companies behind these twelve foundations disclose no R&D figure. Among the "
+        "three that do, spending more does not visibly buy a cleaner or more concentrated formula.",
+        body, current="/rd/"))
+
+
 # ----------------------------------------------------------------- disclaimer
 def build_disclaimer():
     """Render DISCLAIMER.md as a site page.
@@ -1255,6 +1342,7 @@ def main():
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
     build_price(cq)
+    build_rd(cq)
     build_banned(reg, ra)
     build_sourcing(src, ra)
     build_mocra(reg, ra)
