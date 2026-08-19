@@ -119,6 +119,9 @@ PAGES = [
     ("/complexity/", "Is it better"),
     ("/price/", "What you pay for"),
     ("/ownership/", "Who makes it"),
+    ("/banned/", "What's banned"),
+    ("/sourcing/", "Where it came from"),
+    ("/mocra/", "Who's watching"),
 ]
 
 
@@ -170,6 +173,35 @@ def write(slug, html):
 def load():
     j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
     return j("corpus.json"), j("analysis.json"), j("cost-quality.json"), j("prices.json")
+
+
+def load_regulatory():
+    j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
+    return j("regulatory.json"), j("sourcing.json"), j("regulatory-analysis.json")
+
+
+def longdate(iso):
+    """2022-12-29 -> 29 December 2022. For prose; tables keep the ISO form."""
+    from datetime import date
+    d = date.fromisoformat(iso)
+    return "%d %s %d" % (d.day, d.strftime("%B"), d.year)
+
+
+def cite(src, label=None):
+    """Render a source block as a footnote line.
+
+    Every regulatory figure on these pages carries one of these, because the
+    whole claim of the page is that the number came out of the instrument and
+    not out of a summary of it.
+    """
+    if not src or not src.get("url"):
+        return '<span class="note">%s</span>' % escape(
+            (src or {}).get("note") or "no source")
+    text = label or src.get("type", "source")
+    out = '<a href="%s">%s</a>' % (escape(src["url"]), escape(text))
+    if src.get("publisher"):
+        out += ' <span class="note">— %s</span>' % escape(src["publisher"])
+    return out
 
 
 def src_link(p):
@@ -742,16 +774,490 @@ def build_disclaimer():
         body))
 
 
+# --------------------------------------------------------------------- banned
+def build_banned(reg, ra):
+    """Issue #16 -- FDA-allowed vs internationally banned."""
+    s = ra["issue_16_banned_ingredients"]
+    silo = reg["siloxanes"]
+    uv = reg["uv_filters"]
+
+    us_rows = "".join(
+        "<tr><td><code>{c}</code></td><td>{s}</td></tr>".format(
+            c=escape(x["cite"]), s=escape(x["substance"]))
+        for x in reg["us_prohibited_substances"]["sections"])
+
+    fp_rows = "".join(
+        "<tr><td>{i}</td><td class='num'>{r}</td><td>{w}</td></tr>".format(
+            i=escape(x["ingredient"]), r=x["annex_ii_ref"], w=escape(x["why"]))
+        for x in reg["corpus_ingredients_on_eu_prohibited_list"]["false_positives"])
+
+    silo_rows = "".join(
+        "<tr><td>{b}</td><td class='note'>{p}</td><td><span class='tier'>{t}</span></td>"
+        "<td>{s}</td></tr>".format(
+            b=escape(r["brand"]), p=escape(r["product"]), t=r["tier"],
+            s=", ".join("%s (%s)" % (escape(x["inci"]), x["designation"])
+                        for x in r["siloxanes"]))
+        for r in s["siloxane_products"])
+
+    alg_rows = "".join(
+        "<tr><td>{b}</td><td><span class='tier'>{t}</span></td><td class='num'>{n}</td>"
+        "<td class='note'>{a}</td></tr>".format(
+            b=escape(r["brand"]), t=r["tier"], n=r["count"],
+            a=escape(", ".join(r["allergens"])))
+        for r in s["allergen_products"])
+
+    octi = [a for a in s["actives"] if a["octinoxate_pct"] is not None]
+    octi.sort(key=lambda a: -a["octinoxate_pct"])
+    octi_rows = "".join(
+        "<tr><td>{b}</td><td><span class='tier'>{t}</span></td><td class='num'>{p:.1f}%</td>"
+        "<td class='num'>{l:g}%</td><td>{ok}</td></tr>".format(
+            b=escape(a["brand"]), t=a["tier"], p=a["octinoxate_pct"],
+            l=s["octinoxate_eu_limit_pct"],
+            ok="<span style='color:var(--ok)'>within limit</span>"
+               if not a["octinoxate_over_eu_limit"]
+               else "<span style='color:var(--bad)'>over limit</span>")
+        for a in octi)
+
+    eu_only = "".join("<li>%s</li>" % escape(x) for x in uv["eu_only_examples"])
+
+    body = f"""
+  <section>
+    <h2>The premise, tested</h2>
+    <div class="finding"><p><strong>Not one of the
+    {s['corpus_ingredients_tested']} ingredients in this corpus is prohibited in the
+    European Union.</strong> The EU's prohibited-substances list runs to
+    {s['eu_prohibited_entries']:,} entries and the American one to
+    {s['us_prohibited_entries']}, and that {round(s['eu_prohibited_entries'] / s['us_prohibited_entries'])}-fold
+    gap does not separate these twelve products at all. Where the two regimes actually
+    diverge is somewhere else entirely — in concentration ceilings, in which UV filters a
+    regulator will approve, in a restriction that has not started yet, and in what has to
+    be printed on the box.</p></div>
+
+    <p>The claim that American cosmetics are full of ingredients Europe has banned is
+    common enough to be worth testing rather than repeating. It is testable here because
+    the corpus is built from filings: every ingredient in every product is on the record,
+    so the list can be run against the prohibition list directly.</p>
+
+    <h3>How the match was done</h3>
+    <p class="note">{escape(reg['corpus_ingredients_on_eu_prohibited_list']['method'])}</p>
+    <p>The raw comparison threw {len(reg['corpus_ingredients_on_eu_prohibited_list']['false_positives'])} string
+    collisions. Every one turned out to be a longer chemical name that happens to contain a
+    corpus ingredient's name inside it — which is exactly the kind of hit that a careless
+    version of this study would publish as a finding.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Corpus ingredient</th><th class="num">Annex II ref</th>
+          <th>What the entry actually prohibits</th></tr></thead>
+        <tbody>{fp_rows}</tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>The limit of this result.</strong>
+    Annex II is keyed by systematic chemical name and CAS number, not by INCI name, because a
+    banned substance needs no INCI glossary entry. A name-based match is conservative: read
+    this as <em>no match found</em>, not as a chemical clearance of any product.</p></div>
+  </section>
+
+  <section>
+    <h2>What the American list actually contains</h2>
+    <p>The entire US prohibited-and-restricted list for cosmetic ingredients is nine
+    substances or classes, and it has not grown since MoCRA. It fits on one screen.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Citation</th><th>Substance</th></tr></thead>
+        <tbody>{us_rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Source: {cite(reg['us_prohibited_substances']['source'], '21 CFR 700, subpart B')}.
+    Two further sections of the subpart are excluded from the count because they restrict
+    packaging and labelling rather than an ingredient.</p>
+  </section>
+
+  <section>
+    <h2>Sunscreen: the divergence runs the other way</h2>
+    <div class="finding"><p><strong>The EU permits {s['eu_uv_filters']} UV filters. The
+    United States permits {s['us_uv_filters']} — and reached that number ten weeks ago.</strong>
+    On the one ingredient class where these two regimes differ most, the American regulator
+    is the restrictive one.</p></div>
+
+    <p>Every product in this corpus carries an SPF claim, which is why its ingredients are
+    filed with the FDA at all. The filters they use are the old ones. Bemotrizinol, permitted
+    in Europe for years, was added to the US monograph by final order on
+    {longdate(uv['bemotrizinol']['final_order_published'])} at up to
+    {uv['bemotrizinol']['max_concentration_pct']}% — the first new American UV filter in
+    decades.</p>
+
+    <h3>Permitted in the EU, not in the US</h3>
+    <ul class="tight">{eu_only}</ul>
+
+    <div class="caveat"><p><strong>And the older American filters are not settled either.</strong>
+    {escape(uv['grase_status_note']['text'])}</p></div>
+    <p class="note">Sources: {cite(uv['bemotrizinol']['source'], 'final order OTC000039')};
+    {cite(uv['us_source'], '21 CFR 352.10')}; {cite(uv['eu_source'], 'Annex VI, consolidated')}.</p>
+  </section>
+
+  <section>
+    <h2>Octinoxate, and a myth worth retiring</h2>
+    <p>{s['products_declaring_octinoxate']} of the {ra['products']} products declare
+    octinoxate. It is routinely described as banned in Europe. It is not: the EU permits it
+    up to {s['octinoxate_eu_limit_pct']:g}%, and the highest concentration anyone in this
+    corpus files is {s['octinoxate_max_declared_pct']:.1f}%.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">Declared</th>
+          <th class="num">EU ceiling</th><th>Status</th></tr></thead>
+        <tbody>{octi_rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">{escape(reg['octinoxate_limit']['source']['note'])}
+    Source: {cite(reg['octinoxate_limit']['source'], 'Annex VI entry 12')}. Local reef-protection
+    laws in Hawaii, Key West and Palau restrict octinoxate in sunscreens, and those are real —
+    but they are municipal and state measures, not an EU ban, and conflating the two is where
+    the myth comes from.</p>
+  </section>
+
+  <section>
+    <h2>The divergence that has not happened yet</h2>
+    <div class="finding"><p><strong>{s['products_affected_by_siloxane_restriction']} of the
+    {ra['products']} products contain a cyclic siloxane that the EU will bar from leave-on
+    cosmetics after {longdate(s['siloxane_restriction_applies_from'])} — {s['days_until_siloxane_restriction']}
+    days from now.</strong> In the United States there is no restriction at all, and none in
+    prospect.</p></div>
+
+    <p>A foundation is a leave-on product, so it falls under the later of the two dates in the
+    restriction — a distinction press coverage regularly loses. The restriction is
+    environmental rather than a consumer-safety finding: D4, D5 and D6 are classified as very
+    persistent and very bioaccumulative.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Product</th><th>Tier</th><th>Siloxane declared</th></tr></thead>
+        <tbody>{silo_rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Threshold is {silo['concentration_threshold_pct']}% by
+    weight. Source: {cite(silo['source'], 'Regulation (EU) 2024/1328, REACH Annex XVII entry 70')}.
+    US position: {escape(silo['us_position'])}</p>
+  </section>
+
+  <section>
+    <h2>What the label has to say</h2>
+    <p>{s['products_declaring_eu_allergens']} of the {ra['products']} products name
+    EU-declarable fragrance allergens in their FDA filing. No American rule requires that.
+    They appear because a manufacturer running one global formula prints one global ingredient
+    list — the US label is carrying a European obligation for free.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">Allergens</th><th>Declared</th></tr></thead>
+        <tbody>{alg_rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">The EU expanded this list by
+    {reg['fragrance_allergens']['eu']['new_annex_iii_entries']} new Annex III entries under
+    Regulation (EU) 2023/1545; non-compliant products could be placed on the Union market only
+    until {longdate(reg['fragrance_allergens']['eu']['placing_on_market_deadline'])}, a deadline
+    that has now passed. The American equivalent, FD&amp;C section 609(b), exists in statute and
+    has never been given a list —
+    <a href="/mocra/">that story is on the MoCRA page</a>.
+    Sources: {cite(reg['fragrance_allergens']['eu']['source'], 'Regulation (EU) 2023/1545')};
+    {cite(reg['fragrance_allergens']['us']['source'], 'Public Law 117-328')}.</p>
+  </section>
+"""
+    write("banned", page(
+        "What's banned where — Foundation",
+        "The EU prohibits 1,760 substances and the US prohibits nine. Neither list touches "
+        "the twelve foundations in this corpus.",
+        "What's banned where",
+        "The EU prohibits 1,760 substances in cosmetics. The United States prohibits nine. "
+        "Testing that gap against twelve real American foundations gives an answer almost "
+        "nobody expects.",
+        body, current="/banned/"))
+
+
+# ------------------------------------------------------------------- sourcing
+def build_sourcing(src, ra):
+    """Issue #17 -- the fourth founding question, and why the label cannot answer it."""
+    s = ra["issue_17_sourcing"]
+    acop = src["loreal_acop_2023"]
+    a = s["loreal_acop"]
+
+    reasoning = "".join("<li>%s</li>" % escape(x)
+                        for x in src["why_the_label_cannot_answer"]["reasoning"])
+
+    palm_rows = "".join(
+        "<tr><td>{b}</td><td><span class='tier'>{t}</span></td><td>{p}</td>"
+        "<td class='num'>{c}</td><td class='num'>{n}</td><td class='num'>{s:.0%}</td></tr>".format(
+            b=escape(r["brand"]), t=r["tier"], p=escape(r["parent"]),
+            c=r["count"], n=r["formula_length"], s=r["share_of_formula"])
+        for r in s["per_product"])
+
+    model_rows = "".join(
+        "<tr><td>{k}</td><td class='num'>{v:,.0f}</td><td class='num'>{p:.1f}%</td></tr>".format(
+            k=escape(k.replace("_", " ").title()), v=v,
+            p=100 * v / a["certified_total_tonnes"])
+        for k, v in acop["certified_by_model_tonnes"].items())
+
+    parent_rows = "".join(
+        "<tr><td>{p}</td><td>{r}</td><td>{m}</td><td class='note'>{n}</td></tr>".format(
+            p=escape(c["parent"]),
+            r=("<span style='color:var(--ok)'>confirmed</span>" if c["rspo_member"] is True
+               else "<span class='note'>not confirmed</span>"),
+            m=("<span style='color:var(--ok)'>confirmed</span>" if c["rmi_member"] is True
+               else "<span class='note'>not confirmed</span>"),
+            n=escape((c["source"].get("note") or "")[:150]))
+        for c in src["parent_company_positions"])
+
+    body = f"""
+  <section>
+    <h2>The question the label cannot answer</h2>
+    <div class="finding"><p><strong>An ingredient declaration names what a substance is and
+    never where it came from.</strong> That is a property of the labelling system, not a gap in
+    this corpus — and it means no amount of care with FDA filings can tell you whether the
+    glycerin in a particular bottle was responsibly sourced.</p></div>
+    <ul class="tight">{reasoning}</ul>
+    <p>So this study does the only honest thing available: it maps where the sourcing question
+    <em>arises</em> in these twelve formulas, and then goes to the company-level filings, which
+    are the only primary documents that speak to provenance at all.</p>
+  </section>
+
+  <section>
+    <h2>Where the question arises: palm</h2>
+    <p>Palm and palm-kernel oil are the feedstock behind a long list of cosmetic ingredients
+    that carry no hint of it in the name. Across this corpus a product declares on average
+    {s['mean_palm_derivable_per_product']} ingredients that are commonly palm-derived, and one
+    declares {s['max_palm_derivable_in_one_product']}.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th>Parent</th><th class="num">Palm-derivable</th>
+          <th class="num">Formula length</th><th class="num">Share</th></tr></thead>
+        <tbody>{palm_rows}</tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>Derivable, not derived.</strong>
+    {escape(src['palm_derivable_ingredients']['source']['note'])}</p></div>
+  </section>
+
+  <section>
+    <h2>What a certification actually certifies</h2>
+    <div class="finding"><p><strong>L'Oréal reports {a['total_palm_volume_tonnes']:,.0f} tonnes
+    of palm and palm derivatives for 2023, of which
+    {a['mass_balance_share_of_certified']:.1%} of the certified volume is Mass Balance and
+    {a['physically_separated_share_of_certified']:.2%} is physically separated from uncertified
+    material.</strong> Certified, at this scale, is an accounting statement about volumes bought —
+    not a claim that the molecule in your bottle is traceable to a certified plantation.</p></div>
+
+    <p>This is the corpus's largest parent by product count, and the figures come from its own
+    filing to RSPO rather than from a sustainability brochure. Two things in it are worth
+    reading closely. The first is that
+    {a['derivatives_share_of_volume']:.1%} of the volume is <em>derivatives and fractions</em>,
+    not palm oil — in cosmetics, palm arrives as glycerin and stearates, which is exactly why it
+    is invisible on a label. The second is the split by supply-chain model:</p>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>RSPO model</th><th class="num">Tonnes</th><th class="num">Share of certified</th></tr></thead>
+        <tbody>{model_rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">{escape(src['certification_schemes']['rspo']['why_the_model_matters'])}</p>
+    <p class="note">Source: {cite(acop['source'], "L'Oréal RSPO Annual Communication of Progress 2023")}.
+    The company's own summary: “{escape(acop['company_statement'])}”</p>
+    <p class="note"><strong>On the two percentages.</strong> The table above reports Mass Balance as
+    {a['mass_balance_share_of_certified']:.1%} of <em>all certified volume</em>, across all four
+    models. The company's statement reports {acop['certified_by_model_tonnes']['mass_balance'] / acop['derivatives_and_fractions_tonnes']:.1%}
+    of <em>derivative volume only</em>, which excludes the crude palm oil that carries the Segregated
+    certification. Both are correct and they are not the same denominator — the difference is the
+    209 tonnes of crude oil, out of {acop['total_palm_volume_tonnes']:,.0f}.</p>
+  </section>
+
+  <section>
+    <h2>Mica, and the one sourcing choice that is visible</h2>
+    <p>Natural mica carries a child-labour concern in Indian and Madagascan mining.
+    {len(s['natural_mica_products'])} of the {ra['products']} products list it among their
+    colourants. {len(s['synthetic_mica_products'])} declare synthetic fluorphlogopite — mica grown
+    in a reactor instead of dug out of the ground.</p>
+    <div class="finding"><p><strong>That substitution is one of the very few sourcing decisions a
+    reader can actually see on an ingredient list.</strong> It is not necessarily made for ethical
+    reasons — synthetic mica is also brighter and more uniform — which is precisely why the label
+    cannot be read as a claim.</p></div>
+    <p>Talc appears in {len(s['talc_products'])} product. Its sourcing question is asbestos
+    contamination, because the two minerals occur together geologically. That is the one
+    ingredient issue MoCRA addressed head-on, and
+    <a href="/mocra/">the resulting rule was withdrawn</a>.</p>
+  </section>
+
+  <section>
+    <h2>What could and could not be confirmed</h2>
+    <p>Membership of a certification scheme is a checkable fact about a company. It is also the
+    ceiling of what is checkable: a product made by an RSPO member is not an RSPO-certified
+    product, and no scheme in this table certifies a finished foundation.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Parent</th><th>RSPO</th><th>Responsible Mica Initiative</th><th>Note</th></tr></thead>
+        <tbody>{parent_rows}</tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>Read the blanks as blanks.</strong>
+    {s['parents_with_confirmed_rspo_membership']} of {s['parents_total']} parents were confirmed as
+    RSPO members from the scheme's own member pages. The remaining
+    {s['parents_unconfirmed']} are recorded as <em>not confirmed</em>, which is not the same as not
+    a member: RSPO publishes no member search API and its directory pages are rendered client-side,
+    so failing to locate a page is a limit of the retrieval, not evidence about the company.</p></div>
+  </section>
+"""
+    write("sourcing", page(
+        "Where it came from — Foundation",
+        "Ethical-sourcing claims tested against twelve foundations, and why an ingredient "
+        "list structurally cannot answer the question.",
+        "Where it came from",
+        "The fourth founding question — was it sourced ethically, and to which standard. The "
+        "short answer is that an ingredient list cannot tell you, and the interesting part is why.",
+        body, current="/sourcing/"))
+
+
+# ---------------------------------------------------------------------- mocra
+def build_mocra(reg, ra):
+    """Issue #18 -- what MoCRA requires, and by when."""
+    s = ra["issue_18_mocra"]
+    m = reg["mocra"]
+    fr = m["federal_register_record"]
+
+    def status_cell(st):
+        colour = {"in force": "var(--ok)", "not issued": "var(--bad)",
+                  "withdrawn": "var(--bad)", "not confirmed": "var(--warn)"}.get(st, "var(--muted)")
+        return "<span style='color:%s'>%s</span>" % (colour, escape(st))
+
+    rows = "".join(
+        "<tr class='{hi}'><td>{r}</td><td class='note'><code>{c}</code></td>"
+        "<td class='num'>{d}</td><td>{s}</td><td class='note'>{n}</td></tr>".format(
+            hi="hi" if x["status"] in ("not issued", "withdrawn") else "",
+            r=escape(x["requirement"]), c=escape(x["cite"]),
+            d=escape(x["statutory_deadline"]), s=status_cell(x["status"]),
+            n=escape(x.get("status_detail") or ""))
+        for x in m["requirements"])
+
+    overdue_rows = "".join(
+        "<tr><td>{r}</td><td class='num'>{d}</td><td>{s}</td>"
+        "<td class='num'>{mo:.1f}</td></tr>".format(
+            r=escape(x["requirement"]), d=escape(x["statutory_deadline"]),
+            s=status_cell(x["status"]), mo=x["months_past_deadline"])
+        for x in s["overdue"])
+
+    talc = next(x for x in m["requirements"] if x["id"] == "talc")
+    talc_docs = " · ".join(
+        '<a href="%s">%s, %s</a>' % (escape(d["url"]), escape(d["kind"]), escape(d["date"]))
+        for d in talc["documents"])
+
+    sections = "".join(
+        "<tr><td class='num'>%s</td><td>%s</td></tr>" % (escape(x["cite"]), escape(x["title"]))
+        for x in m["new_fdc_sections"])
+
+    body = f"""
+  <section>
+    <h2>The first cosmetics law in eighty years</h2>
+    <div class="finding"><p><strong>MoCRA was enacted on {longdate(m['enacted'])} —
+    {s['years_since_enactment']:.1f} years ago — and has produced
+    {s['rules_issued_final']} final rules.</strong> Of the
+    {s['requirements_total']} obligations tracked here, {s['in_force']} are in force because the
+    statute made them self-executing. Every one that depends on FDA writing a rule is
+    outstanding.</p></div>
+
+    <p>Before MoCRA, the FDA's authority over cosmetics rested on a 1938 statute that gave it no
+    power to require registration, no access to safety records, and no mandatory recall. MoCRA
+    added eleven new sections to the Food, Drug, and Cosmetic Act, listed below. The question this
+    page answers is a narrow and checkable one: what did it require, by when, and what has actually
+    happened.</p>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th class="num">FD&amp;C §</th><th>Title</th></tr></thead>
+        <tbody>{sections}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Every deadline on this page is computed from the
+    enactment date and the statute's own “not later than” clauses, read in the enrolled text:
+    {cite(m['source'], 'Public Law 117-328, Division FF, Title III, Subtitle E')}. FDA's own summary
+    pages are not used as a source for any of them.</p>
+  </section>
+
+  <section>
+    <h2>Requirement by requirement</h2>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Requirement</th><th>Cite</th><th class="num">Statutory deadline</th>
+          <th>Status</th><th>Detail</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Status is as at {longdate(ra['as_of'])}. “Not confirmed”
+    appears once, for the PFAS report, which is published on FDA's own website rather than in the
+    Federal Register — and fda.gov could not be reached from the machine this was built on. It is
+    recorded as unverified rather than as missing, because those are different claims.</p>
+  </section>
+
+  <section>
+    <h2>What is overdue</h2>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Requirement</th><th class="num">Due</th><th>Status</th>
+          <th class="num">Months late</th></tr></thead>
+        <tbody>{overdue_rows}</tbody>
+      </table>
+    </div>
+
+    <h3>The talc rule, proposed and withdrawn</h3>
+    <p>{escape(talc['status_detail'])} Talc's asbestos question is the single most concrete
+    ingredient-safety issue MoCRA named, and one product in this corpus declares talc.</p>
+    <p class="note">{talc_docs}</p>
+
+    <h3>The allergen rule that would have given section 609(b) its content</h3>
+    <p>The statute requires a label to identify each fragrance allergen, but leaves the identity of
+    those allergens to be set by regulation. No proposed rule has issued, so the duty has no list
+    and binds no one. The European Union, over the same period, added
+    {reg['fragrance_allergens']['eu']['new_annex_iii_entries']} substances to its declarable list
+    and let the transition deadline for placing non-compliant products on the market pass on
+    {longdate(reg['fragrance_allergens']['eu']['placing_on_market_deadline'])}.
+    <a href="/banned/">Five of the twelve products already declare EU allergens anyway</a>,
+    because global formulas travel with global labels.</p>
+  </section>
+
+  <section>
+    <h2>The whole Federal Register record</h2>
+    <div class="finding"><p><strong>{fr['documents_referencing_mocra']} documents mentioning MoCRA
+    by name have appeared in the Federal Register since enactment: {fr['final_rules']} final rules,
+    {fr['proposed_rules']} proposed rule, and {fr['proposed_rules_withdrawn']} withdrawal — of that
+    same proposed rule.</strong> The rest is guidance and administrative notices.</p></div>
+    <p class="note">{escape(fr['source']['note'])} Source:
+    {cite(fr['source'], 'Federal Register full-text search')}.</p>
+    <div class="caveat"><p><strong>What this does and does not show.</strong> A missed rulemaking
+    deadline is a fact about the rulemaking record, not a judgement about the agency, and guidance
+    documents do real work even though they are not rules — the November 2023 compliance policy is
+    why registration and listing became workable at all. What the record does establish is that the
+    parts of MoCRA that need a rule to mean anything still do not have one.</p></div>
+  </section>
+"""
+    write("mocra", page(
+        "Who's watching — Foundation",
+        "MoCRA's requirements and deadlines, read out of the statute, against what has "
+        "actually appeared in the Federal Register.",
+        "Who's watching",
+        "MoCRA was the first substantial change to US cosmetics law since 1938. Three and a half "
+        "years on, this is what it required, what took effect, and what never issued.",
+        body, current="/mocra/"))
+
+
 def margins_sort(m):
     return sorted(m.items(), key=lambda kv: -(kv[1].get("gross_margin_pct") or -1))
 
 
 def main():
     corpus, analysis, cq, prices = load()
+    reg, src, ra = load_regulatory()
     build_ingredients(corpus, analysis, prices)
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
     build_price(cq)
+    build_banned(reg, ra)
+    build_sourcing(src, ra)
+    build_mocra(reg, ra)
     build_disclaimer()
 
 

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where it came from — Foundation</title>
+<meta name="description" content="Ethical-sourcing claims tested against twelve foundations, and why an ingredient list structurally cannot answer the question.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>Where it came from</h1>
+    <p class="lede">The fourth founding question — was it sourced ethically, and to which standard. The short answer is that an ingredient list cannot tell you, and the interesting part is why.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><span aria-current="page">Where it came from</span><a href="/mocra/">Who&#x27;s watching</a></nav>
+
+  <section>
+    <h2>The question the label cannot answer</h2>
+    <div class="finding"><p><strong>An ingredient declaration names what a substance is and
+    never where it came from.</strong> That is a property of the labelling system, not a gap in
+    this corpus — and it means no amount of care with FDA filings can tell you whether the
+    glycerin in a particular bottle was responsibly sourced.</p></div>
+    <ul class="tight"><li>INCI names identify a substance chemically. Glycerin filed by one manufacturer and glycerin filed by another are the same INCI name whether the feedstock was palm, coconut, tallow or petrochemical synthesis.</li><li>The FDA-filed OTC drug label that this corpus is built from carries the same limit: it is a complete chemical declaration and a complete provenance blank.</li><li>So no amount of care with the corpus can answer an ethical-sourcing question about a specific bottle. That is a property of the labelling system, and it is the finding, not a gap in the research.</li></ul>
+    <p>So this study does the only honest thing available: it maps where the sourcing question
+    <em>arises</em> in these twelve formulas, and then goes to the company-level filings, which
+    are the only primary documents that speak to provenance at all.</p>
+  </section>
+
+  <section>
+    <h2>Where the question arises: palm</h2>
+    <p>Palm and palm-kernel oil are the feedstock behind a long list of cosmetic ingredients
+    that carry no hint of it in the name. Across this corpus a product declares on average
+    3.67 ingredients that are commonly palm-derived, and one
+    declares 9.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th>Parent</th><th class="num">Palm-derivable</th>
+          <th class="num">Formula length</th><th class="num">Share</th></tr></thead>
+        <tbody><tr><td>Dior</td><td><span class='tier'>luxury</span></td><td>LVMH</td><td class='num'>9</td><td class='num'>36</td><td class='num'>25%</td></tr><tr><td>Rimmel London</td><td><span class='tier'>mass</span></td><td>Coty</td><td class='num'>5</td><td class='num'>50</td><td class='num'>10%</td></tr><tr><td>Clinique</td><td><span class='tier'>prestige</span></td><td>Estée Lauder Companies</td><td class='num'>5</td><td class='num'>37</td><td class='num'>14%</td></tr><tr><td>e.l.f.</td><td><span class='tier'>budget</span></td><td>e.l.f. Beauty</td><td class='num'>4</td><td class='num'>27</td><td class='num'>15%</td></tr><tr><td>Estée Lauder</td><td><span class='tier'>prestige</span></td><td>Estée Lauder Companies</td><td class='num'>4</td><td class='num'>50</td><td class='num'>8%</td></tr><tr><td>MAC</td><td><span class='tier'>prestige</span></td><td>Estée Lauder Companies</td><td class='num'>3</td><td class='num'>38</td><td class='num'>8%</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td>L&#x27;Oréal</td><td class='num'>3</td><td class='num'>36</td><td class='num'>8%</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td>L&#x27;Oréal</td><td class='num'>3</td><td class='num'>51</td><td class='num'>6%</td></tr><tr><td>Maybelline</td><td><span class='tier'>mass</span></td><td>L&#x27;Oréal</td><td class='num'>2</td><td class='num'>29</td><td class='num'>7%</td></tr><tr><td>Revlon</td><td><span class='tier'>mass</span></td><td>Revlon</td><td class='num'>2</td><td class='num'>27</td><td class='num'>7%</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td>L&#x27;Oréal</td><td class='num'>2</td><td class='num'>34</td><td class='num'>6%</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td>L&#x27;Oréal</td><td class='num'>2</td><td class='num'>35</td><td class='num'>6%</td></tr></tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>Derivable, not derived.</strong>
+    Assembled by hand from the corpus ingredient list, on the basis of which INCI substances are conventionally produced from palm or palm-kernel feedstock. This is the weakest-provenance item in the dataset: it is a judgement about industry practice, not a reading of any filing, and it is presented as a map of the question rather than as a measurement.</p></div>
+  </section>
+
+  <section>
+    <h2>What a certification actually certifies</h2>
+    <div class="finding"><p><strong>L'Oréal reports 92,260 tonnes
+    of palm and palm derivatives for 2023, of which
+    99.5% of the certified volume is Mass Balance and
+    0.23% is physically separated from uncertified
+    material.</strong> Certified, at this scale, is an accounting statement about volumes bought —
+    not a claim that the molecule in your bottle is traceable to a certified plantation.</p></div>
+
+    <p>This is the corpus's largest parent by product count, and the figures come from its own
+    filing to RSPO rather than from a sustainability brochure. Two things in it are worth
+    reading closely. The first is that
+    99.8% of the volume is <em>derivatives and fractions</em>,
+    not palm oil — in cosmetics, palm arrives as glycerin and stearates, which is exactly why it
+    is invisible on a label. The second is the split by supply-chain model:</p>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>RSPO model</th><th class="num">Tonnes</th><th class="num">Share of certified</th></tr></thead>
+        <tbody><tr><td>Identity Preserved</td><td class='num'>0</td><td class='num'>0.0%</td></tr><tr><td>Segregated</td><td class='num'>209</td><td class='num'>0.2%</td></tr><tr><td>Mass Balance</td><td class='num'>91,840</td><td class='num'>99.5%</td></tr><tr><td>Book And Claim</td><td class='num'>211</td><td class='num'>0.2%</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Identity Preserved and Segregated keep certified material physically separate. Mass Balance permits certified and uncertified material to be mixed in the supply chain, with volumes reconciled on paper. Book and Claim is a credit purchase with no physical link at all. A product whose maker reports mostly Mass Balance volume cannot be said to contain certified palm - only that the company bought as much certified volume as it used.</p>
+    <p class="note">Source: <a href="https://document.rspo.org/2023/L_Oreal_ACOP2023.pdf">L&#x27;Oréal RSPO Annual Communication of Progress 2023</a> <span class="note">— Roundtable on Sustainable Palm Oil</span>.
+    The company's own summary: “Since 2010, 100% of the palm oil purchased directly by L&#x27;Oréal has been certified sustainable according to the RSPO Segregated model. Since 2012, 100% of the palm and palm kernel derivatives used are RSPO certified, and in 2023 99.8% of derivative volumes were certified via the Mass Balance model.”</p>
+    <p class="note"><strong>On the two percentages.</strong> The table above reports Mass Balance as
+    99.5% of <em>all certified volume</em>, across all four
+    models. The company's statement reports 99.8%
+    of <em>derivative volume only</em>, which excludes the crude palm oil that carries the Segregated
+    certification. Both are correct and they are not the same denominator — the difference is the
+    209 tonnes of crude oil, out of 92,260.</p>
+  </section>
+
+  <section>
+    <h2>Mica, and the one sourcing choice that is visible</h2>
+    <p>Natural mica carries a child-labour concern in Indian and Madagascan mining.
+    2 of the 12 products list it among their
+    colourants. 5 declare synthetic fluorphlogopite — mica grown
+    in a reactor instead of dug out of the ground.</p>
+    <div class="finding"><p><strong>That substitution is one of the very few sourcing decisions a
+    reader can actually see on an ingredient list.</strong> It is not necessarily made for ethical
+    reasons — synthetic mica is also brighter and more uniform — which is precisely why the label
+    cannot be read as a claim.</p></div>
+    <p>Talc appears in 1 product. Its sourcing question is asbestos
+    contamination, because the two minerals occur together geologically. That is the one
+    ingredient issue MoCRA addressed head-on, and
+    <a href="/mocra/">the resulting rule was withdrawn</a>.</p>
+  </section>
+
+  <section>
+    <h2>What could and could not be confirmed</h2>
+    <p>Membership of a certification scheme is a checkable fact about a company. It is also the
+    ceiling of what is checkable: a product made by an RSPO member is not an RSPO-certified
+    product, and no scheme in this table certifies a finished foundation.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Parent</th><th>RSPO</th><th>Responsible Mica Initiative</th><th>Note</th></tr></thead>
+        <tbody><tr><td>L&#x27;Oréal</td><td><span style='color:var(--ok)'>confirmed</span></td><td><span style='color:var(--ok)'>confirmed</span></td><td class='note'>RMI membership is reported as a founding membership from 2017; RMI&#x27;s own current-member roster is served in lazy-loaded fragments and could not be enu</td></tr><tr><td>Estée Lauder Companies</td><td><span style='color:var(--ok)'>confirmed</span></td><td><span class='note'>not confirmed</span></td><td class='note'>Membership confirmed from the member page. RMI status not confirmed either way.</td></tr><tr><td>Coty</td><td><span style='color:var(--ok)'>confirmed</span></td><td><span class='note'>not confirmed</span></td><td class='note'>A member page exists for Coty Inc. The membership number was not read, because the page body is rendered client-side and the value was not retrievable</td></tr><tr><td>LVMH</td><td><span class='note'>not confirmed</span></td><td><span class='note'>not confirmed</span></td><td class='note'>No RSPO member page was located for LVMH. Recorded as unconfirmed, not as a negative: RSPO&#x27;s member directory has no public search API and its listing</td></tr><tr><td>Revlon</td><td><span class='note'>not confirmed</span></td><td><span class='note'>not confirmed</span></td><td class='note'>Same limit as LVMH. Revlon is additionally the corpus&#x27;s only parent with no current public financial filing, having emerged from Chapter 11 as a priva</td></tr><tr><td>e.l.f. Beauty</td><td><span class='note'>not confirmed</span></td><td><span class='note'>not confirmed</span></td><td class='note'>Same limit as LVMH.</td></tr></tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>Read the blanks as blanks.</strong>
+    3 of 6 parents were confirmed as
+    RSPO members from the scheme's own member pages. The remaining
+    3 are recorded as <em>not confirmed</em>, which is not the same as not
+    a member: RSPO publishes no member search API and its directory pages are rendered client-side,
+    so failing to locate a page is a limit of the retrieval, not evidence about the company.</p></div>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
+         Template and property list: claude-rules/shared-rules.md. -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

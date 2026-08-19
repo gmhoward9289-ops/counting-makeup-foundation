@@ -4,8 +4,8 @@
     {
       "name": "foundation-site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8231", "--directory", "site"],
-      "port": 8231
+      "runtimeArgs": ["-m", "http.server", "8240", "--directory", "site"],
+      "port": 8240
     }
   ]
 }
