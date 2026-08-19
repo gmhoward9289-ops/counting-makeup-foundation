@@ -106,10 +106,37 @@ def split_list(text):
     return [t for t in (clean_token(x) for x in out) if t]
 
 
+# Colour Index numbers. The +/- colorant block is where house styles diverge
+# most: the same pigment is filed as "Iron Oxides (CI 77491)", "CI 77491 (Iron
+# Oxides)" and bare "Iron Oxides" by three different manufacturers. Collapsing
+# the CI number off the name is what makes those three countable as one
+# ingredient. The collapse is recorded per-product in synonyms_collapsed, so it
+# is visible rather than silent, exactly like the SYNONYMS table.
+CI_SUFFIX = re.compile(r"^(.+?)\s*\((?:ci\s*\d{5})(?:\s*,\s*ci\s*\d{5})*\)$", re.I)
+CI_PREFIX = re.compile(r"^(?:ci\s*\d{5})(?:\s*,\s*ci\s*\d{5})*\s*\((.+)\)$", re.I)
+
+# Two filings leak characters that are not part of any ingredient name: Rimmel
+# keeps the "+/-" marker glued to its first colorant, and Dior's label runs a
+# French cosmetic registration number ("N. 22157/Z") on past the closing
+# bracket of the last one.
+STRAY_PREFIX = re.compile(r"^[\[\]\s]*(?:/\s*\+\s*-|\+\s*/\s*-)\s*:?\s*", re.I)
+STRAY_SUFFIX = re.compile(r"\]\s*\..*$")
+
+
+def canonical_colorant(key):
+    """Strip CI numbers and filing artefacts off a colorant name."""
+    out = STRAY_SUFFIX.sub("", STRAY_PREFIX.sub("", key)).strip()
+    m = CI_PREFIX.match(out) or CI_SUFFIX.match(out)
+    if m:
+        out = m.group(1).strip()
+    return out
+
+
 def normalize(name):
     key = name.lower().strip()
     fixed = SPELLING_FIXES.get(key, key)
-    canon = SYNONYMS.get(fixed, fixed)
+    colorant = canonical_colorant(fixed)
+    canon = SYNONYMS.get(colorant, colorant)
     return canon, (fixed != key), (canon != fixed)
 
 

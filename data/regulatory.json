@@ -1,0 +1,313 @@
+{
+  "dataset": "regulatory-divergence-us-eu",
+  "description": "Primary-source regulatory facts for issues #16 (FDA-allowed vs internationally banned) and #18 (MoCRA timeline). Every figure here was read out of the regulation, statute or Federal Register record itself, not from trade press. Counts obtained by counting rows in a consolidated legal text record the method in `note` so the count can be repeated.",
+  "retrieved": "2026-08-19",
+  "retrieval_notes": [
+    "EUR-Lex refuses scripted access from this network: the PDF and HTML endpoints answer HTTP 202 with a zero-byte body to curl and to WebFetch alike. The consolidated texts below were read in a browser and the entry counts computed in-page over the rendered tables. Anyone repeating this should expect the same 202 and should not read it as 'document missing'.",
+    "www.fda.gov fails TLS certificate verification from this machine (a local interception certificate is in the chain), so FDA's own summary pages were not used. This is not a loss: the statute on congress.gov and the Federal Register record are primary to both.",
+    "21 CFR text was taken from the govinfo CFR XML rather than eCFR, because eCFR redirects automated clients to a bot-block page."
+  ],
+
+  "eu_prohibited_substances": {
+    "count": 1760,
+    "highest_reference_number": 1766,
+    "annex": "Annex II (substances prohibited in cosmetic products)",
+    "instrument": "Regulation (EC) No 1223/2009, consolidated text as at 2026-05-18",
+    "source": {
+      "type": "Consolidated EU legal text",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R1223-20260518",
+      "note": "Counted as the number of distinct numeric reference numbers on rows of the Annex II table. The highest reference number (1766) exceeds the count (1760) because some entries have been deleted over time without renumbering."
+    }
+  },
+
+  "us_prohibited_substances": {
+    "count": 9,
+    "sections": [
+      {"cite": "21 CFR 700.11", "substance": "Bithionol"},
+      {"cite": "21 CFR 700.13", "substance": "Mercury compounds (prohibited in skin-bleaching; restricted to 65 ppm or less as an eye-area preservative)"},
+      {"cite": "21 CFR 700.14", "substance": "Vinyl chloride (in aerosol products)"},
+      {"cite": "21 CFR 700.15", "substance": "Halogenated salicylanilides (tribromsalan, dibromsalan, metabromsalan, tetrachlorosalicylanilide)"},
+      {"cite": "21 CFR 700.16", "substance": "Zirconium (in aerosol products)"},
+      {"cite": "21 CFR 700.18", "substance": "Chloroform"},
+      {"cite": "21 CFR 700.19", "substance": "Methylene chloride"},
+      {"cite": "21 CFR 700.23", "substance": "Chlorofluorocarbon propellants"},
+      {"cite": "21 CFR 700.27", "substance": "Prohibited cattle materials"}
+    ],
+    "source": {
+      "type": "Code of Federal Regulations, Title 21 Part 700 Subpart B",
+      "publisher": "U.S. Government Publishing Office (govinfo)",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol7/xml/CFR-2024-title21-vol7-part700.xml",
+      "note": "Subpart B contains eleven sections. Two are excluded from this count because they restrict neither an ingredient nor a substance: 700.25 (tamper-resistant packaging) and 700.35 (conditions for the word 'sunscreen' in labelling). MoCRA (2022) did not add to this list."
+    }
+  },
+
+  "corpus_ingredients_on_eu_prohibited_list": {
+    "tested": 191,
+    "genuine_matches": 0,
+    "raw_string_hits": 9,
+    "false_positives": [
+      {"ingredient": "alumina", "annex_ii_ref": 906, "why": "entry is petrolatum that has been alumina-treated, not alumina"},
+      {"ingredient": "isobutane", "annex_ii_ref": 464, "why": "entry is isobutane only if it contains 0.1% or more butadiene"},
+      {"ingredient": "isobutane", "annex_ii_ref": 493, "why": "entry is isobutane-rich petroleum gases containing 0.1% or more butadiene"},
+      {"ingredient": "polyethylene", "annex_ii_ref": 633, "why": "entry is polycyclic aromatic hydrocarbons from coal-tar pitch and polyethylene pyrolysis"},
+      {"ingredient": "polyethylene", "annex_ii_ref": 634, "why": "entry is polycyclic aromatic hydrocarbons from polyethylene pyrolysis"},
+      {"ingredient": "propanediol", "annex_ii_ref": 1326, "why": "entry is a nitrophenyl hair-dye derivative whose chemical name ends in propanediol"},
+      {"ingredient": "propanediol", "annex_ii_ref": 1327, "why": "entry is a nitrophenyl hair-dye derivative whose chemical name ends in propanediol"},
+      {"ingredient": "salicylic acid", "annex_ii_ref": 1266, "why": "entry is an azo dye whose systematic name contains the words salicylic acid"},
+      {"ingredient": "water", "annex_ii_ref": 1716, "why": "entry is a margosa (neem) extract described as water-extracted"}
+    ],
+    "method": "Each of the 191 distinct INCI names in the corpus was normalised (lowercased, punctuation collapsed to single spaces) and tested against the normalised chemical-name column of all 1760 Annex II entries, matching on whole-string equality or whole-word containment. Every hit was then read by hand.",
+    "limits": [
+      "Annex II is keyed by systematic chemical name and CAS number, not by INCI name, because a prohibited substance needs no INCI glossary entry. A name-based match is therefore conservative in principle: a banned substance filed under an INCI synonym would not be caught.",
+      "The finding should be read as 'no match found', not as a chemical clearance of any product."
+    ]
+  },
+
+  "uv_filters": {
+    "eu_permitted_count": 30,
+    "eu_annex": "Annex VI (UV filters allowed in cosmetic products)",
+    "eu_source": {
+      "type": "Consolidated EU legal text",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R1223-20260518",
+      "note": "Counted as distinct Annex VI reference numbers carrying an INCI name. Nano and non-nano forms of the same substance share a reference number and are counted once."
+    },
+    "us_permitted_count": 17,
+    "us_source": {
+      "type": "Code of Federal Regulations, Title 21 section 352.10, as amended by OTC Monograph M020",
+      "publisher": "U.S. Government Publishing Office (govinfo); U.S. Food and Drug Administration",
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol5/xml/CFR-2024-title21-vol5-sec352-10.xml",
+      "note": "21 CFR 352.10 lists 16 active ingredients. Bemotrizinol was added as the 17th by final order OTC000039 on 2026-06-10."
+    },
+    "eu_only_examples": [
+      "Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine (bemotrizinol) - EU Annex VI ref 25; added in the US only on 2026-06-10",
+      "Methylene Bis-Benzotriazolyl Tetramethylbutylphenol (bisoctrizole) - EU Annex VI ref 23",
+      "Diethylamino Hydroxybenzoyl Hexyl Benzoate - EU Annex VI ref 28",
+      "Ethylhexyl Triazone - EU Annex VI ref 15",
+      "Tris-biphenyl triazine - EU Annex VI ref 29",
+      "Phenylene Bis-Diphenyltriazine - EU Annex VI ref 31"
+    ],
+    "bemotrizinol": {
+      "proposed_order_published": "2025-12-12",
+      "final_order_published": "2026-06-10",
+      "max_concentration_pct": 6,
+      "order_number": "OTC000039",
+      "source": {
+        "type": "Federal Register notice of availability of a final administrative order",
+        "publisher": "Office of the Federal Register",
+        "url": "https://www.federalregister.gov/documents/2026/06/10/2026-11578/amending-over-the-counter-monograph-m020-sunscreen-drug-products-for-over-the-counter-human-use-and",
+        "note": "The first new UV filter added to the US monograph in decades. The EU has permitted the same substance under Annex VI for years."
+      }
+    },
+    "grase_status_note": {
+      "text": "Of the 16 filters already in the US monograph, only titanium dioxide and zinc oxide are affirmed as generally recognised as safe and effective. The other 14 - including octinoxate and octisalate, the filters this corpus actually runs on - remain in the monograph but their GRASE status is unresolved pending safety data.",
+      "source": {
+        "type": "Federal Register, proposed administrative order OTC000039",
+        "publisher": "Office of the Federal Register",
+        "url": "https://www.federalregister.gov/documents/2025/12/12/2025-22649/amending-over-the-counter-monograph-m020-sunscreen-drug-products-for-over-the-counter-human-use"
+      }
+    }
+  },
+
+  "octinoxate_limit": {
+    "eu_max_concentration_pct": 10,
+    "eu_inci": "Ethylhexyl Methoxycinnamate",
+    "eu_annex_reference": 12,
+    "source": {
+      "type": "Consolidated EU legal text, Annex VI entry 12",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R1223-20260518",
+      "note": "Commission Regulation (EU) 2022/1176 amended Annex VI but changed the limits for benzophenone-3 and octocrylene, not for ethylhexyl methoxycinnamate, whose 10% ceiling stands. The widely repeated claim that octinoxate is 'banned in Europe' is wrong."
+    }
+  },
+
+  "siloxanes": {
+    "substances": ["octamethylcyclotetrasiloxane (D4)", "decamethylcyclopentasiloxane (D5)", "dodecamethylcyclohexasiloxane (D6)"],
+    "concentration_threshold_pct": 0.1,
+    "dates": [
+      {"scope": "wash-off cosmetic products (D4, D5)", "applies_after": "2020-01-31"},
+      {"scope": "general: substances, constituents and mixtures", "applies_after": "2026-06-06"},
+      {"scope": "all cosmetic products other than wash-off - that is, leave-on, which is what a foundation is", "applies_after": "2027-06-06"}
+    ],
+    "us_position": "No restriction. Neither D4, D5 nor D6 appears in 21 CFR 700 subpart B, and MoCRA created no ingredient-review process that has reached them.",
+    "source": {
+      "type": "Commission Regulation (EU) 2024/1328, replacing entry 70 of Annex XVII to REACH",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1328",
+      "note": "The restriction is environmental, not a consumer-safety finding: D4, D5 and D6 are classified as very persistent and very bioaccumulative. The leave-on date comes from paragraph 3(b) of the replacement entry, not the general date in paragraph 1 - coverage frequently conflates the two."
+    }
+  },
+
+  "fragrance_allergens": {
+    "eu": {
+      "instrument": "Commission Regulation (EU) 2023/1545",
+      "new_annex_iii_entries": 45,
+      "replaced_annex_iii_entries": 17,
+      "placing_on_market_deadline": "2026-07-31",
+      "making_available_deadline": "2028-07-31",
+      "source": {
+        "type": "EU legal text, Official Journal L 188",
+        "publisher": "EUR-Lex, Publications Office of the European Union",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1545",
+        "note": "Counted as the number of new Annex III reference numbers above 324 introduced by the Annex to this Regulation. Non-compliant products could be placed on the Union market until 2026-07-31 and may be made available until 2028-07-31."
+      }
+    },
+    "us": {
+      "statutory_basis": "FD&C Act section 609(b), added by MoCRA section 3502",
+      "rule_status": "Not issued. No proposed rule has appeared in the Federal Register.",
+      "npr_deadline": "2024-06-29",
+      "note": "Section 609(b) requires the responsible person to identify each fragrance allergen on the label, but leaves the identity of those allergens to be determined by the Secretary by regulation. Because that regulation has never issued, the requirement has no operative list.",
+      "source": {
+        "type": "Public Law 117-328, Division FF, Title III, Subtitle E",
+        "publisher": "U.S. Congress (congress.gov)",
+        "url": "https://www.congress.gov/117/plaws/publ328/PLAW-117publ328.htm"
+      }
+    },
+    "eu_declarable_in_corpus": [
+      "alpha-isomethyl ionone",
+      "benzyl alcohol",
+      "benzyl salicylate",
+      "citral",
+      "citronellol",
+      "geraniol",
+      "hexyl cinnamal",
+      "limonene",
+      "linalool"
+    ]
+  },
+
+  "mocra": {
+    "short_title": "Modernization of Cosmetics Regulation Act of 2022",
+    "enacted": "2022-12-29",
+    "vehicle": "Public Law 117-328 (Consolidated Appropriations Act, 2023), Division FF, Title III, Subtitle E",
+    "source": {
+      "type": "Enrolled statute text",
+      "publisher": "U.S. Congress (congress.gov)",
+      "url": "https://www.congress.gov/117/plaws/publ328/PLAW-117publ328.htm",
+      "note": "Deadlines below are computed from the enactment date and the statute's own 'not later than N after the date of enactment' clauses. FDA's summary pages are not used as a source for any of them."
+    },
+    "new_fdc_sections": [
+      {"cite": "604", "title": "Definitions"},
+      {"cite": "605", "title": "Adverse events"},
+      {"cite": "606", "title": "Good manufacturing practice"},
+      {"cite": "607", "title": "Registration and product listing"},
+      {"cite": "608", "title": "Safety substantiation"},
+      {"cite": "609", "title": "Labeling"},
+      {"cite": "610", "title": "Records"},
+      {"cite": "611", "title": "Mandatory recall authority"},
+      {"cite": "612", "title": "Small businesses"},
+      {"cite": "613", "title": "Exemption for certain products and facilities"},
+      {"cite": "614", "title": "Preemption"}
+    ],
+    "requirements": [
+      {
+        "id": "registration",
+        "requirement": "Facility registration for facilities operating at enactment",
+        "cite": "FD&C 607(a)",
+        "statutory_deadline": "2023-12-29",
+        "clause": "not later than 1 year after the date of enactment",
+        "status": "in force",
+        "status_detail": "FDA issued a compliance-policy guidance in November 2023 stating it did not intend to enforce registration and listing until 2024-07-01.",
+        "rule_required": false
+      },
+      {
+        "id": "listing",
+        "requirement": "Cosmetic product listing for products marketed at enactment",
+        "cite": "FD&C 607(c)",
+        "statutory_deadline": "2023-12-29",
+        "clause": "not later than 1 year after the date of enactment",
+        "status": "in force",
+        "status_detail": "Same November 2023 compliance policy applied.",
+        "rule_required": false
+      },
+      {
+        "id": "adverse-events",
+        "requirement": "Serious adverse event reports submitted within 15 business days",
+        "cite": "FD&C 605(b)(1)",
+        "statutory_deadline": "2023-12-29",
+        "clause": "amendments take effect 1 year after enactment",
+        "status": "in force",
+        "status_detail": null,
+        "rule_required": false
+      },
+      {
+        "id": "safety-substantiation",
+        "requirement": "Adequate substantiation of safety, with records",
+        "cite": "FD&C 608",
+        "statutory_deadline": "2023-12-29",
+        "clause": "amendments take effect 1 year after enactment",
+        "status": "in force",
+        "status_detail": "The statute defines adequate substantiation but sets no test methods and requires no rule, so the standard is in force and undefined in detail.",
+        "rule_required": false
+      },
+      {
+        "id": "labeling-contact",
+        "requirement": "Label must carry a domestic contact route for adverse event reports",
+        "cite": "FD&C 609(a)",
+        "statutory_deadline": "2024-12-29",
+        "clause": "section 609(a) takes effect 2 years after enactment",
+        "status": "in force",
+        "status_detail": null,
+        "rule_required": false
+      },
+      {
+        "id": "talc",
+        "requirement": "Standardised methods for detecting asbestos in talc-containing cosmetics",
+        "cite": "MoCRA 3505",
+        "statutory_deadline": "2023-12-29",
+        "clause": "proposed regulations not later than one year after enactment; final within 180 days of comment close",
+        "status": "withdrawn",
+        "status_detail": "Proposed rule published 2024-12-27, roughly a year past the statutory deadline, then withdrawn on 2025-11-28 without a final rule. No proposal is currently pending.",
+        "rule_required": true,
+        "documents": [
+          {"date": "2024-12-27", "kind": "Proposed rule", "url": "https://www.federalregister.gov/documents/2024/12/27/2024-30544/testing-methods-for-detecting-and-identifying-asbestos-in-talc-containing-cosmetic-products"},
+          {"date": "2025-11-28", "kind": "Withdrawal", "url": "https://www.federalregister.gov/documents/2025/11/28/2025-21407/testing-methods-for-detecting-and-identifying-asbestos-in-talc-containing-cosmetic-products"}
+        ]
+      },
+      {
+        "id": "gmp",
+        "requirement": "Good manufacturing practice regulations",
+        "cite": "FD&C 606",
+        "statutory_deadline": "2024-12-29",
+        "final_rule_deadline": "2025-12-29",
+        "clause": "notice of proposed rulemaking not later than 2 years after enactment; final rule not later than 3 years after enactment",
+        "status": "not issued",
+        "status_detail": "No proposed rule has appeared in the Federal Register. The only FDA action on the record is an April 2023 listening session.",
+        "rule_required": true
+      },
+      {
+        "id": "fragrance-allergens",
+        "requirement": "Fragrance allergen labelling, and the regulation defining which substances are fragrance allergens",
+        "cite": "FD&C 609(b)",
+        "statutory_deadline": "2024-06-29",
+        "clause": "notice of proposed rulemaking not later than 18 months after enactment; final within 180 days of comment close",
+        "status": "not issued",
+        "status_detail": "No proposed rule has appeared in the Federal Register. Because the statute leaves the allergen list to be set by regulation, the labelling duty has no operative content.",
+        "rule_required": true
+      },
+      {
+        "id": "pfas",
+        "requirement": "Report assessing use and safety of PFAS in cosmetics",
+        "cite": "MoCRA 3506",
+        "statutory_deadline": "2025-12-29",
+        "clause": "report not later than 3 years after enactment",
+        "status": "not confirmed",
+        "status_detail": "A report of this kind is published on FDA's own website rather than in the Federal Register, and fda.gov could not be reached from this machine (TLS interception). Recorded as unverified rather than as missing.",
+        "rule_required": false
+      }
+    ],
+    "federal_register_record": {
+      "documents_referencing_mocra": 12,
+      "final_rules": 0,
+      "proposed_rules": 1,
+      "proposed_rules_withdrawn": 1,
+      "source": {
+        "type": "Federal Register full-text search API, exact phrase 'Modernization of Cosmetics Regulation Act'",
+        "publisher": "Office of the Federal Register",
+        "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22Modernization+of+Cosmetics+Regulation+Act%22",
+        "note": "Retrieved 2026-08-19. The single proposed rule is the talc testing proposal, and it is also the single withdrawal. Everything else on the record is guidance or an administrative notice."
+      }
+    }
+  }
+}

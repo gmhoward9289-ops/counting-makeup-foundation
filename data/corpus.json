@@ -170,7 +170,7 @@
         {
           "position": 1,
           "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
-          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+          "inci": "iron oxides"
         }
       ],
       "label_corrections": [
@@ -187,6 +187,10 @@
         {
           "as_filed": "Fragrance (Parfum)",
           "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
+          "canonical": "iron oxides"
         }
       ]
     },
@@ -638,12 +642,12 @@
         {
           "position": 1,
           "as_filed": "/+-: Titanium Dioxide (CI 77891)",
-          "inci": "/+-: titanium dioxide (ci 77891)"
+          "inci": "titanium dioxide"
         },
         {
           "position": 2,
           "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
-          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+          "inci": "iron oxides"
         }
       ],
       "label_corrections": [
@@ -676,7 +680,16 @@
           "read_as": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
         }
       ],
-      "synonyms_collapsed": []
+      "synonyms_collapsed": [
+        {
+          "as_filed": "/+-: Titanium Dioxide (CI 77891)",
+          "canonical": "titanium dioxide"
+        },
+        {
+          "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
+          "canonical": "iron oxides"
+        }
+      ]
     },
     {
       "id": "revlon-colorstay",
@@ -834,22 +847,22 @@
         {
           "position": 1,
           "as_filed": "Iron Oxides (CI 77491)",
-          "inci": "iron oxides (ci 77491)"
+          "inci": "iron oxides"
         },
         {
           "position": 2,
           "as_filed": "Iron Oxides (CI 77492)",
-          "inci": "iron oxides (ci 77492)"
+          "inci": "iron oxides"
         },
         {
           "position": 3,
           "as_filed": "Iron Oxides (CI 77499)",
-          "inci": "iron oxides (ci 77499)"
+          "inci": "iron oxides"
         },
         {
           "position": 4,
           "as_filed": "Titanium Dioxide (CI 77891)",
-          "inci": "titanium dioxide (ci 77891)"
+          "inci": "titanium dioxide"
         }
       ],
       "label_corrections": [],
@@ -857,6 +870,22 @@
         {
           "as_filed": "Aqua/Water/Eau",
           "canonical": "water"
+        },
+        {
+          "as_filed": "Iron Oxides (CI 77491)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "Iron Oxides (CI 77492)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "Iron Oxides (CI 77499)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "Titanium Dioxide (CI 77891)",
+          "canonical": "titanium dioxide"
         }
       ]
     },
@@ -1505,22 +1534,22 @@
         {
           "position": 1,
           "as_filed": "TITANIUM DIOXIDE (CI 77891)",
-          "inci": "titanium dioxide (ci 77891)"
+          "inci": "titanium dioxide"
         },
         {
           "position": 2,
           "as_filed": "IRON OXIDES (CI 77491)",
-          "inci": "iron oxides (ci 77491)"
+          "inci": "iron oxides"
         },
         {
           "position": 3,
           "as_filed": "IRON OXIDES (CI 77492)",
-          "inci": "iron oxides (ci 77492)"
+          "inci": "iron oxides"
         },
         {
           "position": 4,
           "as_filed": "IRON OXIDES (CI 77499)",
-          "inci": "iron oxides (ci 77499)"
+          "inci": "iron oxides"
         }
       ],
       "label_corrections": [],
@@ -1528,6 +1557,22 @@
         {
           "as_filed": "WATER\\AQUA\\EAU",
           "canonical": "water"
+        },
+        {
+          "as_filed": "TITANIUM DIOXIDE (CI 77891)",
+          "canonical": "titanium dioxide"
+        },
+        {
+          "as_filed": "IRON OXIDES (CI 77491)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "IRON OXIDES (CI 77492)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "IRON OXIDES (CI 77499)",
+          "canonical": "iron oxides"
         }
       ]
     },
@@ -1737,12 +1782,12 @@
         {
           "position": 1,
           "as_filed": "titanium dioxide (ci 77891)",
-          "inci": "titanium dioxide (ci 77891)"
+          "inci": "titanium dioxide"
         },
         {
           "position": 2,
           "as_filed": "iron oxides (ci 77491, ci 77492, ci 77499)",
-          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+          "inci": "iron oxides"
         },
         {
           "position": 3,
@@ -1752,7 +1797,7 @@
         {
           "position": 4,
           "as_filed": "bismuth oxychloride (ci 77163)",
-          "inci": "bismuth oxychloride (ci 77163)"
+          "inci": "bismuth oxychloride"
         }
       ],
       "label_corrections": [],
@@ -1764,6 +1809,18 @@
         {
           "as_filed": "yeast extract\\faex\\extrait de levure",
           "canonical": "yeast extract"
+        },
+        {
+          "as_filed": "titanium dioxide (ci 77891)",
+          "canonical": "titanium dioxide"
+        },
+        {
+          "as_filed": "iron oxides (ci 77491, ci 77492, ci 77499)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "bismuth oxychloride (ci 77163)",
+          "canonical": "bismuth oxychloride"
         }
       ]
     },
@@ -2038,22 +2095,22 @@
         {
           "position": 1,
           "as_filed": "titanium dioxide (ci 77891)",
-          "inci": "titanium dioxide (ci 77891)"
+          "inci": "titanium dioxide"
         },
         {
           "position": 2,
           "as_filed": "iron oxides (ci 77491)",
-          "inci": "iron oxides (ci 77491)"
+          "inci": "iron oxides"
         },
         {
           "position": 3,
           "as_filed": "iron oxides (ci 77492)",
-          "inci": "iron oxides (ci 77492)"
+          "inci": "iron oxides"
         },
         {
           "position": 4,
           "as_filed": "iron oxides (ci 77499)",
-          "inci": "iron oxides (ci 77499)"
+          "inci": "iron oxides"
         }
       ],
       "label_corrections": [
@@ -2066,6 +2123,22 @@
         {
           "as_filed": "water\\aqua\\eau",
           "canonical": "water"
+        },
+        {
+          "as_filed": "titanium dioxide (ci 77891)",
+          "canonical": "titanium dioxide"
+        },
+        {
+          "as_filed": "iron oxides (ci 77491)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "iron oxides (ci 77492)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "iron oxides (ci 77499)",
+          "canonical": "iron oxides"
         }
       ]
     },
@@ -2779,22 +2852,22 @@
         {
           "position": 1,
           "as_filed": "CI 77491 (IRON OXIDES)",
-          "inci": "ci 77491 (iron oxides)"
+          "inci": "iron oxides"
         },
         {
           "position": 2,
           "as_filed": "CI 77492 (IRON OXIDES)",
-          "inci": "ci 77492 (iron oxides)"
+          "inci": "iron oxides"
         },
         {
           "position": 3,
           "as_filed": "CI 77499 (IRON OXIDES)",
-          "inci": "ci 77499 (iron oxides)"
+          "inci": "iron oxides"
         },
         {
           "position": 4,
           "as_filed": "CI 77891 (TITANIUM DIOXIDE)]. N\u00b0 22157/Z",
-          "inci": "ci 77891 (titanium dioxide)]. n\u00b0 22157/z"
+          "inci": "titanium dioxide"
         }
       ],
       "label_corrections": [
@@ -2819,6 +2892,22 @@
         {
           "as_filed": "HYALURONIC ACID",
           "canonical": "sodium hyaluronate"
+        },
+        {
+          "as_filed": "CI 77491 (IRON OXIDES)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "CI 77492 (IRON OXIDES)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "CI 77499 (IRON OXIDES)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "CI 77891 (TITANIUM DIOXIDE)]. N\u00b0 22157/Z",
+          "canonical": "titanium dioxide"
         }
       ]
     }

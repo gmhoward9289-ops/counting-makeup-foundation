@@ -1,0 +1,591 @@
+{
+  "generated_from": [
+    "corpus.json",
+    "regulatory.json",
+    "sourcing.json"
+  ],
+  "as_of": "2026-08-19",
+  "products": 12,
+  "issue_16_banned_ingredients": {
+    "corpus_ingredients_tested": 191,
+    "eu_prohibited_entries": 1760,
+    "us_prohibited_entries": 9,
+    "corpus_ingredients_prohibited_in_eu": 0,
+    "eu_uv_filters": 30,
+    "us_uv_filters": 17,
+    "siloxane_restriction_applies_from": "2027-06-06",
+    "siloxane_restriction_in_force": false,
+    "days_until_siloxane_restriction": 291,
+    "products_affected_by_siloxane_restriction": 3,
+    "siloxane_products": [
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "product": "Flawless Finish Foundation Oil Free SPF 15",
+        "tier": "budget",
+        "siloxanes": [
+          {
+            "inci": "cyclopentasiloxane",
+            "designation": "D5"
+          },
+          {
+            "inci": "cyclohexasiloxane",
+            "designation": "D6"
+          }
+        ],
+        "position": [
+          5,
+          11
+        ]
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "product": "Lasting Finish 25HR Foundation SPF 20",
+        "tier": "mass",
+        "siloxanes": [
+          {
+            "inci": "cyclopentasiloxane",
+            "designation": "D5"
+          }
+        ],
+        "position": [
+          2
+        ]
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "product": "ColorStay Liquid Makeup, Oily/Combination",
+        "tier": "mass",
+        "siloxanes": [
+          {
+            "inci": "cyclopentasiloxane",
+            "designation": "D5"
+          }
+        ],
+        "position": [
+          2
+        ]
+      }
+    ],
+    "products_declaring_eu_allergens": 5,
+    "allergen_products": [
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "tier": "mass",
+        "allergens": [
+          "alpha-isomethyl ionone",
+          "benzyl salicylate",
+          "geraniol",
+          "hexyl cinnamal",
+          "limonene",
+          "linalool"
+        ],
+        "count": 6
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "allergens": [
+          "alpha-isomethyl ionone",
+          "benzyl alcohol",
+          "benzyl salicylate",
+          "citronellol",
+          "hexyl cinnamal",
+          "linalool"
+        ],
+        "count": 6
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "allergens": [
+          "alpha-isomethyl ionone",
+          "benzyl alcohol",
+          "benzyl salicylate",
+          "citronellol",
+          "hexyl cinnamal",
+          "linalool"
+        ],
+        "count": 6
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "tier": "prestige",
+        "allergens": [
+          "benzyl alcohol",
+          "citral",
+          "citronellol",
+          "geraniol",
+          "limonene",
+          "linalool"
+        ],
+        "count": 6
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "tier": "mass",
+        "allergens": [
+          "alpha-isomethyl ionone"
+        ],
+        "count": 1
+      }
+    ],
+    "products_declaring_octinoxate": 8,
+    "octinoxate_max_declared_pct": 6.7,
+    "octinoxate_eu_limit_pct": 10,
+    "products_over_eu_octinoxate_limit": 0,
+    "actives": [
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "tier": "budget",
+        "filters": [
+          {
+            "filter": "titanium dioxide",
+            "pct": 4.45
+          },
+          {
+            "filter": "octinoxate",
+            "pct": 4.0
+          },
+          {
+            "filter": "octisalate",
+            "pct": 3.0
+          }
+        ],
+        "octinoxate_pct": 4.0,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "tier": "mass",
+        "filters": [
+          {
+            "filter": "octisalate",
+            "pct": 5.0
+          }
+        ],
+        "octinoxate_pct": null,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "tier": "mass",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 2.5
+          }
+        ],
+        "octinoxate_pct": 2.5,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "tier": "mass",
+        "filters": [
+          {
+            "filter": "titanium dioxide",
+            "pct": 4.35
+          },
+          {
+            "filter": "zinc oxide",
+            "pct": 2.19
+          }
+        ],
+        "octinoxate_pct": null,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 6.7
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 3.6
+          }
+        ],
+        "octinoxate_pct": 6.7,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 6.7
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 4.6
+          }
+        ],
+        "octinoxate_pct": 6.7,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "mac-studio-fix-fluid",
+        "brand": "MAC",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 3.0
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 1.0
+          }
+        ],
+        "octinoxate_pct": 3.0,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "clinique-even-better",
+        "brand": "Clinique",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 5.9
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 3.5
+          },
+          {
+            "filter": "zinc oxide",
+            "pct": 2.8
+          }
+        ],
+        "octinoxate_pct": 5.9,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "esteelauder-double-wear-sheer",
+        "brand": "Est\u00e9e Lauder",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 2.0
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 2.3
+          }
+        ],
+        "octinoxate_pct": 2.0,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "lancome-teint-idole-breathable",
+        "brand": "Lanc\u00f4me",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "octinoxate",
+            "pct": 6.7
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 11.5
+          }
+        ],
+        "octinoxate_pct": 6.7,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "ensulizole",
+            "pct": 3.6
+          }
+        ],
+        "octinoxate_pct": null,
+        "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "dior-forever-skin-wear",
+        "brand": "Dior",
+        "tier": "luxury",
+        "filters": [
+          {
+            "filter": "octisalate",
+            "pct": 3.5
+          },
+          {
+            "filter": "titanium dioxide",
+            "pct": 0.94
+          }
+        ],
+        "octinoxate_pct": null,
+        "octinoxate_over_eu_limit": false
+      }
+    ]
+  },
+  "issue_17_sourcing": {
+    "palm_derivable_ingredients_defined": 22,
+    "mean_palm_derivable_per_product": 3.67,
+    "max_palm_derivable_in_one_product": 9,
+    "products_with_no_palm_derivable": 0,
+    "per_product": [
+      {
+        "id": "dior-forever-skin-wear",
+        "brand": "Dior",
+        "tier": "luxury",
+        "parent": "LVMH",
+        "palm_derivable": [
+          "caprylic/capric triglyceride",
+          "cetyl dimethicone",
+          "isostearic acid",
+          "lecithin",
+          "polyglyceryl-10 decaisostearate",
+          "polyglyceryl-3 polyricinoleate",
+          "polyhydroxystearic acid",
+          "sodium myristoyl glutamate",
+          "stearic acid"
+        ],
+        "count": 9,
+        "formula_length": 36,
+        "share_of_formula": 0.25
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "tier": "mass",
+        "parent": "Coty",
+        "palm_derivable": [
+          "glycerin",
+          "lecithin",
+          "tribehenin",
+          "trihydroxystearin",
+          "zinc stearate"
+        ],
+        "count": 5,
+        "formula_length": 50,
+        "share_of_formula": 0.1
+      },
+      {
+        "id": "clinique-even-better",
+        "brand": "Clinique",
+        "tier": "prestige",
+        "parent": "Est\u00e9e Lauder Companies",
+        "palm_derivable": [
+          "caprylyl glycol",
+          "glycerin",
+          "lecithin",
+          "polyglyceryl-6 polyricinoleate",
+          "sodium myristoyl sarcosinate"
+        ],
+        "count": 5,
+        "formula_length": 37,
+        "share_of_formula": 0.1351
+      },
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "tier": "budget",
+        "parent": "e.l.f. Beauty",
+        "palm_derivable": [
+          "caprylyl glycol",
+          "glycerin",
+          "magnesium stearate",
+          "sorbitan sesquioleate"
+        ],
+        "count": 4,
+        "formula_length": 27,
+        "share_of_formula": 0.1481
+      },
+      {
+        "id": "esteelauder-double-wear-sheer",
+        "brand": "Est\u00e9e Lauder",
+        "tier": "prestige",
+        "parent": "Est\u00e9e Lauder Companies",
+        "palm_derivable": [
+          "caprylyl glycol",
+          "glycerin",
+          "lecithin",
+          "zinc stearate"
+        ],
+        "count": 4,
+        "formula_length": 50,
+        "share_of_formula": 0.08
+      },
+      {
+        "id": "mac-studio-fix-fluid",
+        "brand": "MAC",
+        "tier": "prestige",
+        "parent": "Est\u00e9e Lauder Companies",
+        "palm_derivable": [
+          "hydrogenated lecithin",
+          "lecithin",
+          "sorbitan sesquioleate"
+        ],
+        "count": 3,
+        "formula_length": 38,
+        "share_of_formula": 0.0789
+      },
+      {
+        "id": "lancome-teint-idole-breathable",
+        "brand": "Lanc\u00f4me",
+        "tier": "prestige",
+        "parent": "L'Or\u00e9al",
+        "palm_derivable": [
+          "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "disodium stearoyl glutamate",
+          "glycerin"
+        ],
+        "count": 3,
+        "formula_length": 36,
+        "share_of_formula": 0.0833
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "tier": "prestige",
+        "parent": "L'Or\u00e9al",
+        "palm_derivable": [
+          "caprylyl glycol",
+          "disodium stearoyl glutamate",
+          "glycerin"
+        ],
+        "count": 3,
+        "formula_length": 51,
+        "share_of_formula": 0.0588
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "tier": "mass",
+        "parent": "L'Or\u00e9al",
+        "palm_derivable": [
+          "disodium stearoyl glutamate",
+          "glycerin"
+        ],
+        "count": 2,
+        "formula_length": 29,
+        "share_of_formula": 0.069
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "tier": "mass",
+        "parent": "Revlon",
+        "palm_derivable": [
+          "polyglyceryl-3 diisostearate",
+          "tribehenin"
+        ],
+        "count": 2,
+        "formula_length": 27,
+        "share_of_formula": 0.0741
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "parent": "L'Or\u00e9al",
+        "palm_derivable": [
+          "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "disodium stearoyl glutamate"
+        ],
+        "count": 2,
+        "formula_length": 34,
+        "share_of_formula": 0.0588
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "tier": "mass",
+        "parent": "L'Or\u00e9al",
+        "palm_derivable": [
+          "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "disodium stearoyl glutamate"
+        ],
+        "count": 2,
+        "formula_length": 35,
+        "share_of_formula": 0.0571
+      }
+    ],
+    "natural_mica_products": [
+      "loreal-infallible-32h",
+      "clinique-even-better"
+    ],
+    "synthetic_mica_products": [
+      "maybelline-fit-me-dewy",
+      "loreal-infallible-24h",
+      "loreal-infallible-32h",
+      "lancome-teint-idole-breathable",
+      "lancome-teint-idole-care-glow"
+    ],
+    "talc_products": [
+      "rimmel-lasting-finish"
+    ],
+    "loreal_acop": {
+      "total_palm_volume_tonnes": 92260.0,
+      "derivatives_share_of_volume": 0.9977,
+      "certified_total_tonnes": 92260.0,
+      "mass_balance_share_of_certified": 0.9954,
+      "physically_separated_tonnes": 209.0,
+      "physically_separated_share_of_certified": 0.00227
+    },
+    "parents_with_confirmed_rspo_membership": 3,
+    "parents_unconfirmed": 3,
+    "parents_total": 6
+  },
+  "issue_18_mocra": {
+    "enacted": "2022-12-29",
+    "years_since_enactment": 3.64,
+    "requirements_total": 9,
+    "in_force": 5,
+    "requiring_a_rule": 3,
+    "rules_issued_final": 0,
+    "overdue": [
+      {
+        "id": "talc",
+        "requirement": "Standardised methods for detecting asbestos in talc-containing cosmetics",
+        "statutory_deadline": "2023-12-29",
+        "status": "withdrawn",
+        "days_past_deadline": 964,
+        "months_past_deadline": 31.7
+      },
+      {
+        "id": "fragrance-allergens",
+        "requirement": "Fragrance allergen labelling, and the regulation defining which substances are fragrance allergens",
+        "statutory_deadline": "2024-06-29",
+        "status": "not issued",
+        "days_past_deadline": 781,
+        "months_past_deadline": 25.7
+      },
+      {
+        "id": "gmp",
+        "requirement": "Good manufacturing practice regulations",
+        "statutory_deadline": "2024-12-29",
+        "status": "not issued",
+        "days_past_deadline": 598,
+        "months_past_deadline": 19.6
+      }
+    ],
+    "overdue_count": 3
+  }
+}

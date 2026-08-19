@@ -19,6 +19,10 @@ The site is organized around the four questions from the original brief
    filings and bottom-up ingredient cost estimates, always labeled as estimates.
 4. **Was it sourced ethically?** — sourcing claims, and to which ethical standards.
 
+Two further studies grew out of the fourth question and now stand on their own:
+**what's banned where** (the US and EU prohibition lists, tested against the corpus) and
+**who's watching** (what MoCRA required, and what has actually issued).
+
 Every figure carries a citation to a primary source, chicken-wings style. See
 `ISSUES.md` for the feature/epic backlog.
 
@@ -56,10 +60,28 @@ python tools/build_corpus.py                # parse + normalize  -> data/corpus.
 python tools/fetch_margins.py               # SEC + annual reports -> data/margins.json
 python tools/analyze.py                     # issues #9 #14 #15  -> data/analysis.json
 python tools/cost_quality.py                # issues #10 #13     -> data/cost-quality.json
+python tools/analyze_regulatory.py          # issues #16 #17 #18 -> data/regulatory-analysis.json
 python tools/build_site.py                  # render site/*/index.html
 ```
 
 Pages are generated from the data so no published figure can drift from its source.
+
+## Hand-read primary sources
+
+Three data files are not fetched by a script, because their sources cannot be fetched
+reliably from here: `data/margins-manual.json`, `data/regulatory.json` and
+`data/sourcing.json`. EUR-Lex answers scripted requests with an empty HTTP 202, and
+fda.gov fails TLS verification behind a local interception certificate. So the
+consolidated regulations and the statute were read once, by hand, and every figure in
+those files carries its own `source` block with the URL, the publisher and a note on how
+a count was arrived at.
+
+The rule that keeps this honest is that nothing *derived* is hand-entered. Which
+products a rule actually touches, how many months a deadline is overdue, how the corpus
+crosses a prohibition list — all of that is computed by `tools/analyze_regulatory.py`
+from the corpus on every run. `data/regulatory.json` also records what could **not** be
+verified (the PFAS report, three of six parent companies' scheme memberships) as
+explicit nulls with reasons, rather than leaving a gap that later reads as a finding.
 Ingredient-name corrections (manufacturers do file typos) and synonym collapsing are
 declared in `tools/build_corpus.py` and recorded per-product in the corpus — there are
 no silent edits.

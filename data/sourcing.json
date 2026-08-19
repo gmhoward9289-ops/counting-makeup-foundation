@@ -1,0 +1,170 @@
+{
+  "dataset": "sourcing-claims",
+  "description": "Primary-source material for issue #17, the fourth founding question: was it sourced ethically, and to which standard. The organising fact of this dataset is negative - an INCI declaration names what a substance is and never where it came from - so almost everything verifiable here is about the parent company, not the product.",
+  "retrieved": "2026-08-19",
+
+  "why_the_label_cannot_answer": {
+    "claim": "Provenance is absent from the ingredient declaration by design, not by omission.",
+    "reasoning": [
+      "INCI names identify a substance chemically. Glycerin filed by one manufacturer and glycerin filed by another are the same INCI name whether the feedstock was palm, coconut, tallow or petrochemical synthesis.",
+      "The FDA-filed OTC drug label that this corpus is built from carries the same limit: it is a complete chemical declaration and a complete provenance blank.",
+      "So no amount of care with the corpus can answer an ethical-sourcing question about a specific bottle. That is a property of the labelling system, and it is the finding, not a gap in the research."
+    ]
+  },
+
+  "palm_derivable_ingredients": {
+    "note": "Ingredients in the corpus that are commonly manufactured from palm or palm-kernel oil. 'Derivable' is the correct word: each of these can also be made from other feedstocks, and the label does not say which was used. This list is a map of where the sourcing question arises, not a claim that any product contains palm.",
+    "inci": [
+      "glycerin",
+      "stearic acid",
+      "magnesium stearate",
+      "zinc stearate",
+      "cetyl dimethicone",
+      "caprylic/capric triglyceride",
+      "caprylyl glycol",
+      "isostearic acid",
+      "sodium myristoyl glutamate",
+      "sodium myristoyl sarcosinate",
+      "disodium stearoyl glutamate",
+      "polyhydroxystearic acid",
+      "polyglyceryl-3 diisostearate",
+      "polyglyceryl-10 decaisostearate",
+      "polyglyceryl-3 polyricinoleate",
+      "polyglyceryl-6 polyricinoleate",
+      "tribehenin",
+      "trihydroxystearin",
+      "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+      "sorbitan sesquioleate",
+      "lecithin",
+      "hydrogenated lecithin"
+    ],
+    "source": {
+      "type": "Ingredient-origin classification",
+      "publisher": "this project",
+      "url": null,
+      "note": "Assembled by hand from the corpus ingredient list, on the basis of which INCI substances are conventionally produced from palm or palm-kernel feedstock. This is the weakest-provenance item in the dataset: it is a judgement about industry practice, not a reading of any filing, and it is presented as a map of the question rather than as a measurement."
+    }
+  },
+
+  "mica": {
+    "natural_mica_in_may_contain": 2,
+    "synthetic_fluorphlogopite_in_base_formula": 5,
+    "note": "Natural mica is the ingredient behind the child-labour concern in Indian and Madagascan mining. Synthetic fluorphlogopite is lab-grown mica, and choosing it is a sourcing decision visible on the label - one of the very few that is. Counts are computed from the corpus by tools/analyze_sourcing.py, not entered here."
+  },
+
+  "talc": {
+    "products_declaring_talc": 1,
+    "note": "Talc's sourcing question is asbestos contamination, because the two minerals co-occur geologically. This is the one sourcing issue that MoCRA squarely addressed - and the resulting rule was withdrawn. See the MoCRA study.",
+    "cross_reference": "regulatory.json -> mocra.requirements[id=talc]"
+  },
+
+  "certification_schemes": {
+    "rspo": {
+      "name": "Roundtable on Sustainable Palm Oil",
+      "what_it_certifies": "Palm oil and palm-derivative supply chains, under four models: Identity Preserved, Segregated, Mass Balance and Book and Claim.",
+      "why_the_model_matters": "Identity Preserved and Segregated keep certified material physically separate. Mass Balance permits certified and uncertified material to be mixed in the supply chain, with volumes reconciled on paper. Book and Claim is a credit purchase with no physical link at all. A product whose maker reports mostly Mass Balance volume cannot be said to contain certified palm - only that the company bought as much certified volume as it used.",
+      "url": "https://rspo.org/as-an-organisation/membership/acop/"
+    },
+    "rmi": {
+      "name": "Responsible Mica Initiative",
+      "what_it_certifies": "Not a product certification. A multi-stakeholder programme working towards a mica supply chain free of child labour, principally in Jharkhand and Bihar.",
+      "url": "https://responsible-mica-initiative.com/"
+    }
+  },
+
+  "parent_company_positions": [
+    {
+      "parent": "L'Oréal",
+      "rspo_member": true,
+      "rspo_membership_number": "4-0021-07-000-00",
+      "rmi_member": true,
+      "source": {
+        "type": "RSPO member page and RSPO Annual Communication of Progress 2023",
+        "publisher": "Roundtable on Sustainable Palm Oil",
+        "url": "https://document.rspo.org/2023/L_Oreal_ACOP2023.pdf",
+        "note": "RMI membership is reported as a founding membership from 2017; RMI's own current-member roster is served in lazy-loaded fragments and could not be enumerated in full from this machine."
+      }
+    },
+    {
+      "parent": "Estée Lauder Companies",
+      "rspo_member": true,
+      "rspo_membership_number": "4-0596-15-000-00",
+      "rmi_member": null,
+      "source": {
+        "type": "RSPO member page",
+        "publisher": "Roundtable on Sustainable Palm Oil",
+        "url": "https://rspo.org/members/4-0596-15-000-00/",
+        "note": "Membership confirmed from the member page. RMI status not confirmed either way."
+      }
+    },
+    {
+      "parent": "Coty",
+      "rspo_member": true,
+      "rspo_membership_number": null,
+      "rmi_member": null,
+      "source": {
+        "type": "RSPO member page",
+        "publisher": "Roundtable on Sustainable Palm Oil",
+        "url": "https://rspo.org/members/6783/Coty-Inc",
+        "note": "A member page exists for Coty Inc. The membership number was not read, because the page body is rendered client-side and the value was not retrievable without a browser session."
+      }
+    },
+    {
+      "parent": "LVMH",
+      "rspo_member": null,
+      "rspo_membership_number": null,
+      "rmi_member": null,
+      "source": {
+        "type": "not confirmed",
+        "publisher": null,
+        "url": null,
+        "note": "No RSPO member page was located for LVMH. Recorded as unconfirmed, not as a negative: RSPO's member directory has no public search API and its listing pages are client-rendered, so absence of a located page is not evidence of absence of membership."
+      }
+    },
+    {
+      "parent": "Revlon",
+      "rspo_member": null,
+      "rspo_membership_number": null,
+      "rmi_member": null,
+      "source": {
+        "type": "not confirmed",
+        "publisher": null,
+        "url": null,
+        "note": "Same limit as LVMH. Revlon is additionally the corpus's only parent with no current public financial filing, having emerged from Chapter 11 as a private company."
+      }
+    },
+    {
+      "parent": "e.l.f. Beauty",
+      "rspo_member": null,
+      "rspo_membership_number": null,
+      "rmi_member": null,
+      "source": {
+        "type": "not confirmed",
+        "publisher": null,
+        "url": null,
+        "note": "Same limit as LVMH."
+      }
+    }
+  ],
+
+  "loreal_acop_2023": {
+    "note": "The single most informative primary document found for this study. L'Oréal is the corpus's largest parent by number of products (four of twelve), and its ACOP is a filing to RSPO rather than a marketing page - the numbers are reported into a scheme, not chosen for a brochure.",
+    "reporting_year": 2023,
+    "total_palm_volume_tonnes": 92260.0,
+    "crude_palm_oil_tonnes": 209.0,
+    "derivatives_and_fractions_tonnes": 92051.0,
+    "certified_by_model_tonnes": {
+      "identity_preserved": 0.0,
+      "segregated": 209.0,
+      "mass_balance": 91840.0,
+      "book_and_claim": 211.0
+    },
+    "company_statement": "Since 2010, 100% of the palm oil purchased directly by L'Oréal has been certified sustainable according to the RSPO Segregated model. Since 2012, 100% of the palm and palm kernel derivatives used are RSPO certified, and in 2023 99.8% of derivative volumes were certified via the Mass Balance model.",
+    "source": {
+      "type": "RSPO Annual Communication of Progress 2023, filed by the member",
+      "publisher": "Roundtable on Sustainable Palm Oil",
+      "url": "https://document.rspo.org/2023/L_Oreal_ACOP2023.pdf",
+      "note": "Volumes read from questions CG.2.2 and CG.2.4 of the filing. The company statement is quoted from question 3.4.1."
+    }
+  }
+}

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What&#x27;s banned where — Foundation</title>
+<meta name="description" content="The EU prohibits 1,760 substances and the US prohibits nine. Neither list touches the twelve foundations in this corpus.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>What's banned where</h1>
+    <p class="lede">The EU prohibits 1,760 substances in cosmetics. The United States prohibits nine. Testing that gap against twelve real American foundations gives an answer almost nobody expects.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/ownership/">Who makes it</a><span aria-current="page">What&#x27;s banned</span><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a></nav>
+
+  <section>
+    <h2>The premise, tested</h2>
+    <div class="finding"><p><strong>Not one of the
+    191 ingredients in this corpus is prohibited in the
+    European Union.</strong> The EU's prohibited-substances list runs to
+    1,760 entries and the American one to
+    9, and that 196-fold
+    gap does not separate these twelve products at all. Where the two regimes actually
+    diverge is somewhere else entirely — in concentration ceilings, in which UV filters a
+    regulator will approve, in a restriction that has not started yet, and in what has to
+    be printed on the box.</p></div>
+
+    <p>The claim that American cosmetics are full of ingredients Europe has banned is
+    common enough to be worth testing rather than repeating. It is testable here because
+    the corpus is built from filings: every ingredient in every product is on the record,
+    so the list can be run against the prohibition list directly.</p>
+
+    <h3>How the match was done</h3>
+    <p class="note">Each of the 191 distinct INCI names in the corpus was normalised (lowercased, punctuation collapsed to single spaces) and tested against the normalised chemical-name column of all 1760 Annex II entries, matching on whole-string equality or whole-word containment. Every hit was then read by hand.</p>
+    <p>The raw comparison threw 9 string
+    collisions. Every one turned out to be a longer chemical name that happens to contain a
+    corpus ingredient's name inside it — which is exactly the kind of hit that a careless
+    version of this study would publish as a finding.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Corpus ingredient</th><th class="num">Annex II ref</th>
+          <th>What the entry actually prohibits</th></tr></thead>
+        <tbody><tr><td>alumina</td><td class='num'>906</td><td>entry is petrolatum that has been alumina-treated, not alumina</td></tr><tr><td>isobutane</td><td class='num'>464</td><td>entry is isobutane only if it contains 0.1% or more butadiene</td></tr><tr><td>isobutane</td><td class='num'>493</td><td>entry is isobutane-rich petroleum gases containing 0.1% or more butadiene</td></tr><tr><td>polyethylene</td><td class='num'>633</td><td>entry is polycyclic aromatic hydrocarbons from coal-tar pitch and polyethylene pyrolysis</td></tr><tr><td>polyethylene</td><td class='num'>634</td><td>entry is polycyclic aromatic hydrocarbons from polyethylene pyrolysis</td></tr><tr><td>propanediol</td><td class='num'>1326</td><td>entry is a nitrophenyl hair-dye derivative whose chemical name ends in propanediol</td></tr><tr><td>propanediol</td><td class='num'>1327</td><td>entry is a nitrophenyl hair-dye derivative whose chemical name ends in propanediol</td></tr><tr><td>salicylic acid</td><td class='num'>1266</td><td>entry is an azo dye whose systematic name contains the words salicylic acid</td></tr><tr><td>water</td><td class='num'>1716</td><td>entry is a margosa (neem) extract described as water-extracted</td></tr></tbody>
+      </table>
+    </div>
+    <div class="caveat" style="margin-top:1rem"><p><strong>The limit of this result.</strong>
+    Annex II is keyed by systematic chemical name and CAS number, not by INCI name, because a
+    banned substance needs no INCI glossary entry. A name-based match is conservative: read
+    this as <em>no match found</em>, not as a chemical clearance of any product.</p></div>
+  </section>
+
+  <section>
+    <h2>What the American list actually contains</h2>
+    <p>The entire US prohibited-and-restricted list for cosmetic ingredients is nine
+    substances or classes, and it has not grown since MoCRA. It fits on one screen.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Citation</th><th>Substance</th></tr></thead>
+        <tbody><tr><td><code>21 CFR 700.11</code></td><td>Bithionol</td></tr><tr><td><code>21 CFR 700.13</code></td><td>Mercury compounds (prohibited in skin-bleaching; restricted to 65 ppm or less as an eye-area preservative)</td></tr><tr><td><code>21 CFR 700.14</code></td><td>Vinyl chloride (in aerosol products)</td></tr><tr><td><code>21 CFR 700.15</code></td><td>Halogenated salicylanilides (tribromsalan, dibromsalan, metabromsalan, tetrachlorosalicylanilide)</td></tr><tr><td><code>21 CFR 700.16</code></td><td>Zirconium (in aerosol products)</td></tr><tr><td><code>21 CFR 700.18</code></td><td>Chloroform</td></tr><tr><td><code>21 CFR 700.19</code></td><td>Methylene chloride</td></tr><tr><td><code>21 CFR 700.23</code></td><td>Chlorofluorocarbon propellants</td></tr><tr><td><code>21 CFR 700.27</code></td><td>Prohibited cattle materials</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Source: <a href="https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol7/xml/CFR-2024-title21-vol7-part700.xml">21 CFR 700, subpart B</a> <span class="note">— U.S. Government Publishing Office (govinfo)</span>.
+    Two further sections of the subpart are excluded from the count because they restrict
+    packaging and labelling rather than an ingredient.</p>
+  </section>
+
+  <section>
+    <h2>Sunscreen: the divergence runs the other way</h2>
+    <div class="finding"><p><strong>The EU permits 30 UV filters. The
+    United States permits 17 — and reached that number ten weeks ago.</strong>
+    On the one ingredient class where these two regimes differ most, the American regulator
+    is the restrictive one.</p></div>
+
+    <p>Every product in this corpus carries an SPF claim, which is why its ingredients are
+    filed with the FDA at all. The filters they use are the old ones. Bemotrizinol, permitted
+    in Europe for years, was added to the US monograph by final order on
+    10 June 2026 at up to
+    6% — the first new American UV filter in
+    decades.</p>
+
+    <h3>Permitted in the EU, not in the US</h3>
+    <ul class="tight"><li>Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine (bemotrizinol) - EU Annex VI ref 25; added in the US only on 2026-06-10</li><li>Methylene Bis-Benzotriazolyl Tetramethylbutylphenol (bisoctrizole) - EU Annex VI ref 23</li><li>Diethylamino Hydroxybenzoyl Hexyl Benzoate - EU Annex VI ref 28</li><li>Ethylhexyl Triazone - EU Annex VI ref 15</li><li>Tris-biphenyl triazine - EU Annex VI ref 29</li><li>Phenylene Bis-Diphenyltriazine - EU Annex VI ref 31</li></ul>
+
+    <div class="caveat"><p><strong>And the older American filters are not settled either.</strong>
+    Of the 16 filters already in the US monograph, only titanium dioxide and zinc oxide are affirmed as generally recognised as safe and effective. The other 14 - including octinoxate and octisalate, the filters this corpus actually runs on - remain in the monograph but their GRASE status is unresolved pending safety data.</p></div>
+    <p class="note">Sources: <a href="https://www.federalregister.gov/documents/2026/06/10/2026-11578/amending-over-the-counter-monograph-m020-sunscreen-drug-products-for-over-the-counter-human-use-and">final order OTC000039</a> <span class="note">— Office of the Federal Register</span>;
+    <a href="https://www.govinfo.gov/content/pkg/CFR-2024-title21-vol5/xml/CFR-2024-title21-vol5-sec352-10.xml">21 CFR 352.10</a> <span class="note">— U.S. Government Publishing Office (govinfo); U.S. Food and Drug Administration</span>; <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R1223-20260518">Annex VI, consolidated</a> <span class="note">— EUR-Lex, Publications Office of the European Union</span>.</p>
+  </section>
+
+  <section>
+    <h2>Octinoxate, and a myth worth retiring</h2>
+    <p>8 of the 12 products declare
+    octinoxate. It is routinely described as banned in Europe. It is not: the EU permits it
+    up to 10%, and the highest concentration anyone in this
+    corpus files is 6.7%.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">Declared</th>
+          <th class="num">EU ceiling</th><th>Status</th></tr></thead>
+        <tbody><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>6.7%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>6.7%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>6.7%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>Clinique</td><td><span class='tier'>prestige</span></td><td class='num'>5.9%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>e.l.f.</td><td><span class='tier'>budget</span></td><td class='num'>4.0%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>MAC</td><td><span class='tier'>prestige</span></td><td class='num'>3.0%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>Rimmel London</td><td><span class='tier'>mass</span></td><td class='num'>2.5%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr><tr><td>Estée Lauder</td><td><span class='tier'>prestige</span></td><td class='num'>2.0%</td><td class='num'>10%</td><td><span style='color:var(--ok)'>within limit</span></td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Commission Regulation (EU) 2022/1176 amended Annex VI but changed the limits for benzophenone-3 and octocrylene, not for ethylhexyl methoxycinnamate, whose 10% ceiling stands. The widely repeated claim that octinoxate is &#x27;banned in Europe&#x27; is wrong.
+    Source: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02009R1223-20260518">Annex VI entry 12</a> <span class="note">— EUR-Lex, Publications Office of the European Union</span>. Local reef-protection
+    laws in Hawaii, Key West and Palau restrict octinoxate in sunscreens, and those are real —
+    but they are municipal and state measures, not an EU ban, and conflating the two is where
+    the myth comes from.</p>
+  </section>
+
+  <section>
+    <h2>The divergence that has not happened yet</h2>
+    <div class="finding"><p><strong>3 of the
+    12 products contain a cyclic siloxane that the EU will bar from leave-on
+    cosmetics after 6 June 2027 — 291
+    days from now.</strong> In the United States there is no restriction at all, and none in
+    prospect.</p></div>
+
+    <p>A foundation is a leave-on product, so it falls under the later of the two dates in the
+    restriction — a distinction press coverage regularly loses. The restriction is
+    environmental rather than a consumer-safety finding: D4, D5 and D6 are classified as very
+    persistent and very bioaccumulative.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Product</th><th>Tier</th><th>Siloxane declared</th></tr></thead>
+        <tbody><tr><td>e.l.f.</td><td class='note'>Flawless Finish Foundation Oil Free SPF 15</td><td><span class='tier'>budget</span></td><td>cyclopentasiloxane (D5), cyclohexasiloxane (D6)</td></tr><tr><td>Rimmel London</td><td class='note'>Lasting Finish 25HR Foundation SPF 20</td><td><span class='tier'>mass</span></td><td>cyclopentasiloxane (D5)</td></tr><tr><td>Revlon</td><td class='note'>ColorStay Liquid Makeup, Oily/Combination</td><td><span class='tier'>mass</span></td><td>cyclopentasiloxane (D5)</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Threshold is 0.1% by
+    weight. Source: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1328">Regulation (EU) 2024/1328, REACH Annex XVII entry 70</a> <span class="note">— EUR-Lex, Publications Office of the European Union</span>.
+    US position: No restriction. Neither D4, D5 nor D6 appears in 21 CFR 700 subpart B, and MoCRA created no ingredient-review process that has reached them.</p>
+  </section>
+
+  <section>
+    <h2>What the label has to say</h2>
+    <p>5 of the 12 products name
+    EU-declarable fragrance allergens in their FDA filing. No American rule requires that.
+    They appear because a manufacturer running one global formula prints one global ingredient
+    list — the US label is carrying a European obligation for free.</p>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">Allergens</th><th>Declared</th></tr></thead>
+        <tbody><tr><td>Rimmel London</td><td><span class='tier'>mass</span></td><td class='num'>6</td><td class='note'>alpha-isomethyl ionone, benzyl salicylate, geraniol, hexyl cinnamal, limonene, linalool</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>6</td><td class='note'>alpha-isomethyl ionone, benzyl alcohol, benzyl salicylate, citronellol, hexyl cinnamal, linalool</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>6</td><td class='note'>alpha-isomethyl ionone, benzyl alcohol, benzyl salicylate, citronellol, hexyl cinnamal, linalool</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>6</td><td class='note'>benzyl alcohol, citral, citronellol, geraniol, limonene, linalool</td></tr><tr><td>Maybelline</td><td><span class='tier'>mass</span></td><td class='num'>1</td><td class='note'>alpha-isomethyl ionone</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">The EU expanded this list by
+    45 new Annex III entries under
+    Regulation (EU) 2023/1545; non-compliant products could be placed on the Union market only
+    until 31 July 2026, a deadline
+    that has now passed. The American equivalent, FD&amp;C section 609(b), exists in statute and
+    has never been given a list —
+    <a href="/mocra/">that story is on the MoCRA page</a>.
+    Sources: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1545">Regulation (EU) 2023/1545</a> <span class="note">— EUR-Lex, Publications Office of the European Union</span>;
+    <a href="https://www.congress.gov/117/plaws/publ328/PLAW-117publ328.htm">Public Law 117-328</a> <span class="note">— U.S. Congress (congress.gov)</span>.</p>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
+         Template and property list: claude-rules/shared-rules.md. -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
