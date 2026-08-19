@@ -70,6 +70,7 @@ BASE_CSS = """
   table { border-collapse: collapse; width: 100%; font-size: .88rem; }
   th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
     white-space: nowrap; }
+  table.brands td:nth-child(2), table.brands td:nth-child(4) { white-space: normal; }
   th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
     font-weight: 600; }
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
@@ -258,8 +259,8 @@ def build_ingredients(corpus, analysis, prices):
     ingredient declaration with the FDA, and that filing is public. Nothing in this corpus comes
     from a retailer listing or a transcription site.</p>
 
-    <div class="panel scroll">
-      <table>
+    <div class="panel">
+      <table class="brands">
         <thead><tr><th>Brand</th><th>Product</th><th>Tier</th><th>Parent</th>
           <th class="num">Ingredients</th><th class="num">Label filed</th><th>Source</th></tr></thead>
         <tbody>{rows}</tbody>
