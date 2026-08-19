@@ -1,7 +1,7 @@
 # Issues
 
 Now public: the live tracker is
-https://github.com/gmhoward9289-ops/nicole-project-cosmetics/issues — the entries
+https://github.com/gmhoward9289-ops/counting-makeup-foundation/issues — the entries
 below are the founding backlog (2026-08-17), kept as the record of the original
 brief. File new work on GitHub.
 
