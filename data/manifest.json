@@ -1,0 +1,29 @@
+{
+  "corpus": "foundation-spf-liquid-us",
+  "description": "US liquid/cream foundations that carry an SPF claim. SPF cosmetics are regulated as OTC drugs in the United States, so the manufacturer files the complete ingredient declaration with the FDA. Every product in this corpus is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid, lotion, cream or emulsion foundation (no powders, sticks or cushions -- different vehicle, not comparable).",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "SPF-only inclusion is a selection bias: it excludes SPF-free foundations (Estée Lauder Double Wear, Maybelline Fit Me Matte + Poreless, Fenty Pro Filt'r). Those are the same product category but have no primary filing, so they are excluded rather than sourced more weakly.",
+    "Shade-level filings exist for some brands (Dior files one label per shade). The base formula is identical across shades; only the +/- colorant list varies. One shade is taken as representative and the shade is recorded.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos. Corrections are recorded per-ingredient in the normalization layer, never silently."
+  ],
+  "products": [
+    {"id": "elf-flawless-finish",       "brand": "e.l.f.",          "product": "Flawless Finish Foundation Oil Free SPF 15", "parent": "e.l.f. Beauty",           "tier": "budget",   "setid": "aa8df265-c098-4c67-b68b-2eeff0f45591"},
+    {"id": "maybelline-fit-me-dewy",    "brand": "Maybelline",      "product": "Fit Me Dewy + Smooth Foundation SPF 18",     "parent": "L'Oréal",                 "tier": "mass",     "setid": "5460ca0d-f6b4-423d-e063-6294a90afce7"},
+    {"id": "rimmel-lasting-finish",     "brand": "Rimmel London",   "product": "Lasting Finish 25HR Foundation SPF 20",      "parent": "Coty",                    "tier": "mass",     "setid": "cfd041e9-ed40-dc93-e053-2995a90a9699"},
+    {"id": "revlon-colorstay",          "brand": "Revlon",          "product": "ColorStay Liquid Makeup, Oily/Combination",  "parent": "Revlon",                  "tier": "mass",     "setid": "410d1cb2-6c92-1ca3-e054-00144ff8d46c"},
+    {"id": "loreal-infallible-24h",     "brand": "L'Oréal Paris",   "product": "Infallible up to 24H Fresh Wear SPF 25",     "parent": "L'Oréal",                 "tier": "mass",     "setid": "917f6775-8f48-4b7e-9f67-253bc0c6d59e"},
+    {"id": "loreal-infallible-32h",     "brand": "L'Oréal Paris",   "product": "Infallible up to 32H Fresh Wear SPF 25",     "parent": "L'Oréal",                 "tier": "mass",     "setid": "f6457973-3718-44cd-a764-de0b089d4eee"},
+    {"id": "mac-studio-fix-fluid",      "brand": "MAC",             "product": "Studio Fix Fluid Broad Spectrum SPF 15",     "parent": "Estée Lauder Companies",  "tier": "prestige", "setid": "fb59afc1-1dc9-f783-e053-6394a90a196b"},
+    {"id": "clinique-even-better",      "brand": "Clinique",        "product": "Even Better Makeup Broad Spectrum SPF 15",   "parent": "Estée Lauder Companies",  "tier": "prestige", "setid": "d4de3c7b-3993-40e5-88a4-f6005ab97531"},
+    {"id": "esteelauder-double-wear-sheer", "brand": "Estée Lauder","product": "Double Wear Sheer Long-Wear Makeup SPF 19",  "parent": "Estée Lauder Companies",  "tier": "prestige", "setid": "2f93580c-c8e9-4822-91bf-a749cf4deb4e"},
+    {"id": "lancome-teint-idole-breathable", "brand": "Lancôme",    "product": "Teint Idole Ultra Wear Breathable Coverage SPF 25", "parent": "L'Oréal",          "tier": "prestige", "setid": "be2a83fb-e4f8-4313-b5bd-150f351fb345"},
+    {"id": "lancome-teint-idole-care-glow", "brand": "Lancôme",     "product": "Teint Idole Ultra Wear Care & Glow SPF 27",  "parent": "L'Oréal",                 "tier": "prestige", "setid": "3ff286c0-4515-4cab-9b93-a782545b2f36"},
+    {"id": "dior-forever-skin-wear",    "brand": "Dior",            "product": "Forever Skin Wear Foundation SPF 20 (10N)",  "parent": "LVMH",                    "tier": "luxury",   "setid": "038939d6-b9a5-4cb6-a818-6f7cf3f106fa"}
+  ]
+}

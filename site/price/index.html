@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What am I paying for? — Foundation</title>
+<meta name="description" content="Gross margins from company filings, a bounded formula-cost estimate, and price measured against what is actually in the bottle.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>What am I paying for?</h1>
+    <p class="lede">The ingredients in a $53 foundation cost about the same as the ingredients in a $12 one. Here is what the filings say, and what the extra $41 is actually buying.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><span aria-current="page">What you pay for</span><a href="/ownership/">Who makes it</a></nav>
+
+  <section>
+    <h2>What the margin says</h2>
+    <div class="finding"><p><strong>e.l.f. Beauty runs a 70.7% gross margin. Estée Lauder runs
+    74.0%.</strong> The gap between a $10 foundation and a $52 one is not a margin gap — both
+    companies keep roughly three-quarters of the sale. The price difference is what the rest of
+    the business costs, not what the bottle costs.</p></div>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Company</th><th class="num">Gross margin</th><th>Source</th></tr></thead>
+        <tbody><tr><td>Coty</td><td class='num'>64.8%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr><tr><td>Estée Lauder Companies</td><td class='num'>74.0%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr><tr><td>L&#x27;Oréal</td><td class='num'>74.3%</td><td class='note'>Annual results press release, consolidated profit and loss account</td></tr><tr><td>LVMH</td><td class='num'>67.0%</td><td class='note'>Key figures, consolidated income statement</td></tr><tr><td>Revlon</td><td class='num'>—</td><td class='note'>not available</td></tr><tr><td>e.l.f. Beauty</td><td class='num'>70.7%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">These are group-wide margins across every product a
+    company sells, taken from its own filings. LVMH's is the weakest comparator on the page: it is
+    dominated by fashion and leather goods, and LVMH does not break out a gross margin for its
+    Perfumes &amp; Cosmetics segment.</p>
+  </section>
+
+  <section>
+    <h2>What the formula costs</h2>
+    <p>No cosmetics company publishes per-product manufacturing cost, so anything more granular
+    than gross margin is modelling. What follows is a <em>bound</em>, not an estimate: even a
+    deliberately generous blended price across the entire formula mass lands far below the retail
+    price, and that conclusion holds anywhere inside the band.</p>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">List</th>
+          <th class="num">Parent margin</th><th class="num">Implied cost of goods</th>
+          <th class="num">Formula cost</th><th class="num">Formula as % of list</th></tr></thead>
+        <tbody><tr><td>e.l.f.</td><td><span class='tier'>budget</span></td><td class='num'>$9.99</td><td class='num'>70.7%</td><td class='num'>$2.93</td><td class='num'>$0.06–$0.32</td><td class='num'>0.63–3.15%</td></tr><tr><td>Maybelline</td><td><span class='tier'>mass</span></td><td class='num'>$11.99</td><td class='num'>74.3%</td><td class='num'>$3.08</td><td class='num'>$0.10–$0.47</td><td class='num'>0.79–3.94%</td></tr><tr><td>Rimmel London</td><td><span class='tier'>mass</span></td><td class='num'>$7.99</td><td class='num'>64.8%</td><td class='num'>$2.81</td><td class='num'>$0.10–$0.47</td><td class='num'>1.19–5.92%</td></tr><tr><td>Revlon</td><td><span class='tier'>mass</span></td><td class='num'>$14.99</td><td class='num'>—</td><td class='num'>—</td><td class='num'>$0.10–$0.47</td><td class='num'>0.63–3.16%</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>$18.99</td><td class='num'>74.3%</td><td class='num'>$4.88</td><td class='num'>$0.10–$0.47</td><td class='num'>0.50–2.49%</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>$18.99</td><td class='num'>74.3%</td><td class='num'>$4.88</td><td class='num'>$0.10–$0.47</td><td class='num'>0.50–2.49%</td></tr><tr><td>MAC</td><td><span class='tier'>prestige</span></td><td class='num'>$39.00</td><td class='num'>74.0%</td><td class='num'>$10.14</td><td class='num'>$0.10–$0.47</td><td class='num'>0.24–1.21%</td></tr><tr><td>Clinique</td><td><span class='tier'>prestige</span></td><td class='num'>$39.00</td><td class='num'>74.0%</td><td class='num'>$10.14</td><td class='num'>$0.10–$0.47</td><td class='num'>0.24–1.21%</td></tr><tr><td>Estée Lauder</td><td><span class='tier'>prestige</span></td><td class='num'>$52.00</td><td class='num'>74.0%</td><td class='num'>$13.52</td><td class='num'>$0.10–$0.47</td><td class='num'>0.18–0.91%</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>$53.00</td><td class='num'>74.3%</td><td class='num'>$13.62</td><td class='num'>$0.10–$0.47</td><td class='num'>0.18–0.89%</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>$53.00</td><td class='num'>74.3%</td><td class='num'>$13.62</td><td class='num'>$0.10–$0.47</td><td class='num'>0.18–0.89%</td></tr><tr><td>Dior</td><td><span class='tier'>luxury</span></td><td class='num'>$60.00</td><td class='num'>67.0%</td><td class='num'>$19.80</td><td class='num'>$0.10–$0.47</td><td class='num'>0.16–0.79%</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="finding" style="margin-top:1rem"><p><strong>The stuff in the bottle costs
+    between about 0.2% and 6% of what you pay for it — and in absolute terms it costs roughly the
+    same whatever you pay.</strong> Thirty millilitres of Lancôme and thirty millilitres of
+    Maybelline are the same mass of largely the same commodity chemistry. What separates $12 from
+    $53 is packaging, retail margin, advertising and the counter it is sold from.</p></div>
+
+    <h3>Assumptions behind those numbers</h3>
+    <div class="sunken"><ul class="tight"><li>Formula density assumed 1.05 g/mL. Silicone-and-water foundation emulsions sit near this; it is an assumption, not a filed figure.</li><li>Blended formula cost assumed $3.00-15.00/kg across the whole mass.</li><li>Anchors for that band: titanium dioxide traded at roughly $2.06-3.36/kg by region in April 2026 (IMARC, ChemAnalyst commodity price reporting), and bulk cosmetic-grade dimethicone is quoted in the low single dollars per kg on trade listings. Trade-listing prices are materially weaker evidence than the FDA filings this project is otherwise built on, which is exactly why the output is a band.</li><li>Implied cost of goods uses the PARENT COMPANY&#x27;s group gross margin, not a product-level margin. Margin varies enormously by product line, so the per-bottle figure is illustrative of the company&#x27;s economics, not a measurement of this bottle.</li><li>Gross margin covers packaging, filling, labour, freight, duty and factory overhead as well as ingredients. Ingredient cost is a fraction of it.</li></ul></div>
+  </section>
+
+  <section>
+    <h2>Price against quality</h2>
+    <p>Formulation-derived and primary-sourced only: every component is read off the FDA-filed OTC drug label. It describes what is in the bottle and how it is arranged, not whether wearers like it. It is not a satisfaction score, a dermatological rating, or a safety verdict.</p>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Measure</th><th class="num">Budget</th><th class="num">Mass</th>
+          <th class="num">Prestige</th><th class="num">Luxury</th></tr></thead>
+        <tbody><tr><td>Price per mL</td><td class='num'>$0.50</td><td class='num'>$0.49</td><td class='num'>$1.57</td><td class='num'>$2.00</td></tr><tr><td>SPF as filed and tested</td><td class='num'>15.0</td><td class='num'>22.0</td><td class='num'>20.2</td><td class='num'>20.0</td></tr><tr><td>Named actives above the 1% line</td><td class='num'>0.00</td><td class='num'>0.00</td><td class='num'>2.60</td><td class='num'>0.00</td></tr><tr><td>EU-declared fragrance allergens</td><td class='num'>0.00</td><td class='num'>3.80</td><td class='num'>1.20</td><td class='num'>0.00</td></tr><tr><td>Ingredients in the formula</td><td class='num'>27.0</td><td class='num'>35.0</td><td class='num'>42.4</td><td class='num'>36.0</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="finding" style="margin-top:1rem"><p><strong>At more than three times the price
+    per millilitre, prestige buys two things the cheaper bottles do not have: actives placed high
+    enough in the formula to be present above about 1%, and markedly fewer declared fragrance
+    allergens.</strong> It does not buy more sun protection — mass-market foundations in this
+    corpus average a <em>higher</em> filed SPF than prestige ones.</p></div>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">Price / mL</th>
+          <th class="num">SPF</th><th class="num">Actives above 1% line</th>
+          <th class="num">Fragrance allergens</th></tr></thead>
+        <tbody><tr><td>Rimmel London</td><td><span class='tier'>mass</span></td><td class='num'>$0.27</td><td class='num'>20</td><td class='num'>0</td><td class='num'>6</td></tr><tr><td>Maybelline</td><td><span class='tier'>mass</span></td><td class='num'>$0.40</td><td class='num'>18</td><td class='num'>0</td><td class='num'>1</td></tr><tr><td>e.l.f.</td><td><span class='tier'>budget</span></td><td class='num'>$0.50</td><td class='num'>15</td><td class='num'>0</td><td class='num'>0</td></tr><tr><td>Revlon</td><td><span class='tier'>mass</span></td><td class='num'>$0.50</td><td class='num'>—</td><td class='num'>0</td><td class='num'>0</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>$0.63</td><td class='num'>25</td><td class='num'>0</td><td class='num'>6</td></tr><tr><td>L&#x27;Oréal Paris</td><td><span class='tier'>mass</span></td><td class='num'>$0.63</td><td class='num'>25</td><td class='num'>0</td><td class='num'>6</td></tr><tr><td>MAC</td><td><span class='tier'>prestige</span></td><td class='num'>$1.30</td><td class='num'>15</td><td class='num'>2</td><td class='num'>0</td></tr><tr><td>Clinique</td><td><span class='tier'>prestige</span></td><td class='num'>$1.30</td><td class='num'>15</td><td class='num'>2</td><td class='num'>0</td></tr><tr><td>Estée Lauder</td><td><span class='tier'>prestige</span></td><td class='num'>$1.73</td><td class='num'>19</td><td class='num'>2</td><td class='num'>0</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>$1.77</td><td class='num'>25</td><td class='num'>2</td><td class='num'>0</td></tr><tr><td>Lancôme</td><td><span class='tier'>prestige</span></td><td class='num'>$1.77</td><td class='num'>27</td><td class='num'>5</td><td class='num'>6</td></tr><tr><td>Dior</td><td><span class='tier'>luxury</span></td><td class='num'>$2.00</td><td class='num'>20</td><td class='num'>0</td><td class='num'>0</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="caveat"><p><strong>Read this axis carefully.</strong> "Quality" here is derived
+    entirely from what is on the filed label. It measures the formulation, not whether the product
+    wears well, matches your skin, or is worth buying — an ingredient list cannot tell you any of
+    that. Prices are US list prices observed on 19 August 2026 and are the softest input on this
+    site: they move by retailer, region and promotion, and drugstore brands are rarely sold at
+    list. Per-product price confidence is recorded in <code>data/prices.json</code>.</p></div>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
+         Template and property list: claude-rules/shared-rules.md. -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

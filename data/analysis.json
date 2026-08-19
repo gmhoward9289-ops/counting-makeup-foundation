@@ -1,0 +1,2376 @@
+{
+  "generated_from": "data/corpus.json",
+  "n_products": 12,
+  "issue_9_ingredient_comparison": {
+    "distinct_base_ingredients": 191,
+    "appearing_in_one_product_only": 105,
+    "shared_core_75pct": [
+      "butylene glycol",
+      "dimethicone",
+      "disteardimonium hectorite",
+      "peg-10 dimethicone",
+      "phenoxyethanol",
+      "trimethylsiloxysilicate",
+      "water"
+    ],
+    "prevalence": [
+      {
+        "inci": "water",
+        "products": 12,
+        "share": 1.0
+      },
+      {
+        "inci": "dimethicone",
+        "products": 11,
+        "share": 0.917
+      },
+      {
+        "inci": "phenoxyethanol",
+        "products": 11,
+        "share": 0.917
+      },
+      {
+        "inci": "trimethylsiloxysilicate",
+        "products": 11,
+        "share": 0.917
+      },
+      {
+        "inci": "butylene glycol",
+        "products": 10,
+        "share": 0.833
+      },
+      {
+        "inci": "disteardimonium hectorite",
+        "products": 10,
+        "share": 0.833
+      },
+      {
+        "inci": "peg-10 dimethicone",
+        "products": 9,
+        "share": 0.75
+      },
+      {
+        "inci": "isododecane",
+        "products": 8,
+        "share": 0.667
+      },
+      {
+        "inci": "silica",
+        "products": 8,
+        "share": 0.667
+      },
+      {
+        "inci": "aluminum hydroxide",
+        "products": 7,
+        "share": 0.583
+      },
+      {
+        "inci": "glycerin",
+        "products": 7,
+        "share": 0.583
+      },
+      {
+        "inci": "magnesium sulfate",
+        "products": 7,
+        "share": 0.583
+      },
+      {
+        "inci": "sodium hyaluronate",
+        "products": 7,
+        "share": 0.583
+      },
+      {
+        "inci": "tocopherol",
+        "products": 7,
+        "share": 0.583
+      },
+      {
+        "inci": "alcohol denat",
+        "products": 6,
+        "share": 0.5
+      },
+      {
+        "inci": "bht",
+        "products": 6,
+        "share": 0.5
+      },
+      {
+        "inci": "parfum/fragrance",
+        "products": 6,
+        "share": 0.5
+      },
+      {
+        "inci": "alumina",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "disodium stearoyl glutamate",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "laureth-7",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "lecithin",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "silica silylate",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "sodium chloride",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "synthetic fluorphlogopite",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "tocopheryl acetate",
+        "products": 5,
+        "share": 0.417
+      },
+      {
+        "inci": "alpha-isomethyl ionone",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "bis-peg/ppg-14/14 dimethicone",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "caprylyl glycol",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "citric acid",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "dimethicone/peg-10/15 crosspolymer",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "dipropylene glycol",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "hydrogen dimethicone",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "linalool",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "methyl trimethicone",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "nylon-12",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "triethoxycaprylylsilane",
+        "products": 4,
+        "share": 0.333
+      },
+      {
+        "inci": "benzyl alcohol",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "benzyl salicylate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "c12-15 alkyl benzoate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "cetyl peg/ppg-10/1 dimethicone",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "chlorphenesin",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "citronellol",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "cyclopentasiloxane",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "diisopropyl sebacate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "hdi/trimethylol hexyllactone crosspolymer",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "hexyl cinnamal",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "isopropyl lauroyl sarcosinate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "maltodextrin",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "methicone",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "perlite",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "phenyl trimethicone",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "propylene carbonate",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "xanthan gum",
+        "products": 3,
+        "share": 0.25
+      },
+      {
+        "inci": "alpha-glucan oligosaccharide",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "ascorbyl glucoside",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "butyloctyl salicylate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "calcium aluminum borosilicate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "cellulose",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "dimethicone/vinyl dimethicone crosspolymer",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "disodium edta",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "disodium phosphate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "ethylhexylglycerin",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "geraniol",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "lactobacillus",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "laminaria saccharina extract",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "limonene",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "moringa oleifera seed extract",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "niacinamide",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "peg-9 polydimethylsiloxyethyl dimethicone",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "pentylene glycol",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "polymnia sonchifolia root juice",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "polysilicone-11",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "potassium sorbate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "propylene glycol",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "salicylic acid",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sodium benzoate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sodium citrate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sodium hydroxide",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sodium lactate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sodium pca",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "sorbitan sesquioleate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "tribehenin",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "zinc stearate",
+        "products": 2,
+        "share": 0.167
+      },
+      {
+        "inci": "acetyl glucosamine",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "acetyl hexapeptide-8",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "acrylates/c10-30 alkyl acrylate crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "acrylonitrile/methyl methacrylate/vinylidene chloride copolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "algae extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "allantoin",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "ammonium polyacryloyldimethyl taurate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "amodimethicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "astrocaryum murumuru seed butter",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "betula alba (birch) bark extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "boron nitride",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "c12-15 alkyl ethylhexanoate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "c24-28 alkyl methicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "caffeine",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "camellia sinensis leaf extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "caprylic/capric triglyceride",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "caprylyl methicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "carvone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "cellulose acetate butyrate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "cetyl dimethicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "chloroxylenol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "citral",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "citrullus lanatus (watermelon) fruit extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "citrus aurantium bergamia peel oil",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "citrus aurantium peel oil",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "citrus grandis (grapefruit) peel extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "cyclohexasiloxane",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dextrin",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dimethicone crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dimethicone crosspolymer-3",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dimethicone silylate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dimethicone/polyglycerin-3 crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "dimethiconol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "diphenyl dimethicone/vinyl diphenyl dimethicone/silsesquioxane crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "ethylene brassylate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "ethylparaben",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "fructose",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "glucose",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "hexylene glycol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "hydrogenated lecithin",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "hydrolyzed vegetable protein",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "hydroxyethylcellulose",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "hydroxyethylpiperazine ethane sulfonic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "iris florentina root extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "isobutane",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "isopropyl titanium triisostearate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "isostearic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "isotridecyl isononanoate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "lens esculenta (lentil) fruit extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "litchi chinensis seed extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "magnesium aluminum silicate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "magnesium ascorbyl phosphate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "magnesium stearate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "maltose",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "mandelic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "methoxy amodimethicone/silsesquioxane copolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "methyl methacrylate crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "methyldihydrojasmonate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "methylparaben",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "neopentyl glycol diheptanoate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "peg/ppg-15/15 dimethicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "peg/ppg-18/18 dimethicone",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "pelargonium graveolens flower oil",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "pinene",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyaminopropyl biguanide",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyethylene",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyglutamic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyglyceryl-10 decaisostearate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyglyceryl-3 diisostearate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyglyceryl-3 polyricinoleate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyglyceryl-6 polyricinoleate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyhydroxystearic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polymethyl methacrylate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polymethylsilsesquioxane",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyphosphorylcholine glycol acrylate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "polyvinyl alcohol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "propanediol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "pyrus malus (apple) fruit extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "rose flower oil/extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "saccharomyces lysate extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "salix nigra (willow) bark extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "silica dimethyl silylate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "sodium dehydroacetate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "sodium myristoyl glutamate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "sodium myristoyl sarcosinate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "sorbic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "sorbitol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "stearic acid",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "talc",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tetrahexyldecyl ascorbate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tetramethyl acetyloctahydronaphthalenes",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tetrasodium edta",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "thermus thermophilus ferment",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "trehalose",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tridecyl trimellitate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "triethyl citrate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "triethylhexanoin",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "trihydroxystearin",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "trimethylcyclopentenyl methylisopentenol",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "trisodium ethylenediamine disuccinate",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tromethamine",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "tropaeolum majus flower/leaf/stem extract",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "urea",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "vinyl dimethicone/methicone silsesquioxane crosspolymer",
+        "products": 1,
+        "share": 0.083
+      },
+      {
+        "inci": "yeast extract",
+        "products": 1,
+        "share": 0.083
+      }
+    ]
+  },
+  "issue_15_ownership": {
+    "pairs": [
+      {
+        "a": "elf-flawless-finish",
+        "b": "maybelline-fit-me-dewy",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.167,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "rimmel-lasting-finish",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Coty",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.149,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "revlon-colorstay",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Revlon",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.174,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "loreal-infallible-24h",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.173,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "loreal-infallible-32h",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.17,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.204,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "clinique-even-better",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.143,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.116,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.167,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.147,
+        "head10_overlap": 0.5,
+        "identical_prefix": 0
+      },
+      {
+        "a": "elf-flawless-finish",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.125,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "rimmel-lasting-finish",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Coty",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.145,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "revlon-colorstay",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Revlon",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.098,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "loreal-infallible-24h",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.235,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "loreal-infallible-32h",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.255,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.155,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "clinique-even-better",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.158,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.179,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.3,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.231,
+        "head10_overlap": 0.4,
+        "identical_prefix": 0
+      },
+      {
+        "a": "maybelline-fit-me-dewy",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.204,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "revlon-colorstay",
+        "a_parent": "Coty",
+        "b_parent": "Revlon",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.149,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "loreal-infallible-24h",
+        "a_parent": "Coty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.2,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "loreal-infallible-32h",
+        "a_parent": "Coty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.197,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "Coty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.222,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "clinique-even-better",
+        "a_parent": "Coty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.13,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "Coty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.19,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "Coty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.162,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "Coty",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.161,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "rimmel-lasting-finish",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Coty",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.132,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "loreal-infallible-24h",
+        "a_parent": "Revlon",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.196,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "loreal-infallible-32h",
+        "a_parent": "Revlon",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.192,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "Revlon",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.25,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "clinique-even-better",
+        "a_parent": "Revlon",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.208,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "Revlon",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.167,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "Revlon",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.189,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "Revlon",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.099,
+        "head10_overlap": 0.4,
+        "identical_prefix": 0
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Revlon",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.105,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "loreal-infallible-32h",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": true,
+        "jaccard": 0.865,
+        "head10_overlap": 1.0,
+        "identical_prefix": 12
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.18,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "clinique-even-better",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.109,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.135,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.556,
+        "head10_overlap": 0.9,
+        "identical_prefix": 9
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.269,
+        "head10_overlap": 0.6,
+        "identical_prefix": 0
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.186,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "mac-studio-fix-fluid",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.177,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "clinique-even-better",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.108,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.133,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.614,
+        "head10_overlap": 0.9,
+        "identical_prefix": 9
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.265,
+        "head10_overlap": 0.6,
+        "identical_prefix": 0
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.183,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "clinique-even-better",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.23,
+        "head10_overlap": 0.6,
+        "identical_prefix": 2
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.275,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.194,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.113,
+        "head10_overlap": 0.4,
+        "identical_prefix": 0
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.194,
+        "head10_overlap": 0.7,
+        "identical_prefix": 2
+      },
+      {
+        "a": "clinique-even-better",
+        "b": "esteelauder-double-wear-sheer",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.318,
+        "head10_overlap": 0.6,
+        "identical_prefix": 4
+      },
+      {
+        "a": "clinique-even-better",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.123,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
+        "a": "clinique-even-better",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.114,
+        "head10_overlap": 0.3,
+        "identical_prefix": 0
+      },
+      {
+        "a": "clinique-even-better",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.141,
+        "head10_overlap": 0.6,
+        "identical_prefix": 2
+      },
+      {
+        "a": "esteelauder-double-wear-sheer",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.162,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "esteelauder-double-wear-sheer",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.148,
+        "head10_overlap": 0.3,
+        "identical_prefix": 0
+      },
+      {
+        "a": "esteelauder-double-wear-sheer",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.162,
+        "head10_overlap": 0.4,
+        "identical_prefix": 2
+      },
+      {
+        "a": "lancome-teint-idole-breathable",
+        "b": "lancome-teint-idole-care-glow",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": true,
+        "jaccard": 0.359,
+        "head10_overlap": 0.6,
+        "identical_prefix": 0
+      },
+      {
+        "a": "lancome-teint-idole-breathable",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.18,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "lancome-teint-idole-care-glow",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.145,
+        "head10_overlap": 0.5,
+        "identical_prefix": 0
+      }
+    ],
+    "tests": [
+      {
+        "metric": "head10_overlap",
+        "observed_gap": 0.1962,
+        "same_parent_mean": 0.6,
+        "diff_parent_mean": 0.4038,
+        "permutations": 20000,
+        "p_value": 0.0096
+      },
+      {
+        "metric": "jaccard",
+        "observed_gap": 0.2065,
+        "same_parent_mean": 0.3671,
+        "diff_parent_mean": 0.1606,
+        "permutations": 20000,
+        "p_value": 0.0
+      },
+      {
+        "metric": "identical_prefix",
+        "observed_gap": 2.4412,
+        "same_parent_mean": 3.3846,
+        "diff_parent_mean": 0.9434,
+        "permutations": 20000,
+        "p_value": 0.0057
+      }
+    ],
+    "tests_excluding_same_brand_pairs": [
+      {
+        "metric": "head10_overlap",
+        "observed_gap": 0.1599,
+        "same_parent_mean": 0.5636,
+        "diff_parent_mean": 0.4038,
+        "permutations": 20000,
+        "p_value": 0.0152,
+        "scope": "cross-brand pairs only"
+      },
+      {
+        "metric": "jaccard",
+        "observed_gap": 0.162,
+        "same_parent_mean": 0.3225,
+        "diff_parent_mean": 0.1606,
+        "permutations": 20000,
+        "p_value": 0.0,
+        "scope": "cross-brand pairs only"
+      },
+      {
+        "metric": "identical_prefix",
+        "observed_gap": 1.9657,
+        "same_parent_mean": 2.9091,
+        "diff_parent_mean": 0.9434,
+        "permutations": 20000,
+        "p_value": 0.0006,
+        "scope": "cross-brand pairs only"
+      }
+    ],
+    "most_similar_pairs": [
+      {
+        "a": "loreal-infallible-24h",
+        "b": "loreal-infallible-32h",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": true,
+        "jaccard": 0.865,
+        "head10_overlap": 1.0,
+        "identical_prefix": 12
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.556,
+        "head10_overlap": 0.9,
+        "identical_prefix": 9
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "lancome-teint-idole-breathable",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.614,
+        "head10_overlap": 0.9,
+        "identical_prefix": 9
+      },
+      {
+        "a": "loreal-infallible-24h",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.186,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "loreal-infallible-32h",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.183,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "mac-studio-fix-fluid",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.194,
+        "head10_overlap": 0.7,
+        "identical_prefix": 2
+      },
+      {
+        "a": "lancome-teint-idole-breathable",
+        "b": "dior-forever-skin-wear",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "LVMH",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.18,
+        "head10_overlap": 0.7,
+        "identical_prefix": 1
+      },
+      {
+        "a": "revlon-colorstay",
+        "b": "loreal-infallible-24h",
+        "a_parent": "Revlon",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.196,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      }
+    ]
+  },
+  "issue_14_complexity_rarity": {
+    "per_product": [
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "product": "Flawless Finish Foundation Oil Free SPF 15",
+        "parent_company": "e.l.f. Beauty",
+        "price_tier": "budget",
+        "length": 27,
+        "structural_share": 0.593,
+        "mean_rarity": 0.617,
+        "exclusive_ingredients": 7,
+        "hero_count": 0,
+        "hero_share": 0.0,
+        "hero_median_relative_position": null,
+        "heroes_in_top_third": 0,
+        "heroes": []
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "product": "Fit Me Dewy + Smooth Foundation SPF 18",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "mass",
+        "length": 29,
+        "structural_share": 0.379,
+        "mean_rarity": 0.575,
+        "exclusive_ingredients": 5,
+        "hero_count": 4,
+        "hero_share": 0.138,
+        "hero_median_relative_position": 0.879,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 10,
+            "of": 29,
+            "inci": "niacinamide"
+          },
+          {
+            "position": 25,
+            "of": 29,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 26,
+            "of": 29,
+            "inci": "ascorbyl glucoside"
+          },
+          {
+            "position": 29,
+            "of": 29,
+            "inci": "camellia sinensis leaf extract"
+          }
+        ]
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "product": "Lasting Finish 25HR Foundation SPF 20",
+        "parent_company": "Coty",
+        "price_tier": "mass",
+        "length": 50,
+        "structural_share": 0.44,
+        "mean_rarity": 0.69,
+        "exclusive_ingredients": 13,
+        "hero_count": 4,
+        "hero_share": 0.08,
+        "hero_median_relative_position": 0.8,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 35,
+            "of": 50,
+            "inci": "urea"
+          },
+          {
+            "position": 38,
+            "of": 50,
+            "inci": "allantoin"
+          },
+          {
+            "position": 42,
+            "of": 50,
+            "inci": "trehalose"
+          },
+          {
+            "position": 49,
+            "of": 50,
+            "inci": "sodium hyaluronate"
+          }
+        ]
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "product": "ColorStay Liquid Makeup, Oily/Combination",
+        "parent_company": "Revlon",
+        "price_tier": "mass",
+        "length": 27,
+        "structural_share": 0.741,
+        "mean_rarity": 0.605,
+        "exclusive_ingredients": 6,
+        "hero_count": 2,
+        "hero_share": 0.074,
+        "hero_median_relative_position": 0.778,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 15,
+            "of": 27,
+            "inci": "hydrolyzed vegetable protein"
+          },
+          {
+            "position": 27,
+            "of": 27,
+            "inci": "salicylic acid"
+          }
+        ]
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "product": "Infallible up to 24H Fresh Wear SPF 25",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "mass",
+        "length": 34,
+        "structural_share": 0.5,
+        "mean_rarity": 0.527,
+        "exclusive_ingredients": 2,
+        "hero_count": 0,
+        "hero_share": 0.0,
+        "hero_median_relative_position": null,
+        "heroes_in_top_third": 0,
+        "heroes": []
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "product": "Infallible up to 32H Fresh Wear SPF 25",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "mass",
+        "length": 35,
+        "structural_share": 0.514,
+        "mean_rarity": 0.531,
+        "exclusive_ingredients": 0,
+        "hero_count": 1,
+        "hero_share": 0.029,
+        "hero_median_relative_position": 0.657,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 23,
+            "of": 35,
+            "inci": "ascorbyl glucoside"
+          }
+        ]
+      },
+      {
+        "id": "mac-studio-fix-fluid",
+        "brand": "MAC",
+        "product": "Studio Fix Fluid Broad Spectrum SPF 15",
+        "parent_company": "Est\u00e9e Lauder Companies",
+        "price_tier": "prestige",
+        "length": 38,
+        "structural_share": 0.553,
+        "mean_rarity": 0.616,
+        "exclusive_ingredients": 10,
+        "hero_count": 6,
+        "hero_share": 0.158,
+        "hero_median_relative_position": 0.355,
+        "heroes_in_top_third": 2,
+        "heroes": [
+          {
+            "position": 11,
+            "of": 38,
+            "inci": "algae extract"
+          },
+          {
+            "position": 12,
+            "of": 38,
+            "inci": "laminaria saccharina extract"
+          },
+          {
+            "position": 13,
+            "of": 38,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 14,
+            "of": 38,
+            "inci": "salix nigra (willow) bark extract"
+          },
+          {
+            "position": 16,
+            "of": 38,
+            "inci": "caffeine"
+          },
+          {
+            "position": 27,
+            "of": 38,
+            "inci": "salicylic acid"
+          }
+        ]
+      },
+      {
+        "id": "clinique-even-better",
+        "brand": "Clinique",
+        "product": "Even Better Makeup Broad Spectrum SPF 15",
+        "parent_company": "Est\u00e9e Lauder Companies",
+        "price_tier": "prestige",
+        "length": 37,
+        "structural_share": 0.595,
+        "mean_rarity": 0.662,
+        "exclusive_ingredients": 15,
+        "hero_count": 7,
+        "hero_share": 0.189,
+        "hero_median_relative_position": 0.378,
+        "heroes_in_top_third": 2,
+        "heroes": [
+          {
+            "position": 8,
+            "of": 37,
+            "inci": "yeast extract"
+          },
+          {
+            "position": 12,
+            "of": 37,
+            "inci": "citrus grandis (grapefruit) peel extract"
+          },
+          {
+            "position": 13,
+            "of": 37,
+            "inci": "betula alba (birch) bark extract"
+          },
+          {
+            "position": 14,
+            "of": 37,
+            "inci": "saccharomyces lysate extract"
+          },
+          {
+            "position": 15,
+            "of": 37,
+            "inci": "astrocaryum murumuru seed butter"
+          },
+          {
+            "position": 29,
+            "of": 37,
+            "inci": "magnesium ascorbyl phosphate"
+          },
+          {
+            "position": 34,
+            "of": 37,
+            "inci": "tetrahexyldecyl ascorbate"
+          }
+        ]
+      },
+      {
+        "id": "esteelauder-double-wear-sheer",
+        "brand": "Est\u00e9e Lauder",
+        "product": "Double Wear Sheer Long-Wear Makeup SPF 19",
+        "parent_company": "Est\u00e9e Lauder Companies",
+        "price_tier": "prestige",
+        "length": 50,
+        "structural_share": 0.66,
+        "mean_rarity": 0.677,
+        "exclusive_ingredients": 15,
+        "hero_count": 9,
+        "hero_share": 0.18,
+        "hero_median_relative_position": 0.38,
+        "heroes_in_top_third": 2,
+        "heroes": [
+          {
+            "position": 15,
+            "of": 50,
+            "inci": "polysilicone-11"
+          },
+          {
+            "position": 16,
+            "of": 50,
+            "inci": "laminaria saccharina extract"
+          },
+          {
+            "position": 17,
+            "of": 50,
+            "inci": "litchi chinensis seed extract"
+          },
+          {
+            "position": 18,
+            "of": 50,
+            "inci": "citrullus lanatus (watermelon) fruit extract"
+          },
+          {
+            "position": 19,
+            "of": 50,
+            "inci": "pyrus malus (apple) fruit extract"
+          },
+          {
+            "position": 20,
+            "of": 50,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 21,
+            "of": 50,
+            "inci": "lens esculenta (lentil) fruit extract"
+          },
+          {
+            "position": 22,
+            "of": 50,
+            "inci": "polyglutamic acid"
+          },
+          {
+            "position": 27,
+            "of": 50,
+            "inci": "thermus thermophilus ferment"
+          }
+        ]
+      },
+      {
+        "id": "lancome-teint-idole-breathable",
+        "brand": "Lanc\u00f4me",
+        "product": "Teint Idole Ultra Wear Breathable Coverage SPF 25",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "prestige",
+        "length": 36,
+        "structural_share": 0.5,
+        "mean_rarity": 0.537,
+        "exclusive_ingredients": 0,
+        "hero_count": 5,
+        "hero_share": 0.139,
+        "hero_median_relative_position": 0.417,
+        "heroes_in_top_third": 2,
+        "heroes": [
+          {
+            "position": 10,
+            "of": 36,
+            "inci": "moringa oleifera seed extract"
+          },
+          {
+            "position": 11,
+            "of": 36,
+            "inci": "polymnia sonchifolia root juice"
+          },
+          {
+            "position": 15,
+            "of": 36,
+            "inci": "alpha-glucan oligosaccharide"
+          },
+          {
+            "position": 16,
+            "of": 36,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 31,
+            "of": 36,
+            "inci": "lactobacillus"
+          }
+        ]
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "product": "Teint Idole Ultra Wear Care & Glow SPF 27",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "prestige",
+        "length": 51,
+        "structural_share": 0.275,
+        "mean_rarity": 0.676,
+        "exclusive_ingredients": 17,
+        "hero_count": 11,
+        "hero_share": 0.216,
+        "hero_median_relative_position": 0.373,
+        "heroes_in_top_third": 5,
+        "heroes": [
+          {
+            "position": 11,
+            "of": 51,
+            "inci": "polysilicone-11"
+          },
+          {
+            "position": 12,
+            "of": 51,
+            "inci": "moringa oleifera seed extract"
+          },
+          {
+            "position": 13,
+            "of": 51,
+            "inci": "polymnia sonchifolia root juice"
+          },
+          {
+            "position": 15,
+            "of": 51,
+            "inci": "mandelic acid"
+          },
+          {
+            "position": 17,
+            "of": 51,
+            "inci": "alpha-glucan oligosaccharide"
+          },
+          {
+            "position": 19,
+            "of": 51,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 30,
+            "of": 51,
+            "inci": "lactobacillus"
+          },
+          {
+            "position": 38,
+            "of": 51,
+            "inci": "pelargonium graveolens flower oil"
+          },
+          {
+            "position": 42,
+            "of": 51,
+            "inci": "rose flower oil/extract"
+          },
+          {
+            "position": 48,
+            "of": 51,
+            "inci": "citrus aurantium bergamia peel oil"
+          },
+          {
+            "position": 49,
+            "of": 51,
+            "inci": "citrus aurantium peel oil"
+          }
+        ]
+      },
+      {
+        "id": "dior-forever-skin-wear",
+        "brand": "Dior",
+        "product": "Forever Skin Wear Foundation SPF 20 (10N)",
+        "parent_company": "LVMH",
+        "price_tier": "luxury",
+        "length": 36,
+        "structural_share": 0.472,
+        "mean_rarity": 0.66,
+        "exclusive_ingredients": 15,
+        "hero_count": 4,
+        "hero_share": 0.111,
+        "hero_median_relative_position": 0.764,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 14,
+            "of": 36,
+            "inci": "niacinamide"
+          },
+          {
+            "position": 23,
+            "of": 36,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 32,
+            "of": 36,
+            "inci": "iris florentina root extract"
+          },
+          {
+            "position": 33,
+            "of": 36,
+            "inci": "tropaeolum majus flower/leaf/stem extract"
+          }
+        ]
+      }
+    ],
+    "mean_length_by_tier": {
+      "budget": 27,
+      "mass": 35,
+      "prestige": 42.4,
+      "luxury": 36
+    },
+    "mean_rarity_by_tier": {
+      "budget": 0.617,
+      "mass": 0.586,
+      "prestige": 0.634,
+      "luxury": 0.66
+    },
+    "mean_hero_share_by_tier": {
+      "budget": 0.0,
+      "mass": 0.064,
+      "prestige": 0.176,
+      "luxury": 0.111
+    },
+    "mean_structural_share_by_tier": {
+      "budget": 0.593,
+      "mass": 0.515,
+      "prestige": 0.517,
+      "luxury": 0.472
+    },
+    "mean_hero_position_by_tier": {
+      "mass": 0.778,
+      "prestige": 0.381,
+      "luxury": 0.764
+    },
+    "hero_patterns": [
+      "\\bextract\\b",
+      "\\bferment\\b",
+      "\\bjuice\\b",
+      "\\boil\\b",
+      "\\bbutter\\b",
+      "\\bpeptide\\b",
+      "hyaluron",
+      "niacinamide",
+      "\\bceramide\\b",
+      "collagen",
+      "resveratrol",
+      "ascorb",
+      "\\bcaffeine\\b",
+      "\\bpolyglutamic\\b",
+      "\\bprotein\\b",
+      "\\blactobacillus\\b",
+      "\\balgae\\b",
+      "\\bsaccharina\\b",
+      "salicylic acid",
+      "mandelic acid",
+      "\\ballantoin\\b",
+      "\\bureaa?\\b",
+      "alpha-glucan",
+      "\\btrehalose\\b",
+      "\\bpolysilicone-11\\b"
+    ]
+  }
+}

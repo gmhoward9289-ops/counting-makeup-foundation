@@ -1,0 +1,574 @@
+{
+  "issue_10_cost_vs_price": {
+    "assumptions": [
+      "Formula density assumed 1.05 g/mL. Silicone-and-water foundation emulsions sit near this; it is an assumption, not a filed figure.",
+      "Blended formula cost assumed $3.00-15.00/kg across the whole mass.",
+      "Anchors for that band: titanium dioxide traded at roughly $2.06-3.36/kg by region in April 2026 (IMARC, ChemAnalyst commodity price reporting), and bulk cosmetic-grade dimethicone is quoted in the low single dollars per kg on trade listings. Trade-listing prices are materially weaker evidence than the FDA filings this project is otherwise built on, which is exactly why the output is a band.",
+      "Implied cost of goods uses the PARENT COMPANY's group gross margin, not a product-level margin. Margin varies enormously by product line, so the per-bottle figure is illustrative of the company's economics, not a measurement of this bottle.",
+      "Gross margin covers packaging, filling, labour, freight, duty and factory overhead as well as ingredients. Ingredient cost is a fraction of it."
+    ],
+    "gross_margins": {
+      "Est\u00e9e Lauder Companies": {
+        "fiscal_year_end": "2025-06-30",
+        "revenue_usd": 14326000000,
+        "gross_profit_usd": 10597000000,
+        "gross_margin_pct": 74.0,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0001001250",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001001250&type=10-K"
+        }
+      },
+      "e.l.f. Beauty": {
+        "fiscal_year_end": "2026-03-31",
+        "revenue_usd": 1636472000,
+        "gross_profit_usd": 1157347000,
+        "gross_margin_pct": 70.7,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0001600033",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001600033&type=10-K"
+        }
+      },
+      "Coty": {
+        "fiscal_year_end": "2025-06-30",
+        "revenue_usd": 5892900000,
+        "gross_profit_usd": 3820900000,
+        "gross_margin_pct": 64.8,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0001024305",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001024305&type=10-K"
+        }
+      },
+      "L'Or\u00e9al": {
+        "fiscal_year_end": "2025-12-31",
+        "revenue_usd": null,
+        "revenue_eur": 44052000000,
+        "cost_of_sales_eur": 11313400000,
+        "gross_profit_eur": 32738600000,
+        "gross_margin_pct": 74.3,
+        "source": {
+          "type": "Annual results press release, consolidated profit and loss account",
+          "publisher": "L'Or\u00e9al (loreal-finance.com)",
+          "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+          "note": "L'Or\u00e9al files in France and is not in SEC EDGAR. Figures are as reported in euros; no USD conversion is applied because the margin is a ratio."
+        }
+      },
+      "LVMH": {
+        "fiscal_year_end": "2024-12-31",
+        "revenue_eur": 84683000000,
+        "gross_profit_eur": 56765000000,
+        "gross_margin_pct": 67.0,
+        "source": {
+          "type": "Key figures, consolidated income statement",
+          "publisher": "LVMH (lvmh.com investors)",
+          "url": "https://www.lvmh.com/en/investors/key-figures",
+          "note": "GROUP-WIDE and therefore the weakest comparator in this table. LVMH's gross margin is dominated by Fashion & Leather Goods; Perfumes & Cosmetics is a separate reporting segment whose gross margin LVMH does not break out. FY2024 is used because the published key-figures table does not yet carry a FY2025 gross margin line."
+        }
+      },
+      "Revlon": {
+        "gross_margin_pct": null,
+        "source": {
+          "type": "not available",
+          "note": "Revlon filed for Chapter 11 in 2022 and emerged in 2023 as a private company. It no longer files a 10-K, so no current primary gross-margin figure exists. Revlon ColorStay stays in the ingredient corpus (its FDA label is filed like any other) but is excluded from the margin comparison."
+        }
+      }
+    },
+    "per_product": [
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "price_tier": "budget",
+        "list_usd": 9.99,
+        "price_per_ml": 0.499,
+        "parent_gross_margin_pct": 70.7,
+        "implied_cogs_usd": 2.93,
+        "estimated_formula_cost_usd": [
+          0.063,
+          0.315
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.63,
+          3.15
+        ],
+        "price_confidence": "medium"
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "price_tier": "mass",
+        "list_usd": 11.99,
+        "price_per_ml": 0.4,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 3.08,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.79,
+          3.94
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "price_tier": "mass",
+        "list_usd": 7.99,
+        "price_per_ml": 0.266,
+        "parent_gross_margin_pct": 64.8,
+        "implied_cogs_usd": 2.81,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          1.19,
+          5.92
+        ],
+        "price_confidence": "low"
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "price_tier": "mass",
+        "list_usd": 14.99,
+        "price_per_ml": 0.5,
+        "parent_gross_margin_pct": null,
+        "implied_cogs_usd": null,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.63,
+          3.16
+        ],
+        "price_confidence": "low"
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "price_tier": "mass",
+        "list_usd": 18.99,
+        "price_per_ml": 0.633,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 4.88,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.5,
+          2.49
+        ],
+        "price_confidence": "low"
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "price_tier": "mass",
+        "list_usd": 18.99,
+        "price_per_ml": 0.633,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 4.88,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.5,
+          2.49
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "mac-studio-fix-fluid",
+        "brand": "MAC",
+        "price_tier": "prestige",
+        "list_usd": 39.0,
+        "price_per_ml": 1.3,
+        "parent_gross_margin_pct": 74.0,
+        "implied_cogs_usd": 10.14,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.24,
+          1.21
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "clinique-even-better",
+        "brand": "Clinique",
+        "price_tier": "prestige",
+        "list_usd": 39.0,
+        "price_per_ml": 1.3,
+        "parent_gross_margin_pct": 74.0,
+        "implied_cogs_usd": 10.14,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.24,
+          1.21
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "esteelauder-double-wear-sheer",
+        "brand": "Est\u00e9e Lauder",
+        "price_tier": "prestige",
+        "list_usd": 52.0,
+        "price_per_ml": 1.733,
+        "parent_gross_margin_pct": 74.0,
+        "implied_cogs_usd": 13.52,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.18,
+          0.91
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "lancome-teint-idole-breathable",
+        "brand": "Lanc\u00f4me",
+        "price_tier": "prestige",
+        "list_usd": 53.0,
+        "price_per_ml": 1.767,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 13.62,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.18,
+          0.89
+        ],
+        "price_confidence": "medium"
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "price_tier": "prestige",
+        "list_usd": 53.0,
+        "price_per_ml": 1.767,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 13.62,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.18,
+          0.89
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "dior-forever-skin-wear",
+        "brand": "Dior",
+        "price_tier": "luxury",
+        "list_usd": 60.0,
+        "price_per_ml": 2.0,
+        "parent_gross_margin_pct": 67.0,
+        "implied_cogs_usd": 19.8,
+        "estimated_formula_cost_usd": [
+          0.095,
+          0.473
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.16,
+          0.79
+        ],
+        "price_confidence": "high"
+      }
+    ]
+  },
+  "issue_13_price_quality_matrix": {
+    "quality_definition": "Formulation-derived and primary-sourced only: every component is read off the FDA-filed OTC drug label. It describes what is in the bottle and how it is arranged, not whether wearers like it. It is not a satisfaction score, a dermatological rating, or a safety verdict.",
+    "components": {
+      "spf_filed": "The FDA-tested SPF on the filing. A measured number, not a claim.",
+      "uv_actives_declared": "How many distinct UV filters are declared as actives.",
+      "named_actives_above_1pct_line": "Marketing-facing actives sitting in the top third of the declared order, where the descending-concentration rule still binds. An active below that line is present at under about 1%.",
+      "eu_declared_allergens": "Count of the 26 fragrance sensitisers the EU requires to be named. Lower is better.",
+      "ingredient_count": "Length of the base formula."
+    },
+    "per_product": [
+      {
+        "id": "elf-flawless-finish",
+        "brand": "e.l.f.",
+        "price_tier": "budget",
+        "list_usd": 9.99,
+        "price_per_ml": 0.499,
+        "spf_filed": 15,
+        "uv_actives_declared": 3,
+        "named_actives_total": 0,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 27
+      },
+      {
+        "id": "maybelline-fit-me-dewy",
+        "brand": "Maybelline",
+        "price_tier": "mass",
+        "list_usd": 11.99,
+        "price_per_ml": 0.4,
+        "spf_filed": 18,
+        "uv_actives_declared": 1,
+        "named_actives_total": 4,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 1,
+        "eu_declared_allergen_list": [
+          "alpha-isomethyl ionone"
+        ],
+        "ingredient_count": 29
+      },
+      {
+        "id": "rimmel-lasting-finish",
+        "brand": "Rimmel London",
+        "price_tier": "mass",
+        "list_usd": 7.99,
+        "price_per_ml": 0.266,
+        "spf_filed": 20,
+        "uv_actives_declared": 1,
+        "named_actives_total": 4,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 6,
+        "eu_declared_allergen_list": [
+          "alpha-isomethyl ionone",
+          "benzyl salicylate",
+          "geraniol",
+          "hexyl cinnamal",
+          "limonene",
+          "linalool"
+        ],
+        "ingredient_count": 50
+      },
+      {
+        "id": "revlon-colorstay",
+        "brand": "Revlon",
+        "price_tier": "mass",
+        "list_usd": 14.99,
+        "price_per_ml": 0.5,
+        "spf_filed": null,
+        "uv_actives_declared": 2,
+        "named_actives_total": 2,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 27
+      },
+      {
+        "id": "loreal-infallible-24h",
+        "brand": "L'Or\u00e9al Paris",
+        "price_tier": "mass",
+        "list_usd": 18.99,
+        "price_per_ml": 0.633,
+        "spf_filed": 25,
+        "uv_actives_declared": 2,
+        "named_actives_total": 0,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 6,
+        "eu_declared_allergen_list": [
+          "alpha-isomethyl ionone",
+          "benzyl alcohol",
+          "benzyl salicylate",
+          "citronellol",
+          "hexyl cinnamal",
+          "linalool"
+        ],
+        "ingredient_count": 34
+      },
+      {
+        "id": "loreal-infallible-32h",
+        "brand": "L'Or\u00e9al Paris",
+        "price_tier": "mass",
+        "list_usd": 18.99,
+        "price_per_ml": 0.633,
+        "spf_filed": 25,
+        "uv_actives_declared": 2,
+        "named_actives_total": 1,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 6,
+        "eu_declared_allergen_list": [
+          "alpha-isomethyl ionone",
+          "benzyl alcohol",
+          "benzyl salicylate",
+          "citronellol",
+          "hexyl cinnamal",
+          "linalool"
+        ],
+        "ingredient_count": 35
+      },
+      {
+        "id": "mac-studio-fix-fluid",
+        "brand": "MAC",
+        "price_tier": "prestige",
+        "list_usd": 39.0,
+        "price_per_ml": 1.3,
+        "spf_filed": 15,
+        "uv_actives_declared": 2,
+        "named_actives_total": 6,
+        "named_actives_above_1pct_line": 2,
+        "named_actives_above_line_list": [
+          "algae extract",
+          "laminaria saccharina extract"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 38
+      },
+      {
+        "id": "clinique-even-better",
+        "brand": "Clinique",
+        "price_tier": "prestige",
+        "list_usd": 39.0,
+        "price_per_ml": 1.3,
+        "spf_filed": 15,
+        "uv_actives_declared": 3,
+        "named_actives_total": 7,
+        "named_actives_above_1pct_line": 2,
+        "named_actives_above_line_list": [
+          "yeast extract",
+          "citrus grandis (grapefruit) peel extract"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 37
+      },
+      {
+        "id": "esteelauder-double-wear-sheer",
+        "brand": "Est\u00e9e Lauder",
+        "price_tier": "prestige",
+        "list_usd": 52.0,
+        "price_per_ml": 1.733,
+        "spf_filed": 19,
+        "uv_actives_declared": 2,
+        "named_actives_total": 9,
+        "named_actives_above_1pct_line": 2,
+        "named_actives_above_line_list": [
+          "polysilicone-11",
+          "laminaria saccharina extract"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 50
+      },
+      {
+        "id": "lancome-teint-idole-breathable",
+        "brand": "Lanc\u00f4me",
+        "price_tier": "prestige",
+        "list_usd": 53.0,
+        "price_per_ml": 1.767,
+        "spf_filed": 25,
+        "uv_actives_declared": 2,
+        "named_actives_total": 5,
+        "named_actives_above_1pct_line": 2,
+        "named_actives_above_line_list": [
+          "moringa oleifera seed extract",
+          "polymnia sonchifolia root juice"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 36
+      },
+      {
+        "id": "lancome-teint-idole-care-glow",
+        "brand": "Lanc\u00f4me",
+        "price_tier": "prestige",
+        "list_usd": 53.0,
+        "price_per_ml": 1.767,
+        "spf_filed": 27,
+        "uv_actives_declared": 1,
+        "named_actives_total": 11,
+        "named_actives_above_1pct_line": 5,
+        "named_actives_above_line_list": [
+          "polysilicone-11",
+          "moringa oleifera seed extract",
+          "polymnia sonchifolia root juice",
+          "mandelic acid",
+          "alpha-glucan oligosaccharide"
+        ],
+        "eu_declared_allergens": 6,
+        "eu_declared_allergen_list": [
+          "benzyl alcohol",
+          "citral",
+          "citronellol",
+          "geraniol",
+          "limonene",
+          "linalool"
+        ],
+        "ingredient_count": 51
+      },
+      {
+        "id": "dior-forever-skin-wear",
+        "brand": "Dior",
+        "price_tier": "luxury",
+        "list_usd": 60.0,
+        "price_per_ml": 2.0,
+        "spf_filed": 20,
+        "uv_actives_declared": 2,
+        "named_actives_total": 4,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 36
+      }
+    ],
+    "by_tier": {
+      "budget": {
+        "n": 1,
+        "mean_price_per_ml": 0.5,
+        "mean_spf": 15,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 27
+      },
+      "mass": {
+        "n": 5,
+        "mean_price_per_ml": 0.49,
+        "mean_spf": 22,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 3.8,
+        "mean_ingredient_count": 35
+      },
+      "prestige": {
+        "n": 5,
+        "mean_price_per_ml": 1.57,
+        "mean_spf": 20.2,
+        "mean_actives_above_line": 2.6,
+        "mean_allergens": 1.2,
+        "mean_ingredient_count": 42.4
+      },
+      "luxury": {
+        "n": 1,
+        "mean_price_per_ml": 2.0,
+        "mean_spf": 20,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 36
+      }
+    }
+  }
+}
