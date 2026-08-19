@@ -1,0 +1,20 @@
+{
+  "_note": "US list prices observed 2026-08-19. Price is by far the softest input in this project and is NOT of the same evidential class as the FDA-filed ingredient declarations: list prices move by retailer, region, promotion and day, and drugstore brands in particular are almost never sold at list. Each entry records where the figure was seen and when. Analyses use price_tier as the primary axis and treat price-per-mL as indicative only.",
+  "currency": "USD",
+  "observed": "2026-08-19",
+  "volume_source": "Package volume is taken from the FDA-filed label (SPL packaging section), not from the retailer listing.",
+  "prices": {
+    "elf-flawless-finish":            {"list_usd": 9.99,  "volume_ml": 20, "seen_at": "Walmart",  "confidence": "medium", "note": "0.68 fl oz. e.l.f. list price has ranged $6-10 across retailers."},
+    "maybelline-fit-me-dewy":         {"list_usd": 11.99, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "high",   "note": "Observed 2026-08-05."},
+    "rimmel-lasting-finish":          {"list_usd": 7.99,  "volume_ml": 30, "seen_at": "CVS",      "confidence": "low",    "note": "Rimmel US distribution has thinned; this is the least reliable price in the table."},
+    "revlon-colorstay":               {"list_usd": 14.99, "volume_ml": 30, "seen_at": "Target",   "confidence": "low",    "note": "Observed range $11.43-15.89 across retailers."},
+    "loreal-infallible-24h":          {"list_usd": 18.99, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "low",    "note": "Superseded by the 32H version; priced at the current line price."},
+    "loreal-infallible-32h":          {"list_usd": 18.99, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "high",   "note": "Observed 2026."},
+    "mac-studio-fix-fluid":           {"list_usd": 39.00, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "high",   "note": "Observed 2026."},
+    "clinique-even-better":           {"list_usd": 39.00, "volume_ml": 30, "seen_at": "Sephora",  "confidence": "high",   "note": "Observed 2026-07-24; corroborated at Macy's."},
+    "esteelauder-double-wear-sheer":  {"list_usd": 52.00, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "high",   "note": "Observed 2025-08-12."},
+    "lancome-teint-idole-breathable": {"list_usd": 53.00, "volume_ml": 30, "seen_at": "Macy's",   "confidence": "medium", "note": "Macy's lists the Teint Idole Ultra Wear line from $53 to $57."},
+    "lancome-teint-idole-care-glow":  {"list_usd": 53.00, "volume_ml": 30, "seen_at": "Sephora",  "confidence": "high",   "note": "Observed 2026-08-11."},
+    "dior-forever-skin-wear":         {"list_usd": 60.00, "volume_ml": 30, "seen_at": "dior.com", "confidence": "high",   "note": "Brand's own US site."}
+  }
+}

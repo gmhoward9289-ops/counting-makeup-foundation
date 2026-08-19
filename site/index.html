@@ -61,6 +61,10 @@
     padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem;
   }
   .card h2 { margin: 0; font-size: 1.05rem; color: var(--accent); }
+  .card h2 a { color: inherit; text-decoration: none; }
+  .card h2 a:hover { text-decoration: underline; }
+  .card.live { border-color: var(--accent); }
+  .card .finding { font-size: .88rem; color: var(--ink); margin: 0; }
   .card p { margin: 0; color: var(--muted); font-size: .9rem; }
   .card .method { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--none); margin-top: auto; padding-top: .5rem; }
 
@@ -86,34 +90,36 @@
     <p class="lede">Sourced research on the cosmetics industry. Similar products, different
     brands, side by side: the ingredients, the prices, and the claims — with every figure
     cited to a primary source.</p>
-    <span class="status">Research in progress — first corpus underway</span>
+    <span class="status">First corpus published — 12 foundations, every ingredient list from an FDA filing</span>
   </header>
 
   <section class="cards" aria-label="The four questions">
-    <div class="card">
-      <h2>What's in my makeup?</h2>
-      <p>INCI ingredient lists compared across brands selling the same kind of product.
-      What's shared, what actually differs, and where a formula is mostly the same thing
-      in different packaging.</p>
-      <p class="method">Source: INCI declarations · EU CosIng</p>
+    <div class="card live">
+      <h2><a href="/ingredients/">What's in my makeup?</a></h2>
+      <p>Twelve foundations compared ingredient by ingredient, with a slider to put any two side by side. 191 distinct ingredients; only 7 appear in three-quarters of them.</p>
+      <p class="method">Source: FDA-filed OTC drug labels (DailyMed)</p>
     </div>
-    <div class="card">
-      <h2>Is it really better?</h2>
-      <p>Does a $60 foundation differ from a $12 one where it counts? Formula-by-formula
-      comparison across price tiers, not marketing copy.</p>
-      <p class="method">Source: ingredient corpus · published tests</p>
+    <div class="card live">
+      <h2><a href="/complexity/">Is it really better?</a></h2>
+      <p>Does a dearer formula mean rarer chemistry? Measured: price buys a longer list and better-placed actives, but ingredient rarity is flat across every tier.</p>
+      <p class="method">Source: ingredient corpus · label ordering rule</p>
     </div>
-    <div class="card">
-      <h2>What am I paying for?</h2>
-      <p>Cost-to-make versus retail price: bottom-up ingredient cost estimates paired with
-      gross margins from public filings. Estimates are always labeled as estimates.</p>
-      <p class="method">Source: annual filings · supplier pricing</p>
+    <div class="card live">
+      <h2><a href="/price/">What am I paying for?</a></h2>
+      <p>e.l.f. runs a 70.7% gross margin; Estée Lauder runs 74.0%. The formula in a $53 bottle costs about what the formula in a $12 bottle costs.</p>
+      <p class="method">Source: SEC 10-K · company annual reports</p>
     </div>
     <div class="card">
       <h2>Was it sourced ethically?</h2>
       <p>Sourcing claims and the standards behind them — which certifications actually
       bind, and what they do and don't cover.</p>
       <p class="method">Source: certification bodies · disclosures</p>
+    </div>
+    <div class="card live">
+      <h2><a href="/ownership/">Who really makes it?</a></h2>
+      <p>A $19 L'Oréal Paris foundation and a $53 Lancôme one declare the same first nine
+      ingredients in the same order. Both brands belong to L'Oréal.</p>
+      <p class="method">Source: FDA filings · permutation test</p>
     </div>
   </section>
 
@@ -123,7 +129,7 @@
     <a href="https://wings.swamplink.com/">wings</a>. No figure without a citation, no
     citation without checking it says what we claim it says. The full standard is
     written down in the
-    <a href="https://swamplink.com/data/policy/">SwampLink data policy</a>.
+    <a href="https://swamplink.com/data/policy/">SwampLink data policy</a>, and this site's limits are in its <a href="/disclaimer/">disclaimer</a>.
   </section>
 
   <footer>

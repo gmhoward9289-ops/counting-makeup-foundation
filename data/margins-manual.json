@@ -1,0 +1,35 @@
+{
+  "L'Oréal": {
+    "fiscal_year_end": "2025-12-31",
+    "revenue_usd": null,
+    "revenue_eur": 44052000000,
+    "cost_of_sales_eur": 11313400000,
+    "gross_profit_eur": 32738600000,
+    "gross_margin_pct": 74.3,
+    "source": {
+      "type": "Annual results press release, consolidated profit and loss account",
+      "publisher": "L'Oréal (loreal-finance.com)",
+      "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+      "note": "L'Oréal files in France and is not in SEC EDGAR. Figures are as reported in euros; no USD conversion is applied because the margin is a ratio."
+    }
+  },
+  "LVMH": {
+    "fiscal_year_end": "2024-12-31",
+    "revenue_eur": 84683000000,
+    "gross_profit_eur": 56765000000,
+    "gross_margin_pct": 67.0,
+    "source": {
+      "type": "Key figures, consolidated income statement",
+      "publisher": "LVMH (lvmh.com investors)",
+      "url": "https://www.lvmh.com/en/investors/key-figures",
+      "note": "GROUP-WIDE and therefore the weakest comparator in this table. LVMH's gross margin is dominated by Fashion & Leather Goods; Perfumes & Cosmetics is a separate reporting segment whose gross margin LVMH does not break out. FY2024 is used because the published key-figures table does not yet carry a FY2025 gross margin line."
+    }
+  },
+  "Revlon": {
+    "gross_margin_pct": null,
+    "source": {
+      "type": "not available",
+      "note": "Revlon filed for Chapter 11 in 2022 and emerged in 2023 as a private company. It no longer files a 10-K, so no current primary gross-margin figure exists. Revlon ColorStay stays in the ingredient corpus (its FDA label is filed like any other) but is excluded from the margin comparison."
+    }
+  }
+}

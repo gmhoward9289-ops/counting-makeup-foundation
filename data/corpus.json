@@ -1,0 +1,2826 @@
+{
+  "corpus": "foundation-spf-liquid-us",
+  "description": "US liquid/cream foundations that carry an SPF claim. SPF cosmetics are regulated as OTC drugs in the United States, so the manufacturer files the complete ingredient declaration with the FDA. Every product in this corpus is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid, lotion, cream or emulsion foundation (no powders, sticks or cushions -- different vehicle, not comparable).",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "SPF-only inclusion is a selection bias: it excludes SPF-free foundations (Est\u00e9e Lauder Double Wear, Maybelline Fit Me Matte + Poreless, Fenty Pro Filt'r). Those are the same product category but have no primary filing, so they are excluded rather than sourced more weakly.",
+    "Shade-level filings exist for some brands (Dior files one label per shade). The base formula is identical across shades; only the +/- colorant list varies. One shade is taken as representative and the shade is recorded.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos. Corrections are recorded per-ingredient in the normalization layer, never silently."
+  ],
+  "retrieved": "2026-08-19",
+  "products": [
+    {
+      "id": "elf-flawless-finish",
+      "brand": "e.l.f.",
+      "product": "Flawless Finish Foundation Oil Free SPF 15",
+      "parent_company": "e.l.f. Beauty",
+      "price_tier": "budget",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "aa8df265-c098-4c67-b68b-2eeff0f45591",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa8df265-c098-4c67-b68b-2eeff0f45591",
+        "label_effective_date": "2024-12-12"
+      },
+      "active_ingredients_as_filed": "Active Ingredient: Titanium Dioxide: 4.45% Octinoxate: 4.0% Octisalate: 3.0%",
+      "inactive_ingredients_as_filed": "Inactive Ingredient: Water (Aqua), Glycerin, Isododecane, Dimethicone, Cyclopentasiloxane, Propylene Glycol, C12-15 Alkyl Benzoate, Cetyl PEG/PPG-10/1 Dimethicone, Tridecyl Trimellitate, Sorbitan Sesquioleate, Cyclohexasiloxane, Dimethicone/Vinyl Dimethicone Crosspolymer, Polymethyl Methacrylate, Boron Nitride, Magnesium Sulfate, Magnesium Stearate, PEG/PPG-15/15 Dimethicone, Disteardimonium Hectorite, Silica Dimethyl Silylate, Aluminum Hydroxide, Triethoxycaprylylsilane, Silica, Alumina, Fragrance (Parfum), Phenoxyethanol, Caprylyl Glycol, EthylhexylglycerinMA May contain: Iron Oxides (CI 77491, CI 77492, CI 77499)",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water (Aqua)",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 3,
+          "as_filed": "Isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 4,
+          "as_filed": "Dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 5,
+          "as_filed": "Cyclopentasiloxane",
+          "inci": "cyclopentasiloxane"
+        },
+        {
+          "position": 6,
+          "as_filed": "Propylene Glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "C12-15 Alkyl Benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 8,
+          "as_filed": "Cetyl PEG/PPG-10/1 Dimethicone",
+          "inci": "cetyl peg/ppg-10/1 dimethicone"
+        },
+        {
+          "position": 9,
+          "as_filed": "Tridecyl Trimellitate",
+          "inci": "tridecyl trimellitate"
+        },
+        {
+          "position": 10,
+          "as_filed": "Sorbitan Sesquioleate",
+          "inci": "sorbitan sesquioleate"
+        },
+        {
+          "position": 11,
+          "as_filed": "Cyclohexasiloxane",
+          "inci": "cyclohexasiloxane"
+        },
+        {
+          "position": 12,
+          "as_filed": "Dimethicone/Vinyl Dimethicone Crosspolymer",
+          "inci": "dimethicone/vinyl dimethicone crosspolymer"
+        },
+        {
+          "position": 13,
+          "as_filed": "Polymethyl Methacrylate",
+          "inci": "polymethyl methacrylate"
+        },
+        {
+          "position": 14,
+          "as_filed": "Boron Nitride",
+          "inci": "boron nitride"
+        },
+        {
+          "position": 15,
+          "as_filed": "Magnesium Sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 16,
+          "as_filed": "Magnesium Stearate",
+          "inci": "magnesium stearate"
+        },
+        {
+          "position": 17,
+          "as_filed": "PEG/PPG-15/15 Dimethicone",
+          "inci": "peg/ppg-15/15 dimethicone"
+        },
+        {
+          "position": 18,
+          "as_filed": "Disteardimonium Hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 19,
+          "as_filed": "Silica Dimethyl Silylate",
+          "inci": "silica dimethyl silylate"
+        },
+        {
+          "position": 20,
+          "as_filed": "Aluminum Hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 21,
+          "as_filed": "Triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 22,
+          "as_filed": "Silica",
+          "inci": "silica"
+        },
+        {
+          "position": 23,
+          "as_filed": "Alumina",
+          "inci": "alumina"
+        },
+        {
+          "position": 24,
+          "as_filed": "Fragrance (Parfum)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 25,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 26,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 27,
+          "as_filed": "EthylhexylglycerinMA",
+          "inci": "ethylhexylglycerin"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
+          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+        }
+      ],
+      "label_corrections": [
+        {
+          "as_filed": "EthylhexylglycerinMA",
+          "read_as": "ethylhexylglycerin"
+        }
+      ],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Water (Aqua)",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "Fragrance (Parfum)",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "maybelline-fit-me-dewy",
+      "brand": "Maybelline",
+      "product": "Fit Me Dewy + Smooth Foundation SPF 18",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "5460ca0d-f6b4-423d-e063-6294a90afce7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5460ca0d-f6b4-423d-e063-6294a90afce7",
+        "label_effective_date": "2026-06-16"
+      },
+      "active_ingredients_as_filed": "Active ingredient Octisalate 5%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, dimethicone, glycerin, isododecane, isotridecyl isononanoate, propanediol, butyloctyl salicylate, PEG-10 dimethicone, PEG-9 polydimethylsiloxyethyl dimethicone, niacinamide, trimethylsiloxysilicate, synthetic fluorphlogopite, phenoxyethanol, dimethicone/polyglycerin-3 crosspolymer, disteardimonium hectorite, sodium chloride, disodium stearoyl glutamate, chlorphenesin, tocopherol, trisodium ethylenediamine disuccinate, ethylhexylglycerin, aluminum hydroxide, maltodextrin, citric acid, sodium hyaluronate, ascorbyl glucoside, dipropylene glycol, alpha-isomethyl ionone, camellia sinensis leaf extract; may contain: titanium dioxide, iron oxides",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 4,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 5,
+          "as_filed": "isotridecyl isononanoate",
+          "inci": "isotridecyl isononanoate"
+        },
+        {
+          "position": 6,
+          "as_filed": "propanediol",
+          "inci": "propanediol"
+        },
+        {
+          "position": 7,
+          "as_filed": "butyloctyl salicylate",
+          "inci": "butyloctyl salicylate"
+        },
+        {
+          "position": 8,
+          "as_filed": "PEG-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 9,
+          "as_filed": "PEG-9 polydimethylsiloxyethyl dimethicone",
+          "inci": "peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 10,
+          "as_filed": "niacinamide",
+          "inci": "niacinamide"
+        },
+        {
+          "position": 11,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 12,
+          "as_filed": "synthetic fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 13,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 14,
+          "as_filed": "dimethicone/polyglycerin-3 crosspolymer",
+          "inci": "dimethicone/polyglycerin-3 crosspolymer"
+        },
+        {
+          "position": 15,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 16,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 17,
+          "as_filed": "disodium stearoyl glutamate",
+          "inci": "disodium stearoyl glutamate"
+        },
+        {
+          "position": 18,
+          "as_filed": "chlorphenesin",
+          "inci": "chlorphenesin"
+        },
+        {
+          "position": 19,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 20,
+          "as_filed": "trisodium ethylenediamine disuccinate",
+          "inci": "trisodium ethylenediamine disuccinate"
+        },
+        {
+          "position": 21,
+          "as_filed": "ethylhexylglycerin",
+          "inci": "ethylhexylglycerin"
+        },
+        {
+          "position": 22,
+          "as_filed": "aluminum hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 23,
+          "as_filed": "maltodextrin",
+          "inci": "maltodextrin"
+        },
+        {
+          "position": 24,
+          "as_filed": "citric acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 25,
+          "as_filed": "sodium hyaluronate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 26,
+          "as_filed": "ascorbyl glucoside",
+          "inci": "ascorbyl glucoside"
+        },
+        {
+          "position": 27,
+          "as_filed": "dipropylene glycol",
+          "inci": "dipropylene glycol"
+        },
+        {
+          "position": 28,
+          "as_filed": "alpha-isomethyl ionone",
+          "inci": "alpha-isomethyl ionone"
+        },
+        {
+          "position": 29,
+          "as_filed": "camellia sinensis leaf extract",
+          "inci": "camellia sinensis leaf extract"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides",
+          "inci": "iron oxides"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "rimmel-lasting-finish",
+      "brand": "Rimmel London",
+      "product": "Lasting Finish 25HR Foundation SPF 20",
+      "parent_company": "Coty",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "cfd041e9-ed40-dc93-e053-2995a90a9699",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cfd041e9-ed40-dc93-e053-2995a90a9699",
+        "label_effective_date": "2024-11-19"
+      },
+      "active_ingredients_as_filed": "Octinoxate 2.5%",
+      "inactive_ingredients_as_filed": "Inactive ingredients Water, Cyclopentasiloxane, Butylene Glucol, Talc, Cetyl PEG/PPG-10/1 Dimethicone, Trimethylsiloxysilicate, Sodium PCA, Silica Silylate, C12-15 Alkyl Ethylhexanoate, Dimethicone/vinyl Dimethicone Crosspolymer, Magnesium Sulfate, Zinc Stearate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Bis-PEG/PPG- 14/14 Dimethicone, Amodimethicone, Lecithin, Tribehenin, Laureth-7, Disteardimonium Hectorite, Phenoxyethanol, Trihydroxystearin, Chlorphenesin, Triethoxycaprylysilance, Parfum.Fragrance, Xanthan Gum, Pentylene Glycol, Dimethiconol, Hydroxyethyleclulose, Propylene Carbonate, Tocopheryl Acetate, Glycerin, Citric Acid, Fructose, Sodium Hydroxide, Urea, Hexyl Cinnamal, Limonene , Allantoin, Maltose, SOdium Chloride, Sodium Lactate, Trehalose, Benzyl Salicylate, Linalool, Geraniol, BHT, Alpha-Isomethyl Lonone, GLucose, Sodium Hyaluraonate, Penaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, [May Contain/Peut Contenir/+-: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Cyclopentasiloxane",
+          "inci": "cyclopentasiloxane"
+        },
+        {
+          "position": 3,
+          "as_filed": "Butylene Glucol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 4,
+          "as_filed": "Talc",
+          "inci": "talc"
+        },
+        {
+          "position": 5,
+          "as_filed": "Cetyl PEG/PPG-10/1 Dimethicone",
+          "inci": "cetyl peg/ppg-10/1 dimethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "Trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 7,
+          "as_filed": "Sodium PCA",
+          "inci": "sodium pca"
+        },
+        {
+          "position": 8,
+          "as_filed": "Silica Silylate",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 9,
+          "as_filed": "C12-15 Alkyl Ethylhexanoate",
+          "inci": "c12-15 alkyl ethylhexanoate"
+        },
+        {
+          "position": 10,
+          "as_filed": "Dimethicone/vinyl Dimethicone Crosspolymer",
+          "inci": "dimethicone/vinyl dimethicone crosspolymer"
+        },
+        {
+          "position": 11,
+          "as_filed": "Magnesium Sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 12,
+          "as_filed": "Zinc Stearate",
+          "inci": "zinc stearate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+          "inci": "acrylates/c10-30 alkyl acrylate crosspolymer"
+        },
+        {
+          "position": 14,
+          "as_filed": "Bis-PEG/PPG-14/14 Dimethicone",
+          "inci": "bis-peg/ppg-14/14 dimethicone"
+        },
+        {
+          "position": 15,
+          "as_filed": "Amodimethicone",
+          "inci": "amodimethicone"
+        },
+        {
+          "position": 16,
+          "as_filed": "Lecithin",
+          "inci": "lecithin"
+        },
+        {
+          "position": 17,
+          "as_filed": "Tribehenin",
+          "inci": "tribehenin"
+        },
+        {
+          "position": 18,
+          "as_filed": "Laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 19,
+          "as_filed": "Disteardimonium Hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 20,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 21,
+          "as_filed": "Trihydroxystearin",
+          "inci": "trihydroxystearin"
+        },
+        {
+          "position": 22,
+          "as_filed": "Chlorphenesin",
+          "inci": "chlorphenesin"
+        },
+        {
+          "position": 23,
+          "as_filed": "Triethoxycaprylysilance",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 24,
+          "as_filed": "Parfum.Fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 25,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 26,
+          "as_filed": "Pentylene Glycol",
+          "inci": "pentylene glycol"
+        },
+        {
+          "position": 27,
+          "as_filed": "Dimethiconol",
+          "inci": "dimethiconol"
+        },
+        {
+          "position": 28,
+          "as_filed": "Hydroxyethyleclulose",
+          "inci": "hydroxyethylcellulose"
+        },
+        {
+          "position": 29,
+          "as_filed": "Propylene Carbonate",
+          "inci": "propylene carbonate"
+        },
+        {
+          "position": 30,
+          "as_filed": "Tocopheryl Acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 31,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 32,
+          "as_filed": "Citric Acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 33,
+          "as_filed": "Fructose",
+          "inci": "fructose"
+        },
+        {
+          "position": 34,
+          "as_filed": "Sodium Hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 35,
+          "as_filed": "Urea",
+          "inci": "urea"
+        },
+        {
+          "position": 36,
+          "as_filed": "Hexyl Cinnamal",
+          "inci": "hexyl cinnamal"
+        },
+        {
+          "position": 37,
+          "as_filed": "Limonene",
+          "inci": "limonene"
+        },
+        {
+          "position": 38,
+          "as_filed": "Allantoin",
+          "inci": "allantoin"
+        },
+        {
+          "position": 39,
+          "as_filed": "Maltose",
+          "inci": "maltose"
+        },
+        {
+          "position": 40,
+          "as_filed": "SOdium Chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 41,
+          "as_filed": "Sodium Lactate",
+          "inci": "sodium lactate"
+        },
+        {
+          "position": 42,
+          "as_filed": "Trehalose",
+          "inci": "trehalose"
+        },
+        {
+          "position": 43,
+          "as_filed": "Benzyl Salicylate",
+          "inci": "benzyl salicylate"
+        },
+        {
+          "position": 44,
+          "as_filed": "Linalool",
+          "inci": "linalool"
+        },
+        {
+          "position": 45,
+          "as_filed": "Geraniol",
+          "inci": "geraniol"
+        },
+        {
+          "position": 46,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 47,
+          "as_filed": "Alpha-Isomethyl Lonone",
+          "inci": "alpha-isomethyl ionone"
+        },
+        {
+          "position": 48,
+          "as_filed": "GLucose",
+          "inci": "glucose"
+        },
+        {
+          "position": 49,
+          "as_filed": "Sodium Hyaluraonate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 50,
+          "as_filed": "Penaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "/+-: Titanium Dioxide (CI 77891)",
+          "inci": "/+-: titanium dioxide (ci 77891)"
+        },
+        {
+          "position": 2,
+          "as_filed": "Iron Oxides (CI 77491, CI 77492, CI 77499)",
+          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+        }
+      ],
+      "label_corrections": [
+        {
+          "as_filed": "Butylene Glucol",
+          "read_as": "butylene glycol"
+        },
+        {
+          "as_filed": "Triethoxycaprylysilance",
+          "read_as": "triethoxycaprylylsilane"
+        },
+        {
+          "as_filed": "Parfum.Fragrance",
+          "read_as": "parfum/fragrance"
+        },
+        {
+          "as_filed": "Hydroxyethyleclulose",
+          "read_as": "hydroxyethylcellulose"
+        },
+        {
+          "as_filed": "Alpha-Isomethyl Lonone",
+          "read_as": "alpha-isomethyl ionone"
+        },
+        {
+          "as_filed": "Sodium Hyaluraonate",
+          "read_as": "sodium hyaluronate"
+        },
+        {
+          "as_filed": "Penaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate",
+          "read_as": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        }
+      ],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "revlon-colorstay",
+      "brand": "Revlon",
+      "product": "ColorStay Liquid Makeup, Oily/Combination",
+      "parent_company": "Revlon",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "410d1cb2-6c92-1ca3-e054-00144ff8d46c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=410d1cb2-6c92-1ca3-e054-00144ff8d46c",
+        "label_effective_date": "2024-12-31"
+      },
+      "active_ingredients_as_filed": "Active Ingredients: Titanium Dioxide 4.35 % Zinc Oxide (nano) 2.19 % Purpose: Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive Ingredients: Aqua/Water/Eau, Cyclopentasiloxane, Dimethicone, Trimethylsiloxysilicate, PEG-9 Polydimethylsiloxyethyl Dimethicone, Butylene Glycol, Tribehenin, Phenyl Trimethicone, Nylon-12, Alcohol Denat., Alumina, Dimethicone/PEG-10/15 Crosspolymer, Ethylene Brassylate, Hydrogen Dimethicone, Hydrolyzed Vegetable Protein, Laureth-7, Magnesium Sulfate, Methicone, Polyglyceryl-3 Diisostearate, Silica, Tetrasodium EDTA, Tocopheryl Acetate, Triethoxycaprylylsilane, Ethylparaben, Methylparaben, Phenoxyethanol, Salicylic Acid. MAY CONTAIN: Iron Oxides (CI 77491) Iron Oxides (CI 77492) Iron Oxides (CI 77499) Titanium Dioxide (CI 77891",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua/Water/Eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Cyclopentasiloxane",
+          "inci": "cyclopentasiloxane"
+        },
+        {
+          "position": 3,
+          "as_filed": "Dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "Trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 5,
+          "as_filed": "PEG-9 Polydimethylsiloxyethyl Dimethicone",
+          "inci": "peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "Butylene Glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "Tribehenin",
+          "inci": "tribehenin"
+        },
+        {
+          "position": 8,
+          "as_filed": "Phenyl Trimethicone",
+          "inci": "phenyl trimethicone"
+        },
+        {
+          "position": 9,
+          "as_filed": "Nylon-12",
+          "inci": "nylon-12"
+        },
+        {
+          "position": 10,
+          "as_filed": "Alcohol Denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 11,
+          "as_filed": "Alumina",
+          "inci": "alumina"
+        },
+        {
+          "position": 12,
+          "as_filed": "Dimethicone/PEG-10/15 Crosspolymer",
+          "inci": "dimethicone/peg-10/15 crosspolymer"
+        },
+        {
+          "position": 13,
+          "as_filed": "Ethylene Brassylate",
+          "inci": "ethylene brassylate"
+        },
+        {
+          "position": 14,
+          "as_filed": "Hydrogen Dimethicone",
+          "inci": "hydrogen dimethicone"
+        },
+        {
+          "position": 15,
+          "as_filed": "Hydrolyzed Vegetable Protein",
+          "inci": "hydrolyzed vegetable protein"
+        },
+        {
+          "position": 16,
+          "as_filed": "Laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 17,
+          "as_filed": "Magnesium Sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 18,
+          "as_filed": "Methicone",
+          "inci": "methicone"
+        },
+        {
+          "position": 19,
+          "as_filed": "Polyglyceryl-3 Diisostearate",
+          "inci": "polyglyceryl-3 diisostearate"
+        },
+        {
+          "position": 20,
+          "as_filed": "Silica",
+          "inci": "silica"
+        },
+        {
+          "position": 21,
+          "as_filed": "Tetrasodium EDTA",
+          "inci": "tetrasodium edta"
+        },
+        {
+          "position": 22,
+          "as_filed": "Tocopheryl Acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 23,
+          "as_filed": "Triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 24,
+          "as_filed": "Ethylparaben",
+          "inci": "ethylparaben"
+        },
+        {
+          "position": 25,
+          "as_filed": "Methylparaben",
+          "inci": "methylparaben"
+        },
+        {
+          "position": 26,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 27,
+          "as_filed": "Salicylic Acid",
+          "inci": "salicylic acid"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Iron Oxides (CI 77491)",
+          "inci": "iron oxides (ci 77491)"
+        },
+        {
+          "position": 2,
+          "as_filed": "Iron Oxides (CI 77492)",
+          "inci": "iron oxides (ci 77492)"
+        },
+        {
+          "position": 3,
+          "as_filed": "Iron Oxides (CI 77499)",
+          "inci": "iron oxides (ci 77499)"
+        },
+        {
+          "position": 4,
+          "as_filed": "Titanium Dioxide (CI 77891)",
+          "inci": "titanium dioxide (ci 77891)"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua/Water/Eau",
+          "canonical": "water"
+        }
+      ]
+    },
+    {
+      "id": "loreal-infallible-24h",
+      "brand": "L'Or\u00e9al Paris",
+      "product": "Infallible up to 24H Fresh Wear SPF 25",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "917f6775-8f48-4b7e-9f67-253bc0c6d59e",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=917f6775-8f48-4b7e-9f67-253bc0c6d59e",
+        "label_effective_date": "2023-12-29"
+      },
+      "active_ingredients_as_filed": "Active ingredients Octinoxate 6.7% Titanium dioxide 3.6%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, dimethicone, isododecane, alcohol denat., trimethylsiloxysilicate, butylene glycol, PEG-10 dimethicone, perlite, synthetic fluorphlogopite, nylon-12, isopropyl lauroyl sarcosinate, diisopropyl sebacate, disteardimonium hectorite, HDI/trimethylol hexyllactone crosspolymer, bis-PEG/PPG-14/14 dimethicone, magnesium sulfate, aluminum hydroxide, phenoxyethanol, disodium stearoyl glutamate, hydrogen dimethicone, dipentaerythrityl tetrahydroxystearate/tetraisostearate, fragrance, silica silylate, acrylonitrile/methyl methacrylate/vinylidene chloride copolymer, tocopherol, hexyl cinnamal, silica, isobutane, benzyl salicylate, linalool, alpha-isomethyl ionone, benzyl alcohol, BHT, citronellol, may contain: titanium dioxide, iron oxides, ferric ammonium ferrocyanide",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 4,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 5,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 6,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "PEG-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 8,
+          "as_filed": "perlite",
+          "inci": "perlite"
+        },
+        {
+          "position": 9,
+          "as_filed": "synthetic fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 10,
+          "as_filed": "nylon-12",
+          "inci": "nylon-12"
+        },
+        {
+          "position": 11,
+          "as_filed": "isopropyl lauroyl sarcosinate",
+          "inci": "isopropyl lauroyl sarcosinate"
+        },
+        {
+          "position": 12,
+          "as_filed": "diisopropyl sebacate",
+          "inci": "diisopropyl sebacate"
+        },
+        {
+          "position": 13,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 14,
+          "as_filed": "HDI/trimethylol hexyllactone crosspolymer",
+          "inci": "hdi/trimethylol hexyllactone crosspolymer"
+        },
+        {
+          "position": 15,
+          "as_filed": "bis-PEG/PPG-14/14 dimethicone",
+          "inci": "bis-peg/ppg-14/14 dimethicone"
+        },
+        {
+          "position": 16,
+          "as_filed": "magnesium sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 17,
+          "as_filed": "aluminum hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 18,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 19,
+          "as_filed": "disodium stearoyl glutamate",
+          "inci": "disodium stearoyl glutamate"
+        },
+        {
+          "position": 20,
+          "as_filed": "hydrogen dimethicone",
+          "inci": "hydrogen dimethicone"
+        },
+        {
+          "position": 21,
+          "as_filed": "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "inci": "dipentaerythrityl tetrahydroxystearate/tetraisostearate"
+        },
+        {
+          "position": 22,
+          "as_filed": "fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 23,
+          "as_filed": "silica silylate",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 24,
+          "as_filed": "acrylonitrile/methyl methacrylate/vinylidene chloride copolymer",
+          "inci": "acrylonitrile/methyl methacrylate/vinylidene chloride copolymer"
+        },
+        {
+          "position": 25,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 26,
+          "as_filed": "hexyl cinnamal",
+          "inci": "hexyl cinnamal"
+        },
+        {
+          "position": 27,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 28,
+          "as_filed": "isobutane",
+          "inci": "isobutane"
+        },
+        {
+          "position": 29,
+          "as_filed": "benzyl salicylate",
+          "inci": "benzyl salicylate"
+        },
+        {
+          "position": 30,
+          "as_filed": "linalool",
+          "inci": "linalool"
+        },
+        {
+          "position": 31,
+          "as_filed": "alpha-isomethyl ionone",
+          "inci": "alpha-isomethyl ionone"
+        },
+        {
+          "position": 32,
+          "as_filed": "benzyl alcohol",
+          "inci": "benzyl alcohol"
+        },
+        {
+          "position": 33,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 34,
+          "as_filed": "citronellol",
+          "inci": "citronellol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 3,
+          "as_filed": "ferric ammonium ferrocyanide",
+          "inci": "ferric ammonium ferrocyanide"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "loreal-infallible-32h",
+      "brand": "L'Or\u00e9al Paris",
+      "product": "Infallible up to 32H Fresh Wear SPF 25",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "f6457973-3718-44cd-a764-de0b089d4eee",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6457973-3718-44cd-a764-de0b089d4eee",
+        "label_effective_date": "2024-06-28"
+      },
+      "active_ingredients_as_filed": "Active ingredients Octinoxate 6.7% Titanium dioxide 4.6%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, dimethicone, isododecane, alcohol denat., trimethylsiloxysilicate, butylene glycol, PEG-10 dimethicone, perlite, synthetic fluorphlogopite, nylon-12, isopropyl lauroyl sarcosinate, diisopropyl sebacate, HDI /trimethylol hexyllactone crosspolymer, disteardimonium hectorite, BIS -PEG/PPG-14/14 dimethicone, magnesium sulfate, aluminum hydroxide, phenoxyethanol, disodium stearoyl glutamate, hydrogen dimethicone, cellulose, dipentaerythrityl tetrahydroxystearate/tetraisostearate, ascorbyl glucoside, silica silylate, fragrance, calcium aluminum borosilicate, tocopherol, silica, hexyl cinnamal, benzyl salicylate, BHT, linalool, alpha-isomethyl ionone, benzyl alcohol, citronellol; may contain: titanium dioxide, iron oxides, bismuth oxychloride, mica",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 4,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 5,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 6,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "PEG-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 8,
+          "as_filed": "perlite",
+          "inci": "perlite"
+        },
+        {
+          "position": 9,
+          "as_filed": "synthetic fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 10,
+          "as_filed": "nylon-12",
+          "inci": "nylon-12"
+        },
+        {
+          "position": 11,
+          "as_filed": "isopropyl lauroyl sarcosinate",
+          "inci": "isopropyl lauroyl sarcosinate"
+        },
+        {
+          "position": 12,
+          "as_filed": "diisopropyl sebacate",
+          "inci": "diisopropyl sebacate"
+        },
+        {
+          "position": 13,
+          "as_filed": "HDI/trimethylol hexyllactone crosspolymer",
+          "inci": "hdi/trimethylol hexyllactone crosspolymer"
+        },
+        {
+          "position": 14,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 15,
+          "as_filed": "BIS-PEG/PPG-14/14 dimethicone",
+          "inci": "bis-peg/ppg-14/14 dimethicone"
+        },
+        {
+          "position": 16,
+          "as_filed": "magnesium sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 17,
+          "as_filed": "aluminum hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 18,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 19,
+          "as_filed": "disodium stearoyl glutamate",
+          "inci": "disodium stearoyl glutamate"
+        },
+        {
+          "position": 20,
+          "as_filed": "hydrogen dimethicone",
+          "inci": "hydrogen dimethicone"
+        },
+        {
+          "position": 21,
+          "as_filed": "cellulose",
+          "inci": "cellulose"
+        },
+        {
+          "position": 22,
+          "as_filed": "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "inci": "dipentaerythrityl tetrahydroxystearate/tetraisostearate"
+        },
+        {
+          "position": 23,
+          "as_filed": "ascorbyl glucoside",
+          "inci": "ascorbyl glucoside"
+        },
+        {
+          "position": 24,
+          "as_filed": "silica silylate",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 25,
+          "as_filed": "fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 26,
+          "as_filed": "calcium aluminum borosilicate",
+          "inci": "calcium aluminum borosilicate"
+        },
+        {
+          "position": 27,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 28,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 29,
+          "as_filed": "hexyl cinnamal",
+          "inci": "hexyl cinnamal"
+        },
+        {
+          "position": 30,
+          "as_filed": "benzyl salicylate",
+          "inci": "benzyl salicylate"
+        },
+        {
+          "position": 31,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 32,
+          "as_filed": "linalool",
+          "inci": "linalool"
+        },
+        {
+          "position": 33,
+          "as_filed": "alpha-isomethyl ionone",
+          "inci": "alpha-isomethyl ionone"
+        },
+        {
+          "position": 34,
+          "as_filed": "benzyl alcohol",
+          "inci": "benzyl alcohol"
+        },
+        {
+          "position": 35,
+          "as_filed": "citronellol",
+          "inci": "citronellol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 3,
+          "as_filed": "bismuth oxychloride",
+          "inci": "bismuth oxychloride"
+        },
+        {
+          "position": 4,
+          "as_filed": "mica",
+          "inci": "mica"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "mac-studio-fix-fluid",
+      "brand": "MAC",
+      "product": "Studio Fix Fluid Broad Spectrum SPF 15",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "fb59afc1-1dc9-f783-e053-6394a90a196b",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fb59afc1-1dc9-f783-e053-6394a90a196b",
+        "label_effective_date": "2024-12-17"
+      },
+      "active_ingredients_as_filed": "Active Ingredients Octinoxate 3.0% Titanium Dioxide 1.0%",
+      "inactive_ingredients_as_filed": "Inactive Ingredients WATER\\AQUA\\EAU,METHYL TRIMETHICONE,DIMETHICONE,TRIMETHYLSILOXYSILICATE,PEG-10 DIMETHICONE,BUTYLENE GLYCOL,ISODODECANE,POLYETHYLENE,CETYL PEG/PPG-10/1 DIMETHICONE,MAGNESIUM SULFATE,ALGAE EXTRACT,LAMINARIA SACCHARINA EXTRACT,SODIUM HYALURONATE,SALIX NIGRA (WILLOW) BARK EXTRACT,TOCOPHERYL ACETATE,CAFFEINE,LECITHIN,HYDROGENATED LECITHIN,DISTEARDIMONIUM HECTORITE,SILICA,XANTHAN GUM,DIMETHICONE CROSSPOLYMER,TRIETHOXYCAPRYLYLSILANE,DIMETHICONE/PEG-10/15 CROSSPOLYMER,METHOXY AMODIMETHICONE/SILSESQUIOXANE COPOLYMER,SORBITAN SESQUIOLEATE,SALICYLIC ACID,SODIUM CITRATE,LAURETH-7,METHYLDIHYDROJASMONATE,PROPYLENE CARBONATE,ALUMINA,DIPROPYLENE GLYCOL,PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE,BHT,PHENOXYETHANOL,SORBIC ACID,CHLOROXYLENOL, [+/- TITANIUM DIOXIDE (CI 77891),IRON OXIDES (CI 77491),IRON OXIDES (CI 77492),IRON OXIDES (CI 77499)] <ILN50543>",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "WATER\\AQUA\\EAU",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "METHYL TRIMETHICONE",
+          "inci": "methyl trimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "DIMETHICONE",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "TRIMETHYLSILOXYSILICATE",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 5,
+          "as_filed": "PEG-10 DIMETHICONE",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "BUTYLENE GLYCOL",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "ISODODECANE",
+          "inci": "isododecane"
+        },
+        {
+          "position": 8,
+          "as_filed": "POLYETHYLENE",
+          "inci": "polyethylene"
+        },
+        {
+          "position": 9,
+          "as_filed": "CETYL PEG/PPG-10/1 DIMETHICONE",
+          "inci": "cetyl peg/ppg-10/1 dimethicone"
+        },
+        {
+          "position": 10,
+          "as_filed": "MAGNESIUM SULFATE",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 11,
+          "as_filed": "ALGAE EXTRACT",
+          "inci": "algae extract"
+        },
+        {
+          "position": 12,
+          "as_filed": "LAMINARIA SACCHARINA EXTRACT",
+          "inci": "laminaria saccharina extract"
+        },
+        {
+          "position": 13,
+          "as_filed": "SODIUM HYALURONATE",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 14,
+          "as_filed": "SALIX NIGRA (WILLOW) BARK EXTRACT",
+          "inci": "salix nigra (willow) bark extract"
+        },
+        {
+          "position": 15,
+          "as_filed": "TOCOPHERYL ACETATE",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 16,
+          "as_filed": "CAFFEINE",
+          "inci": "caffeine"
+        },
+        {
+          "position": 17,
+          "as_filed": "LECITHIN",
+          "inci": "lecithin"
+        },
+        {
+          "position": 18,
+          "as_filed": "HYDROGENATED LECITHIN",
+          "inci": "hydrogenated lecithin"
+        },
+        {
+          "position": 19,
+          "as_filed": "DISTEARDIMONIUM HECTORITE",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 20,
+          "as_filed": "SILICA",
+          "inci": "silica"
+        },
+        {
+          "position": 21,
+          "as_filed": "XANTHAN GUM",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 22,
+          "as_filed": "DIMETHICONE CROSSPOLYMER",
+          "inci": "dimethicone crosspolymer"
+        },
+        {
+          "position": 23,
+          "as_filed": "TRIETHOXYCAPRYLYLSILANE",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 24,
+          "as_filed": "DIMETHICONE/PEG-10/15 CROSSPOLYMER",
+          "inci": "dimethicone/peg-10/15 crosspolymer"
+        },
+        {
+          "position": 25,
+          "as_filed": "METHOXY AMODIMETHICONE/SILSESQUIOXANE COPOLYMER",
+          "inci": "methoxy amodimethicone/silsesquioxane copolymer"
+        },
+        {
+          "position": 26,
+          "as_filed": "SORBITAN SESQUIOLEATE",
+          "inci": "sorbitan sesquioleate"
+        },
+        {
+          "position": 27,
+          "as_filed": "SALICYLIC ACID",
+          "inci": "salicylic acid"
+        },
+        {
+          "position": 28,
+          "as_filed": "SODIUM CITRATE",
+          "inci": "sodium citrate"
+        },
+        {
+          "position": 29,
+          "as_filed": "LAURETH-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 30,
+          "as_filed": "METHYLDIHYDROJASMONATE",
+          "inci": "methyldihydrojasmonate"
+        },
+        {
+          "position": 31,
+          "as_filed": "PROPYLENE CARBONATE",
+          "inci": "propylene carbonate"
+        },
+        {
+          "position": 32,
+          "as_filed": "ALUMINA",
+          "inci": "alumina"
+        },
+        {
+          "position": 33,
+          "as_filed": "DIPROPYLENE GLYCOL",
+          "inci": "dipropylene glycol"
+        },
+        {
+          "position": 34,
+          "as_filed": "PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        },
+        {
+          "position": 35,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 36,
+          "as_filed": "PHENOXYETHANOL",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 37,
+          "as_filed": "SORBIC ACID",
+          "inci": "sorbic acid"
+        },
+        {
+          "position": 38,
+          "as_filed": "CHLOROXYLENOL",
+          "inci": "chloroxylenol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "TITANIUM DIOXIDE (CI 77891)",
+          "inci": "titanium dioxide (ci 77891)"
+        },
+        {
+          "position": 2,
+          "as_filed": "IRON OXIDES (CI 77491)",
+          "inci": "iron oxides (ci 77491)"
+        },
+        {
+          "position": 3,
+          "as_filed": "IRON OXIDES (CI 77492)",
+          "inci": "iron oxides (ci 77492)"
+        },
+        {
+          "position": 4,
+          "as_filed": "IRON OXIDES (CI 77499)",
+          "inci": "iron oxides (ci 77499)"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "WATER\\AQUA\\EAU",
+          "canonical": "water"
+        }
+      ]
+    },
+    {
+      "id": "clinique-even-better",
+      "brand": "Clinique",
+      "product": "Even Better Makeup Broad Spectrum SPF 15",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "d4de3c7b-3993-40e5-88a4-f6005ab97531",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d4de3c7b-3993-40e5-88a4-f6005ab97531",
+        "label_effective_date": "2024-01-09"
+      },
+      "active_ingredients_as_filed": "Active ingredients Octinoxate 5.9% Titanium Dioxide 3.5% Zinc Oxide 2.8%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water\\aqua\\eau \u2022 methyl trimethicone \u2022 phenyl trimethicone \u2022 dimethicone \u2022 triethylhexanoin \u2022 butylene glycol \u2022 trimethylsiloxysilicate \u2022 yeast extract\\faex\\extrait de levure \u2022 peg-10 dimethicone \u2022 lauryl peg-9 polydimethylsiloxyethyl dimethicone \u2022 alumina \u2022 citrus grandis (grapefruit) peel extract \u2022 betula alba (birch) bark extract \u2022 saccharomyces lysate extract \u2022 astrocaryum murumuru seed butter \u2022 c12-15 alkyl benzoate \u2022 glycerin \u2022 sodium myristoyl sarcosinate \u2022 acetyl glucosamine \u2022 caprylyl methicone \u2022 methicone \u2022 polyglyceryl-6 polyricinoleate \u2022 disteardimonium hectorite \u2022 dimethicone crosspolymer-3 \u2022 isopropyl titanium triisostearate \u2022 lecithin \u2022 laureth-7 \u2022 tocopheryl acetate \u2022 magnesium ascorbyl phosphate \u2022 dimethicone/peg-10/15 crosspolymer \u2022 dipropylene glycol \u2022 sodium chloride \u2022 caprylyl glycol \u2022 tetrahexyldecyl ascorbate \u2022 disodium edta \u2022 phenoxyethanol \u2022 polyaminopropyl biguanide \u2022 [+/- titanium dioxide (ci 77891) \u2022 iron oxides (ci 77491, ci 77492, ci 77499) \u2022 mica \u2022 bismuth oxychloride (ci 77163)] [iln39834]",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water\\aqua\\eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "methyl trimethicone",
+          "inci": "methyl trimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "phenyl trimethicone",
+          "inci": "phenyl trimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 5,
+          "as_filed": "triethylhexanoin",
+          "inci": "triethylhexanoin"
+        },
+        {
+          "position": 6,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 8,
+          "as_filed": "yeast extract\\faex\\extrait de levure",
+          "inci": "yeast extract"
+        },
+        {
+          "position": 9,
+          "as_filed": "peg-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 10,
+          "as_filed": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
+          "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 11,
+          "as_filed": "alumina",
+          "inci": "alumina"
+        },
+        {
+          "position": 12,
+          "as_filed": "citrus grandis (grapefruit) peel extract",
+          "inci": "citrus grandis (grapefruit) peel extract"
+        },
+        {
+          "position": 13,
+          "as_filed": "betula alba (birch) bark extract",
+          "inci": "betula alba (birch) bark extract"
+        },
+        {
+          "position": 14,
+          "as_filed": "saccharomyces lysate extract",
+          "inci": "saccharomyces lysate extract"
+        },
+        {
+          "position": 15,
+          "as_filed": "astrocaryum murumuru seed butter",
+          "inci": "astrocaryum murumuru seed butter"
+        },
+        {
+          "position": 16,
+          "as_filed": "c12-15 alkyl benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 17,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 18,
+          "as_filed": "sodium myristoyl sarcosinate",
+          "inci": "sodium myristoyl sarcosinate"
+        },
+        {
+          "position": 19,
+          "as_filed": "acetyl glucosamine",
+          "inci": "acetyl glucosamine"
+        },
+        {
+          "position": 20,
+          "as_filed": "caprylyl methicone",
+          "inci": "caprylyl methicone"
+        },
+        {
+          "position": 21,
+          "as_filed": "methicone",
+          "inci": "methicone"
+        },
+        {
+          "position": 22,
+          "as_filed": "polyglyceryl-6 polyricinoleate",
+          "inci": "polyglyceryl-6 polyricinoleate"
+        },
+        {
+          "position": 23,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 24,
+          "as_filed": "dimethicone crosspolymer-3",
+          "inci": "dimethicone crosspolymer-3"
+        },
+        {
+          "position": 25,
+          "as_filed": "isopropyl titanium triisostearate",
+          "inci": "isopropyl titanium triisostearate"
+        },
+        {
+          "position": 26,
+          "as_filed": "lecithin",
+          "inci": "lecithin"
+        },
+        {
+          "position": 27,
+          "as_filed": "laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 28,
+          "as_filed": "tocopheryl acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 29,
+          "as_filed": "magnesium ascorbyl phosphate",
+          "inci": "magnesium ascorbyl phosphate"
+        },
+        {
+          "position": 30,
+          "as_filed": "dimethicone/peg-10/15 crosspolymer",
+          "inci": "dimethicone/peg-10/15 crosspolymer"
+        },
+        {
+          "position": 31,
+          "as_filed": "dipropylene glycol",
+          "inci": "dipropylene glycol"
+        },
+        {
+          "position": 32,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 33,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 34,
+          "as_filed": "tetrahexyldecyl ascorbate",
+          "inci": "tetrahexyldecyl ascorbate"
+        },
+        {
+          "position": 35,
+          "as_filed": "disodium edta",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 36,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 37,
+          "as_filed": "polyaminopropyl biguanide",
+          "inci": "polyaminopropyl biguanide"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide (ci 77891)",
+          "inci": "titanium dioxide (ci 77891)"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides (ci 77491, ci 77492, ci 77499)",
+          "inci": "iron oxides (ci 77491, ci 77492, ci 77499)"
+        },
+        {
+          "position": 3,
+          "as_filed": "mica",
+          "inci": "mica"
+        },
+        {
+          "position": 4,
+          "as_filed": "bismuth oxychloride (ci 77163)",
+          "inci": "bismuth oxychloride (ci 77163)"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "water\\aqua\\eau",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "yeast extract\\faex\\extrait de levure",
+          "canonical": "yeast extract"
+        }
+      ]
+    },
+    {
+      "id": "esteelauder-double-wear-sheer",
+      "brand": "Est\u00e9e Lauder",
+      "product": "Double Wear Sheer Long-Wear Makeup SPF 19",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "2f93580c-c8e9-4822-91bf-a749cf4deb4e",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f93580c-c8e9-4822-91bf-a749cf4deb4e",
+        "label_effective_date": "2024-12-25"
+      },
+      "active_ingredients_as_filed": "Active ingredients Purpose Octinoxate 2.0% Sunscreen Titanium Dioxide 2.3% Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive ingredients water\\aqua\\eau \u2022 methyl trimethicone \u2022 phenyl trimethicone \u2022 dimethicone \u2022 neopentyl glycol diheptanoate \u2022 polymethylsilsesquioxane \u2022 silica \u2022 lauryl peg-9 polydimethylsiloxyethyl dimethicone \u2022 c12-15 alkyl benzoate \u2022 butylene glycol \u2022 butyloctyl salicylate \u2022 trimethylsiloxysilicate \u2022 glycerin \u2022 peg-10 dimethicone \u2022 polysilicone-11 \u2022 laminaria saccharina extract \u2022 litchi chinensis seed extract \u2022 citrullus lanatus (watermelon) fruit extract \u2022 pyrus malus (apple) fruit extract \u2022 sodium hyaluronate \u2022 lens esculenta (lentil) fruit extract \u2022 polyglutamic acid \u2022 methicone \u2022 tocopheryl acetate \u2022 caprylyl glycol \u2022 triethyl citrate \u2022 thermus thermophillus ferment \u2022 sodium lactate \u2022 sodium pca \u2022 tocopherol \u2022 lecithin \u2022 dimethicone/peg-10/15 crosspolymer \u2022 c24-28 alkyl methicone \u2022 dimethicone silylate \u2022 disteardimonium hectorite \u2022 zinc stearate \u2022 sodium chloride \u2022 hexylene glycol \u2022 laureth-7 \u2022 magnesium aluminum silicate \u2022 dextrin \u2022 xanthan gum \u2022 dipropylene glycol \u2022 bht \u2022 disodium edta \u2022 sodium citrate \u2022 potassium sorbate \u2022 sodium dehydroacetate \u2022 sodium benzoate \u2022 phenoxyethanol \u2022 [+/- titanium dioxide (ci 77891) \u2022 iron oxides (ci 77491) \u2022 iron oxides (ci 77492) \u2022 iron oxides (ci 77499)] <iln48777>",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water\\aqua\\eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "methyl trimethicone",
+          "inci": "methyl trimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "phenyl trimethicone",
+          "inci": "phenyl trimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 5,
+          "as_filed": "neopentyl glycol diheptanoate",
+          "inci": "neopentyl glycol diheptanoate"
+        },
+        {
+          "position": 6,
+          "as_filed": "polymethylsilsesquioxane",
+          "inci": "polymethylsilsesquioxane"
+        },
+        {
+          "position": 7,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 8,
+          "as_filed": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
+          "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 9,
+          "as_filed": "c12-15 alkyl benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 10,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 11,
+          "as_filed": "butyloctyl salicylate",
+          "inci": "butyloctyl salicylate"
+        },
+        {
+          "position": 12,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 13,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 14,
+          "as_filed": "peg-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 15,
+          "as_filed": "polysilicone-11",
+          "inci": "polysilicone-11"
+        },
+        {
+          "position": 16,
+          "as_filed": "laminaria saccharina extract",
+          "inci": "laminaria saccharina extract"
+        },
+        {
+          "position": 17,
+          "as_filed": "litchi chinensis seed extract",
+          "inci": "litchi chinensis seed extract"
+        },
+        {
+          "position": 18,
+          "as_filed": "citrullus lanatus (watermelon) fruit extract",
+          "inci": "citrullus lanatus (watermelon) fruit extract"
+        },
+        {
+          "position": 19,
+          "as_filed": "pyrus malus (apple) fruit extract",
+          "inci": "pyrus malus (apple) fruit extract"
+        },
+        {
+          "position": 20,
+          "as_filed": "sodium hyaluronate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 21,
+          "as_filed": "lens esculenta (lentil) fruit extract",
+          "inci": "lens esculenta (lentil) fruit extract"
+        },
+        {
+          "position": 22,
+          "as_filed": "polyglutamic acid",
+          "inci": "polyglutamic acid"
+        },
+        {
+          "position": 23,
+          "as_filed": "methicone",
+          "inci": "methicone"
+        },
+        {
+          "position": 24,
+          "as_filed": "tocopheryl acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 25,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 26,
+          "as_filed": "triethyl citrate",
+          "inci": "triethyl citrate"
+        },
+        {
+          "position": 27,
+          "as_filed": "thermus thermophillus ferment",
+          "inci": "thermus thermophilus ferment"
+        },
+        {
+          "position": 28,
+          "as_filed": "sodium lactate",
+          "inci": "sodium lactate"
+        },
+        {
+          "position": 29,
+          "as_filed": "sodium pca",
+          "inci": "sodium pca"
+        },
+        {
+          "position": 30,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 31,
+          "as_filed": "lecithin",
+          "inci": "lecithin"
+        },
+        {
+          "position": 32,
+          "as_filed": "dimethicone/peg-10/15 crosspolymer",
+          "inci": "dimethicone/peg-10/15 crosspolymer"
+        },
+        {
+          "position": 33,
+          "as_filed": "c24-28 alkyl methicone",
+          "inci": "c24-28 alkyl methicone"
+        },
+        {
+          "position": 34,
+          "as_filed": "dimethicone silylate",
+          "inci": "dimethicone silylate"
+        },
+        {
+          "position": 35,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 36,
+          "as_filed": "zinc stearate",
+          "inci": "zinc stearate"
+        },
+        {
+          "position": 37,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 38,
+          "as_filed": "hexylene glycol",
+          "inci": "hexylene glycol"
+        },
+        {
+          "position": 39,
+          "as_filed": "laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 40,
+          "as_filed": "magnesium aluminum silicate",
+          "inci": "magnesium aluminum silicate"
+        },
+        {
+          "position": 41,
+          "as_filed": "dextrin",
+          "inci": "dextrin"
+        },
+        {
+          "position": 42,
+          "as_filed": "xanthan gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 43,
+          "as_filed": "dipropylene glycol",
+          "inci": "dipropylene glycol"
+        },
+        {
+          "position": 44,
+          "as_filed": "bht",
+          "inci": "bht"
+        },
+        {
+          "position": 45,
+          "as_filed": "disodium edta",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 46,
+          "as_filed": "sodium citrate",
+          "inci": "sodium citrate"
+        },
+        {
+          "position": 47,
+          "as_filed": "potassium sorbate",
+          "inci": "potassium sorbate"
+        },
+        {
+          "position": 48,
+          "as_filed": "sodium dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 49,
+          "as_filed": "sodium benzoate",
+          "inci": "sodium benzoate"
+        },
+        {
+          "position": 50,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide (ci 77891)",
+          "inci": "titanium dioxide (ci 77891)"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides (ci 77491)",
+          "inci": "iron oxides (ci 77491)"
+        },
+        {
+          "position": 3,
+          "as_filed": "iron oxides (ci 77492)",
+          "inci": "iron oxides (ci 77492)"
+        },
+        {
+          "position": 4,
+          "as_filed": "iron oxides (ci 77499)",
+          "inci": "iron oxides (ci 77499)"
+        }
+      ],
+      "label_corrections": [
+        {
+          "as_filed": "thermus thermophillus ferment",
+          "read_as": "thermus thermophilus ferment"
+        }
+      ],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "water\\aqua\\eau",
+          "canonical": "water"
+        }
+      ]
+    },
+    {
+      "id": "lancome-teint-idole-breathable",
+      "brand": "Lanc\u00f4me",
+      "product": "Teint Idole Ultra Wear Breathable Coverage SPF 25",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "be2a83fb-e4f8-4313-b5bd-150f351fb345",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be2a83fb-e4f8-4313-b5bd-150f351fb345",
+        "label_effective_date": "2024-06-26"
+      },
+      "active_ingredients_as_filed": "Active ingredients Octinoxate 6.7% Titanium dioxide 11.5%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, dimethicone, isododecane, alcohol denat., trimethylsiloxysilicate, butylene glycol, PEG-10 dimethicone, perlite, synthetic fluorphlogopite, moringa oleifera seed extract, polymnia sonchifolia root juice, calcium aluminum borosilicate, glycerin, dipentaerythrityl tetrahydroxystearate/tetraisostearate, alpha-glucan oligosaccharide, sodium hyaluronate, silica, silica silylate, HDI/trimethylol hexyllactone crosspolymer, cellulose, aluminum hydroxide, magnesium sulfate, nylon-12, disodium phosphate, disodium stearoyl glutamate, isopropyl lauroyl sarcosinate, hydrogen dimethicone, citric acid, diisopropyl sebacate, bis-PEG/PPG-14/14 dimethicone, lactobacillus, maltodextrin, disteardimonium hectorite, BHT, tocopherol, phenoxyethanol; may contain: titanium dioxide, iron oxides, chromium oxide greens",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 4,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 5,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 6,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "PEG-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 8,
+          "as_filed": "perlite",
+          "inci": "perlite"
+        },
+        {
+          "position": 9,
+          "as_filed": "synthetic fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 10,
+          "as_filed": "moringa oleifera seed extract",
+          "inci": "moringa oleifera seed extract"
+        },
+        {
+          "position": 11,
+          "as_filed": "polymnia sonchifolia root juice",
+          "inci": "polymnia sonchifolia root juice"
+        },
+        {
+          "position": 12,
+          "as_filed": "calcium aluminum borosilicate",
+          "inci": "calcium aluminum borosilicate"
+        },
+        {
+          "position": 13,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 14,
+          "as_filed": "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
+          "inci": "dipentaerythrityl tetrahydroxystearate/tetraisostearate"
+        },
+        {
+          "position": 15,
+          "as_filed": "alpha-glucan oligosaccharide",
+          "inci": "alpha-glucan oligosaccharide"
+        },
+        {
+          "position": 16,
+          "as_filed": "sodium hyaluronate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 17,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 18,
+          "as_filed": "silica silylate",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 19,
+          "as_filed": "HDI/trimethylol hexyllactone crosspolymer",
+          "inci": "hdi/trimethylol hexyllactone crosspolymer"
+        },
+        {
+          "position": 20,
+          "as_filed": "cellulose",
+          "inci": "cellulose"
+        },
+        {
+          "position": 21,
+          "as_filed": "aluminum hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 22,
+          "as_filed": "magnesium sulfate",
+          "inci": "magnesium sulfate"
+        },
+        {
+          "position": 23,
+          "as_filed": "nylon-12",
+          "inci": "nylon-12"
+        },
+        {
+          "position": 24,
+          "as_filed": "disodium phosphate",
+          "inci": "disodium phosphate"
+        },
+        {
+          "position": 25,
+          "as_filed": "disodium stearoyl glutamate",
+          "inci": "disodium stearoyl glutamate"
+        },
+        {
+          "position": 26,
+          "as_filed": "isopropyl lauroyl sarcosinate",
+          "inci": "isopropyl lauroyl sarcosinate"
+        },
+        {
+          "position": 27,
+          "as_filed": "hydrogen dimethicone",
+          "inci": "hydrogen dimethicone"
+        },
+        {
+          "position": 28,
+          "as_filed": "citric acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 29,
+          "as_filed": "diisopropyl sebacate",
+          "inci": "diisopropyl sebacate"
+        },
+        {
+          "position": 30,
+          "as_filed": "bis-PEG/PPG-14/14 dimethicone",
+          "inci": "bis-peg/ppg-14/14 dimethicone"
+        },
+        {
+          "position": 31,
+          "as_filed": "lactobacillus",
+          "inci": "lactobacillus"
+        },
+        {
+          "position": 32,
+          "as_filed": "maltodextrin",
+          "inci": "maltodextrin"
+        },
+        {
+          "position": 33,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 34,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 35,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 36,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 3,
+          "as_filed": "chromium oxide greens",
+          "inci": "chromium oxide greens"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "lancome-teint-idole-care-glow",
+      "brand": "Lanc\u00f4me",
+      "product": "Teint Idole Ultra Wear Care & Glow SPF 27",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "3ff286c0-4515-4cab-9b93-a782545b2f36",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ff286c0-4515-4cab-9b93-a782545b2f36",
+        "label_effective_date": "2026-05-27"
+      },
+      "active_ingredients_as_filed": "Active ingredient Ensulizole 3.6%",
+      "inactive_ingredients_as_filed": "Inactive ingredients dimethicone, water, isododecane, alcohol denat., trimethylsiloxysilicate, propylene glycol, glycerin, PEG/PPG-18/18 dimethicone, silica, synthetic fluorphlogopite, polysilicone-11, moringa oleifera seed extract, polymnia sonchifolia root juice, sorbitol, mandelic acid, PEG-10 dimethicone, alpha-glucan oligosaccharide, sodium chloride, sodium hyaluronate, sodium hydroxide, silica silylate, cellulose acetate butyrate, aluminum hydroxide, ammonium polyacryloyldimethyl taurate, disodium phosphate, disodium stearoyl glutamate, hydroxyethylpiperazine ethane sulfonic acid, caprylyl glycol, citric acid, lactobacillus, maltodextrin, polyphosphorylcholine glycol acrylate, polyvinyl alcohol, butylene glycol, tocopherol, phenoxyethanol, fragrance, pelargonium graveolens flower oil, linalool, geraniol, pinene, rose flower oil/extract, trimethylcyclopentenyl methylisopentenol, limonene, citral, tetramethyl acetyloctahydronaphthalenes, citronellol, citrus aurantium bergamia peel oil, citrus aurantium peel oil, carvone, benzyl alcohol; may contain: titanium dioxide, iron oxides",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 2,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 3,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 4,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 5,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 6,
+          "as_filed": "propylene glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 8,
+          "as_filed": "PEG/PPG-18/18 dimethicone",
+          "inci": "peg/ppg-18/18 dimethicone"
+        },
+        {
+          "position": 9,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 10,
+          "as_filed": "synthetic fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 11,
+          "as_filed": "polysilicone-11",
+          "inci": "polysilicone-11"
+        },
+        {
+          "position": 12,
+          "as_filed": "moringa oleifera seed extract",
+          "inci": "moringa oleifera seed extract"
+        },
+        {
+          "position": 13,
+          "as_filed": "polymnia sonchifolia root juice",
+          "inci": "polymnia sonchifolia root juice"
+        },
+        {
+          "position": 14,
+          "as_filed": "sorbitol",
+          "inci": "sorbitol"
+        },
+        {
+          "position": 15,
+          "as_filed": "mandelic acid",
+          "inci": "mandelic acid"
+        },
+        {
+          "position": 16,
+          "as_filed": "PEG-10 dimethicone",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 17,
+          "as_filed": "alpha-glucan oligosaccharide",
+          "inci": "alpha-glucan oligosaccharide"
+        },
+        {
+          "position": 18,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 19,
+          "as_filed": "sodium hyaluronate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 20,
+          "as_filed": "sodium hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 21,
+          "as_filed": "silica silylate",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 22,
+          "as_filed": "cellulose acetate butyrate",
+          "inci": "cellulose acetate butyrate"
+        },
+        {
+          "position": 23,
+          "as_filed": "aluminum hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 24,
+          "as_filed": "ammonium polyacryloyldimethyl taurate",
+          "inci": "ammonium polyacryloyldimethyl taurate"
+        },
+        {
+          "position": 25,
+          "as_filed": "disodium phosphate",
+          "inci": "disodium phosphate"
+        },
+        {
+          "position": 26,
+          "as_filed": "disodium stearoyl glutamate",
+          "inci": "disodium stearoyl glutamate"
+        },
+        {
+          "position": 27,
+          "as_filed": "hydroxyethylpiperazine ethane sulfonic acid",
+          "inci": "hydroxyethylpiperazine ethane sulfonic acid"
+        },
+        {
+          "position": 28,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 29,
+          "as_filed": "citric acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 30,
+          "as_filed": "lactobacillus",
+          "inci": "lactobacillus"
+        },
+        {
+          "position": 31,
+          "as_filed": "maltodextrin",
+          "inci": "maltodextrin"
+        },
+        {
+          "position": 32,
+          "as_filed": "polyphosphorylcholine glycol acrylate",
+          "inci": "polyphosphorylcholine glycol acrylate"
+        },
+        {
+          "position": 33,
+          "as_filed": "polyvinyl alcohol",
+          "inci": "polyvinyl alcohol"
+        },
+        {
+          "position": 34,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 35,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 36,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 37,
+          "as_filed": "fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 38,
+          "as_filed": "pelargonium graveolens flower oil",
+          "inci": "pelargonium graveolens flower oil"
+        },
+        {
+          "position": 39,
+          "as_filed": "linalool",
+          "inci": "linalool"
+        },
+        {
+          "position": 40,
+          "as_filed": "geraniol",
+          "inci": "geraniol"
+        },
+        {
+          "position": 41,
+          "as_filed": "pinene",
+          "inci": "pinene"
+        },
+        {
+          "position": 42,
+          "as_filed": "rose flower oil/extract",
+          "inci": "rose flower oil/extract"
+        },
+        {
+          "position": 43,
+          "as_filed": "trimethylcyclopentenyl methylisopentenol",
+          "inci": "trimethylcyclopentenyl methylisopentenol"
+        },
+        {
+          "position": 44,
+          "as_filed": "limonene",
+          "inci": "limonene"
+        },
+        {
+          "position": 45,
+          "as_filed": "citral",
+          "inci": "citral"
+        },
+        {
+          "position": 46,
+          "as_filed": "tetramethyl acetyloctahydronaphthalenes",
+          "inci": "tetramethyl acetyloctahydronaphthalenes"
+        },
+        {
+          "position": 47,
+          "as_filed": "citronellol",
+          "inci": "citronellol"
+        },
+        {
+          "position": 48,
+          "as_filed": "citrus aurantium bergamia peel oil",
+          "inci": "citrus aurantium bergamia peel oil"
+        },
+        {
+          "position": 49,
+          "as_filed": "citrus aurantium peel oil",
+          "inci": "citrus aurantium peel oil"
+        },
+        {
+          "position": 50,
+          "as_filed": "carvone",
+          "inci": "carvone"
+        },
+        {
+          "position": 51,
+          "as_filed": "benzyl alcohol",
+          "inci": "benzyl alcohol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "titanium dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides",
+          "inci": "iron oxides"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "dior-forever-skin-wear",
+      "brand": "Dior",
+      "product": "Forever Skin Wear Foundation SPF 20 (10N)",
+      "parent_company": "LVMH",
+      "price_tier": "luxury",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "038939d6-b9a5-4cb6-a818-6f7cf3f106fa",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=038939d6-b9a5-4cb6-a818-6f7cf3f106fa",
+        "label_effective_date": "2026-01-16"
+      },
+      "active_ingredients_as_filed": "Active ingredients Octisalate 3.50% Titanium Dioxide 0.94% Purpose Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive ingredients AQUA (WATER) \u2022 METHYL TRIMETHICONE \u2022 ALCOHOL \u2022 ISODODECANE \u2022 PEG-10 DIMETHICONE \u2022 TRIMETHYLSILOXYSILICATE \u2022 BUTYLENE GLYCOL \u2022 METHYL METHACRYLATE CROSSPOLYMER \u2022 DIMETHICONE \u2022 DIPHENYL DIMETHICONE/VINYL DIPHENYL DIMETHICONE/SILSESQUIOXANE CROSSPOLYMER \u2022 VINYL DIMETHICONE/METHICONE SILSESQUIOXANE CROSSPOLYMER \u2022 CETYL DIMETHICONE \u2022 DISTEARDIMONIUM HECTORITE \u2022 NIACINAMIDE \u2022 POLYGLYCERYL-10 DECAISOSTEARATE \u2022 SODIUM MYRISTOYL GLUTAMATE \u2022 PARFUM (FRAGRANCE) \u2022 PROPYLENE CARBONATE \u2022 CHLORPHENESIN \u2022 POLYHYDROXYSTEARIC ACID \u2022 CAPRYLICA/CAPRIC TRIGLYCERIDE \u2022 ALUMINUM HYDROXIDE \u2022 HYALURONIC ACID \u2022 TROMETHAMINE \u2022 ISOSTEARIC ACID \u2022 ALUMINA \u2022 STEARIC ACID \u2022 TOCOPHEROL \u2022 POLYGLYCERYL-3 POLYRICINOLEATE \u2022 LECITHIN \u2022 PENTYLENE GLYCOL \u2022 IRIS FLORENTINA ROOT EXTRACT \u2022 TROPAEOLUM MAJUS FLOWER/LEAF/STEM EXTRACT \u2022 SODIUM BENZOATE \u2022 POTASSIUM SORBATE \u2022 ACETYL HEXAPEPTIDE-8 [MAY CONTAIN : CI 77491 (IRON OXIDES), CI 77492 (IRON OXIDES) , CI 77499 (IRON OXIDES), CI 77891 (TITANIUM DIOXIDE)]. N\u00b0 22157/Z",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "AQUA (WATER)",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "METHYL TRIMETHICONE",
+          "inci": "methyl trimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "ALCOHOL",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 4,
+          "as_filed": "ISODODECANE",
+          "inci": "isododecane"
+        },
+        {
+          "position": 5,
+          "as_filed": "PEG-10 DIMETHICONE",
+          "inci": "peg-10 dimethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "TRIMETHYLSILOXYSILICATE",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 7,
+          "as_filed": "BUTYLENE GLYCOL",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 8,
+          "as_filed": "METHYL METHACRYLATE CROSSPOLYMER",
+          "inci": "methyl methacrylate crosspolymer"
+        },
+        {
+          "position": 9,
+          "as_filed": "DIMETHICONE",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 10,
+          "as_filed": "DIPHENYL DIMETHICONE/VINYL DIPHENYL DIMETHICONE/SILSESQUIOXANE CROSSPOLYMER",
+          "inci": "diphenyl dimethicone/vinyl diphenyl dimethicone/silsesquioxane crosspolymer"
+        },
+        {
+          "position": 11,
+          "as_filed": "VINYL DIMETHICONE/METHICONE SILSESQUIOXANE CROSSPOLYMER",
+          "inci": "vinyl dimethicone/methicone silsesquioxane crosspolymer"
+        },
+        {
+          "position": 12,
+          "as_filed": "CETYL DIMETHICONE",
+          "inci": "cetyl dimethicone"
+        },
+        {
+          "position": 13,
+          "as_filed": "DISTEARDIMONIUM HECTORITE",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 14,
+          "as_filed": "NIACINAMIDE",
+          "inci": "niacinamide"
+        },
+        {
+          "position": 15,
+          "as_filed": "POLYGLYCERYL-10 DECAISOSTEARATE",
+          "inci": "polyglyceryl-10 decaisostearate"
+        },
+        {
+          "position": 16,
+          "as_filed": "SODIUM MYRISTOYL GLUTAMATE",
+          "inci": "sodium myristoyl glutamate"
+        },
+        {
+          "position": 17,
+          "as_filed": "PARFUM (FRAGRANCE)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 18,
+          "as_filed": "PROPYLENE CARBONATE",
+          "inci": "propylene carbonate"
+        },
+        {
+          "position": 19,
+          "as_filed": "CHLORPHENESIN",
+          "inci": "chlorphenesin"
+        },
+        {
+          "position": 20,
+          "as_filed": "POLYHYDROXYSTEARIC ACID",
+          "inci": "polyhydroxystearic acid"
+        },
+        {
+          "position": 21,
+          "as_filed": "CAPRYLICA/CAPRIC TRIGLYCERIDE",
+          "inci": "caprylic/capric triglyceride"
+        },
+        {
+          "position": 22,
+          "as_filed": "ALUMINUM HYDROXIDE",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 23,
+          "as_filed": "HYALURONIC ACID",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 24,
+          "as_filed": "TROMETHAMINE",
+          "inci": "tromethamine"
+        },
+        {
+          "position": 25,
+          "as_filed": "ISOSTEARIC ACID",
+          "inci": "isostearic acid"
+        },
+        {
+          "position": 26,
+          "as_filed": "ALUMINA",
+          "inci": "alumina"
+        },
+        {
+          "position": 27,
+          "as_filed": "STEARIC ACID",
+          "inci": "stearic acid"
+        },
+        {
+          "position": 28,
+          "as_filed": "TOCOPHEROL",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 29,
+          "as_filed": "POLYGLYCERYL-3 POLYRICINOLEATE",
+          "inci": "polyglyceryl-3 polyricinoleate"
+        },
+        {
+          "position": 30,
+          "as_filed": "LECITHIN",
+          "inci": "lecithin"
+        },
+        {
+          "position": 31,
+          "as_filed": "PENTYLENE GLYCOL",
+          "inci": "pentylene glycol"
+        },
+        {
+          "position": 32,
+          "as_filed": "IRIS FLORENTINA ROOT EXTRACT",
+          "inci": "iris florentina root extract"
+        },
+        {
+          "position": 33,
+          "as_filed": "TROPAEOLUM MAJUS FLOWER/LEAF/STEM EXTRACT",
+          "inci": "tropaeolum majus flower/leaf/stem extract"
+        },
+        {
+          "position": 34,
+          "as_filed": "SODIUM BENZOATE",
+          "inci": "sodium benzoate"
+        },
+        {
+          "position": 35,
+          "as_filed": "POTASSIUM SORBATE",
+          "inci": "potassium sorbate"
+        },
+        {
+          "position": 36,
+          "as_filed": "ACETYL HEXAPEPTIDE-8",
+          "inci": "acetyl hexapeptide-8"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "CI 77491 (IRON OXIDES)",
+          "inci": "ci 77491 (iron oxides)"
+        },
+        {
+          "position": 2,
+          "as_filed": "CI 77492 (IRON OXIDES)",
+          "inci": "ci 77492 (iron oxides)"
+        },
+        {
+          "position": 3,
+          "as_filed": "CI 77499 (IRON OXIDES)",
+          "inci": "ci 77499 (iron oxides)"
+        },
+        {
+          "position": 4,
+          "as_filed": "CI 77891 (TITANIUM DIOXIDE)]. N\u00b0 22157/Z",
+          "inci": "ci 77891 (titanium dioxide)]. n\u00b0 22157/z"
+        }
+      ],
+      "label_corrections": [
+        {
+          "as_filed": "CAPRYLICA/CAPRIC TRIGLYCERIDE",
+          "read_as": "caprylic/capric triglyceride"
+        }
+      ],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "AQUA (WATER)",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "ALCOHOL",
+          "canonical": "alcohol denat"
+        },
+        {
+          "as_filed": "PARFUM (FRAGRANCE)",
+          "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "HYALURONIC ACID",
+          "canonical": "sodium hyaluronate"
+        }
+      ]
+    }
+  ]
+}
