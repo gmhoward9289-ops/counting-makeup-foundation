@@ -40,6 +40,10 @@
   }
   .wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
 
+  .brand-icon-link { display: inline-block; margin: 0 0 .9rem; line-height: 0; }
+  .brand-icon { width: 40px; height: 40px; display: block; transition: opacity .15s; }
+  .brand-icon-link:hover .brand-icon { opacity: .75; }
+
   header .eyebrow {
     font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
     color: var(--muted); margin: 0 0 .5rem;
@@ -85,6 +89,15 @@
 <div class="wrap">
 
   <header>
+    <a href="/" class="brand-icon-link" aria-label="Foundation home">
+      <svg class="brand-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <line x1="16" y1="44" x2="32" y2="22" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+        <line x1="32" y1="22" x2="48" y2="44" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="16" cy="44" r="7" fill="var(--petal)"/>
+        <circle cx="32" cy="22" r="7" fill="var(--accent)"/>
+        <circle cx="48" cy="44" r="7" fill="var(--petal)"/>
+      </svg>
+    </a>
     <p class="eyebrow">A swamplink research property</p>
     <h1><span class="wordmark">Foundation</span> — what's actually in my makeup?</h1>
     <p class="lede">Sourced research on the cosmetics industry. Similar products, different
