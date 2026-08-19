@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How long it takes — Foundation</title>
+<meta name="description" content="What a manufacturer has to prove about a formula&#x27;s stability before it can ship, sourced from US and EU regulation — the part of development time a filing can actually confirm.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>How long it takes</h1>
+    <p class="lede">Iteration counts are not disclosed by anyone in this corpus. What is public is what has to be proven before a formula can ship — this page sources that instead of guessing the rest.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a><span aria-current="page">How long it takes</span></nav>
+
+  <section>
+    <h2>The number that isn't public</h2>
+    <div class="caveat"><p><strong>How many prototypes, how many failed batches, how many
+    months a specific formula took — no manufacturer in this corpus discloses that, and
+    it could not be found sourced anywhere else either.</strong> That number lives inside
+    a company's R&amp;D function and never reaches a filing, an annual report or a
+    standard. Anything claiming a precise iteration count for the industry is not
+    reporting a fact; it is guessing. This page does not guess.</p></div>
+
+    <p>What it does instead is answer a narrower, checkable question: what is a
+    manufacturer legally required to prove about a formula's stability before that
+    formula may ship, and how is that requirement structured. That's not the same
+    question as "how many tries did it take" — but it is the part of development time
+    that a regulator, not a marketing brief, actually controls, and it is the same
+    reasoning MoCRA's own <a href="/mocra/">safety-substantiation duty</a> rests on:
+    a company must be able to show its work, even though the work itself stays
+    private.</p>
+  </section>
+
+  <section>
+    <h2>What has to be proven before a US OTC drug can ship</h2>
+    <div class="finding"><p><strong>21 CFR 211.166 is the rule that actually binds
+    these twelve products.</strong> Every product in this corpus carries an SPF claim, which makes it an OTC drug in the US — so this cGMP requirement, not general cosmetics practice, is what actually binds these twelve products.</p></div>
+    <ul class="tight"><li>a written stability-testing program with sample sizes and test intervals set on statistical criteria</li><li>testing in the same container-closure system the product is actually marketed in</li><li>an adequate number of batches tested to support the expiration date</li><li>accelerated studies may support a tentative expiration date only while full shelf-life studies are still being conducted — the tentative date must later be verified by real-time data or revised</li></ul>
+    <p class="note">Source: <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211/subpart-I/section-211.166">21 CFR 211.166 — Stability testing</a> <span class="note">— eCFR (Office of the Federal Register / GPO)</span>.
+    Text as displayed 2026-08-19, current to amendments through 46 FR 56412 (17 Nov 1981); unchanged since.</p>
+    <p>The load-bearing clause is the one about accelerated data: a company can launch on
+    a projected shelf life while real-time testing is still running, but only as a
+    <em>tentative</em> date that must later be verified. That's the mechanism that lets a
+    product with a two-year claimed shelf life ship well under two years after formulation
+    is finalized, without skipping the real-time study — the real-time data just keeps
+    running in the background after launch.</p>
+  </section>
+
+  <section>
+    <h2>What the EU requires of every cosmetic, drug claim or not</h2>
+    <div class="finding"><p>Guidelines on Annex I to Regulation (EC) No 1223/2009 — stability of the cosmetic product requires a documented stability assessment for
+    every cosmetic product placed on the EU market, drug claim or not. The SCCS has recommended that &#x27;relevant stability tests, adapted to the type of cosmetic product and its intended use, should be carried out.&#x27;</p></div>
+    <ul class="tight"><li>the safety report must show the tested composition matches what is actually placed on the market</li><li>a preservative efficacy (challenge) test where applicable</li><li>a determined and justified minimum durability, and a period-after-opening (PAO) where applicable</li><li>physical stability tests run in the actual market packaging, not just an inert reference container</li></ul>
+    <p class="note">Source: <a href="https://www.legislation.gov.uk/eudn/2013/674/annex/2013-11-25">2013/674/EU, Annex, point 3.2.3</a> <span class="note">— legislation.gov.uk (mirror of Commission Implementing Decision 2013/674/EU)</span>. Adopted 25 November 2013, published in the Official Journal 26 November 2013; guidance on Annex I of Regulation (EC) No 1223/2009, unchanged since adoption.</p>
+    <p>The EU rule is broader than the US one in scope — it covers all twelve products in
+    this corpus, not just the OTC-drug half of what those products' SPF claims trigger —
+    and it is explicit about testing in the real market packaging rather than a neutral
+    reference container, because packaging interactions are themselves a stability
+    variable.</p>
+  </section>
+
+  <section>
+    <h2>The one public timeline figure, and why it's labeled color</h2>
+    <div class="panel">
+      <p>16% less than 12 months ·
+      <strong>58% said 12–18 months</strong> ·
+      26% more than 18 months</p>
+      <p class="note"><a href="https://www.cosmeticsandtoiletries.com/polls/news/22874070/1click-poll-what-is-an-average-timeline-for-a-cosmetic-product-from-concept-to-launch">Cosmetics &amp; Toiletries reader poll, 2023-10-02</a> <span class="note">— Cosmetics &amp; Toiletries</span></p>
+    </div>
+    <div class="caveat"><p><strong>A self-selected 1-click reader poll, not a methodology-disclosed survey — treated here as color, matching what the site&#x27;s own issue tracker called this page, not as a sourced statistic on the order of the corpus figures elsewhere on this site.</strong></p></div>
+    <p>It's included anyway because it's the only concept-to-launch timeline figure found
+    with an attributable publisher and date — and because, read against the two stability
+    rules above, the 12–18 month plurality is not surprising. A product claiming a
+    multi-year shelf life needs months of accelerated data before it can even launch on a
+    tentative date, and that requirement alone accounts for most of the low end of the
+    range.</p>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
+         Template and property list: claude-rules/shared-rules.md. -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

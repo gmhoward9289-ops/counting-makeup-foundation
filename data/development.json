@@ -1,0 +1,60 @@
+{
+  "dataset": "development-and-testing-effort",
+  "description": "Primary-source material for issue #11 (development/testing effort). Internal R&D data — how many prototypes, how many failed iterations, how long a specific team took — is not disclosed by any manufacturer in the corpus and could not be found sourced anywhere. What is public and checkable is the other half of the question: what a product is legally required to prove about its own stability before it can ship, and how long that proof takes to produce. This file is deliberately thin — the ISSUES.md entry that opened this page calls it color, not a pillar, precisely because the interesting number (iteration count) is not obtainable and should not be estimated.",
+  "retrieved": "2026-08-19",
+  "retrieval_notes": [
+    "EUR-Lex refuses scripted access from this network (empty HTTP 202), same as data/regulatory.json. The 2013/674/EU guidelines text below was read from the legislation.gov.uk mirror of the instrument, which serves the same point-in-time text as adopted — this decision has not been amended since 2013.",
+    "eCFR was reachable this time (govinfo was used for data/regulatory.json's CFR text; the earlier note about eCFR bot-blocking a scripted client did not reproduce here for this section, so eCFR is cited directly).",
+    "One trade-press figure is included — a Cosmetics & Toiletries reader poll — and is labeled as exactly that: a self-selected 1-click poll of trade-magazine readers, not a survey with a disclosed methodology. It is the only concept-to-launch timeline figure found with an attributable, checkable publisher and date; broader claims about typical iteration counts turned up only unsourced marketing copy and were left out rather than repeated."
+  ],
+
+  "us_otc_stability": {
+    "cite": "21 CFR 211.166",
+    "title": "Stability testing",
+    "applies_because": "Every product in this corpus carries an SPF claim, which makes it an OTC drug in the US — so this cGMP requirement, not general cosmetics practice, is what actually binds these twelve products.",
+    "requirements": [
+      "a written stability-testing program with sample sizes and test intervals set on statistical criteria",
+      "testing in the same container-closure system the product is actually marketed in",
+      "an adequate number of batches tested to support the expiration date",
+      "accelerated studies may support a tentative expiration date only while full shelf-life studies are still being conducted — the tentative date must later be verified by real-time data or revised"
+    ],
+    "source": {
+      "type": "Code of Federal Regulations, Title 21 Part 211 Subpart I",
+      "publisher": "eCFR (Office of the Federal Register / GPO)",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211/subpart-I/section-211.166",
+      "note": "Text as displayed 2026-08-19, current to amendments through 46 FR 56412 (17 Nov 1981); unchanged since."
+    }
+  },
+
+  "eu_stability_guidance": {
+    "cite": "2013/674/EU, Annex, point 3.2.3",
+    "title": "Guidelines on Annex I to Regulation (EC) No 1223/2009 — stability of the cosmetic product",
+    "quote": "The SCCS has recommended that 'relevant stability tests, adapted to the type of cosmetic product and its intended use, should be carried out.'",
+    "requirements": [
+      "the safety report must show the tested composition matches what is actually placed on the market",
+      "a preservative efficacy (challenge) test where applicable",
+      "a determined and justified minimum durability, and a period-after-opening (PAO) where applicable",
+      "physical stability tests run in the actual market packaging, not just an inert reference container"
+    ],
+    "source": {
+      "type": "Commission Implementing Decision, consolidated guidance text",
+      "publisher": "legislation.gov.uk (mirror of Commission Implementing Decision 2013/674/EU)",
+      "url": "https://www.legislation.gov.uk/eudn/2013/674/annex/2013-11-25",
+      "note": "Adopted 25 November 2013, published in the Official Journal 26 November 2013; guidance on Annex I of Regulation (EC) No 1223/2009, unchanged since adoption."
+    }
+  },
+
+  "concept_to_launch_poll": {
+    "less_than_12_months_pct": 16,
+    "twelve_to_eighteen_months_pct": 58,
+    "more_than_18_months_pct": 26,
+    "published": "2023-10-02",
+    "caveat": "A self-selected 1-click reader poll, not a methodology-disclosed survey — treated here as color, matching what the site's own issue tracker called this page, not as a sourced statistic on the order of the corpus figures elsewhere on this site.",
+    "source": {
+      "type": "Trade-press reader poll",
+      "publisher": "Cosmetics & Toiletries",
+      "url": "https://www.cosmeticsandtoiletries.com/polls/news/22874070/1click-poll-what-is-an-average-timeline-for-a-cosmetic-product-from-concept-to-launch",
+      "note": "Poll results as published; no raw vote count or respondent count disclosed."
+    }
+  }
+}

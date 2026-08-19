@@ -19,9 +19,13 @@ The site is organized around the four questions from the original brief
    filings and bottom-up ingredient cost estimates, always labeled as estimates.
 4. **Was it sourced ethically?** — sourcing claims, and to which ethical standards.
 
-Two further studies grew out of the fourth question and now stand on their own:
-**what's banned where** (the US and EU prohibition lists, tested against the corpus) and
-**who's watching** (what MoCRA required, and what has actually issued).
+Three further studies grew out of the founding four and now stand on their own:
+**what's banned where** (the US and EU prohibition lists, tested against the corpus),
+**who's watching** (what MoCRA required, and what has actually issued), and
+**how long it takes** — development iteration counts are not disclosed anywhere, so this
+one sources the checkable half instead: the stability testing a formula must pass before
+it can ship (deliberately thin; see `ISSUES.md`'s own framing of it as color, not a
+pillar).
 
 Every figure carries a citation to a primary source, chicken-wings style. See
 `ISSUES.md` for the feature/epic backlog.
@@ -68,13 +72,15 @@ Pages are generated from the data so no published figure can drift from its sour
 
 ## Hand-read primary sources
 
-Three data files are not fetched by a script, because their sources cannot be fetched
-reliably from here: `data/margins-manual.json`, `data/regulatory.json` and
-`data/sourcing.json`. EUR-Lex answers scripted requests with an empty HTTP 202, and
-fda.gov fails TLS verification behind a local interception certificate. So the
-consolidated regulations and the statute were read once, by hand, and every figure in
-those files carries its own `source` block with the URL, the publisher and a note on how
-a count was arrived at.
+Four data files are not fetched by a script, because their sources cannot be fetched
+reliably from here: `data/margins-manual.json`, `data/regulatory.json`,
+`data/sourcing.json` and `data/development.json`. EUR-Lex answers scripted requests with
+an empty HTTP 202, and fda.gov fails TLS verification behind a local interception
+certificate. So the consolidated regulations and the statute were read once, by hand, and
+every figure in those files carries its own `source` block with the URL, the publisher
+and a note on how a count was arrived at. `data/development.json` also carries its own
+caveat on the one trade-press figure it uses (a reader poll, not a survey) and says
+plainly what it did not find: a sourced iteration count.
 
 The rule that keeps this honest is that nothing *derived* is hand-entered. Which
 products a rule actually touches, how many months a deadline is overdue, how the corpus
