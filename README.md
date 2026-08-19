@@ -33,8 +33,8 @@ keep their Blackwater values and semantics — they are never decorative.
 
 Chandler-style: `site/` is deployed verbatim (no build step); each page is a
 self-contained `site/<slug>/index.html` with tokens inlined. Deploy is a git push to
-`swamplink:/srv/git/counting-makeup-foundation.git`; a post-receive hook publishes
-`site/` to `/var/www/foundation`.
+`lynx:/srv/git/counting-makeup-foundation.git`; a post-receive hook publishes
+`site/` to `/var/www/foundation` on lynx.
 
 Public repo (see `.repo-visibility`), like wings: GitHub for collaboration,
 swamplink for deploy.
