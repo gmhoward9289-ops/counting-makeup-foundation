@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Does R&amp;D spend buy quality? — Foundation</title>
+<meta name="description" content="Public-company R&amp;D expense, paired against this project&#x27;s formulation-derived quality proxy. Most companies in this corpus disclose no R&amp;D figure at all.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>Does R&D spend buy quality?</h1>
+    <p class="lede">Half the companies behind these twelve foundations disclose no R&D figure. Among the three that do, spending more does not visibly buy a cleaner or more concentrated formula.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><span aria-current="page">Does R&amp;D pay off</span><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a></nav>
+
+  <section>
+    <h2>Who discloses R&amp;D at all</h2>
+    <p>Group-wide R&amp;D expense (or, for L&#x27;Oréal, its own reported &#x27;Research &amp; Innovation&#x27; line) as a percentage of group-wide revenue, in the most recent fiscal year each company discloses it. Company-wide, not product-line-wide: it covers R&amp;D across every category a company sells, not just foundation.</p>
+    <div class="finding"><p><strong>Half the companies behind this corpus disclose no R&amp;D
+    figure whatsoever — not e.l.f. Beauty, not LVMH, not Revlon.</strong> Only Coty, Estée Lauder
+    and L'Oréal publish a number a reader can actually cite, and even Estée Lauder's only survives
+    in prose in a footnote, not as a structured financial-statement fact.</p></div>
+
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Parent company</th><th class="num">Products in corpus</th>
+          <th class="num">R&amp;D / revenue</th><th>Fiscal year</th>
+          <th class="num">Mean SPF</th><th class="num">Mean actives above 1% line</th>
+          <th class="num">Mean allergens</th><th class="num">Mean ingredient count</th></tr></thead>
+        <tbody><tr><td>L&#x27;Oréal</td><td class='num'>5</td><td class='num'>3.10%</td><td class='note'>2025-12-31</td><td class='num'>24</td><td class='num'>1.4</td><td class='num'>3.8</td><td class='num'>37</td></tr><tr><td>Estée Lauder Companies</td><td class='num'>3</td><td class='num'>2.21%</td><td class='note'>2025-06-30</td><td class='num'>16.33</td><td class='num'>2</td><td class='num'>0</td><td class='num'>41.67</td></tr><tr><td>Coty</td><td class='num'>1</td><td class='num'>2.09%</td><td class='note'>2025-06-30</td><td class='num'>20</td><td class='num'>0</td><td class='num'>6</td><td class='num'>50</td></tr><tr><td>LVMH</td><td class='num'>1</td><td class='num'>—</td><td class='note'>—</td><td class='num'>20</td><td class='num'>0</td><td class='num'>0</td><td class='num'>36</td></tr><tr><td>Revlon</td><td class='num'>1</td><td class='num'>—</td><td class='note'>—</td><td class='num'>—</td><td class='num'>0</td><td class='num'>0</td><td class='num'>27</td></tr><tr><td>e.l.f. Beauty</td><td class='num'>1</td><td class='num'>—</td><td class='note'>—</td><td class='num'>15</td><td class='num'>0</td><td class='num'>0</td><td class='num'>27</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Quality columns are the exact same formulation-derived
+    proxy used throughout this site, averaged per company across its products in this corpus — see
+    <a href="/price/">price against quality</a> for the full definition.</p>
+  </section>
+
+  <section>
+    <h2>Does more R&amp;D buy a better formula?</h2>
+    <div class="finding"><p><strong>No visible relationship, at n=3.</strong> Ranked by R&amp;D as
+    a share of revenue: Coty (2.09%), Estée Lauder (2.21%), L'Oréal (3.10%). Ranked by the
+    formulation-quality proxy, the order scrambles completely — Coty's single product carries the
+    most declared fragrance allergens and zero actives above the 1% line, while Estée Lauder's
+    products average the fewest allergens and the most actives above that line, sitting in the
+    middle of the R&amp;D ranking. Spending more on research is not visibly buying a cleaner or
+    more concentrated formula in this corpus.</p></div>
+
+    <h3>Sources for each R&amp;D figure</h3>
+    <div class="sunken"><ul class="tight"><li><strong>Coty</strong> — <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001024305&amp;type=10-K">SEC Form 10-K (XBRL company facts)</a> <span class="note">— U.S. Securities and Exchange Commission</span></li><li><strong>Estée Lauder Companies</strong> — <a href="https://www.sec.gov/Archives/edgar/data/1001250/000100125026000041/el-20260630.htm">SEC Form 10-K, Note to the financial statements (hand-read, not a discrete XBRL tag)</a> <span class="note">— The Estée Lauder Companies Inc.</span></li><li><strong>L&#x27;Oréal</strong> — <a href="https://www.loreal-finance.com/eng/press-release/2025-annual-results">Annual results press release, consolidated profit and loss account</a> <span class="note">— L&#x27;Oréal (loreal-finance.com)</span></li><li><strong>LVMH</strong> — <span class="note">LVMH does not disclose a group-wide research and development expenditure figure in its annual results release or Universal Registration Document. R&amp;D at LVMH sits inside its Maisons -- Perfumes &amp; Cosmetics is one of five reporting segments -- and is not broken out as its own line or segment note, the same limitation this project already records for LVMH&#x27;s segment-level gross margin.</span></li><li><strong>Revlon</strong> — <span class="note">Revlon filed for Chapter 11 in 2022 and emerged in 2023 as a private company. It no longer files a 10-K, so no current primary R&amp;D figure exists.</span></li><li><strong>e.l.f. Beauty</strong> — <span class="note">e.l.f. Beauty&#x27;s 10-K reports no discrete research and development line, in prose or in XBRL. Product development cost is folded into Selling, general and administrative expenses with no separate disclosure of the amount.</span></li></ul></div>
+  </section>
+
+  <section>
+    <div class="caveat"><p><strong>Read this page skeptically.</strong> Three companies with a
+    disclosed figure is not a sample size that can establish or rule out a correlation — it is
+    barely enough to plot. R&amp;D-as-percent-of-revenue is company-wide, covering every category
+    each company sells (skincare, fragrance, haircare, and in L'Oréal and LVMH's case, far beyond
+    beauty), not R&amp;D spent on foundation specifically, which no company breaks out. And the
+    quality proxy on this page is exactly what it is everywhere else on this site: formulation
+    read off an FDA filing, never a review score, a dermatologist rating, or a reformulation-
+    frequency count — the axis the original request for this page asked for, and which this
+    project does not use.</p></div>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
+         Template and property list: claude-rules/shared-rules.md. -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

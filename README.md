@@ -58,8 +58,9 @@ Rebuild everything from scratch:
 python tools/fetch_dailymed.py <setid>...   # pull the FDA labels (writes data/raw/)
 python tools/build_corpus.py                # parse + normalize  -> data/corpus.json
 python tools/fetch_margins.py               # SEC + annual reports -> data/margins.json
+python tools/fetch_rd.py                    # SEC + annual reports -> data/rd.json
 python tools/analyze.py                     # issues #9 #14 #15  -> data/analysis.json
-python tools/cost_quality.py                # issues #10 #13     -> data/cost-quality.json
+python tools/cost_quality.py                # issues #10 #12 #13 -> data/cost-quality.json
 python tools/analyze_regulatory.py          # issues #16 #17 #18 -> data/regulatory-analysis.json
 python tools/build_site.py                  # render site/*/index.html
 ```
@@ -68,13 +69,17 @@ Pages are generated from the data so no published figure can drift from its sour
 
 ## Hand-read primary sources
 
-Three data files are not fetched by a script, because their sources cannot be fetched
-reliably from here: `data/margins-manual.json`, `data/regulatory.json` and
+Four data files are not fetched by a script, because their sources cannot be fetched
+reliably from here, or because the source itself is prose rather than a structured
+filing: `data/margins-manual.json`, `data/rd-manual.json`, `data/regulatory.json` and
 `data/sourcing.json`. EUR-Lex answers scripted requests with an empty HTTP 202, and
-fda.gov fails TLS verification behind a local interception certificate. So the
-consolidated regulations and the statute were read once, by hand, and every figure in
-those files carries its own `source` block with the URL, the publisher and a note on how
-a count was arrived at.
+fda.gov fails TLS verification behind a local interception certificate. L'Oréal and
+LVMH file outside SEC EDGAR entirely, and even Estée Lauder's R&D expense — unlike its
+gross margin — has not been a discrete XBRL fact since fiscal 2014, so it has to be
+read out of the footnote prose in every 10-K it appears in. So the consolidated
+regulations, the statute, and these company figures were read once, by hand, and every
+figure in those files carries its own `source` block with the URL, the publisher and a
+note on how a count was arrived at.
 
 The rule that keeps this honest is that nothing *derived* is hand-entered. Which
 products a rule actually touches, how many months a deadline is overdue, how the corpus

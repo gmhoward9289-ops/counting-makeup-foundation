@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Issue #10 (cost vs price) and issue #13 (the price x quality matrix).
+"""Issue #10 (cost vs price), issue #13 (the price x quality matrix), and
+issue #12 (R&D spend vs quality).
 
-Two deliberate choices govern this file.
+Three deliberate choices govern this file.
 
 COST. Nobody publishes per-product manufacturing cost, so the only cost figure
 with a citation behind it is company gross margin. That gives implied cost of
@@ -15,7 +16,12 @@ precise-looking single number here would be false precision.
 QUALITY. Per the project decision of 2026-08-19, quality is derived from the
 filings themselves rather than from review scores. Every component below is
 read off the FDA-filed label. This measures the formulation, not whether anyone
-enjoys wearing it, and the site says so.
+enjoys wearing it, and the site says so. Issue #12 asks whether R&D spend
+correlates with quality; it reuses this exact quality proxy rather than the
+review/derm-rating axis the issue names, because that axis was deliberately
+rejected for this project. See data/rd-manual.json and tools/fetch_rd.py for
+why R&D disclosure turned out to be even less consistent across these
+companies than gross margin.
 """
 import json
 import re
@@ -70,6 +76,7 @@ def main():
     corpus = json.loads((ROOT / "data" / "corpus.json").read_text(encoding="utf-8"))
     analysis = json.loads((ROOT / "data" / "analysis.json").read_text(encoding="utf-8"))
     margins = json.loads((ROOT / "data" / "margins.json").read_text(encoding="utf-8"))
+    rd = json.loads((ROOT / "data" / "rd.json").read_text(encoding="utf-8"))
     prices = json.loads((ROOT / "data" / "prices.json").read_text(encoding="utf-8"))["prices"]
     cr = {r["id"]: r for r in analysis["issue_14_complexity_rarity"]["per_product"]}
 
@@ -132,6 +139,31 @@ def main():
                     vals.append(v)
         return round(statistics.mean(vals), 2) if vals else None
 
+    def company_mean(company, path):
+        vals = []
+        for r in rows:
+            if r["parent_company"] != company:
+                continue
+            v = r
+            for k in path:
+                v = v.get(k) if isinstance(v, dict) else None
+            if v is not None:
+                vals.append(v)
+        return round(statistics.mean(vals), 2) if vals else None
+
+    companies = sorted({r["parent_company"] for r in rows})
+    rd_rows = [{
+        "parent_company": c,
+        "n_products": sum(1 for r in rows if r["parent_company"] == c),
+        "rd_pct_of_revenue": rd.get(c, {}).get("rd_pct_of_revenue"),
+        "rd_fiscal_year_end": rd.get(c, {}).get("fiscal_year_end"),
+        "rd_source": rd.get(c, {}).get("source"),
+        "mean_spf": company_mean(c, ["quality", "spf_filed"]),
+        "mean_actives_above_line": company_mean(c, ["quality", "named_actives_above_1pct_line"]),
+        "mean_allergens": company_mean(c, ["quality", "eu_declared_allergens"]),
+        "mean_ingredient_count": company_mean(c, ["quality", "ingredient_count"]),
+    } for c in companies]
+
     tiers = ["budget", "mass", "prestige", "luxury"]
     out = {
         "issue_10_cost_vs_price": {
@@ -167,6 +199,20 @@ def main():
                 "mean_allergens": tier_mean(t, ["quality", "eu_declared_allergens"]),
                 "mean_ingredient_count": tier_mean(t, ["quality", "ingredient_count"]),
             } for t in tiers},
+        },
+        "issue_12_rd_vs_quality": {
+            "quality_definition": (
+                "The same formulation-derived quality proxy as issue #13, above, "
+                "averaged across each parent company's products in this corpus -- "
+                "not review scores or dermatologist ratings, which this project "
+                "deliberately does not use."),
+            "rd_definition": (
+                "Group-wide R&D expense (or, for L'Oréal, its own reported "
+                "'Research & Innovation' line) as a percentage of group-wide "
+                "revenue, in the most recent fiscal year each company discloses "
+                "it. Company-wide, not product-line-wide: it covers R&D across "
+                "every category a company sells, not just foundation."),
+            "per_company": rd_rows,
         },
     }
     (ROOT / "data" / "cost-quality.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
