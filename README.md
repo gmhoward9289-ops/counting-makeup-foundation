@@ -1,8 +1,12 @@
 # Foundation
 
+[![Discussions](https://img.shields.io/github/discussions/gmhoward9289-ops/counting-makeup-foundation)](https://github.com/gmhoward9289-ops/counting-makeup-foundation/discussions)
+
 A swamplink research property: the counting-chicken-wings sourced-research model,
 applied to the cosmetics industry. Site: **https://foundation.swamplink.com/**
 (sibling of wings.swamplink.com — same discipline, different shelf).
+
+Questions or shelf finds: [Discussions](https://github.com/gmhoward9289-ops/counting-makeup-foundation/discussions).
 
 Named *Foundation* the same way wings was named: one word, the product itself. It also
 carries the second meaning for free — foundational research, what a claim stands on.
