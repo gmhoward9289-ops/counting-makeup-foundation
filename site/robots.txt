@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foundation.swamplink.com/sitemap.xml
