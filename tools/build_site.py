@@ -1444,6 +1444,12 @@ def main():
     build_mocra(reg, ra)
     build_development(dev)
     build_disclaimer()
+    # Homepage is hand-written, but the study-count badge is derived from
+    # its live cards so it cannot sit at "Eight" after a ninth page ships.
+    from check_study_count import check, sync_home_badge
+    if sync_home_badge():
+        print("updated site/index.html study-count badge")
+    check()
 
 
 if __name__ == "__main__":
