@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Foundation — what's actually in my makeup?</title>
-<meta name="description" content="Sourced research on the cosmetics industry: ingredients, prices, and claims — every figure cited to a primary source.">
+<meta name="description" content="A $19 L'Oréal Paris foundation and a $53 Lancôme one declare the same first nine ingredients. Sourced research on cosmetics: every figure cited to a primary source.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -36,30 +36,86 @@
   body {
     background: var(--bg); color: var(--ink);
     font: 15px/1.55 system-ui, "Segoe UI", sans-serif;
-    margin: 0; padding: 2rem 1.25rem 4rem;
+    margin: 0; padding: 1.4rem 1.25rem 4rem;
   }
-  .wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+  .wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.1rem; }
 
-  .brand-icon-link { display: inline-block; margin: 0 0 .9rem; line-height: 0; }
+  .chrome {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+    max-width: 880px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+  }
+  .chrome .home {
+    color: var(--ink); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chrome .home:hover { color: var(--accent); }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
+  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav a:hover { color: var(--ink); }
+
+  .brand-icon-link { display: inline-block; margin: 0 0 .7rem; line-height: 0; }
   .brand-icon { width: 40px; height: 40px; display: block; transition: opacity .15s; }
   .brand-icon-link:hover .brand-icon { opacity: .75; }
 
   header .eyebrow {
     font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
-    color: var(--muted); margin: 0 0 .5rem;
+    color: var(--muted); margin: 0 0 .45rem;
   }
-  header h1 { margin: 0 0 .5rem; font-size: 2.1rem; letter-spacing: -.01em; text-wrap: balance; }
+  header h1 { margin: 0 0 .4rem; font-size: 2.1rem; letter-spacing: -.01em; text-wrap: balance; }
   header h1 .wordmark { color: var(--accent); }
   header p.lede { margin: 0; color: var(--muted); max-width: 62ch; font-size: 1.02rem; }
 
-  .status {
-    display: inline-flex; align-items: center; gap: .4rem; margin-top: 1rem;
-    font-size: .74rem; letter-spacing: .04em; text-transform: uppercase;
-    padding: .2rem .6rem; border-radius: 3px;
-    color: var(--warn); background: var(--warn-bg); border: 1px solid var(--warn-line);
+  .lead {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1.25rem 1.35rem 1.35rem;
   }
+  .lead .kicker {
+    font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 .55rem;
+  }
+  .lead h2 {
+    margin: 0 0 .55rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: clamp(1.55rem, 4.6vw, 2.15rem);
+    letter-spacing: -.015em;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  .lead p { margin: 0 0 .85rem; max-width: 62ch; }
+  .lead p:last-child { margin-bottom: 0; }
+  .lead a { color: var(--petal); }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  }
+  @media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+  .stat {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: .95rem 1.05rem;
+  }
+  .stat .n {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem; font-weight: 700; letter-spacing: -.02em;
+    color: var(--ink); line-height: 1.15; margin: 0 0 .35rem;
+  }
+  .stat .l { margin: 0; color: var(--muted); font-size: .88rem; }
+  .stat a { color: inherit; text-decoration: none; }
+  .stat a:hover .n { color: var(--accent); }
 
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+  .cards-head {
+    font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 -.8rem;
+  }
   .card {
     background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
     padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem;
@@ -67,8 +123,6 @@
   .card h2 { margin: 0; font-size: 1.05rem; color: var(--accent); }
   .card h2 a { color: inherit; text-decoration: none; }
   .card h2 a:hover { text-decoration: underline; }
-  .card.live { border-color: var(--accent); }
-  .card .finding { font-size: .88rem; color: var(--ink); margin: 0; }
   .card p { margin: 0; color: var(--muted); font-size: .9rem; }
   .card .method { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--none); margin-top: auto; padding-top: .5rem; }
 
@@ -86,6 +140,18 @@
 </style>
 </head>
 <body>
+<div class="chrome">
+  <a class="home" href="https://www.swamplink.com/">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    swamplink
+  </a>
+  <nav aria-label="site">
+    <a href="https://www.swamplink.com/data/">data</a>
+    <a href="https://www.swamplink.com/tools/">tools</a>
+    <a href="https://blog.swamplink.com/">blog</a>
+    <a href="https://www.swamplink.com/news/">news</a>
+  </nav>
+</div>
 <div class="wrap">
 
   <header>
@@ -100,60 +166,80 @@
     </a>
     <p class="eyebrow">A swamplink research property</p>
     <h1><span class="wordmark">Foundation</span> — what's actually in my makeup?</h1>
-    <p class="lede">Sourced research on the cosmetics industry. Similar products, different
-    brands, side by side: the ingredients, the prices, and the claims — with every figure
-    cited to a primary source.</p>
-    <span class="status">Eight studies live — 12 foundations, every ingredient list from an FDA filing</span>
+    <p class="lede">Twelve FDA-filed formulas, side by side. The ingredients, the prices, and the claims — every figure cited to a primary source.</p>
   </header>
 
+  <section class="lead" aria-labelledby="lead-h">
+    <p class="kicker">A live finding · ownership</p>
+    <h2 id="lead-h">Same first nine ingredients.</h2>
+    <p>A $19 L'Oréal Paris foundation and a $53 Lancôme one declare them in the same order. Both brands belong to L'Oréal.</p>
+    <p><a href="/ownership/">Read the ownership study</a></p>
+  </section>
+
+  <section class="stats" aria-label="Live counts">
+    <a class="stat" href="/ingredients/">
+      <div class="n">191</div>
+      <p class="l">distinct ingredients across 12 foundations. Only 7 show up in three-quarters of them.</p>
+    </a>
+    <a class="stat" href="/price/">
+      <div class="n">70.7% / 74.0%</div>
+      <p class="l">e.l.f. vs Estée Lauder gross margin. The $53 formula costs about what the $12 one does.</p>
+    </a>
+    <a class="stat" href="/banned/">
+      <div class="n">1,760 vs 9</div>
+      <p class="l">substances the EU prohibits in cosmetics, versus the US. None of the 191 are on either list.</p>
+    </a>
+  </section>
+
+  <p class="cards-head">The studies</p>
   <section class="cards" aria-label="The research questions">
-    <div class="card live">
+    <div class="card">
       <h2><a href="/ingredients/">What's in my makeup?</a></h2>
       <p>Twelve foundations compared ingredient by ingredient, with a slider to put any two side by side. 191 distinct ingredients; only 7 appear in three-quarters of them.</p>
       <p class="method">Source: FDA-filed OTC drug labels (DailyMed)</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/complexity/">Is it really better?</a></h2>
       <p>Does a dearer formula mean rarer chemistry? Measured: price buys a longer list and better-placed actives, but ingredient rarity is flat across every tier.</p>
       <p class="method">Source: ingredient corpus · label ordering rule</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/price/">What am I paying for?</a></h2>
       <p>e.l.f. runs a 70.7% gross margin; Estée Lauder runs 74.0%. The formula in a $53 bottle costs about what the formula in a $12 bottle costs.</p>
       <p class="method">Source: SEC 10-K · company annual reports</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/sourcing/">Was it sourced ethically?</a></h2>
       <p>An ingredient list names what a substance is and never where it came from. L'Oréal's own
       RSPO filing shows 99.5% of its certified palm is mass balance — an accounting claim, not a
       traceable molecule.</p>
       <p class="method">Source: RSPO Annual Communication of Progress · scheme registries</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/ownership/">Who really makes it?</a></h2>
       <p>A $19 L'Oréal Paris foundation and a $53 Lancôme one declare the same first nine
       ingredients in the same order. Both brands belong to L'Oréal.</p>
       <p class="method">Source: FDA filings · permutation test</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/banned/">What's banned where?</a></h2>
       <p>The EU prohibits 1,760 substances in cosmetics and the US prohibits nine. Not one of the
       191 ingredients in this corpus appears on either list — the real divergence is elsewhere.</p>
       <p class="method">Source: EU Cosmetics Regulation · 21 CFR 700 · REACH</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/mocra/">Who's watching?</a></h2>
       <p>The first substantial change to US cosmetics law since 1938, enacted three and a half
       years ago. Every requirement that needs FDA to write a rule is still outstanding.</p>
       <p class="method">Source: Public Law 117-328 · Federal Register</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/development/">How long does it take?</a></h2>
       <p>No manufacturer discloses how many prototypes a formula takes — so this sources what
       actually is public: the stability testing a formula must pass before it can ship.</p>
       <p class="method">Source: 21 CFR 211.166 · EU Decision 2013/674/EU</p>
     </div>
-    <div class="card live">
+    <div class="card">
       <h2><a href="/rd/">Does R&amp;D spend buy quality?</a></h2>
       <p>Half the parent companies behind this corpus disclose no R&amp;D figure at all. Among the
       three that do, spending more does not visibly buy a cleaner or more concentrated formula.</p>

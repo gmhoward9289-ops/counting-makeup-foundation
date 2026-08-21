@@ -76,6 +76,24 @@
   footer a { text-decoration: none; }
   footer a:hover { text-decoration: underline; }
   footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .chrome {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+    max-width: 940px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+  }
+  .chrome .home {
+    color: var(--ink); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chrome .home:hover { color: var(--accent); }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
+  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav a:hover { color: var(--ink); }
+
   .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
   .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
     border: 1px solid var(--line); text-decoration: none; }
@@ -104,6 +122,18 @@
 </style>
 </head>
 <body>
+<div class="chrome">
+  <a class="home" href="https://www.swamplink.com/">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    swamplink
+  </a>
+  <nav aria-label="site">
+    <a href="https://www.swamplink.com/data/">data</a>
+    <a href="https://www.swamplink.com/tools/">tools</a>
+    <a href="https://blog.swamplink.com/">blog</a>
+    <a href="https://www.swamplink.com/news/">news</a>
+  </nav>
+</div>
 <div class="wrap">
   <header>
     <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
