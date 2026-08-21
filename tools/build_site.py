@@ -155,7 +155,11 @@ def nav(current):
     return '  <nav class="pagenav" aria-label="Research pages">%s</nav>\n' % items
 
 
+ORIGIN = "https://foundation.swamplink.com"
+
+
 def page(title, desc, h1, lede, body, extra_css="", script="", current=""):
+    canonical = ORIGIN + (current if current else "/")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -163,6 +167,7 @@ def page(title, desc, h1, lede, body, extra_css="", script="", current=""):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(desc)}">
+<link rel="canonical" href="{escape(canonical)}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -894,7 +899,7 @@ def build_disclaimer():
         "What this site is, what it is not, and how to read its estimates.",
         "Disclaimer",
         "What this site is, what it is not, and how to read its numbers.",
-        body))
+        body, current="/disclaimer/"))
 
 
 # --------------------------------------------------------------------- banned
@@ -1474,6 +1479,12 @@ def main():
     build_mocra(reg, ra)
     build_development(dev)
     build_disclaimer()
+    # Homepage is hand-written, but the study-count badge is derived from
+    # its live cards so it cannot sit at "Eight" after a ninth page ships.
+    from check_study_count import check, sync_home_badge
+    if sync_home_badge():
+        print("updated site/index.html study-count badge")
+    check()
 
 
 if __name__ == "__main__":
