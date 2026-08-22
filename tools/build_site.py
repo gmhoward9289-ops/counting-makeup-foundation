@@ -67,6 +67,7 @@ BASE_CSS = """
     border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
   .caveat strong { color: var(--warn); }
   .scroll { overflow-x: auto; }
+  img.figure-chart { width: 100%; height: auto; display: block; margin: 1rem 0; border-radius: 8px; }
   table { border-collapse: collapse; width: 100%; font-size: .88rem; }
   th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
     white-space: nowrap; }
@@ -735,6 +736,7 @@ def build_price(cq):
   <section>
     <h2>Price against quality</h2>
     <p>{escape(c13['quality_definition'])}</p>
+    <img class="figure-chart" src="/price/foundation-price.png" alt="Price against actives above 1% and fragrance allergens.">
 
     <div class="panel scroll">
       <table>
@@ -1030,6 +1032,7 @@ def build_banned(reg, ra):
     octinoxate. It is routinely described as banned in Europe. It is not: the EU permits it
     up to {s['octinoxate_eu_limit_pct']:g}%, and the highest concentration anyone in this
     corpus files is {s['octinoxate_max_declared_pct']:.1f}%.</p>
+    <img class="figure-chart" src="/banned/foundation-octinoxate.png" alt="Octinoxate in eight of twelve products. Not banned in the EU. Ceiling is 10%.">
     <div class="panel scroll">
       <table>
         <thead><tr><th>Brand</th><th>Tier</th><th class="num">Declared</th>
