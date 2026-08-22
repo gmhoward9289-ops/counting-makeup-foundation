@@ -110,6 +110,7 @@ BASE_CSS = """
   .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
   .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
     border-color: var(--accent); font-weight: 600; }
+  section > img { max-width: 100%; height: auto; display: block; margin: 0 0 .8rem; }
 """
 
 FOOTER = """
@@ -735,7 +736,7 @@ def build_price(cq):
   <section>
     <h2>Price against quality</h2>
     <p>{escape(c13['quality_definition'])}</p>
-
+    <img src="price-actives.png" alt="Signed chart titled Price against actives above 1% and fragrance allergens. Pink dots are actives above 1%; orange dots are fragrance allergens; x-axis is US list price per mL as of 19 Aug 2026. SPF is a label, not an axis.">
     <div class="panel scroll">
       <table>
         <thead><tr><th>Measure</th><th class="num">Budget</th><th class="num">Mass</th>
@@ -1030,6 +1031,7 @@ def build_banned(reg, ra):
     octinoxate. It is routinely described as banned in Europe. It is not: the EU permits it
     up to {s['octinoxate_eu_limit_pct']:g}%, and the highest concentration anyone in this
     corpus files is {s['octinoxate_max_declared_pct']:.1f}%.</p>
+    <img src="octinoxate.png" alt="Signed chart titled Not banned in the EU. Ceiling is 10%. Horizontal bars for octinoxate in 8 of 12 foundations: L’Oréal Paris 6.7% twice, Lancôme 6.7%, Clinique 5.9%, e.l.f. 4.0%, MAC 3.0%, Rimmel London 2.5%, Estée Lauder 2.0%, all below a yellow EU 10% line.">
     <div class="panel scroll">
       <table>
         <thead><tr><th>Brand</th><th>Tier</th><th class="num">Declared</th>
