@@ -47,5 +47,12 @@ jobs:
           install -m 700 -d ~/.ssh
           printf '%s\n' "$FOUNDATION_DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H "$FOUNDATION_DEPLOY_HOST" >> ~/.ssh/known_hosts
+          # Pinned host key (fetched and verified out-of-band 2026-08-23),
+          # not ssh-keyscan -- a GitHub-hosted runner is a fresh box every
+          # run, so trusting whatever key answers at connect time would
+          # accept a MITM's key just as readily as the real one.
+          printf '%s ssh-ed25519 %s\n' \
+            "$FOUNDATION_DEPLOY_HOST" \
+            "AAAAC3NzaC1lZDI1NTE5AAAAIHYgqIEuvxwNp4s4MzSpisUa5fp70ky+GHTcgqdocm3b" \
+            > ~/.ssh/known_hosts
           git push "git@${FOUNDATION_DEPLOY_HOST}:/srv/git/counting-makeup-foundation.git" "HEAD:refs/heads/master"
