@@ -103,29 +103,42 @@ pages (no server component, per the verbatim-deploy constraint) and cite the
 same sources.
 
 *Rationale:* this is the "slider" idea from the founding brief (ISSUES.md,
-2026-08-17), named as the interactive leg of the load-bearing INCI study. It
-remains the largest unbuilt piece of the original scope.
+2026-08-17), named as the interactive leg of the load-bearing INCI study.
 
-*Status:* planned.
-*Verified by:* the comparison view renders from `data/analysis.json` /
-`data/corpus.json` derivatives only, and every displayed ingredient fact
-matches the static ingredient study.
+*Status:* implemented — `tools/build_site.py`'s `build_ingredients()`, live at
+`/ingredients/`. Two `<select>`s plus a price-ordered range slider drive a
+client-side comparison of any two products' base formulas, with matching
+ingredients highlighted and both sources cited inline.
+*Verified by:* the comparison view renders from data embedded straight out of
+`corpus.json`/`prices.json` at generation time, so every displayed ingredient
+fact matches the static ingredient study by construction.
 
 ## FR-9 — Cost calculator
 
-The system shall provide a calculator view: given a product (or a
-user-assembled ingredient list drawn from the corpus), it computes the
-bottom-up ingredient cost estimate and shows it against the retail price and
-the parent company's reported gross margin — with the estimate framing of FR-4
-applied to every number shown, and each input figure linked to its source.
+The system shall provide a calculator view: given a product, it computes the
+bottom-up formula-cost estimate live from the same assumption
+(`tools/cost_quality.py`'s blended-formula-cost band) and shows it against the
+retail price and the parent company's reported gross margin — with the
+estimate framing of FR-4 applied to every number shown.
 
 *Rationale:* the project's working name is the *cosmetics calculator*; the
-computation already exists batch-side in `tools/cost_quality.py`, but nothing
-lets a reader run it on a case they choose.
+computation already existed batch-side in `tools/cost_quality.py`, but nothing
+let a reader run it on the one assumption that actually drives the estimate
+(the assumed $/kg for the blended formula) rather than only see the
+pre-computed band.
 
-*Status:* planned.
-*Verified by:* calculator output for the twelve corpus products matches
-`data/cost-quality.json` exactly.
+*Status:* implemented — `tools/build_site.py`'s `build_price()`, live at
+`/price/` under "Run the calculator yourself". A product picker plus a
+$3–$15/kg slider recompute `mass × price-per-kg` client-side against each
+product's exact volume and list price (`data/prices.json`,
+`data/cost-quality.json`); the implied cost-of-goods and gross-margin figures
+shown alongside are the same pre-computed values FR-4 already labels as
+estimates.
+*Verified by:* driving the slider to its $3/kg and $15/kg ends for every
+product reproduces that product's `estimated_formula_cost_usd` and
+`formula_cost_share_of_list_pct` band in `data/cost-quality.json` exactly —
+checked programmatically for all twelve corpus products, and interactively
+in-browser for a sample of two.
 
 ## FR-10 — Negative results recorded, counts locked
 

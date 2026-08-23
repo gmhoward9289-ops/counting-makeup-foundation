@@ -645,7 +645,16 @@ def build_complexity(analysis):
 
 
 # ---------------------------------------------------------------------- price
-def build_price(cq):
+
+# Must match tools/cost_quality.py's BLENDED_FORMULA_USD_PER_KG /
+# ASSUMED_DENSITY_G_PER_ML -- the calculator below runs the identical
+# mass x price-per-kg arithmetic client-side so its slider ends reproduce the
+# published band exactly.
+BLENDED_LOW, BLENDED_HIGH = 3.0, 15.0
+CALC_DENSITY_G_PER_ML = 1.05
+
+
+def build_price(cq, prices):
     c10, c13 = cq["issue_10_cost_vs_price"], cq["issue_13_price_quality_matrix"]
     margins = "".join(
         "<tr><td>{k}</td><td class='num'>{v}</td><td class='note'>{s}</td></tr>".format(
@@ -689,6 +698,13 @@ def build_price(cq):
         for r in sorted(c13["per_product"], key=lambda r: r["price_per_ml"] or 0))
 
     assumptions = "".join("<li>%s</li>" % escape(a) for a in c10["assumptions"])
+
+    calc_data = [{
+        "id": r["id"], "brand": r["brand"], "list_usd": r["list_usd"],
+        "volume_ml": prices["prices"].get(r["id"], {}).get("volume_ml"),
+        "margin_pct": r["parent_gross_margin_pct"],
+        "implied_cogs_usd": r["implied_cogs_usd"],
+    } for r in c10["per_product"] if r["list_usd"] and prices["prices"].get(r["id"], {}).get("volume_ml")]
 
     body = f"""
   <section>
@@ -737,6 +753,32 @@ def build_price(cq):
   </section>
 
   <section>
+    <h2>Run the calculator yourself</h2>
+    <p>The table above reports a band because the blended-formula price
+    (${BLENDED_LOW:.2f}–${BLENDED_HIGH:.2f}/kg) is an assumption, not a filed figure. Pick a
+    product and slide that one assumption to see how the estimate moves — the arithmetic is
+    the same <code>mass × price-per-kg</code> calculation <code>tools/cost_quality.py</code>
+    runs for the whole corpus, just run live on the number you choose.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>Product <select id="calcProduct"></select></label>
+      </div>
+      <div class="slider-row">
+        <span class="note">${BLENDED_LOW:.2f}/kg</span>
+        <input type="range" id="calcSlider" min="{BLENDED_LOW}" max="{BLENDED_HIGH}" step="0.1" value="{BLENDED_LOW}">
+        <span class="note">${BLENDED_HIGH:.2f}/kg</span>
+      </div>
+      <p class="note" id="calcHint"></p>
+      <div class="stats" id="calcStats"></div>
+      <p class="note" id="calcSrc"></p>
+    </div>
+    <p class="note" style="margin-top:.7rem">Volume, list price and parent gross margin come
+    straight out of <code>data/cost-quality.json</code>; nothing here is re-fetched or
+    re-derived independently of the batch pipeline, so a slider setting of
+    ${BLENDED_LOW:.2f}/kg or ${BLENDED_HIGH:.2f}/kg reproduces the published band exactly.</p>
+  </section>
+
+  <section>
     <h2>Price against quality</h2>
     <p>{escape(c13['quality_definition'])}</p>
     <img class="figure-chart" src="/price/foundation-price.png" alt="Price against actives above 1% and fragrance allergens.">
@@ -774,6 +816,56 @@ def build_price(cq):
     list. Per-product price confidence is recorded in <code>data/prices.json</code>.</p></div>
   </section>
 """
+    extra_css = """
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .slider-row { display:flex; align-items:center; gap:.8rem; margin-bottom:.5rem; }
+  .slider-row input { flex:1; accent-color: var(--accent); }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+"""
+
+    script = """
+<script>
+const CALC = __CALC__;
+const DENSITY = __DENSITY__;
+const sel = document.getElementById('calcProduct'), slider = document.getElementById('calcSlider');
+const byId = Object.fromEntries(CALC.map(p => [p.id, p]));
+for (const p of CALC) sel.add(new Option(p.brand + ' — $' + p.list_usd.toFixed(2), p.id));
+sel.value = CALC[0].id;
+
+function render() {
+  const p = byId[sel.value];
+  const costPerKg = parseFloat(slider.value);
+  const massG = p.volume_ml * DENSITY;
+  const formulaCost = massG / 1000 * costPerKg;
+  const sharePct = 100 * formulaCost / p.list_usd;
+
+  document.getElementById('calcStats').innerHTML = [
+    ['<b>$' + formulaCost.toFixed(3) + '</b><span>estimated formula cost</span>'],
+    ['<b>' + sharePct.toFixed(2) + '%</b><span>of the $' + p.list_usd.toFixed(2) + ' list price</span>'],
+    ['<b>' + (p.implied_cogs_usd != null ? '$' + p.implied_cogs_usd.toFixed(2) : 'n/a') +
+      '</b><span>implied cost of goods (from margin)</span>'],
+    ['<b>' + (p.margin_pct != null ? p.margin_pct.toFixed(1) + '%' : 'n/a') +
+      '</b><span>parent gross margin</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  document.getElementById('calcHint').textContent =
+    p.brand + ': ' + p.volume_ml.toFixed(0) + ' mL at $' + costPerKg.toFixed(2) + '/kg blended formula cost.';
+  document.getElementById('calcSrc').innerHTML =
+    'List price, volume and margin are read from <code>data/cost-quality.json</code>, generated by ' +
+    '<code>tools/cost_quality.py</code> from the FDA corpus and company filings.';
+}
+sel.addEventListener('change', render);
+slider.addEventListener('input', render);
+render();
+</script>
+""".replace("__CALC__", json.dumps(calc_data)).replace("__DENSITY__", json.dumps(CALC_DENSITY_G_PER_ML))
+
     write("price", page(
         "What am I paying for? — Foundation",
         "Gross margins from company filings, a bounded formula-cost estimate, and price "
@@ -781,7 +873,7 @@ def build_price(cq):
         "What am I paying for?",
         "The ingredients in a $53 foundation cost about the same as the ingredients in a $12 one. "
         "Here is what the filings say, and what the extra $41 is actually buying.",
-        body, current="/price/"))
+        body, extra_css, script, current="/price/"))
 
 
 
@@ -1479,7 +1571,7 @@ def main():
     build_ingredients(corpus, analysis, prices)
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
-    build_price(cq)
+    build_price(cq, prices)
     build_rd(cq)
     build_banned(reg, ra)
     build_sourcing(src, ra)
