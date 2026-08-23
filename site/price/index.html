@@ -103,6 +103,17 @@
   .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
   .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
     border-color: var(--accent); font-weight: 600; }
+
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .slider-row { display:flex; align-items:center; gap:.8rem; margin-bottom:.5rem; }
+  .slider-row input { flex:1; accent-color: var(--accent); }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
 </style>
 </head>
 <body>
@@ -172,6 +183,32 @@
   </section>
 
   <section>
+    <h2>Run the calculator yourself</h2>
+    <p>The table above reports a band because the blended-formula price
+    ($3.00–$15.00/kg) is an assumption, not a filed figure. Pick a
+    product and slide that one assumption to see how the estimate moves — the arithmetic is
+    the same <code>mass × price-per-kg</code> calculation <code>tools/cost_quality.py</code>
+    runs for the whole corpus, just run live on the number you choose.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>Product <select id="calcProduct"></select></label>
+      </div>
+      <div class="slider-row">
+        <span class="note">$3.00/kg</span>
+        <input type="range" id="calcSlider" min="3.0" max="15.0" step="0.1" value="3.0">
+        <span class="note">$15.00/kg</span>
+      </div>
+      <p class="note" id="calcHint"></p>
+      <div class="stats" id="calcStats"></div>
+      <p class="note" id="calcSrc"></p>
+    </div>
+    <p class="note" style="margin-top:.7rem">Volume, list price and parent gross margin come
+    straight out of <code>data/cost-quality.json</code>; nothing here is re-fetched or
+    re-derived independently of the batch pipeline, so a slider setting of
+    $3.00/kg or $15.00/kg reproduces the published band exactly.</p>
+  </section>
+
+  <section>
     <h2>Price against quality</h2>
     <p>Formulation-derived and primary-sourced only: every component is read off the FDA-filed OTC drug label. It describes what is in the bottle and how it is arranged, not whether wearers like it. It is not a satisfaction score, a dermatological rating, or a safety verdict.</p>
     <img class="figure-chart" src="/price/foundation-price.png" alt="Price against actives above 1% and fragrance allergens.">
@@ -216,20 +253,58 @@
     by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
     <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
     safety advice, and cost figures are estimates, not company data.</p>
-    <!-- swamplink family strip — canonical order: home, siblings, data policy, blog.
-         Template and property list: claude-rules/shared-rules.md. -->
+    <!-- swamplink:family:begin — GENERATED, do not edit by hand.
+         Source: claude-rules/family-strip/properties.json
+         Regenerate: python swamp-ops/scripts/sync_family_strip.py --write -->
     <div class="family">
       <span>Foundation · a swamplink research property</span>
       <a href="https://swamplink.com/">swamplink.com</a>
       <a href="https://wings.swamplink.com/">wings — the chicken one</a>
       <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
       <a href="https://swamplink.com/data/trust/">ai trust</a>
+      <a href="https://iq.swamplink.com/">iq-check — the intelligence one</a>
       <a href="https://swamplink.com/data/policy/">data policy</a>
       <a href="https://blog.swamplink.com/">the blog</a>
     </div>
+    <!-- swamplink:family:end -->
   </footer>
 
 </div>
+
+<script>
+const CALC = [{"id": "elf-flawless-finish", "brand": "e.l.f.", "list_usd": 9.99, "volume_ml": 20, "margin_pct": 70.7, "implied_cogs_usd": 2.93}, {"id": "maybelline-fit-me-dewy", "brand": "Maybelline", "list_usd": 11.99, "volume_ml": 30, "margin_pct": 74.3, "implied_cogs_usd": 3.08}, {"id": "rimmel-lasting-finish", "brand": "Rimmel London", "list_usd": 7.99, "volume_ml": 30, "margin_pct": 64.8, "implied_cogs_usd": 2.81}, {"id": "revlon-colorstay", "brand": "Revlon", "list_usd": 14.99, "volume_ml": 30, "margin_pct": null, "implied_cogs_usd": null}, {"id": "loreal-infallible-24h", "brand": "L'Or\u00e9al Paris", "list_usd": 18.99, "volume_ml": 30, "margin_pct": 74.3, "implied_cogs_usd": 4.88}, {"id": "loreal-infallible-32h", "brand": "L'Or\u00e9al Paris", "list_usd": 18.99, "volume_ml": 30, "margin_pct": 74.3, "implied_cogs_usd": 4.88}, {"id": "mac-studio-fix-fluid", "brand": "MAC", "list_usd": 39.0, "volume_ml": 30, "margin_pct": 74.0, "implied_cogs_usd": 10.14}, {"id": "clinique-even-better", "brand": "Clinique", "list_usd": 39.0, "volume_ml": 30, "margin_pct": 74.0, "implied_cogs_usd": 10.14}, {"id": "esteelauder-double-wear-sheer", "brand": "Est\u00e9e Lauder", "list_usd": 52.0, "volume_ml": 30, "margin_pct": 74.0, "implied_cogs_usd": 13.52}, {"id": "lancome-teint-idole-breathable", "brand": "Lanc\u00f4me", "list_usd": 53.0, "volume_ml": 30, "margin_pct": 74.3, "implied_cogs_usd": 13.62}, {"id": "lancome-teint-idole-care-glow", "brand": "Lanc\u00f4me", "list_usd": 53.0, "volume_ml": 30, "margin_pct": 74.3, "implied_cogs_usd": 13.62}, {"id": "dior-forever-skin-wear", "brand": "Dior", "list_usd": 60.0, "volume_ml": 30, "margin_pct": 67.0, "implied_cogs_usd": 19.8}];
+const DENSITY = 1.05;
+const sel = document.getElementById('calcProduct'), slider = document.getElementById('calcSlider');
+const byId = Object.fromEntries(CALC.map(p => [p.id, p]));
+for (const p of CALC) sel.add(new Option(p.brand + ' — $' + p.list_usd.toFixed(2), p.id));
+sel.value = CALC[0].id;
+
+function render() {
+  const p = byId[sel.value];
+  const costPerKg = parseFloat(slider.value);
+  const massG = p.volume_ml * DENSITY;
+  const formulaCost = massG / 1000 * costPerKg;
+  const sharePct = 100 * formulaCost / p.list_usd;
+
+  document.getElementById('calcStats').innerHTML = [
+    ['<b>$' + formulaCost.toFixed(3) + '</b><span>estimated formula cost</span>'],
+    ['<b>' + sharePct.toFixed(2) + '%</b><span>of the $' + p.list_usd.toFixed(2) + ' list price</span>'],
+    ['<b>' + (p.implied_cogs_usd != null ? '$' + p.implied_cogs_usd.toFixed(2) : 'n/a') +
+      '</b><span>implied cost of goods (from margin)</span>'],
+    ['<b>' + (p.margin_pct != null ? p.margin_pct.toFixed(1) + '%' : 'n/a') +
+      '</b><span>parent gross margin</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  document.getElementById('calcHint').textContent =
+    p.brand + ': ' + p.volume_ml.toFixed(0) + ' mL at $' + costPerKg.toFixed(2) + '/kg blended formula cost.';
+  document.getElementById('calcSrc').innerHTML =
+    'List price, volume and margin are read from <code>data/cost-quality.json</code>, generated by ' +
+    '<code>tools/cost_quality.py</code> from the FDA corpus and company filings.';
+}
+sel.addEventListener('change', render);
+slider.addEventListener('input', render);
+render();
+</script>
 
 </body>
 </html>
