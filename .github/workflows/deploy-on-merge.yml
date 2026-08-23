@@ -1,0 +1,48 @@
+# Mirror GitHub master to the swamplink deploy remote so a merged PR goes
+# live without a manual push from a laptop. The deploy account is a
+# restricted `git` user on lynx (git-shell, no interactive login) whose key
+# is further forced via authorized_keys to run git-receive-pack against only
+# this one repo path -- see /srv/git/counting-makeup-foundation.git's
+# permissions on lynx for the server-side half of this setup.
+#
+# Repo secrets (never committed):
+#   FOUNDATION_DEPLOY_SSH_KEY  — private key for the restricted git@lynx account
+#   FOUNDATION_DEPLOY_HOST     — SSH host/IP (the host in git@HOST:/srv/git/...)
+name: deploy-on-merge
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check secrets
+        id: cfg
+        env:
+          KEY: ${{ secrets.FOUNDATION_DEPLOY_SSH_KEY }}
+          HOST: ${{ secrets.FOUNDATION_DEPLOY_HOST }}
+        run: |
+          if [ -z "$KEY" ] || [ -z "$HOST" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Deploy secrets not set. PR merge stays on GitHub; live site waits for a manual git push to lynx."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.cfg.outputs.skip == 'false'
+        with:
+          fetch-depth: 0
+      - name: Push to deploy remote
+        if: steps.cfg.outputs.skip == 'false'
+        env:
+          FOUNDATION_DEPLOY_SSH_KEY: ${{ secrets.FOUNDATION_DEPLOY_SSH_KEY }}
+          FOUNDATION_DEPLOY_HOST: ${{ secrets.FOUNDATION_DEPLOY_HOST }}
+        run: |
+          set -euo pipefail
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$FOUNDATION_DEPLOY_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "$FOUNDATION_DEPLOY_HOST" >> ~/.ssh/known_hosts
+          git push "git@${FOUNDATION_DEPLOY_HOST}:/srv/git/counting-makeup-foundation.git" "HEAD:refs/heads/master"
