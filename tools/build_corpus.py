@@ -81,8 +81,13 @@ def split_list(text):
     survives the XML round-trip as a replacement char often enough that both
     have to be handled.
     """
-    text = re.sub(r"^\s*inactive ingredients?\s*:?\s*", "", text, flags=re.I)
+    text = re.sub(r"^\s*(?:inactive\s+)?ingredients?\s*:?\s*", "", text, flags=re.I)
     text = text.replace("\u2022", ",").replace("\ufffd", ",").replace("\u00b7", ",")
+    # A locant comma inside a chemical name ("1,2-Hexanediol", "Diethylhexyl 2,
+    # 6-Naphthalate") is not a separator. Protect any comma directly between
+    # two digits (allowing the filer's optional space) before splitting, and
+    # restore it once tokens are cut.
+    text = re.sub(r"(\d),(\s*\d)", "\\1\x00\\2", text)
     # A comma inside parentheses belongs to the ingredient -- "Iron Oxides (CI
     # 77491, CI 77492)" is one declaration, not two. Split only at depth 0.
     tokens, buf, depth = [], [], 0
@@ -103,7 +108,7 @@ def split_list(text):
     for tok in tokens:
         runs = re.findall(r"[^()]+?\((?:CI|Ci)\s*\d{5}[^)]*\)?", tok)
         out.extend(runs if len(runs) > 1 else [tok])
-    return [t for t in (clean_token(x) for x in out) if t]
+    return [t.replace("\x00", ",") for t in (clean_token(x) for x in out) if t]
 
 
 # Colour Index numbers. The +/- colorant block is where house styles diverge
@@ -185,19 +190,27 @@ def parse_product(entry):
 
 
 def main():
+    # A bare `manifest.json`/`corpus.json` is the foundation corpus (the
+    # project's original category); any other category reads/writes its own
+    # `manifest-<category>.json` / `corpus-<category>.json` pair so multiple
+    # product categories can share this same normalization logic.
+    category = sys.argv[1] if len(sys.argv) > 1 else "foundation"
+    suffix = "" if category == "foundation" else "-%s" % category
+    retrieved = {"foundation": "2026-08-19"}.get(category, "2026-08-26")
+
     # encoding is explicit everywhere in this toolchain: Windows defaults
     # read_text() to cp1252, which silently turns "Estee Lauder" into mojibake.
-    manifest = json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "data" / ("manifest%s.json" % suffix)).read_text(encoding="utf-8"))
     products = [parse_product(p) for p in manifest["products"]]
     out = {
         "corpus": manifest["corpus"],
         "description": manifest["description"],
         "inclusion_criteria": manifest["inclusion_criteria"],
         "known_limits": manifest["known_limits"],
-        "retrieved": "2026-08-19",
+        "retrieved": retrieved,
         "products": products,
     }
-    (ROOT / "data" / "corpus.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    (ROOT / "data" / ("corpus%s.json" % suffix)).write_text(json.dumps(out, indent=2), encoding="utf-8")
     for p in products:
         print("%-34s base=%2d  +/-=%2d  fixes=%d" % (
             p["id"], len(p["base_formula"]), len(p["may_contain"]), len(p["label_corrections"])))
