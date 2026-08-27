@@ -153,3 +153,31 @@ pages.
 `.github/workflows/check-study-count.yml`.
 *Verified by:* the CI check fails on any count drift; grepping `data/` for
 nulls finds a reason beside each.
+
+## FR-11 — Setting-powder talc corpus, checked separately from the reformulation story
+
+The system shall build a second, separate corpus of US setting/finishing powders
+carrying an SPF claim (same FR-1 rule: FDA-filed OTC drug label required),
+compute talc presence in each product's inactive-ingredient declaration, and
+present that alongside — but never blended with — the press/FDA-sourced
+narrative on brands reformulating away from talc, since none of those
+reformulated products carries an SPF claim or has a primary filing to check.
+
+*Rationale:* the obvious question — "have setting powders gotten rid of
+talc?" — turns out to split into two populations that barely overlap: the
+FDA-filed SPF powders (all mineral sunscreens, none ever used talc) and the
+widely-reported talc-to-talc-free reformulations (Chanel, Laura Mercier,
+CoverGirl, Airspun, Givenchy — none SPF-filed). Answering honestly means
+keeping the two sourced separately rather than implying one corpus answers
+both.
+
+*Status:* implemented — `tools/build_setting_powder_corpus.py` (fetches via
+`tools/fetch_dailymed.py`) → `data/setting-powder-corpus.json`;
+`tools/analyze_talc.py` → `data/talc-analysis.json`; hand-read FDA
+asbestos-testing rounds and named-brand reformulation claims in
+`data/talc.json`; rendered by `tools/build_site.py`'s `build_talc()`, live at
+`/setting-powders/`.
+*Verified by:* every product in `data/setting-powder-corpus.json` traces to a
+raw SPL file in `data/raw/`; `contains_talc` on each product is computed by
+`tools/analyze_talc.py` from the filed ingredient list, never hand-entered;
+every fact in `data/talc.json` carries its own `source` block.
