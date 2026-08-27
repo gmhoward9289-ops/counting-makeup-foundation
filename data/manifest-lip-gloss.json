@@ -1,0 +1,25 @@
+{
+  "corpus": "lip-gloss-spf-us",
+  "description": "US lip glosses that carry an SPF claim, sourced the same way as the foundation corpus: an SPF claim makes a cosmetic an OTC drug in the United States, so the manufacturer files the complete ingredient declaration with the FDA, and that filing is public on DailyMed.",
+  "inclusion_criteria": [
+    "Marketed as a lip gloss, lip oil or gloss-format lip balm (not a lipstick, solid balm stick or lip liner) -- a liquid or semi-liquid film, not a solid pigmented stick.",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "The SPL text carries one shade's/flavor's full ingredient declaration without being merged with another shade's list in the same untagged block -- see known_limits for the two real candidates excluded on this basis."
+  ],
+  "known_limits": [
+    "This corpus supports the ingredient-comparison study only. Unlike SPF foundation, true SPF lip gloss on DailyMed is held almost entirely by small, independent or direct-to-consumer sun-care brands -- not one product here is made by a company that files financial statements with the SEC the way L'Oréal, Estée Lauder, Coty or LVMH do for foundation. That rules out a cost-to-make/gross-margin comparison and an R&D-vs-quality comparison for this category; there is no public filing to source either from. Recorded as a negative result, not a silent gap.",
+    "The category is small: a DailyMed search across 'lip gloss', 'gloss' and 'lip shine' SPF filings turned up roughly a dozen distinct lip-gloss-format OTC labels total, of which five met every inclusion criterion below.",
+    "Three otherwise-eligible filings were excluded rather than guessed at, each for a different filing defect: LALICIOUS Hydrating Butter Gloss SPF 30 and Good Weather Skin Daily Lip Sun Gloss SPF 30 each concatenate two shades' full ingredient lists back-to-back in one untagged block with no structural marker reliable enough to split on; PURE SOL SPF15 Lip Gloss files its inactive-ingredient declaration as a run of names with no separating punctuation at all (commas, bullets), which cannot be split into ingredient tokens without guessing where one multi-word INCI name ends and the next begins; Alleyoop Sun Serum Lip Oil files its entire ingredient section as an embedded label photo with no machine-readable text, so there is nothing to parse.",
+    "No retail price is recorded for this corpus (unlike data/prices.json for foundation) -- these are indie brands sold through their own sites and small retailers where a stable, citable list price is harder to establish than for the mass/prestige lines in the foundation corpus, and price was not load-bearing for the one study this corpus supports.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos. Corrections are recorded per-ingredient in the normalization layer, never silently."
+  ],
+  "retrieved": "2026-08-26",
+  "products": [
+    {"id": "supergoop-glow-gloss",    "brand": "Supergoop!",     "product": "Glow Gloss Lip Balm SPF 40 (Caramel Glaze)",              "setid": "26d2897f-46a7-52b2-e063-6394a90aed32"},
+    {"id": "mark-glossworks",        "brand": "mark. (Avon)",   "product": "Glossworks Lip Gloss SPF 15",                             "setid": "58626b79-60fd-4a75-be8a-4461a881ebf6"},
+    {"id": "sugargirl-sun-gloss",    "brand": "SugarGirl",      "product": "Sun Gloss SPF 15 Tinted Lip Gloss Sunscreen (Pink Ice)",  "setid": "ea23616f-1d59-4e32-88bb-d035af727728"},
+    {"id": "poolside-frostbite",     "brand": "Poolside",       "product": "Frostbite Sunscreen SPF 15 Scented Lip Gloss (Coconut)",  "setid": "ee045b64-7a95-4378-8183-e6e556f3b184"},
+    {"id": "luxe-gloss-hydrating",   "brand": "Luxe Gloss",     "product": "Hydrating Lip Gloss SPF 35 (Naked Honey)",                "setid": "581fb0cd-c55d-d562-e063-6394a90a7f11"}
+  ]
+}

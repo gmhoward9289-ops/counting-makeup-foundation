@@ -1,0 +1,341 @@
+{
+  "issue_ingredient_comparison": {
+    "distinct_base_ingredients": 66,
+    "appearing_in_one_product_only": 48,
+    "shared_core_75pct": [
+      "parfum/fragrance"
+    ],
+    "prevalence": [
+      {
+        "inci": "parfum/fragrance",
+        "products": 4,
+        "share": 0.8
+      },
+      {
+        "inci": "aluminum hydroxide",
+        "products": 3,
+        "share": 0.6
+      },
+      {
+        "inci": "hydrogenated polyisobutene",
+        "products": 3,
+        "share": 0.6
+      },
+      {
+        "inci": "tocopherol",
+        "products": 3,
+        "share": 0.6
+      },
+      {
+        "inci": "bisabolol",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "butyloctyl salicylate",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "euphorbia cerifera (candelilla) wax",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "menthol",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "menthoxypropanediol",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "octyldodecanol",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "silica",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "sodium chloride",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "sodium sulfate",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "sorbitan isostearate",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "sucrose cocoate",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "synthetic wax",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "water",
+        "products": 2,
+        "share": 0.4
+      },
+      {
+        "inci": "acrylates/octylacrylamide copolymer",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "bht",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "butylene/ethylene/styrene copolymer",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "butyrospermum parkii (shea) butter",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "c12-15 alkyl benzoate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "c18-38 alkyl hydroxystearoyl stearate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "calcium aluminum borosilicate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "calcium sulfate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "caprylic/capric triglyceride",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "cetearyl ethylhexanoate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ci 77491",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ci15850",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ci77492",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ci77499",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "citric acid",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "cocos nucifera (coconut) oil",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "dicalcium phosphate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ethylene/propylene/styrene copolymer",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "ethylhexyl isononanoate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "fd&c blue 1 aluminum lake",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "flavor",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "glyceryl caprylate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "hydrogenated poly (c6-14 olefin)",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "hydrogenated poly(c6-14 olefin)",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "hydrogenated styrene/butadiene copolymer",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "hydrogenated styrene/isoprene copolymer",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "microcrystalline wax",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "palmitoyl tripeptide-38",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate sparkle shades may also contain: tin oxide",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "pentaerythrityl tetraisostearate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "polybutene",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "polyisobutene",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "portulaca pilosa extract",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "propylene carbonate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "red 28 lake",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "red 7 lake",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "rosin",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "silica dimethyl silylate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "silica silylate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "simmondsia chinensis (jojoba) seed oil",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "sorbitan oleate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "sorbitan stearate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "stearalkonium hectorite",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "stevia rebaudiana leaf/stem extract",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "triethoxycaprylylsilane",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "triisostearyl citrate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "trimethylsiloxysilicate",
+        "products": 1,
+        "share": 0.2
+      },
+      {
+        "inci": "vp/hexadecene copolymer",
+        "products": 1,
+        "share": 0.2
+      }
+    ]
+  }
+}

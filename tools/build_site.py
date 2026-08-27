@@ -148,6 +148,7 @@ PAGES = [
     ("/sourcing/", "Where it came from"),
     ("/mocra/", "Who's watching"),
     ("/development/", "How long it takes"),
+    ("/lip-gloss/", "Lip gloss ingredients"),
 ]
 
 
@@ -225,6 +226,11 @@ def load_regulatory():
 
 def load_development():
     return json.loads((ROOT / "data" / "development.json").read_text(encoding="utf-8"))
+
+
+def load_lip_gloss():
+    j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
+    return j("corpus-lip-gloss.json"), j("analysis-lip-gloss.json")
 
 
 def longdate(iso):
@@ -447,6 +453,177 @@ render();
         "Twelve foundations, from a $8 drugstore bottle to a $60 one, compared ingredient by "
         "ingredient. Every list is the manufacturer's own declaration to the FDA.",
         body, extra_css, script, "/ingredients/"))
+
+
+# ----------------------------------------------------------------- lip gloss
+def build_lip_gloss(corpus, analysis):
+    ic = analysis["issue_ingredient_comparison"]
+    n = len(corpus["products"])
+    slim = [{
+        "id": p["id"], "brand": p["brand"], "product": p["product"],
+        "url": p["source"]["url"], "date": p["source"]["label_effective_date"],
+        "base": [i["inci"] for i in p["base_formula"]],
+    } for p in corpus["products"]]
+    slim.sort(key=lambda x: x["brand"])
+
+    rows = "".join(
+        "<tr><td>{b}</td><td class='note'>{pr}</td><td class='num'>{n}</td>"
+        "<td class='num'>{d}</td><td>{lnk}</td></tr>".format(
+            b=escape(p["brand"]), pr=escape(p["product"]),
+            n=len(p["base_formula"]), d=p["source"]["label_effective_date"], lnk=src_link(p))
+        for p in corpus["products"])
+
+    prev = "".join(
+        "<tr><td>{i}</td><td class='num'>{c}</td><td class='num'>{s:.0%}</td></tr>".format(
+            i=escape(r["inci"]), c=r["products"], s=r["share"])
+        for r in ic["prevalence"][:30])
+
+    core = "".join("<li>%s</li>" % escape(x) for x in ic["shared_core_75pct"]) or \
+        "<li class='note'>None — no ingredient reaches 75% of this corpus.</li>"
+
+    limits = "".join("<li>%s</li>" % escape(x) for x in corpus["known_limits"])
+
+    body = f"""
+  <section>
+    <h2>The corpus</h2>
+    <div class="finding"><p><strong>{ic['distinct_base_ingredients']} distinct ingredients
+    appear across {n} SPF lip glosses, and {ic['appearing_in_one_product_only']} of them
+    ({ic['appearing_in_one_product_only'] * 100 // ic['distinct_base_ingredients']}%) appear in
+    exactly one product.</strong> With only {len(ic['shared_core_75pct'])} ingredient reaching
+    three-quarters of the corpus, these five formulas share far less of a common spine than the
+    twelve <a href="/ingredients/">SPF foundations</a> do — a smaller, less standardized
+    category, built by brands without a shared house style to converge on.</p></div>
+
+    <p>The sourcing discipline is identical to the foundation study: every product here carries
+    an SPF claim, which in the United States makes it an over-the-counter drug, and the
+    manufacturer must file the complete ingredient declaration with the FDA. Nothing in this
+    corpus comes from a retailer listing or a transcription site.</p>
+
+    <div class="panel">
+      <table class="brands">
+        <thead><tr><th>Brand</th><th>Product</th><th class="num">Ingredients</th>
+          <th class="num">Label filed</th><th>Source</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Slide between two glosses</h2>
+    <p>Pick any two and watch the formulas converge or diverge. Matching ingredients line up;
+    the rest is where the products actually differ.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>A <select id="selA"></select></label>
+        <label>B <select id="selB"></select></label>
+      </div>
+      <div id="stats" class="stats"></div>
+      <div class="cmp" id="cmp"></div>
+      <p class="note" id="srcs"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The common spine — such as it is</h2>
+    <p>These ingredients appear in at least 75% of the corpus.</p>
+    <div class="sunken"><ul class="tight">{core}</ul></div>
+
+    <h3>Thirty most common ingredients</h3>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Ingredient (INCI)</th><th class="num">Products</th><th class="num">Share</th></tr></thead>
+        <tbody>{prev}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why there's no cost, margin or R&amp;D study here</h2>
+    <div class="caveat"><p><strong>Unlike SPF foundation, no product in this corpus is made by a
+    company that files financial statements with the SEC.</strong> True SPF lip gloss on
+    DailyMed turns out to be a niche held almost entirely by small, independent or
+    direct-to-consumer sun-care brands — not the L'Oréal / Estée Lauder / Coty / LVMH
+    conglomerates that make up the foundation corpus. That rules out a cost-to-make/gross-margin
+    comparison and an R&amp;D-vs-quality comparison the same way this project ran them for
+    foundation: there is no public filing to source either one from. That's recorded here as a
+    negative result, not left as a silent gap.</p></div>
+    <ul class="tight">{limits}</ul>
+  </section>
+"""
+
+    extra_css = """
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.84rem; }
+  .cmp .col h4 { margin:0 0 .4rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+  .cmp ol { margin:0; padding-left:1.9rem; }
+  .cmp li { padding:.1rem .3rem; border-radius:3px; }
+  .cmp li.match { background:var(--ok-bg); color:var(--ok); }
+  .cmp li.only { color:var(--muted); }
+  @media (max-width:640px) { .cmp { grid-template-columns:1fr; } }
+"""
+
+    script = """
+<script>
+const DATA = __DATA__;
+const byId = Object.fromEntries(DATA.map(p => [p.id, p]));
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+for (const p of DATA) {
+  const label = p.brand + ' — ' + p.product;
+  for (const s of [selA, selB]) s.add(new Option(label, p.id));
+}
+selA.value = DATA[0].id;
+selB.value = DATA[1].id;
+
+function render() {
+  const a = byId[selA.value], b = byId[selB.value];
+  const sb = new Set(b.base);
+  const shared = a.base.filter(x => sb.has(x));
+  const union = new Set([...a.base, ...b.base]);
+  let prefix = 0;
+  while (prefix < a.base.length && prefix < b.base.length && a.base[prefix] === b.base[prefix]) prefix++;
+
+  document.getElementById('stats').innerHTML = [
+    ['<b>' + prefix + '</b><span>identical from the top</span>'],
+    ['<b>' + shared.length + '</b><span>ingredients shared</span>'],
+    ['<b>' + Math.round(100 * shared.length / union.size) + '%</b><span>of all ingredients shared</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  const col = (p, other) => {
+    const s = new Set(other.base);
+    return '<div class="col"><h4>' + p.brand + '</h4><ol>' +
+      p.base.map((x, i) => {
+        const m = (i < prefix) || s.has(x);
+        return '<li class="' + (m ? 'match' : 'only') + '">' + x + '</li>';
+      }).join('') + '</ol></div>';
+  };
+  document.getElementById('cmp').innerHTML = col(a, b) + col(b, a);
+  document.getElementById('srcs').innerHTML =
+    'Sources: <a href="' + a.url + '">' + a.brand + ' label filed ' + a.date + '</a> · ' +
+    '<a href="' + b.url + '">' + b.brand + ' label filed ' + b.date + '</a>';
+}
+selA.addEventListener('change', render);
+selB.addEventListener('change', render);
+render();
+</script>
+""".replace("__DATA__", json.dumps(slim))
+
+    write("lip-gloss", page(
+        "What's in my lip gloss? — Foundation",
+        "Five SPF lip glosses compared ingredient by ingredient, every list taken from the "
+        "manufacturer's own FDA filing — plus why this category can't support a cost or "
+        "R&D study the way SPF foundation can.",
+        "What's in my lip gloss?",
+        "The same sourcing discipline as the foundation study, applied to a much smaller, "
+        "less standardized category: five SPF lip glosses, every ingredient list from the "
+        "manufacturer's own FDA filing.",
+        body, extra_css, script, "/lip-gloss/"))
 
 
 # ------------------------------------------------------------------ ownership
@@ -1568,7 +1745,9 @@ def main():
     corpus, analysis, cq, prices = load()
     reg, src, ra = load_regulatory()
     dev = load_development()
+    lg_corpus, lg_analysis = load_lip_gloss()
     build_ingredients(corpus, analysis, prices)
+    build_lip_gloss(lg_corpus, lg_analysis)
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
     build_price(cq, prices)

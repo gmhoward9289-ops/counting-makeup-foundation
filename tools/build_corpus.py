@@ -166,8 +166,11 @@ def parse_product(entry):
         "id": entry["id"],
         "brand": entry["brand"],
         "product": entry["product"],
-        "parent_company": entry["parent"],
-        "price_tier": entry["tier"],
+        # Foundation's manifest carries parent-company/price-tier for the
+        # ownership and price studies; other manifests (e.g. lip gloss) may
+        # not have that axis to source and simply omit "parent"/"tier".
+        "parent_company": entry.get("parent"),
+        "price_tier": entry.get("tier"),
         "source": {
             "type": "FDA-filed OTC drug label (SPL)",
             "publisher": "DailyMed, U.S. National Library of Medicine",
@@ -187,17 +190,19 @@ def parse_product(entry):
 def main():
     # encoding is explicit everywhere in this toolchain: Windows defaults
     # read_text() to cp1252, which silently turns "Estee Lauder" into mojibake.
-    manifest = json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))
+    manifest_path = Path(sys.argv[1]) if len(sys.argv) > 1 else (ROOT / "data" / "manifest.json")
+    out_path = Path(sys.argv[2]) if len(sys.argv) > 2 else (ROOT / "data" / "corpus.json")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     products = [parse_product(p) for p in manifest["products"]]
     out = {
         "corpus": manifest["corpus"],
         "description": manifest["description"],
         "inclusion_criteria": manifest["inclusion_criteria"],
         "known_limits": manifest["known_limits"],
-        "retrieved": "2026-08-19",
+        "retrieved": manifest.get("retrieved", "2026-08-19"),
         "products": products,
     }
-    (ROOT / "data" / "corpus.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    out_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     for p in products:
         print("%-34s base=%2d  +/-=%2d  fixes=%d" % (
             p["id"], len(p["base_formula"]), len(p["may_contain"]), len(p["label_corrections"])))
