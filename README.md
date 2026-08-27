@@ -102,6 +102,21 @@ publisher and a note on how a count was arrived at. `data/development.json` also
 its own caveat on the one trade-press figure it uses (a reader poll, not a survey) and
 says plainly what it did not find: a sourced iteration count.
 
+## Second corpus: SPF lotions
+
+`data/corpus-lotion.json` is the same discipline applied to a second product
+category: eight US daily moisturizing lotions (face and body) carrying an SPF
+claim, spanning budget to luxury and six parent companies. It reuses the
+foundation corpus's ingestion and normalization tooling
+(`tools/build_corpus.py <category>` reads `data/manifest-<category>.json` and
+writes `data/corpus-<category>.json`; a bare invocation still targets the
+original foundation category). Inclusion criteria and known limits are
+recorded in `data/manifest-lotion.json`, same as the foundation manifest.
+
+*Status:* corpus ingestion only (FR-1/FR-2 equivalent for this category) —
+the analysis, cost, and regulatory stages (FR-3 through FR-10) have not yet
+been run against it, and it is not yet published to `site/`.
+
 The rule that keeps this honest is that nothing *derived* is hand-entered. Which
 products a rule actually touches, how many months a deadline is overdue, how the corpus
 crosses a prohibition list — all of that is computed by `tools/analyze_regulatory.py`

@@ -1,0 +1,1386 @@
+{
+  "corpus": "lotion-spf-us",
+  "description": "US daily moisturizing lotions (face and body) that carry an SPF claim. SPF cosmetics are regulated as OTC drugs in the United States, so the manufacturer files the complete ingredient declaration with the FDA. Every product in this corpus is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Marketed as a daily face or body moisturizing lotion (not a dedicated sunscreen, primer, foundation, or serum), in lotion, fluid or emulsion form.",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "SPF-only inclusion is a selection bias, same as the foundation corpus: it excludes SPF-free daily moisturizers (Cetaphil Daily Facial Moisturizer, Vaseline Intensive Care lines), which have no primary filing and are excluded rather than sourced more weakly.",
+    "The category concentrates in the mass tier -- prestige and luxury lines more often package SPF moisturizer as a 'cream' or 'emulsion' than a 'lotion', and several searched prestige lotion-form candidates (e.g. discontinued Neutrogena Healthy Skin Face Lotion SPF 15) no longer have a live DailyMed filing at all and were excluded.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos and inconsistent separator characters. Corrections are recorded per-ingredient in the normalization layer, never silently.",
+    "Jergens Natural Glow and Olay Complete UV365 are gradual self-tanning and skin-type-specific formulas respectively; both are still marketed and labeled primarily as a daily facial moisturizer with SPF, so they meet inclusion criteria despite the secondary claim."
+  ],
+  "retrieved": "2026-08-26",
+  "products": [
+    {
+      "id": "upandup-morning-facial",
+      "brand": "Up & Up",
+      "product": "Morning Facial Moisturizing Lotion with SPF 30 Sunscreen and Ceramides",
+      "parent_company": "Target Corporation",
+      "price_tier": "budget",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "23598ad1-12a3-fe65-e063-6394a90a4f6f",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23598ad1-12a3-fe65-e063-6394a90a4f6f",
+        "label_effective_date": "2024-09-26"
+      },
+      "active_ingredients_as_filed": "\ufeffActive ingredients Homosalate15.0%, Octocrylene 2.0%, Zinc Oxide 6.3%",
+      "inactive_ingredients_as_filed": "Inactive ingredients aluminum starch octenylsuccinate, boron nitride, capryloyl glycine, carbomer, ceramide AP, ceramide EOP, ceramide NP, cetearyl alcohol, cetearyl glucoside, cetyl palmitate, cholesterol, citrus aurantium dulcis (orange) oil, citrus aurantifolia (lime) oil, dimethicone, disodium EDTA, ethylhexylglycerin, glycerin, hydroxyethylcellulose, niacinamide, phenoxyethanol, phytosphingosine, sodium hyaluronate\u2020, sodium lauroyl lactylate, sorbitan olivate, sorbitan palmitate, triethoxycaprylylsilane, undecylenoyl glycine, water, xanthan gum",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "aluminum starch octenylsuccinate",
+          "inci": "aluminum starch octenylsuccinate"
+        },
+        {
+          "position": 2,
+          "as_filed": "boron nitride",
+          "inci": "boron nitride"
+        },
+        {
+          "position": 3,
+          "as_filed": "capryloyl glycine",
+          "inci": "capryloyl glycine"
+        },
+        {
+          "position": 4,
+          "as_filed": "carbomer",
+          "inci": "carbomer"
+        },
+        {
+          "position": 5,
+          "as_filed": "ceramide AP",
+          "inci": "ceramide ap"
+        },
+        {
+          "position": 6,
+          "as_filed": "ceramide EOP",
+          "inci": "ceramide eop"
+        },
+        {
+          "position": 7,
+          "as_filed": "ceramide NP",
+          "inci": "ceramide np"
+        },
+        {
+          "position": 8,
+          "as_filed": "cetearyl alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 9,
+          "as_filed": "cetearyl glucoside",
+          "inci": "cetearyl glucoside"
+        },
+        {
+          "position": 10,
+          "as_filed": "cetyl palmitate",
+          "inci": "cetyl palmitate"
+        },
+        {
+          "position": 11,
+          "as_filed": "cholesterol",
+          "inci": "cholesterol"
+        },
+        {
+          "position": 12,
+          "as_filed": "citrus aurantium dulcis (orange) oil",
+          "inci": "citrus aurantium dulcis (orange) oil"
+        },
+        {
+          "position": 13,
+          "as_filed": "citrus aurantifolia (lime) oil",
+          "inci": "citrus aurantifolia (lime) oil"
+        },
+        {
+          "position": 14,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 15,
+          "as_filed": "disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 16,
+          "as_filed": "ethylhexylglycerin",
+          "inci": "ethylhexylglycerin"
+        },
+        {
+          "position": 17,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 18,
+          "as_filed": "hydroxyethylcellulose",
+          "inci": "hydroxyethylcellulose"
+        },
+        {
+          "position": 19,
+          "as_filed": "niacinamide",
+          "inci": "niacinamide"
+        },
+        {
+          "position": 20,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 21,
+          "as_filed": "phytosphingosine",
+          "inci": "phytosphingosine"
+        },
+        {
+          "position": 22,
+          "as_filed": "sodium hyaluronate\u2020",
+          "inci": "sodium hyaluronate\u2020"
+        },
+        {
+          "position": 23,
+          "as_filed": "sodium lauroyl lactylate",
+          "inci": "sodium lauroyl lactylate"
+        },
+        {
+          "position": 24,
+          "as_filed": "sorbitan olivate",
+          "inci": "sorbitan olivate"
+        },
+        {
+          "position": 25,
+          "as_filed": "sorbitan palmitate",
+          "inci": "sorbitan palmitate"
+        },
+        {
+          "position": 26,
+          "as_filed": "triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 27,
+          "as_filed": "undecylenoyl glycine",
+          "inci": "undecylenoyl glycine"
+        },
+        {
+          "position": 28,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 29,
+          "as_filed": "xanthan gum",
+          "inci": "xanthan gum"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "cerave-am-facial",
+      "brand": "CeraVe",
+      "product": "AM Facial Moisturizing Lotion Broad Spectrum SPF 30",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "2138f86b-3937-4c2b-9568-d40a745b637d",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2138f86b-3937-4c2b-9568-d40a745b637d",
+        "label_effective_date": "2023-12-31"
+      },
+      "active_ingredients_as_filed": "Active ingredients Homosalate 10% Meradimate 5% Octinoxate 5% Octocrylene 2% Zinc oxide 6.3%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, niacinamide, cetearyl alcohol, glycerin, dimethicone, behentrimonium methosulfate, ceramide 3, ceramide 6-II, ceramide 1, hyaluronic acid, sodium hydroxide, aluminum starch octenylsuccinate, hydroxyethylcellulose, methylparaben, disodium EDTA, propylparaben, sodium lauroyl lactylate, phytosphingosine, cholesterol, carbomer, xanthan gum",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "niacinamide",
+          "inci": "niacinamide"
+        },
+        {
+          "position": 3,
+          "as_filed": "cetearyl alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 4,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 5,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "behentrimonium methosulfate",
+          "inci": "behentrimonium methosulfate"
+        },
+        {
+          "position": 7,
+          "as_filed": "ceramide 3",
+          "inci": "ceramide 3"
+        },
+        {
+          "position": 8,
+          "as_filed": "ceramide 6-II",
+          "inci": "ceramide 6-ii"
+        },
+        {
+          "position": 9,
+          "as_filed": "ceramide 1",
+          "inci": "ceramide 1"
+        },
+        {
+          "position": 10,
+          "as_filed": "hyaluronic acid",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 11,
+          "as_filed": "sodium hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 12,
+          "as_filed": "aluminum starch octenylsuccinate",
+          "inci": "aluminum starch octenylsuccinate"
+        },
+        {
+          "position": 13,
+          "as_filed": "hydroxyethylcellulose",
+          "inci": "hydroxyethylcellulose"
+        },
+        {
+          "position": 14,
+          "as_filed": "methylparaben",
+          "inci": "methylparaben"
+        },
+        {
+          "position": 15,
+          "as_filed": "disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 16,
+          "as_filed": "propylparaben",
+          "inci": "propylparaben"
+        },
+        {
+          "position": 17,
+          "as_filed": "sodium lauroyl lactylate",
+          "inci": "sodium lauroyl lactylate"
+        },
+        {
+          "position": 18,
+          "as_filed": "phytosphingosine",
+          "inci": "phytosphingosine"
+        },
+        {
+          "position": 19,
+          "as_filed": "cholesterol",
+          "inci": "cholesterol"
+        },
+        {
+          "position": 20,
+          "as_filed": "carbomer",
+          "inci": "carbomer"
+        },
+        {
+          "position": 21,
+          "as_filed": "xanthan gum",
+          "inci": "xanthan gum"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "hyaluronic acid",
+          "canonical": "sodium hyaluronate"
+        }
+      ]
+    },
+    {
+      "id": "aveeno-daily-moisturizing",
+      "brand": "Aveeno",
+      "product": "Daily Moisturizing Lotion Broad Spectrum SPF 15",
+      "parent_company": "Kenvue",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "54a13b85-32b5-439d-a27a-8fba2cf44251",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=54a13b85-32b5-439d-a27a-8fba2cf44251",
+        "label_effective_date": "2025-07-16"
+      },
+      "active_ingredients_as_filed": "Active ingredient Dimethicone (1.2%)",
+      "inactive_ingredients_as_filed": "Inactive ingredients Water, Glycerin, Distearyldimonium Chloride, Petrolatum, Isopropyl Palmitate, Cetyl Alcohol, Avena Sativa (Oat) Kernel Flour, Benzyl Alcohol, Sodium Chloride",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 3,
+          "as_filed": "Distearyldimonium Chloride",
+          "inci": "distearyldimonium chloride"
+        },
+        {
+          "position": 4,
+          "as_filed": "Petrolatum",
+          "inci": "petrolatum"
+        },
+        {
+          "position": 5,
+          "as_filed": "Isopropyl Palmitate",
+          "inci": "isopropyl palmitate"
+        },
+        {
+          "position": 6,
+          "as_filed": "Cetyl Alcohol",
+          "inci": "cetyl alcohol"
+        },
+        {
+          "position": 7,
+          "as_filed": "Avena Sativa (Oat) Kernel Flour",
+          "inci": "avena sativa (oat) kernel flour"
+        },
+        {
+          "position": 8,
+          "as_filed": "Benzyl Alcohol",
+          "inci": "benzyl alcohol"
+        },
+        {
+          "position": 9,
+          "as_filed": "Sodium Chloride",
+          "inci": "sodium chloride"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "olay-complete-uv365",
+      "brand": "Olay",
+      "product": "Complete UV365 Daily Moisturizer Normal Broad Spectrum SPF 15",
+      "parent_company": "Procter & Gamble",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "59187729-c166-58fe-e053-2991aa0abe47",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59187729-c166-58fe-e053-2991aa0abe47",
+        "label_effective_date": "2025-12-18"
+      },
+      "active_ingredients_as_filed": "Avobenzone 3.0% Homosalate 4.0% Octisalate 4.5% Octocrylene 2.6% Sunscreen Uses helps prevent sunburn if used as directed with other sun protection measures (see Directions ), decreases the risk of skin cancer and early skin aging caused by the sun",
+      "inactive_ingredients_as_filed": "Inactive ingredients Water, glycerin, dimethicone, zea mays (corn) starch, isopropyl isostearate, niacinamide, panthenol, tocopheryl acetate, ascorbic acid, caprylyl glycol, dimethiconol, cetearyl glucoside, cetearyl alcohol, stearic acid, palmitic acid, stearyl alcohol, cetyl alcohol, behenyl alcohol, disodium EDTA, hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer, PEG-100 stearate, 1,2-hexanediol, phenoxyethanol, fragrance",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 3,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "zea mays (corn) starch",
+          "inci": "zea mays (corn) starch"
+        },
+        {
+          "position": 5,
+          "as_filed": "isopropyl isostearate",
+          "inci": "isopropyl isostearate"
+        },
+        {
+          "position": 6,
+          "as_filed": "niacinamide",
+          "inci": "niacinamide"
+        },
+        {
+          "position": 7,
+          "as_filed": "panthenol",
+          "inci": "panthenol"
+        },
+        {
+          "position": 8,
+          "as_filed": "tocopheryl acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 9,
+          "as_filed": "ascorbic acid",
+          "inci": "ascorbic acid"
+        },
+        {
+          "position": 10,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 11,
+          "as_filed": "dimethiconol",
+          "inci": "dimethiconol"
+        },
+        {
+          "position": 12,
+          "as_filed": "cetearyl glucoside",
+          "inci": "cetearyl glucoside"
+        },
+        {
+          "position": 13,
+          "as_filed": "cetearyl alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 14,
+          "as_filed": "stearic acid",
+          "inci": "stearic acid"
+        },
+        {
+          "position": 15,
+          "as_filed": "palmitic acid",
+          "inci": "palmitic acid"
+        },
+        {
+          "position": 16,
+          "as_filed": "stearyl alcohol",
+          "inci": "stearyl alcohol"
+        },
+        {
+          "position": 17,
+          "as_filed": "cetyl alcohol",
+          "inci": "cetyl alcohol"
+        },
+        {
+          "position": 18,
+          "as_filed": "behenyl alcohol",
+          "inci": "behenyl alcohol"
+        },
+        {
+          "position": 19,
+          "as_filed": "disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 20,
+          "as_filed": "hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer",
+          "inci": "hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer"
+        },
+        {
+          "position": 21,
+          "as_filed": "PEG-100 stearate",
+          "inci": "peg-100 stearate"
+        },
+        {
+          "position": 22,
+          "as_filed": "1,2-hexanediol",
+          "inci": "1,2-hexanediol"
+        },
+        {
+          "position": 23,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 24,
+          "as_filed": "fragrance",
+          "inci": "parfum/fragrance"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "eucerin-daily-protection",
+      "brand": "Eucerin",
+      "product": "Daily Protection Face Lotion Broad Spectrum SPF 30",
+      "parent_company": "Beiersdorf",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "76403f03-aee9-4c0b-b331-f79b6953118c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76403f03-aee9-4c0b-b331-f79b6953118c",
+        "label_effective_date": "2025-12-16"
+      },
+      "active_ingredients_as_filed": "Active ingredients Ensulizole 2% Octinoxate 7.5% Octisalate 4.5% Titanium Dioxide 2.4% Zinc Oxide 4.8%",
+      "inactive_ingredients_as_filed": "Inactive Ingredients Water, Glycerin, C12-15 Alkyl Benzoate, Dimethicone, Cyclomethicone, Methylpropanediol, Cetearyl Alcohol, Cetyl Alcohol, Ceteareth-20, Phenoxyethanol, Glyceryl Stearate SE, Sodium Lactate, Lactic Acid, 1,2-Hexanediol, Hydrogenated Coco-Glycerides, VP/Hexadecene Copolymer, Xanthan Gum, PEG-40 Castor Oil, Sodium Hydroxide, Trisodium EDTA, Alumina, Sodium Cetearyl Sulfate, Triethoxycaprylylsilane, Simethicone",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 3,
+          "as_filed": "C12-15 Alkyl Benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 4,
+          "as_filed": "Dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 5,
+          "as_filed": "Cyclomethicone",
+          "inci": "cyclomethicone"
+        },
+        {
+          "position": 6,
+          "as_filed": "Methylpropanediol",
+          "inci": "methylpropanediol"
+        },
+        {
+          "position": 7,
+          "as_filed": "Cetearyl Alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 8,
+          "as_filed": "Cetyl Alcohol",
+          "inci": "cetyl alcohol"
+        },
+        {
+          "position": 9,
+          "as_filed": "Ceteareth-20",
+          "inci": "ceteareth-20"
+        },
+        {
+          "position": 10,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 11,
+          "as_filed": "Glyceryl Stearate SE",
+          "inci": "glyceryl stearate se"
+        },
+        {
+          "position": 12,
+          "as_filed": "Sodium Lactate",
+          "inci": "sodium lactate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Lactic Acid",
+          "inci": "lactic acid"
+        },
+        {
+          "position": 14,
+          "as_filed": "1,2-Hexanediol",
+          "inci": "1,2-hexanediol"
+        },
+        {
+          "position": 15,
+          "as_filed": "Hydrogenated Coco-Glycerides",
+          "inci": "hydrogenated coco-glycerides"
+        },
+        {
+          "position": 16,
+          "as_filed": "VP/Hexadecene Copolymer",
+          "inci": "vp/hexadecene copolymer"
+        },
+        {
+          "position": 17,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 18,
+          "as_filed": "PEG-40 Castor Oil",
+          "inci": "peg-40 castor oil"
+        },
+        {
+          "position": 19,
+          "as_filed": "Sodium Hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 20,
+          "as_filed": "Trisodium EDTA",
+          "inci": "trisodium edta"
+        },
+        {
+          "position": 21,
+          "as_filed": "Alumina",
+          "inci": "alumina"
+        },
+        {
+          "position": 22,
+          "as_filed": "Sodium Cetearyl Sulfate",
+          "inci": "sodium cetearyl sulfate"
+        },
+        {
+          "position": 23,
+          "as_filed": "Triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 24,
+          "as_filed": "Simethicone",
+          "inci": "simethicone"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "jergens-natural-glow-face",
+      "brand": "Jergens",
+      "product": "Natural Glow Face Daily Moisturizer SPF 20, Fair/Medium",
+      "parent_company": "Kao Corporation",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "365a98e0-737b-12b3-e054-00144ff8d46c",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=365a98e0-737b-12b3-e054-00144ff8d46c",
+        "label_effective_date": "2024-06-28"
+      },
+      "active_ingredients_as_filed": "Active ingredients Avobenzone 1.25% Octisalate 5% Octocrylene 1.1%",
+      "inactive_ingredients_as_filed": "Inactive ingredients Water, Dihydroxyacetone, Diethylhexyl 2, 6-Naphthalate, Glycerin, Aluminum Starch Octenylsuccinate, Dicaprylyl Ether, Glyceryl Stearate, Polyacrylamide, Behenyl Alcohol, C12-15 Alkyl Benzoate, Dimethicone, Phenyl Trimethicone, PEG-100 Stearate, C13-14 Isoparaffin, Cetyl Alcohol, Steareth-2, Erythrulose, 1,2-Hexanediol, Fragrance, Xanthan Gum, Laureth-7, Tocopheryl Acetate, Zea Mays (Corn) Starch, Benzoic Acid, Alpha-Isomethyl Ionone, Citronellol, Linalool, Caramel",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Dihydroxyacetone",
+          "inci": "dihydroxyacetone"
+        },
+        {
+          "position": 3,
+          "as_filed": "Diethylhexyl 2, 6-Naphthalate",
+          "inci": "diethylhexyl 2, 6-naphthalate"
+        },
+        {
+          "position": 4,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 5,
+          "as_filed": "Aluminum Starch Octenylsuccinate",
+          "inci": "aluminum starch octenylsuccinate"
+        },
+        {
+          "position": 6,
+          "as_filed": "Dicaprylyl Ether",
+          "inci": "dicaprylyl ether"
+        },
+        {
+          "position": 7,
+          "as_filed": "Glyceryl Stearate",
+          "inci": "glyceryl stearate"
+        },
+        {
+          "position": 8,
+          "as_filed": "Polyacrylamide",
+          "inci": "polyacrylamide"
+        },
+        {
+          "position": 9,
+          "as_filed": "Behenyl Alcohol",
+          "inci": "behenyl alcohol"
+        },
+        {
+          "position": 10,
+          "as_filed": "C12-15 Alkyl Benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 11,
+          "as_filed": "Dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 12,
+          "as_filed": "Phenyl Trimethicone",
+          "inci": "phenyl trimethicone"
+        },
+        {
+          "position": 13,
+          "as_filed": "PEG-100 Stearate",
+          "inci": "peg-100 stearate"
+        },
+        {
+          "position": 14,
+          "as_filed": "C13-14 Isoparaffin",
+          "inci": "c13-14 isoparaffin"
+        },
+        {
+          "position": 15,
+          "as_filed": "Cetyl Alcohol",
+          "inci": "cetyl alcohol"
+        },
+        {
+          "position": 16,
+          "as_filed": "Steareth-2",
+          "inci": "steareth-2"
+        },
+        {
+          "position": 17,
+          "as_filed": "Erythrulose",
+          "inci": "erythrulose"
+        },
+        {
+          "position": 18,
+          "as_filed": "1,2-Hexanediol",
+          "inci": "1,2-hexanediol"
+        },
+        {
+          "position": 19,
+          "as_filed": "Fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 20,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 21,
+          "as_filed": "Laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 22,
+          "as_filed": "Tocopheryl Acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 23,
+          "as_filed": "Zea Mays (Corn) Starch",
+          "inci": "zea mays (corn) starch"
+        },
+        {
+          "position": 24,
+          "as_filed": "Benzoic Acid",
+          "inci": "benzoic acid"
+        },
+        {
+          "position": 25,
+          "as_filed": "Alpha-Isomethyl Ionone",
+          "inci": "alpha-isomethyl ionone"
+        },
+        {
+          "position": 26,
+          "as_filed": "Citronellol",
+          "inci": "citronellol"
+        },
+        {
+          "position": 27,
+          "as_filed": "Linalool",
+          "inci": "linalool"
+        },
+        {
+          "position": 28,
+          "as_filed": "Caramel",
+          "inci": "caramel"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "clinique-for-men-moisturizer",
+      "brand": "Clinique",
+      "product": "For Men Broad Spectrum SPF 21 Moisturizer",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "2e9463df-1c71-465f-9820-6cedefe07ad7",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e9463df-1c71-465f-9820-6cedefe07ad7",
+        "label_effective_date": "2023-10-20"
+      },
+      "active_ingredients_as_filed": "Active ingredients Avobenzone 3.0% Octinoxate 7.4% Octisalate 5.0% Oxybenzone 2.0%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water\\aqua\\eau\u2022butylene glycol\u2022dimethicone\u2022neopentyl glycol diheptanoate\u2022cetearyl alcohol\u2022peg-100 stearate\u2022silica\u2022hordeum vulgare (barley) extract\\extrait d'orge\u2022algae extract\u2022cucumis sativus (cucumber) fruit extract\u2022helianthus annuus (sunflower) seedcake\u2022cholesterol\u2022cetearyl glucoside\u2022propylene glycol dicaprate\u2022tridecyl trimellitate\u2022hydrogenated lecithin\u2022stearyl alcohol\u2022zeolite\u2022lactobacillus ferment\u2022cetrimonium chloride\u2022tridecyl stearate\u2022isododecane\u2022dipentaerythrityl hexacaprylate/hexacaprate\u2022pvp\u2022oleth-10\u2022laureth-4\u2022laureth-23\u2022caprylyl glycol\u2022hexylene glycol\u2022polyethylene\u2022tromethamine\u2022carbomer\u2022sodium citrate\u2022disodium edta\u2022potassium sorbate\u2022phenoxyethanol\u2022yellow 5 (ci 19140)\u2022yellow 6 (ci 15985)\u2022red 33 (ci 17200) [iln43259]",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water\\aqua\\eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 3,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "neopentyl glycol diheptanoate",
+          "inci": "neopentyl glycol diheptanoate"
+        },
+        {
+          "position": 5,
+          "as_filed": "cetearyl alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 6,
+          "as_filed": "peg-100 stearate",
+          "inci": "peg-100 stearate"
+        },
+        {
+          "position": 7,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 8,
+          "as_filed": "hordeum vulgare (barley) extract\\extrait d'orge",
+          "inci": "hordeum vulgare (barley) extract\\extrait d'orge"
+        },
+        {
+          "position": 9,
+          "as_filed": "algae extract",
+          "inci": "algae extract"
+        },
+        {
+          "position": 10,
+          "as_filed": "cucumis sativus (cucumber) fruit extract",
+          "inci": "cucumis sativus (cucumber) fruit extract"
+        },
+        {
+          "position": 11,
+          "as_filed": "helianthus annuus (sunflower) seedcake",
+          "inci": "helianthus annuus (sunflower) seedcake"
+        },
+        {
+          "position": 12,
+          "as_filed": "cholesterol",
+          "inci": "cholesterol"
+        },
+        {
+          "position": 13,
+          "as_filed": "cetearyl glucoside",
+          "inci": "cetearyl glucoside"
+        },
+        {
+          "position": 14,
+          "as_filed": "propylene glycol dicaprate",
+          "inci": "propylene glycol dicaprate"
+        },
+        {
+          "position": 15,
+          "as_filed": "tridecyl trimellitate",
+          "inci": "tridecyl trimellitate"
+        },
+        {
+          "position": 16,
+          "as_filed": "hydrogenated lecithin",
+          "inci": "hydrogenated lecithin"
+        },
+        {
+          "position": 17,
+          "as_filed": "stearyl alcohol",
+          "inci": "stearyl alcohol"
+        },
+        {
+          "position": 18,
+          "as_filed": "zeolite",
+          "inci": "zeolite"
+        },
+        {
+          "position": 19,
+          "as_filed": "lactobacillus ferment",
+          "inci": "lactobacillus ferment"
+        },
+        {
+          "position": 20,
+          "as_filed": "cetrimonium chloride",
+          "inci": "cetrimonium chloride"
+        },
+        {
+          "position": 21,
+          "as_filed": "tridecyl stearate",
+          "inci": "tridecyl stearate"
+        },
+        {
+          "position": 22,
+          "as_filed": "isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 23,
+          "as_filed": "dipentaerythrityl hexacaprylate/hexacaprate",
+          "inci": "dipentaerythrityl hexacaprylate/hexacaprate"
+        },
+        {
+          "position": 24,
+          "as_filed": "pvp",
+          "inci": "pvp"
+        },
+        {
+          "position": 25,
+          "as_filed": "oleth-10",
+          "inci": "oleth-10"
+        },
+        {
+          "position": 26,
+          "as_filed": "laureth-4",
+          "inci": "laureth-4"
+        },
+        {
+          "position": 27,
+          "as_filed": "laureth-23",
+          "inci": "laureth-23"
+        },
+        {
+          "position": 28,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 29,
+          "as_filed": "hexylene glycol",
+          "inci": "hexylene glycol"
+        },
+        {
+          "position": 30,
+          "as_filed": "polyethylene",
+          "inci": "polyethylene"
+        },
+        {
+          "position": 31,
+          "as_filed": "tromethamine",
+          "inci": "tromethamine"
+        },
+        {
+          "position": 32,
+          "as_filed": "carbomer",
+          "inci": "carbomer"
+        },
+        {
+          "position": 33,
+          "as_filed": "sodium citrate",
+          "inci": "sodium citrate"
+        },
+        {
+          "position": 34,
+          "as_filed": "disodium edta",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 35,
+          "as_filed": "potassium sorbate",
+          "inci": "potassium sorbate"
+        },
+        {
+          "position": 36,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 37,
+          "as_filed": "yellow 5 (ci 19140)",
+          "inci": "yellow 5"
+        },
+        {
+          "position": 38,
+          "as_filed": "yellow 6 (ci 15985)",
+          "inci": "yellow 6"
+        },
+        {
+          "position": 39,
+          "as_filed": "red 33 (ci 17200)",
+          "inci": "red 33"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "water\\aqua\\eau",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "yellow 5 (ci 19140)",
+          "canonical": "yellow 5"
+        },
+        {
+          "as_filed": "yellow 6 (ci 15985)",
+          "canonical": "yellow 6"
+        },
+        {
+          "as_filed": "red 33 (ci 17200)",
+          "canonical": "red 33"
+        }
+      ]
+    },
+    {
+      "id": "lamer-uv-protecting-fluid",
+      "brand": "La Mer",
+      "product": "The Broad Spectrum SPF 50 UV Protecting Fluid",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "luxury",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "e06bb578-475c-4169-ac09-cefb6a37d392",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e06bb578-475c-4169-ac09-cefb6a37d392",
+        "label_effective_date": "2024-08-29"
+      },
+      "active_ingredients_as_filed": "Active ingredients AVOBENZONE 3.00% HOMOSALATE 5.00% OCTISALATE 5.00% OCTOCRYLENE 2.70% OXYBENZONE 3.00%",
+      "inactive_ingredients_as_filed": "Ingredients WATER\\AQUA\\EAU \u2022 BUTYLOCTYL SALICYLATE \u2022 METHYL TRIMETHICONE \u2022 NEOPENTYL GLYCOL DIHEPTANOATE \u2022 ALEURITES MOLUCCANA (KUKUI) SEED OIL \u2022 LAURYL PEG-9 POLYDIMETHYLSILOXYETHYL DIMETHICONE \u2022 PEG 100 STEARATE \u2022 BUTYLENE GLYCOL \u2022 GLYCERYL STEARATE \u2022 DIPENTAERYTHRITYL TRI-POLYHYDROXYSTEARATE \u2022 POTASSIUM CETYL PHOSPHATE \u2022 ALGAE (SEAWEED) EXTRACT \u2022 SESAMUM INDICUM (SESAME) SEED OIL \u2022 MEDICAGO SATIVA (ALFALFA) SEED POWDER \u2022 HELIANTHUS ANNUUS (SUNFLOWER) SEEDCAKE \u2022 PRUNUS AMYGDALUS DULCIS (SWEET ALMOND) SEED MEAL \u2022 EUCALYPTUS GLOBULUS (EUCALYPTUS) LEAF OIL \u2022 SODIUM GLUCONATE \u2022 COPPER GLUCONATE \u2022 CALCIUM GLUCONATE \u2022 MAGNESIUM GLUCONATE \u2022 ZINC GLUCONATE \u2022 TOCOPHERYL SUCCINATE \u2022 NIACIN \u2022 SESAMUM INDICUM (SESAME) SEED POWDER \u2022 LAMINARIA OCHROLEUCA EXTRACT \u2022 MALACHITE \u2022 CAFFEINE \u2022 SORBITOL \u2022 SODIUM HYALURONATE \u2022 CETYL ALCOHOL \u2022 STEARIC ACID \u2022 VP/EICOSENE COPOLYMER \u2022 ETHYLHEXYLGLYCERIN \u2022 SACCHARIDE ISOMERATE \u2022 CAPRYLIC/CAPRIC TRIGLYCERIDE \u2022 CAPRYLYL GLYCOL \u2022 AMMONIUM ACRYLOYLDIMETHYLTAURATE/VP COPOLYMER \u2022 DEHYDROXANTHAN GUM \u2022 SODIUM DEHYDROACETATE \u2022 CITRIC ACID \u2022 TOURMALINE \u2022 STYRENE/ACRYLATES COPOLYMER \u2022 SILICA \u2022 PEG-8 LAURATE \u2022 FRAGRANCE (PARFUM) \u2022 DISODIUM EDTA \u2022 PHENOXYETHANOL \u2022 LIMONENE \u2022 GERANIOL \u2022 HYDROXYCITRONELLAL \u2022 LINALOOL \u2022 CITRONELLOL \u2022 MICA \u2022 GREEN 5 (CI 61570) \u2022 TITANIUM DIOXIDE (CI 77891) <ILN40137>",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "WATER\\AQUA\\EAU",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "BUTYLOCTYL SALICYLATE",
+          "inci": "butyloctyl salicylate"
+        },
+        {
+          "position": 3,
+          "as_filed": "METHYL TRIMETHICONE",
+          "inci": "methyl trimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "NEOPENTYL GLYCOL DIHEPTANOATE",
+          "inci": "neopentyl glycol diheptanoate"
+        },
+        {
+          "position": 5,
+          "as_filed": "ALEURITES MOLUCCANA (KUKUI) SEED OIL",
+          "inci": "aleurites moluccana (kukui) seed oil"
+        },
+        {
+          "position": 6,
+          "as_filed": "LAURYL PEG-9 POLYDIMETHYLSILOXYETHYL DIMETHICONE",
+          "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 7,
+          "as_filed": "PEG 100 STEARATE",
+          "inci": "peg 100 stearate"
+        },
+        {
+          "position": 8,
+          "as_filed": "BUTYLENE GLYCOL",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 9,
+          "as_filed": "GLYCERYL STEARATE",
+          "inci": "glyceryl stearate"
+        },
+        {
+          "position": 10,
+          "as_filed": "DIPENTAERYTHRITYL TRI-POLYHYDROXYSTEARATE",
+          "inci": "dipentaerythrityl tri-polyhydroxystearate"
+        },
+        {
+          "position": 11,
+          "as_filed": "POTASSIUM CETYL PHOSPHATE",
+          "inci": "potassium cetyl phosphate"
+        },
+        {
+          "position": 12,
+          "as_filed": "ALGAE (SEAWEED) EXTRACT",
+          "inci": "algae (seaweed) extract"
+        },
+        {
+          "position": 13,
+          "as_filed": "SESAMUM INDICUM (SESAME) SEED OIL",
+          "inci": "sesamum indicum (sesame) seed oil"
+        },
+        {
+          "position": 14,
+          "as_filed": "MEDICAGO SATIVA (ALFALFA) SEED POWDER",
+          "inci": "medicago sativa (alfalfa) seed powder"
+        },
+        {
+          "position": 15,
+          "as_filed": "HELIANTHUS ANNUUS (SUNFLOWER) SEEDCAKE",
+          "inci": "helianthus annuus (sunflower) seedcake"
+        },
+        {
+          "position": 16,
+          "as_filed": "PRUNUS AMYGDALUS DULCIS (SWEET ALMOND) SEED MEAL",
+          "inci": "prunus amygdalus dulcis (sweet almond) seed meal"
+        },
+        {
+          "position": 17,
+          "as_filed": "EUCALYPTUS GLOBULUS (EUCALYPTUS) LEAF OIL",
+          "inci": "eucalyptus globulus (eucalyptus) leaf oil"
+        },
+        {
+          "position": 18,
+          "as_filed": "SODIUM GLUCONATE",
+          "inci": "sodium gluconate"
+        },
+        {
+          "position": 19,
+          "as_filed": "COPPER GLUCONATE",
+          "inci": "copper gluconate"
+        },
+        {
+          "position": 20,
+          "as_filed": "CALCIUM GLUCONATE",
+          "inci": "calcium gluconate"
+        },
+        {
+          "position": 21,
+          "as_filed": "MAGNESIUM GLUCONATE",
+          "inci": "magnesium gluconate"
+        },
+        {
+          "position": 22,
+          "as_filed": "ZINC GLUCONATE",
+          "inci": "zinc gluconate"
+        },
+        {
+          "position": 23,
+          "as_filed": "TOCOPHERYL SUCCINATE",
+          "inci": "tocopheryl succinate"
+        },
+        {
+          "position": 24,
+          "as_filed": "NIACIN",
+          "inci": "niacin"
+        },
+        {
+          "position": 25,
+          "as_filed": "SESAMUM INDICUM (SESAME) SEED POWDER",
+          "inci": "sesamum indicum (sesame) seed powder"
+        },
+        {
+          "position": 26,
+          "as_filed": "LAMINARIA OCHROLEUCA EXTRACT",
+          "inci": "laminaria ochroleuca extract"
+        },
+        {
+          "position": 27,
+          "as_filed": "MALACHITE",
+          "inci": "malachite"
+        },
+        {
+          "position": 28,
+          "as_filed": "CAFFEINE",
+          "inci": "caffeine"
+        },
+        {
+          "position": 29,
+          "as_filed": "SORBITOL",
+          "inci": "sorbitol"
+        },
+        {
+          "position": 30,
+          "as_filed": "SODIUM HYALURONATE",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 31,
+          "as_filed": "CETYL ALCOHOL",
+          "inci": "cetyl alcohol"
+        },
+        {
+          "position": 32,
+          "as_filed": "STEARIC ACID",
+          "inci": "stearic acid"
+        },
+        {
+          "position": 33,
+          "as_filed": "VP/EICOSENE COPOLYMER",
+          "inci": "vp/eicosene copolymer"
+        },
+        {
+          "position": 34,
+          "as_filed": "ETHYLHEXYLGLYCERIN",
+          "inci": "ethylhexylglycerin"
+        },
+        {
+          "position": 35,
+          "as_filed": "SACCHARIDE ISOMERATE",
+          "inci": "saccharide isomerate"
+        },
+        {
+          "position": 36,
+          "as_filed": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "inci": "caprylic/capric triglyceride"
+        },
+        {
+          "position": 37,
+          "as_filed": "CAPRYLYL GLYCOL",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 38,
+          "as_filed": "AMMONIUM ACRYLOYLDIMETHYLTAURATE/VP COPOLYMER",
+          "inci": "ammonium acryloyldimethyltaurate/vp copolymer"
+        },
+        {
+          "position": 39,
+          "as_filed": "DEHYDROXANTHAN GUM",
+          "inci": "dehydroxanthan gum"
+        },
+        {
+          "position": 40,
+          "as_filed": "SODIUM DEHYDROACETATE",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 41,
+          "as_filed": "CITRIC ACID",
+          "inci": "citric acid"
+        },
+        {
+          "position": 42,
+          "as_filed": "TOURMALINE",
+          "inci": "tourmaline"
+        },
+        {
+          "position": 43,
+          "as_filed": "STYRENE/ACRYLATES COPOLYMER",
+          "inci": "styrene/acrylates copolymer"
+        },
+        {
+          "position": 44,
+          "as_filed": "SILICA",
+          "inci": "silica"
+        },
+        {
+          "position": 45,
+          "as_filed": "PEG-8 LAURATE",
+          "inci": "peg-8 laurate"
+        },
+        {
+          "position": 46,
+          "as_filed": "FRAGRANCE (PARFUM)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 47,
+          "as_filed": "DISODIUM EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 48,
+          "as_filed": "PHENOXYETHANOL",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 49,
+          "as_filed": "LIMONENE",
+          "inci": "limonene"
+        },
+        {
+          "position": 50,
+          "as_filed": "GERANIOL",
+          "inci": "geraniol"
+        },
+        {
+          "position": 51,
+          "as_filed": "HYDROXYCITRONELLAL",
+          "inci": "hydroxycitronellal"
+        },
+        {
+          "position": 52,
+          "as_filed": "LINALOOL",
+          "inci": "linalool"
+        },
+        {
+          "position": 53,
+          "as_filed": "CITRONELLOL",
+          "inci": "citronellol"
+        },
+        {
+          "position": 54,
+          "as_filed": "MICA",
+          "inci": "mica"
+        },
+        {
+          "position": 55,
+          "as_filed": "GREEN 5 (CI 61570)",
+          "inci": "green 5"
+        },
+        {
+          "position": 56,
+          "as_filed": "TITANIUM DIOXIDE (CI 77891)",
+          "inci": "titanium dioxide"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "WATER\\AQUA\\EAU",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "FRAGRANCE (PARFUM)",
+          "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "GREEN 5 (CI 61570)",
+          "canonical": "green 5"
+        },
+        {
+          "as_filed": "TITANIUM DIOXIDE (CI 77891)",
+          "canonical": "titanium dioxide"
+        }
+      ]
+    }
+  ]
+}
