@@ -1,0 +1,12 @@
+id: lancome-idole-liner
+brand: Lancôme
+product: Idôle Liner (Ultra-Precise Waterproof Felt Tip)
+parent: L'Oréal
+tier: prestige
+url: https://www.lancome-usa.com/makeup/eye-makeup/eye-liners-and-eye-pencils/idole-liner/00538-LAC.html
+accessed: 2026-08-26
+method: brand's official product page, Ingredients accordion. Static HTTP fetch
+  returned HTTP 403; content was read from the rendered DOM in a browser.
+
+INGREDIENTS:
+Aqua/Water/Eau, Styrene/Acrylates/Ammonium Methacrylate Copolymer, CI 77266 [NANO]/Black 2, Methylpropanediol, Styrene/Acrylates Copolymer, Alcohol Denat., Acrylates Copolymer, Poloxamer 407, Coco-Glucoside, PEG-12 Dimethicone, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Caprylyl Glycol, Xanthan Gum, BHT, Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate, Sodium Dehydroacetate, Phenoxyethanol, Iodopropynyl Butylcarbamate.

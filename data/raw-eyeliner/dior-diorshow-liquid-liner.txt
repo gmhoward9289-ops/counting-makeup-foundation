@@ -1,0 +1,17 @@
+id: dior-diorshow-liquid-liner
+brand: Dior
+product: Diorshow Liquid Liner (waterproof felt tip, shade 091 Matte Black #21472)
+parent: LVMH
+tier: luxury
+url: https://www.dior.com/en_us/beauty/products/diorshow-liquid-liner-Y0000006.html
+accessed: 2026-08-26
+method: brand's official product page, Ingredients accordion. Static HTTP fetch
+  returned HTTP 403; content was read from the rendered DOM in a browser. Dior
+  briefly served a maintenance interstitial on one URL pattern for this product;
+  this URL loaded normally.
+
+INGREDIENTS:
+Aqua (Water), Butylene Glycol, Ammonium Styrene/Acrylates Copolymer, Acrylates Copolymer, Pentylene Glycol, Ammonium Acrylates Copolymer, Beheneth-30, Glycerin, 1,2-Hexanediol, Centaurea Cyanus Flower Water, Alcohol, Sodium Dehydroacetate, Hydroxyacetophenone, Caprylyl Glycol, Ethylhexylglycerin, Bentonite, Disodium EDTA, Xanthan Gum, Sodium Benzoate, Potassium Sorbate.
+
+MAY CONTAIN:
+CI 77266 [NANO] (Black 2)

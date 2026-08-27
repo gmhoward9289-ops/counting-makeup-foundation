@@ -1,0 +1,16 @@
+id: mac-eye-kohl
+brand: MAC Cosmetics
+product: Eye Kohl Eyeliner (shade Teddy)
+parent: Estée Lauder Companies
+tier: prestige
+url: https://www.maccosmetics.com/products/eye-kohl-eyeliner
+accessed: 2026-08-26
+method: brand's official product page, Ingredients accordion. Static HTTP fetch
+  resolved to a category listing rather than the product panel; content was read
+  from the rendered DOM in a browser.
+
+INGREDIENTS:
+Hydrogenated Coco-Glycerides, Triethylhexanoin, Beeswax/Cera Alba, Ricinus Communis (Castor) Seed Oil, Dipentaerythrityl Hexahydroxystearate/Hexastearate/Hexarosinate, Copernicia Cerifera (Carnauba) Wax, Polymethyl Methacrylate, Ozokerite, Tocopherol, Ascorbyl Palmitate, Lecithin, Citric Acid.
+
+MAY CONTAIN:
+Mica, Titanium Dioxide, Iron Oxides, Aluminum Powder, Blue 1 Lake, Bismuth Oxychloride, Carmine, Chromium Hydroxide/Oxide Greens, Ferric Ferrocyanide, Manganese Violet, Ultramarines, Yellow 5 Lake

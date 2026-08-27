@@ -1,0 +1,406 @@
+{
+  "generated_from": "data/corpus-eyeliner.json",
+  "n_products": 8,
+  "issue_9_ingredient_comparison": {
+    "distinct_base_ingredients": 79,
+    "appearing_in_one_product_only": 51,
+    "shared_core_75pct": [],
+    "prevalence": [
+      {
+        "inci": "caprylyl glycol",
+        "products": 5,
+        "share": 0.625
+      },
+      {
+        "inci": "phenoxyethanol",
+        "products": 5,
+        "share": 0.625
+      },
+      {
+        "inci": "water",
+        "products": 5,
+        "share": 0.625
+      },
+      {
+        "inci": "sodium dehydroacetate",
+        "products": 4,
+        "share": 0.5
+      },
+      {
+        "inci": "acrylates copolymer",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "coco-glucoside",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "methylpropanediol",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "poloxamer 407",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "sodium lauryl sulfate",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "styrene/acrylates copolymer",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "styrene/acrylates/ammonium methacrylate copolymer",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "xanthan gum",
+        "products": 3,
+        "share": 0.375
+      },
+      {
+        "inci": "alcohol denat",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "ammonium acrylates copolymer",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "bht",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "black 2 (ci 77266) [nano]",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "butylene glycol",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "cera alba",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "citric acid",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "copernicia cerifera (carnauba) wax",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "iodopropynyl butylcarbamate",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "octadecyl di-t-butyl-4-hydroxyhydrocinnamate",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "ozokerite",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "peg-12 dimethicone",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "potassium sorbate",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "sodium benzoate",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "sodium laureth sulfate",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "tocopherol",
+        "products": 2,
+        "share": 0.25
+      },
+      {
+        "inci": "1,2-hexanediol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "alcohol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "alumina",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "aluminum hydroxide",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "ammonium styrene/acrylates copolymer",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "ascorbyl palmitate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "beheneth-30",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "bentonite",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "black 2 (ci 77266) [nano",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "cellulose",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "cellulose gum",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "centaurea cyanus flower water",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "diisostearyl malate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "dimethicone",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "dipentaerythrityl hexahydroxystearate/hexastearate/hexarosinate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "disodium edta",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "ethylhexylglycerin",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "euphorbia cerifera (candelilla) wax",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "glycerin",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "hydrogenated coco-glycerides",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "hydrogenated polycyclopentadiene",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "hydrogenated polyisobutene",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "hydroxyacetophenone",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "isododecane",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "lecithin",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "magnesium aluminum silicate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "methyl methacrylate crosspolymer",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "microcrystalline wax",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "octyldodecanol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "panthenol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "pantolactone",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "paraffin",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "peg-60 hydrogenated castor oil",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "pentylene glycol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "phenylpropanol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "polyethylene",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "polyisobutene",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "polymethyl methacrylate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "propylene glycol",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "ricinus communis (castor) seed oil",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "simethicone",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "sodium laureth-12 sulfate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "synthetic fluorphlogopite",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "synthetic wax",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "talc",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "tocopheryl acetate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "triethylhexanoin",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "trimethylsiloxysilicate",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "vinyldimethyl/trimethylsiloxysilicate stearyl dimethicone crosspolymer",
+        "products": 1,
+        "share": 0.125
+      },
+      {
+        "inci": "vp/hexadecene copolymer",
+        "products": 1,
+        "share": 0.125
+      }
+    ]
+  }
+}
