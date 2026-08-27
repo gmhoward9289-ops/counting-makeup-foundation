@@ -1,0 +1,27 @@
+{
+  "corpus": "toner-acne-monograph-us",
+  "description": "US liquid facial toners that carry an FDA acne-treatment monograph claim (salicylic acid, an OTC drug active). SPF is foundation's and lotion's OTC trigger; toners are almost never sold with an SPF claim, so this corpus uses the other route by which a cosmetic becomes an FDA-filed OTC drug: an acne-treatment (salicylic acid) claim under 21 CFR Part 333. Every product is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid toner/astringent with a formulated cosmetic vehicle (surfactants, humectants, preservatives) -- not a single-ingredient solution.",
+    "Carries a salicylic acid acne-treatment claim under the FDA OTC monograph, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "Monograph-only inclusion is a selection bias, the same shape as foundation's SPF-only rule: it excludes non-drug toners (Kiehl's, Clinique, Paula's Choice, most prestige lines), which have no primary filing and are excluded rather than sourced more weakly. This corpus is therefore budget/mass-tier-heavy; no prestige-counter brand carries a qualifying filing.",
+    "The FDA's astringent monograph (plain witch hazel: T.N. Dickinson's, CVS Health, Equate, and Biore Witch Hazel Pore Clarifying Toner) also produces FDA-filed toner labels, but those products declare only witch hazel and alcohol as ingredients with no formulated vehicle -- there is nothing to cross-brand-compare at the inactive-ingredient level, so they are excluded here as a different formulation type, not sourced more weakly (mirrors the foundation corpus excluding powders/sticks as 'different vehicle, not comparable').",
+    "Biore Witch Hazel Pore Clarifying Toner (Kao USA) has a live DailyMed web page (setid 6edb3b74-e694-fe90-e053-2991aa0ab8ea) but no entry in the DailyMed SPL REST API this project's fetch tool uses -- the underlying XML is not retrievable through the pipeline this project requires, so it is excluded on sourcing-mechanics grounds as well as the vehicle-type exclusion above.",
+    "Stridex Maximum's SPL (setid a3b16d52-76a5-438b-a120-bb59ce062cc1) filed under the same 'toner' branding is not a pourable liquid: its packaging section lists jars of 55/70/90/110 pre-saturated pads, not a fluid ounce/mL fill. Same dosage-form exclusion as powders/sticks in the foundation corpus -- excluded as a different vehicle, not sourced more weakly.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos and inconsistent separator characters. Corrections are recorded per-ingredient in the normalization layer, never silently.",
+    "Burt's Bees Natural Acne Solutions Clarifying Toner's SPL label has an effective date of 2010-08-16, the oldest filing in any corpus this project uses; DailyMed has no newer version indexed, so this is treated as the current filing rather than superseded."
+  ],
+  "products": [
+    {"id": "upandup-deep-clean-toner",   "brand": "Up & Up",        "product": "Deep Clean Toner",                                                "parent": "Target Corporation", "tier": "budget",   "setid": "945b0588-6864-27bc-e053-2995a90a73e3"},
+    {"id": "cleanandclear-deep-cleaning-astringent", "brand": "Clean & Clear", "product": "Essentials Deep Cleaning Astringent",                  "parent": "Kenvue",              "tier": "budget",   "setid": "0beeddf8-8fd5-4ea1-a181-b07c360ddcd3"},
+    {"id": "neutrogena-oil-free-acne-toner", "brand": "Neutrogena", "product": "Oil-Free Acne Stress Control Triple Action Toner",               "parent": "Kenvue",              "tier": "budget",   "setid": "817a9746-df57-4b11-b580-f57fe9940a68"},
+    {"id": "thayers-witch-hazel-blemish", "brand": "Thayers",      "product": "Witch Hazel Aloe Vera Formula Toner, Blemish Clearing",           "parent": "L'Oréal",             "tier": "mass",     "setid": "a2dc3cf4-23d2-4cb7-8fdc-615420db5710"},
+    {"id": "burtsbees-clarifying-toner", "brand": "Burt's Bees",   "product": "Natural Acne Solutions Clarifying Toner",                         "parent": "The Clorox Company",  "tier": "mass",     "setid": "f009d082-947f-455d-912f-c2c111001a30"},
+    {"id": "marykay-clear-proof-toner",  "brand": "Mary Kay",      "product": "Clear Proof Blemish Control Toner",                               "parent": "Mary Kay Inc.",       "tier": "mass",     "setid": "22ead982-2073-4df2-bc18-a2389f9425dd"},
+    {"id": "proactiv-retexturizing-toner", "brand": "Proactiv",    "product": "Plus Retexturizing Toner",                                        "parent": "Alchemee LLC",        "tier": "prestige", "setid": "7c211ff7-920f-407b-ad8d-60d14803b857"}
+  ]
+}

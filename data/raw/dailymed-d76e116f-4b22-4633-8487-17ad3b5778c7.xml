@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="ed961d54-9313-42b8-8563-521ca75e8917"/>
+   <code code="34390-5" displayName="HUMAN OTC DRUG LABEL" codeSystem="2.16.840.1.113883.6.1"/>
+   <title>Drug Facts</title>
+   <effectiveTime value="20260204"/>
+   <setId root="d76e116f-4b22-4633-8487-17ad3b5778c7"/>
+   <versionNumber value="9"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="051957769" root="1.3.6.1.4.1.519.1"/>
+            <name>EQUATE (Wal-Mart Stores, Inc.) (see also WAL-MART INC)</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="eff5d41c-9973-4780-ae9a-b7d7d7fd5004"/>
+               <code code="48780-1" displayName="SPL listing data elements section" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20260204"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="49035-039" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Witch Hazel</name>
+                        <formCode code="C42953" displayName="LIQUID" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Witch hazel</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="842"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="101I4J0U34" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WITCH HAZEL</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="101I4J0U34" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>WITCH HAZEL</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3K9958V90M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="473"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="49035-039-16" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" displayName="BOTTLE, PLASTIC" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20140530"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M016" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" displayName="OTC Monograph Drug" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20140530"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" displayName="TOPICAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_5d663674-6142-4401-bbb9-ad0420492a44">
+               <id root="ccd8714c-9f4c-49a1-ab54-fb005ffebdf5"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>Active ingredient</title>
+               <text>
+                  <paragraph>Witch hazel, USP 86%</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_daac7715-72f1-491c-9073-df7bcb5ec149">
+               <id root="d5fcebab-afee-4d43-beb5-53b171a56372"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>Purpose</title>
+               <text>
+                  <paragraph>Astringent</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_64cc29fb-7b66-4f60-ab9f-7b8ac7265e7e">
+               <id root="cc80eec1-0a46-4159-b211-d7f01806af04"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>Uses</title>
+               <text>
+                  <paragraph>Relieves minor skin irritation due to:  </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>insect bites</item>
+                     <item>minor cuts</item>
+                     <item>minor scrapes</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_0ca3e7ae-6d02-4123-9214-26408e8ea236">
+               <id root="fe580165-e18a-43c2-9116-211df594ab51"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Warnings</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">For external use only.</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>Avoid swallowing.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260204"/>
+               <component>
+                  <section ID="LINK_519d5251-cecf-46fe-ab4e-f095ece2dc19">
+                     <id root="8f255498-777e-4be8-9d1a-e96a4cd48121"/>
+                     <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                     <title>When using this product</title>
+                     <text>
+                        <paragraph>avoid contact with eyes. If contact occurs, rinse thoroughly with water.</paragraph>
+                     </text>
+                     <effectiveTime value="20260204"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_429e85bd-b427-4379-a5b5-f4b6ed4385a2">
+                     <id root="da5045b5-8354-4da4-a8b1-cbc02bfec552"/>
+                     <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                     <title>Stop use and ask a doctor if</title>
+                     <text>
+                        <paragraph>condition worsens or symptoms persist for more than 7 days</paragraph>
+                     </text>
+                     <effectiveTime value="20260204"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_b784c861-fcf0-47d6-b115-874f72012944">
+                     <id root="aad295d6-0e8e-4632-a72f-f735211f22bc"/>
+                     <code code="53414-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PREGNANCY OR BREAST FEEDING SECTION"/>
+                     <title>If pregnant or breast-feeding,</title>
+                     <text>
+                        <paragraph>ask a health professional before use.</paragraph>
+                     </text>
+                     <effectiveTime value="20260204"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_48c8f718-ff0b-4574-ba11-0ca4c1086ab1">
+                     <id root="c55cd8c9-7dc9-49b1-b8d7-4fc48dc91b6d"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <title>Keep out of reach of children.</title>
+                     <text>
+                        <paragraph>If swallowed, get medical help or contact a Poison Control Center (1-800-222-1222) right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20260204"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_49023700-d639-43d6-abde-8d70ae0f3b6f">
+               <id root="8e2ddc23-f5a2-4db7-a684-62dae59ec1fc"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Directions</title>
+               <text>
+                  <paragraph>apply to the affected area as often as needed</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_d39b9b73-32c4-4210-bb2a-3c3a2cc1e1af">
+               <id root="7bf10333-f5b0-45b6-8b56-d477dee73e4c"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>Other information</title>
+               <text>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>keep tightly closed </item>
+                     <item>store at room temperature </item>
+                  </list>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_73cd997a-13b9-4570-a8c6-7dd094666976">
+               <id root="a21ee988-6486-4926-924b-bfa9f24a1184"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>Inactive ingredient</title>
+               <text>
+                  <paragraph>alcohol 14% by volume</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_275f84bd-d201-46ff-a3d0-6ef3f056b1d1">
+               <id root="8740cfe3-4534-469b-b279-e90d47abf3ae"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <title>Questions or comments?</title>
+               <text>
+                  <paragraph>Call <content styleCode="bold">1-888-287-1915</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a61746f5-9eb4-4f23-b1e9-1e5f052a8e97">
+               <id root="b7586f3f-5437-4dd6-ba9c-8eb5231c1d0c"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Witch Hazel USP</content>
+                  </paragraph>
+                  <paragraph>Alcohol 14% By Volume</paragraph>
+                  <paragraph>Astringent</paragraph>
+                  <paragraph>hamamelis water </paragraph>
+                  <paragraph>FL OZ (mL)</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">TAMPER EVIDENT: DO NOT USE IF PRINTED SAFETY SEAL UNDER CAP IS BROKEN OR MISSING.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">DISTRIBUTED BY: Walmart Inc., Bentonville, AR 72716</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_fd3249a9-c8cc-45b4-afab-b37a896db929">
+               <id root="4ae74b03-9df4-4505-aa39-e07583b20bd9"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Package Label</title>
+               <text>
+                  <renderMultiMedia referencedObject="MM1">
+                     <caption>EQUATE Witch Hazel</caption>
+                  </renderMultiMedia>
+               </text>
+               <effectiveTime value="20260204"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Witch hazel, USP 86%</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="witch-hazel-1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,79 @@
+{
+  "generated_from": [
+    "corpus-toner.json",
+    "regulatory-toner.json"
+  ],
+  "products": 7,
+  "scope_note": "Primary-source regulatory facts for the toner corpus's version of issue #16 (FDA-allowed vs internationally banned). Scope is deliberately narrower than the foundation corpus's regulatory.json: it covers the salicylic acid concentration limit (the one rule this corpus's own active ingredient actually triggers) and the same EU-declarable fragrance allergen list already verified for foundation. It does NOT repeat foundation's full EU Annex II general-prohibition sweep (checking every one of this corpus's ~50 distinct ingredient names against all 1760 Annex II entries) -- that is a several-hour hand-verification exercise in its own right, not yet done for this category, and is recorded as an open gap rather than silently assumed clear. See data/manifest-toner.json known_limits and the MoCRA timeline, which is shared across every corpus in this project and lives at data/regulatory.json rather than being duplicated here.",
+  "issue_16_salicylic_acid_limit": {
+    "eu_max_concentration_pct_leave_on": 2.0,
+    "us_monograph_max_concentration_pct": 2.0,
+    "eu_child_under_3_restriction": true,
+    "products_declaring_salicylic_acid": 7,
+    "products_at_us_monograph_ceiling": 5,
+    "products_over_eu_leave_on_limit": 0,
+    "actives": [
+      {
+        "id": "upandup-deep-clean-toner",
+        "brand": "Up & Up",
+        "tier": "budget",
+        "salicylic_acid_pct": 0.5,
+        "at_us_monograph_ceiling": false,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "cleanandclear-deep-cleaning-astringent",
+        "brand": "Clean & Clear",
+        "tier": "budget",
+        "salicylic_acid_pct": 2.0,
+        "at_us_monograph_ceiling": true,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "neutrogena-oil-free-acne-toner",
+        "brand": "Neutrogena",
+        "tier": "budget",
+        "salicylic_acid_pct": 2.0,
+        "at_us_monograph_ceiling": true,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "thayers-witch-hazel-blemish",
+        "brand": "Thayers",
+        "tier": "mass",
+        "salicylic_acid_pct": 2.0,
+        "at_us_monograph_ceiling": true,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "burtsbees-clarifying-toner",
+        "brand": "Burt's Bees",
+        "tier": "mass",
+        "salicylic_acid_pct": 1.0,
+        "at_us_monograph_ceiling": false,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "marykay-clear-proof-toner",
+        "brand": "Mary Kay",
+        "tier": "mass",
+        "salicylic_acid_pct": 2.0,
+        "at_us_monograph_ceiling": true,
+        "over_eu_leave_on_limit": false
+      },
+      {
+        "id": "proactiv-retexturizing-toner",
+        "brand": "Proactiv",
+        "tier": "prestige",
+        "salicylic_acid_pct": 2.0,
+        "at_us_monograph_ceiling": true,
+        "over_eu_leave_on_limit": false
+      }
+    ]
+  },
+  "issue_16_fragrance_allergens": {
+    "eu_declarable_substances_checked": 9,
+    "products_declaring_eu_allergens_by_name": 0,
+    "allergen_products": []
+  }
+}

@@ -15,11 +15,10 @@ import json
 import random
 import re
 import statistics
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CORPUS = ROOT / "data" / "corpus.json"
-OUT = ROOT / "data" / "analysis.json"
 
 # Ingredients a brand can put on the front of the box. Botanical, marine,
 # ferment, peptide and vitamin-derivative actives are the ones marketing names;
@@ -45,8 +44,8 @@ STRUCTURAL_HINTS = re.compile(
     r"xanthan|cellulose|stearate|laureth|edta|citrate|tocopher|bht", re.I)
 
 
-def load():
-    return json.loads(CORPUS.read_text(encoding="utf-8"))
+def load(corpus_path):
+    return json.loads(corpus_path.read_text(encoding="utf-8"))
 
 
 def base(p):
@@ -198,14 +197,22 @@ def by_tier(rows, field):
 
 
 def main():
-    c = load()
+    # A bare invocation is the foundation corpus; any other category reads
+    # data/corpus-<category>.json and writes data/analysis-<category>.json,
+    # matching the category argument tools/build_corpus.py already takes.
+    category = sys.argv[1] if len(sys.argv) > 1 else "foundation"
+    suffix = "" if category == "foundation" else "-%s" % category
+    corpus_path = ROOT / "data" / ("corpus%s.json" % suffix)
+    out_path = ROOT / "data" / ("analysis%s.json" % suffix)
+
+    c = load(corpus_path)
     products = c["products"]
     prev_rows, counts = prevalence(products)
     pairs = pairwise(products)
     cr = complexity_rarity(products, counts)
 
     analysis = {
-        "generated_from": "data/corpus.json",
+        "generated_from": "data/corpus%s.json" % suffix,
         "n_products": len(products),
         "issue_9_ingredient_comparison": {
             "distinct_base_ingredients": len(counts),
@@ -239,7 +246,7 @@ def main():
             "hero_patterns": HERO_PATTERNS,
         },
     }
-    OUT.write_text(json.dumps(analysis, indent=2), encoding="utf-8")
+    out_path.write_text(json.dumps(analysis, indent=2), encoding="utf-8")
     return analysis
 
 

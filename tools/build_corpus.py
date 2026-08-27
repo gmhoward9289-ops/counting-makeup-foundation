@@ -35,6 +35,22 @@ SPELLING_FIXES = {
     "parfum.fragrance": "parfum/fragrance",
     "thermus thermophillus ferment": "thermus thermophilus ferment",
     "ethylhexylglycerinma": "ethylhexylglycerin",
+    # Up & Up (Target) toner filing.
+    "benozphenone-4": "benzophenone-4",
+    # Thayers toner filing.
+    "melalecua alternifolia (tea tree) leaf oil": "melaleuca alternifolia (tea tree) leaf oil",
+}
+
+# A handful of filings run a comma into the middle of one INCI botanical name
+# rather than between two ingredients -- the comma-splitter above has no way
+# to tell that apart from a real separator, so the merge is declared here
+# instead. Applied to the raw declaration text before splitting.
+RAW_TEXT_FIXES = {
+    # Thayers toner filing: "Hamamelis Virginiana (Witch Hazel), Bark/Leaf/Twig
+    # Extract" is one INCI name; every other filing in this project's corpora
+    # writes the common name and plant part with no internal comma.
+    "hamamelis virginiana (witch hazel), bark/leaf/twig extract":
+        "hamamelis virginiana (witch hazel) bark/leaf/twig extract",
 }
 
 # Names for one and the same substance. Collapsing these is what makes
@@ -43,6 +59,7 @@ SPELLING_FIXES = {
 SYNONYMS = {
     "aqua/water/eau": "water", r"aqua\water\eau": "water", r"water\aqua\eau": "water",
     "water (aqua)": "water", "aqua (water)": "water", "aqua": "water", "eau": "water",
+    "aqua (water, eau)": "water", "purified water": "water",
     "fragrance": "parfum/fragrance", "parfum (fragrance)": "parfum/fragrance",
     "parfum": "parfum/fragrance", "fragrance (parfum)": "parfum/fragrance",
     "alcohol denat.": "alcohol denat", "alcohol": "alcohol denat",
@@ -151,6 +168,8 @@ def parse_product(entry):
     eff = re.search(r'<effectiveTime value="(\d{8})"', xml).group(1)
     raw = section_text(xml, INACTIVE_SECTION)
     active = section_text(xml, ACTIVE_SECTION)
+    for before, after in RAW_TEXT_FIXES.items():
+        raw = re.sub(re.escape(before), after, raw, flags=re.I)
 
     parts = MAY_CONTAIN.split(raw, maxsplit=1)
     base_raw, mc_raw = parts[0], (parts[1] if len(parts) > 1 else "")

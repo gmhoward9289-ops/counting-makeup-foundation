@@ -1,0 +1,36 @@
+{
+  "dataset": "regulatory-divergence-us-eu-toner",
+  "description": "Primary-source regulatory facts for the toner corpus's version of issue #16 (FDA-allowed vs internationally banned). Scope is deliberately narrower than the foundation corpus's regulatory.json: it covers the salicylic acid concentration limit (the one rule this corpus's own active ingredient actually triggers) and the same EU-declarable fragrance allergen list already verified for foundation. It does NOT repeat foundation's full EU Annex II general-prohibition sweep (checking every one of this corpus's ~50 distinct ingredient names against all 1760 Annex II entries) -- that is a several-hour hand-verification exercise in its own right, not yet done for this category, and is recorded as an open gap rather than silently assumed clear. See data/manifest-toner.json known_limits and the MoCRA timeline, which is shared across every corpus in this project and lives at data/regulatory.json rather than being duplicated here.",
+  "retrieved": "2026-08-26",
+
+  "salicylic_acid_limit": {
+    "eu_annex": "Annex III entry 98 (substances cosmetic products must not contain except subject to the restrictions laid down)",
+    "instrument": "Regulation (EC) No 1223/2009, as amended by Commission Regulation (EU) 2019/1966",
+    "eu_max_concentration_pct_leave_on": 2.0,
+    "eu_max_concentration_pct_rinse_off_hair": 3.0,
+    "eu_excluded_categories": ["body lotion", "eye shadow", "mascara", "eyeliner", "lipstick", "roll-on deodorant"],
+    "eu_conditions": [
+      "Not to be used in preparations for children under 3 years of age.",
+      "Not to be used in applications that may lead to exposure of the end user's lungs by inhalation.",
+      "Not to be used in oral hygiene products.",
+      "Non-preservative use must be evident from the product's presentation."
+    ],
+    "us_monograph_max_concentration_pct": 2.0,
+    "us_monograph": "21 CFR Part 333, Subpart D (topical acne drug products), OTC monograph",
+    "source": {
+      "type": "Consolidated EU legal text; amending regulation",
+      "publisher": "EUR-Lex, Publications Office of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32019R1966",
+      "note": "Commission Regulation (EU) 2019/1966 of 27 November 2019 replaced Annex III entry 98 with the table cited here, applicable from 2020-05-01. This corrects an easy-to-make error: an earlier amending regulation, 2019/831, is sometimes cited for these figures, but it addressed CMR classification, not this concentration table."
+    },
+    "note": "A facial toner is a leave-on, non-excluded-category product, so the EU ceiling (2.0%) numerically matches the US OTC monograph ceiling this corpus's products are filed under. The EU rule carries one condition the US monograph does not: a ban on use in preparations for children under 3. None of this corpus's labels carry an age restriction, so a 2%-labeled US product would need that condition addressed, not just the concentration, to be Annex-III-compliant if sold in the EU."
+  },
+
+  "fragrance_allergens": {
+    "eu_declarable_in_corpus": [
+      "alpha-isomethyl ionone", "benzyl alcohol", "benzyl salicylate", "citral",
+      "citronellol", "geraniol", "hexyl cinnamal", "limonene", "linalool"
+    ],
+    "note": "Same 26-substance EU-declarable list already verified for the foundation corpus (data/regulatory.json fragrance_allergens.eu). Every toner product in this corpus declares its scent only as generic 'fragrance' or 'parfum' rather than naming an individual allergen, so the computed match against this corpus is 0 for all seven products -- see data/regulatory-analysis-toner.json."
+  }
+}

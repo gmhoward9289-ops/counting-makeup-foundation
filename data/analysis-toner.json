@@ -1,0 +1,947 @@
+{
+  "generated_from": "data/corpus-toner.json",
+  "n_products": 7,
+  "issue_9_ingredient_comparison": {
+    "distinct_base_ingredients": 60,
+    "appearing_in_one_product_only": 44,
+    "shared_core_75pct": [
+      "water"
+    ],
+    "prevalence": [
+      {
+        "inci": "water",
+        "products": 7,
+        "share": 1.0
+      },
+      {
+        "inci": "glycerin",
+        "products": 4,
+        "share": 0.571
+      },
+      {
+        "inci": "parfum/fragrance",
+        "products": 4,
+        "share": 0.571
+      },
+      {
+        "inci": "alcohol denat",
+        "products": 3,
+        "share": 0.429
+      },
+      {
+        "inci": "propylene glycol",
+        "products": 3,
+        "share": 0.429
+      },
+      {
+        "inci": "benzophenone-4",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "blue 1",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "butylene glycol",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "citric acid",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "dimethicone propyl pg-betaine",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "disodium edta",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "ethylhexylglycerin",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "isoceteth-20",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "phenoxyethanol",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "sodium citrate",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "sodium hydroxide",
+        "products": 2,
+        "share": 0.286
+      },
+      {
+        "inci": "alcohol denat. (24.5 %)",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "algae extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "aloe barbadenis leaf juice",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "aloe barbadensis leaf extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "benzalkonium chloride",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "c12-15 alkyl lactate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "camellia sinensis leaf extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "caprylyl glycol",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cetyl lactate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cocamidopropyl betaine",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cocamidopropyl pg-dimonium chloride phosphate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cucumis sativus (cucumber) fruit extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cymbopogon flexuosus oil",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "cymbopogon schoenanthus extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "decyl glucoside",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "diethylhexyl sodium sulfosuccinate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "equisetum hiemale extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "eucalyptus globulus leaf oil",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "glucose",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "glucose oxidase",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "glycolic acid",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "green 5",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "hamamelis virginiana (witch hazel) bark/leaf/twig extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "hamamelis virginiana (witch hazel) leaf extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "hamamelis virginiana (witch hazel) water",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "humulus lupulus (hops) extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "hydrastis canadensis (goldenseal) extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "lactoperoxidase",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "melaleuca alternifolia (tea tree) leaf oil",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "menthol",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "peg-32",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "peg/ppg-20/6 dimethicone",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "polysorbate 20",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "portulaca oleracea extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "ppg-5-ceteth-20",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "red 4",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "salix nigra (willow) bark extract",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "sd alcohol 40-b",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "simethicone",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "sodium benzoate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "sodium benzotriazolyl butylphenol sulfonate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "sodium borate",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "sodium chloride",
+        "products": 1,
+        "share": 0.143
+      },
+      {
+        "inci": "yellow 5",
+        "products": 1,
+        "share": 0.143
+      }
+    ]
+  },
+  "issue_15_ownership": {
+    "pairs": [
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "cleanandclear-deep-cleaning-astringent",
+        "a_parent": "Target Corporation",
+        "b_parent": "Kenvue",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.4,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "neutrogena-oil-free-acne-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "Kenvue",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.179,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "thayers-witch-hazel-blemish",
+        "a_parent": "Target Corporation",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.083,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.125,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.105,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.043,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "neutrogena-oil-free-acne-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Kenvue",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.077,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "thayers-witch-hazel-blemish",
+        "a_parent": "Kenvue",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.05,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.1,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.143,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.056,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "thayers-witch-hazel-blemish",
+        "a_parent": "Kenvue",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.065,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.133,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.077,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.148,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "thayers-witch-hazel-blemish",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.08,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "thayers-witch-hazel-blemish",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.105,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "thayers-witch-hazel-blemish",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.143,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "burtsbees-clarifying-toner",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "The Clorox Company",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.1,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "burtsbees-clarifying-toner",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "The Clorox Company",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.042,
+        "head10_overlap": 0.1,
+        "identical_prefix": 1
+      },
+      {
+        "a": "marykay-clear-proof-toner",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "Mary Kay Inc.",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.056,
+        "head10_overlap": 0.1,
+        "identical_prefix": 0
+      }
+    ],
+    "tests": [
+      {
+        "metric": "head10_overlap",
+        "observed_gap": -0.005,
+        "same_parent_mean": 0.2,
+        "diff_parent_mean": 0.205,
+        "permutations": 20000,
+        "p_value": 0.6631
+      },
+      {
+        "metric": "jaccard",
+        "observed_gap": -0.0347,
+        "same_parent_mean": 0.077,
+        "diff_parent_mean": 0.1116,
+        "permutations": 20000,
+        "p_value": 0.7091
+      },
+      {
+        "metric": "identical_prefix",
+        "observed_gap": 0.25,
+        "same_parent_mean": 1,
+        "diff_parent_mean": 0.75,
+        "permutations": 20000,
+        "p_value": 0.7175
+      }
+    ],
+    "tests_excluding_same_brand_pairs": [
+      {
+        "metric": "head10_overlap",
+        "observed_gap": -0.005,
+        "same_parent_mean": 0.2,
+        "diff_parent_mean": 0.205,
+        "permutations": 20000,
+        "p_value": 0.6631,
+        "scope": "cross-brand pairs only"
+      },
+      {
+        "metric": "jaccard",
+        "observed_gap": -0.0347,
+        "same_parent_mean": 0.077,
+        "diff_parent_mean": 0.1116,
+        "permutations": 20000,
+        "p_value": 0.7091,
+        "scope": "cross-brand pairs only"
+      },
+      {
+        "metric": "identical_prefix",
+        "observed_gap": 0.25,
+        "same_parent_mean": 1,
+        "diff_parent_mean": 0.75,
+        "permutations": 20000,
+        "p_value": 0.7175,
+        "scope": "cross-brand pairs only"
+      }
+    ],
+    "most_similar_pairs": [
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "cleanandclear-deep-cleaning-astringent",
+        "a_parent": "Target Corporation",
+        "b_parent": "Kenvue",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.4,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "neutrogena-oil-free-acne-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "Kenvue",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.179,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.125,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "burtsbees-clarifying-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "The Clorox Company",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.133,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
+        "a": "neutrogena-oil-free-acne-toner",
+        "b": "proactiv-retexturizing-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Alchemee LLC",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.148,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "thayers-witch-hazel-blemish",
+        "a_parent": "Target Corporation",
+        "b_parent": "L'Or\u00e9al",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.083,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
+        "a": "upandup-deep-clean-toner",
+        "b": "marykay-clear-proof-toner",
+        "a_parent": "Target Corporation",
+        "b_parent": "Mary Kay Inc.",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.105,
+        "head10_overlap": 0.2,
+        "identical_prefix": 0
+      },
+      {
+        "a": "cleanandclear-deep-cleaning-astringent",
+        "b": "neutrogena-oil-free-acne-toner",
+        "a_parent": "Kenvue",
+        "b_parent": "Kenvue",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.077,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      }
+    ]
+  },
+  "issue_14_complexity_rarity": {
+    "per_product": [
+      {
+        "id": "upandup-deep-clean-toner",
+        "brand": "Up & Up",
+        "product": "Deep Clean Toner",
+        "parent_company": "Target Corporation",
+        "price_tier": "budget",
+        "length": 13,
+        "structural_share": 0.231,
+        "mean_rarity": 0.648,
+        "exclusive_ingredients": 4,
+        "hero_count": 2,
+        "hero_share": 0.154,
+        "hero_median_relative_position": 0.885,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 11,
+            "of": 13,
+            "inci": "algae extract"
+          },
+          {
+            "position": 12,
+            "of": 13,
+            "inci": "aloe barbadenis leaf juice"
+          }
+        ]
+      },
+      {
+        "id": "cleanandclear-deep-cleaning-astringent",
+        "brand": "Clean & Clear",
+        "product": "Essentials Deep Cleaning Astringent",
+        "parent_company": "Kenvue",
+        "price_tier": "budget",
+        "length": 8,
+        "structural_share": 0.25,
+        "mean_rarity": 0.607,
+        "exclusive_ingredients": 2,
+        "hero_count": 0,
+        "hero_share": 0.0,
+        "hero_median_relative_position": null,
+        "heroes_in_top_third": 0,
+        "heroes": []
+      },
+      {
+        "id": "neutrogena-oil-free-acne-toner",
+        "brand": "Neutrogena",
+        "product": "Oil-Free Acne Stress Control Triple Action Toner",
+        "parent_company": "Kenvue",
+        "price_tier": "budget",
+        "length": 20,
+        "structural_share": 0.2,
+        "mean_rarity": 0.721,
+        "exclusive_ingredients": 11,
+        "hero_count": 2,
+        "hero_share": 0.1,
+        "hero_median_relative_position": 0.8,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 15,
+            "of": 20,
+            "inci": "camellia sinensis leaf extract"
+          },
+          {
+            "position": 17,
+            "of": 20,
+            "inci": "cucumis sativus (cucumber) fruit extract"
+          }
+        ]
+      },
+      {
+        "id": "thayers-witch-hazel-blemish",
+        "brand": "Thayers",
+        "product": "Witch Hazel Aloe Vera Formula Toner, Blemish Clearing",
+        "parent_company": "L'Or\u00e9al",
+        "price_tier": "mass",
+        "length": 13,
+        "structural_share": 0.154,
+        "mean_rarity": 0.725,
+        "exclusive_ingredients": 8,
+        "hero_count": 4,
+        "hero_share": 0.308,
+        "hero_median_relative_position": 0.308,
+        "heroes_in_top_third": 2,
+        "heroes": [
+          {
+            "position": 2,
+            "of": 13,
+            "inci": "hamamelis virginiana (witch hazel) bark/leaf/twig extract"
+          },
+          {
+            "position": 3,
+            "of": 13,
+            "inci": "aloe barbadensis leaf extract"
+          },
+          {
+            "position": 5,
+            "of": 13,
+            "inci": "melaleuca alternifolia (tea tree) leaf oil"
+          },
+          {
+            "position": 6,
+            "of": 13,
+            "inci": "cymbopogon flexuosus oil"
+          }
+        ]
+      },
+      {
+        "id": "burtsbees-clarifying-toner",
+        "brand": "Burt's Bees",
+        "product": "Natural Acne Solutions Clarifying Toner",
+        "parent_company": "The Clorox Company",
+        "price_tier": "mass",
+        "length": 14,
+        "structural_share": 0.071,
+        "mean_rarity": 0.714,
+        "exclusive_ingredients": 10,
+        "hero_count": 6,
+        "hero_share": 0.429,
+        "hero_median_relative_position": 0.5,
+        "heroes_in_top_third": 1,
+        "heroes": [
+          {
+            "position": 4,
+            "of": 14,
+            "inci": "salix nigra (willow) bark extract"
+          },
+          {
+            "position": 5,
+            "of": 14,
+            "inci": "cymbopogon schoenanthus extract"
+          },
+          {
+            "position": 6,
+            "of": 14,
+            "inci": "equisetum hiemale extract"
+          },
+          {
+            "position": 8,
+            "of": 14,
+            "inci": "hamamelis virginiana (witch hazel) leaf extract"
+          },
+          {
+            "position": 9,
+            "of": 14,
+            "inci": "humulus lupulus (hops) extract"
+          },
+          {
+            "position": 10,
+            "of": 14,
+            "inci": "hydrastis canadensis (goldenseal) extract"
+          }
+        ]
+      },
+      {
+        "id": "marykay-clear-proof-toner",
+        "brand": "Mary Kay",
+        "product": "Clear Proof Blemish Control Toner",
+        "parent_company": "Mary Kay Inc.",
+        "price_tier": "mass",
+        "length": 8,
+        "structural_share": 0.25,
+        "mean_rarity": 0.661,
+        "exclusive_ingredients": 4,
+        "hero_count": 1,
+        "hero_share": 0.125,
+        "hero_median_relative_position": 0.5,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 4,
+            "of": 8,
+            "inci": "eucalyptus globulus leaf oil"
+          }
+        ]
+      },
+      {
+        "id": "proactiv-retexturizing-toner",
+        "brand": "Proactiv",
+        "product": "Plus Retexturizing Toner",
+        "parent_company": "Alchemee LLC",
+        "price_tier": "prestige",
+        "length": 11,
+        "structural_share": 0.545,
+        "mean_rarity": 0.714,
+        "exclusive_ingredients": 5,
+        "hero_count": 1,
+        "hero_share": 0.091,
+        "hero_median_relative_position": 1.0,
+        "heroes_in_top_third": 0,
+        "heroes": [
+          {
+            "position": 11,
+            "of": 11,
+            "inci": "portulaca oleracea extract"
+          }
+        ]
+      }
+    ],
+    "mean_length_by_tier": {
+      "budget": 13.667,
+      "mass": 11.667,
+      "prestige": 11
+    },
+    "mean_rarity_by_tier": {
+      "budget": 0.659,
+      "mass": 0.7,
+      "prestige": 0.714
+    },
+    "mean_hero_share_by_tier": {
+      "budget": 0.085,
+      "mass": 0.287,
+      "prestige": 0.091
+    },
+    "mean_structural_share_by_tier": {
+      "budget": 0.227,
+      "mass": 0.158,
+      "prestige": 0.545
+    },
+    "mean_hero_position_by_tier": {
+      "budget": 0.843,
+      "mass": 0.436,
+      "prestige": 1.0
+    },
+    "hero_patterns": [
+      "\\bextract\\b",
+      "\\bferment\\b",
+      "\\bjuice\\b",
+      "\\boil\\b",
+      "\\bbutter\\b",
+      "\\bpeptide\\b",
+      "hyaluron",
+      "niacinamide",
+      "\\bceramide\\b",
+      "collagen",
+      "resveratrol",
+      "ascorb",
+      "\\bcaffeine\\b",
+      "\\bpolyglutamic\\b",
+      "\\bprotein\\b",
+      "\\blactobacillus\\b",
+      "\\balgae\\b",
+      "\\bsaccharina\\b",
+      "salicylic acid",
+      "mandelic acid",
+      "\\ballantoin\\b",
+      "\\bureaa?\\b",
+      "alpha-glucan",
+      "\\btrehalose\\b",
+      "\\bpolysilicone-11\\b"
+    ]
+  }
+}

@@ -150,6 +150,7 @@ PAGES = [
     ("/development/", "How long it takes"),
     ("/lip-gloss/", "Lip gloss ingredients"),
     ("/setting-powders/", "The talc question"),
+    ("/toner/", "Toner ingredients"),
 ]
 
 
@@ -237,6 +238,12 @@ def load_lip_gloss():
 def load_talc():
     j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
     return j("setting-powder-corpus.json"), j("talc-analysis.json"), j("talc.json")
+
+
+def load_toner():
+    j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
+    return (j("corpus-toner.json"), j("analysis-toner.json"),
+            j("cost-quality-toner.json"), j("regulatory-analysis-toner.json"))
 
 
 def longdate(iso):
@@ -630,6 +637,236 @@ render();
         "less standardized category: five SPF lip glosses, every ingredient list from the "
         "manufacturer's own FDA filing.",
         body, extra_css, script, "/lip-gloss/"))
+
+
+# ----------------------------------------------------------------------- toner
+def build_toner(corpus, analysis, cq, reg_analysis):
+    ic = analysis["issue_9_ingredient_comparison"]
+    n = len(corpus["products"])
+    slim = [{
+        "id": p["id"], "brand": p["brand"], "product": p["product"],
+        "url": p["source"]["url"], "date": p["source"]["label_effective_date"],
+        "base": [i["inci"] for i in p["base_formula"]],
+    } for p in corpus["products"]]
+    slim.sort(key=lambda x: x["brand"])
+
+    rows = "".join(
+        "<tr><td>{b}</td><td class='note'>{pr}</td><td class='num'>{n}</td>"
+        "<td class='num'>{d}</td><td>{lnk}</td></tr>".format(
+            b=escape(p["brand"]), pr=escape(p["product"]),
+            n=len(p["base_formula"]), d=p["source"]["label_effective_date"], lnk=src_link(p))
+        for p in corpus["products"])
+
+    prev = "".join(
+        "<tr><td>{i}</td><td class='num'>{c}</td><td class='num'>{s:.0%}</td></tr>".format(
+            i=escape(r["inci"]), c=r["products"], s=r["share"])
+        for r in ic["prevalence"][:30])
+
+    core = "".join("<li>%s</li>" % escape(x) for x in ic["shared_core_75pct"]) or \
+        "<li class='note'>None — no ingredient reaches 75% of this corpus.</li>"
+
+    limits = "".join("<li>%s</li>" % escape(x) for x in corpus["known_limits"])
+
+    c10, c13 = cq["issue_10_cost_vs_price"], cq["issue_13_price_quality_matrix"]
+    margins = "".join(
+        "<tr><td>{k}</td><td class='num'>{v}</td><td class='note'>{s}</td></tr>".format(
+            k=escape(k), v=("%.1f%%" % v["gross_margin_pct"]) if v.get("gross_margin_pct") else "—",
+            s=escape(v["source"]["type"]))
+        for k, v in margins_sort(c10["gross_margins"]))
+
+    cost = "".join(
+        "<tr><td>{b}</td><td><span class='tier'>{t}</span></td><td class='num'>{p}</td>"
+        "<td class='num'>{m}</td><td class='num'>{c}</td><td class='num'>{f}</td></tr>".format(
+            b=escape(r["brand"]), t=r["price_tier"],
+            p="$%.2f" % r["list_usd"] if r["list_usd"] else "—",
+            m="%.1f%%" % r["parent_gross_margin_pct"] if r["parent_gross_margin_pct"] else "—",
+            c="$%.2f" % r["implied_cogs_usd"] if r["implied_cogs_usd"] else "—",
+            f="$%.2f–$%.2f" % tuple(r["estimated_formula_cost_usd"]) if r["estimated_formula_cost_usd"] else "—")
+        for r in c10["per_product"])
+
+    sa16 = reg_analysis["issue_16_salicylic_acid_limit"]
+    sa_rows = "".join(
+        "<tr><td>{b}</td><td class='num'>{p}</td><td>{c}</td></tr>".format(
+            b=escape(a["brand"]),
+            p=("%.1f%%" % a["salicylic_acid_pct"]) if a["salicylic_acid_pct"] is not None else "—",
+            c="at the EU/US ceiling" if a.get("at_us_monograph_ceiling") else "under the ceiling")
+        for a in sa16["actives"])
+
+    assumptions = "".join("<li>%s</li>" % escape(a) for a in c10["assumptions"])
+
+    body = f"""
+  <section>
+    <h2>The corpus, and why it isn't SPF this time</h2>
+    <div class="finding"><p><strong>Toner is almost never sold with an SPF claim, so this
+    corpus uses the FDA's other monograph route to an OTC drug label: salicylic acid, an
+    acne-treatment active.</strong> All {n} products here are liquid toners with a
+    formulated cosmetic vehicle, filed the same way the SPF foundations are — a manufacturer's
+    own declaration to the FDA, never a retailer listing.</p></div>
+
+    <p>Two populations of "toner" turned out not to be comparable and are excluded rather
+    than blended in: plain witch-hazel astringents (T.N. Dickinson's, CVS Health, Equate)
+    declare only witch hazel and alcohol, with no formulated vehicle to compare; and
+    Stridex Maximum's FDA filing is for pre-saturated pads, not a pourable liquid, despite
+    sharing the "toner" branding. Both are the same kind of exclusion the foundation corpus
+    already makes for powders and sticks: a different vehicle, not sourced more weakly.</p>
+
+    <div class="panel">
+      <table class="brands">
+        <thead><tr><th>Brand</th><th>Product</th><th class="num">Ingredients</th>
+          <th class="num">Label filed</th><th>Source</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Slide between two toners</h2>
+    <p>Pick any two and watch the formulas converge or diverge.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>A <select id="selA"></select></label>
+        <label>B <select id="selB"></select></label>
+      </div>
+      <div id="stats" class="stats"></div>
+      <div class="cmp" id="cmp"></div>
+      <p class="note" id="srcs"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The common spine</h2>
+    <p>These ingredients appear in at least 75% of the corpus.</p>
+    <div class="sunken"><ul class="tight">{core}</ul></div>
+
+    <h3>Most common ingredients</h3>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Ingredient (INCI)</th><th class="num">Products</th><th class="num">Share</th></tr></thead>
+        <tbody>{prev}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Margin, cost and price</h2>
+    <p>Same method as the foundation study: nobody publishes per-bottle cost, so the ceiling
+    of what can be said with a citation is the parent company's group gross margin — and,
+    unlike lip gloss, four of this corpus's six parent companies do file one.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Parent company</th><th class="num">Gross margin</th><th>Source</th></tr></thead>
+        <tbody>{margins}</tbody>
+      </table>
+    </div>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">List price</th>
+          <th class="num">Parent margin</th><th class="num">Implied COGS</th>
+          <th class="num">Est. formula cost</th></tr></thead>
+        <tbody>{cost}</tbody>
+      </table>
+    </div>
+    <ul class="tight">{assumptions}</ul>
+  </section>
+
+  <section>
+    <h2>The one rule this corpus actually triggers</h2>
+    <div class="finding"><p><strong>{sa16['products_at_us_monograph_ceiling']} of
+    {sa16['products_declaring_salicylic_acid']} toners are filed at the FDA acne monograph's
+    2.0% salicylic acid ceiling</strong> — which happens to equal the EU's leave-on
+    concentration limit (Annex III entry 98, as amended by Regulation (EU) 2019/1966). The
+    EU rule carries one condition the US monograph doesn't: a ban on use in preparations for
+    children under 3. None of these labels carry that restriction.</p></div>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Brand</th><th class="num">Salicylic acid (filed)</th><th>Vs. ceiling</th></tr></thead>
+        <tbody>{sa_rows}</tbody>
+      </table>
+    </div>
+    <p class="note">Every product in this corpus declares its scent only as generic
+    "fragrance"/"parfum" rather than naming an individual allergen, so the same EU-declarable
+    fragrance-allergen check already run for the foundation corpus finds zero matches here —
+    a real finding, not a skipped computation. A full EU Annex II general-prohibition sweep,
+    like the one run for the foundation corpus, has not yet been done for this category; see
+    the corpus's known limits.</p>
+    <ul class="tight">{limits}</ul>
+  </section>
+"""
+
+    extra_css = """
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.84rem; }
+  .cmp .col h4 { margin:0 0 .4rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+  .cmp ol { margin:0; padding-left:1.9rem; }
+  .cmp li { padding:.1rem .3rem; border-radius:3px; }
+  .cmp li.match { background:var(--ok-bg); color:var(--ok); }
+  .cmp li.only { color:var(--muted); }
+  @media (max-width:640px) { .cmp { grid-template-columns:1fr; } }
+"""
+
+    script = """
+<script>
+const DATA = __DATA__;
+const byId = Object.fromEntries(DATA.map(p => [p.id, p]));
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+for (const p of DATA) {
+  const label = p.brand + ' — ' + p.product;
+  for (const s of [selA, selB]) s.add(new Option(label, p.id));
+}
+selA.value = DATA[0].id;
+selB.value = DATA[1].id;
+
+function render() {
+  const a = byId[selA.value], b = byId[selB.value];
+  const sb = new Set(b.base);
+  const shared = a.base.filter(x => sb.has(x));
+  const union = new Set([...a.base, ...b.base]);
+  let prefix = 0;
+  while (prefix < a.base.length && prefix < b.base.length && a.base[prefix] === b.base[prefix]) prefix++;
+
+  document.getElementById('stats').innerHTML = [
+    ['<b>' + prefix + '</b><span>identical from the top</span>'],
+    ['<b>' + shared.length + '</b><span>ingredients shared</span>'],
+    ['<b>' + Math.round(100 * shared.length / union.size) + '%</b><span>of all ingredients shared</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  const col = (p, other) => {
+    const s = new Set(other.base);
+    return '<div class="col"><h4>' + p.brand + '</h4><ol>' +
+      p.base.map((x, i) => {
+        const m = (i < prefix) || s.has(x);
+        return '<li class="' + (m ? 'match' : 'only') + '">' + x + '</li>';
+      }).join('') + '</ol></div>';
+  };
+  document.getElementById('cmp').innerHTML = col(a, b) + col(b, a);
+  document.getElementById('srcs').innerHTML =
+    'Sources: <a href="' + a.url + '">' + a.brand + ' label filed ' + a.date + '</a> · ' +
+    '<a href="' + b.url + '">' + b.brand + ' label filed ' + b.date + '</a>';
+}
+selA.addEventListener('change', render);
+selB.addEventListener('change', render);
+render();
+</script>
+""".replace("__DATA__", json.dumps(slim))
+
+    write("toner", page(
+        "What's in my toner? — Foundation",
+        "Seven acne-treatment facial toners compared ingredient by ingredient, sourced from "
+        "the FDA's salicylic acid monograph instead of an SPF claim — plus the margin, cost "
+        "and EU-concentration-limit findings that follow from having real, public parent "
+        "companies behind them.",
+        "What's in my toner?",
+        "Toner almost never carries an SPF claim, so this corpus uses the FDA's other route "
+        "to an OTC drug filing: an acne-treatment salicylic acid claim. Seven products, "
+        "sourced the same way as SPF foundation.",
+        body, extra_css, script, "/toner/"))
 
 
 # ------------------------------------------------------------------ ownership
@@ -1863,8 +2100,10 @@ def main():
     dev = load_development()
     lg_corpus, lg_analysis = load_lip_gloss()
     spcorpus, ta, talc = load_talc()
+    tn_corpus, tn_analysis, tn_cq, tn_ra = load_toner()
     build_ingredients(corpus, analysis, prices)
     build_lip_gloss(lg_corpus, lg_analysis)
+    build_toner(tn_corpus, tn_analysis, tn_cq, tn_ra)
     build_ownership(corpus, analysis, prices)
     build_complexity(analysis)
     build_price(cq, prices)
