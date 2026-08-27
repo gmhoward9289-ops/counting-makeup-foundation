@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="d791fe57-f850-4032-8e2d-0b5178eb7f52"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>Invincible Setting Powder SPF 45 Medium</title>
+   <effectiveTime value="20180115"/>
+   <setId root="ba603759-d164-41ff-9191-2675fe0182e6"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="033381850"/>
+            <name>TAYLOR JAMES, LTD.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="001535103"/>
+                        <name>Kolmar Laboratories, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="75936-147" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="acf5cf13-0092-439b-adb0-6dd62c0e9f3d"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <title/>
+               <text/>
+               <effectiveTime value="20180115"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="75936-147" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Invincible Setting Powder SPF 45 medium</name>
+                        <formCode code="C42972" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="POWDER"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Zinc Oxide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="24.5" unit="g"/>
+                              <denominator value="100" unit="g"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="SOI2LOH54Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ZINC OXIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="SOI2LOH54Z" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ZINC OXIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3JRB8A35M0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CALCIUM ALUMINUM BOROSILICATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="Z47NNT4J11" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLY(METHYL METHACRYLATE; 450000 MW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="147D247K3P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ETHYLHEXYLGLYCERIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="LDC331P08E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIETHOXYCAPRYLYLSILANE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="8W46YN971G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM DEHYDROACETATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QN83US2B0N" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ASCORBYL PALMITATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="4370DF050B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CERAMIDE 3</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="CNTM">
+                           <ingredientSubstance>
+                              <code code="1K09F3G675" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE RED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="CNTM">
+                           <ingredientSubstance>
+                              <code code="EX438O2MRT" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE YELLOW</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="CNTM">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="CNTM">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="4.25" unit="g"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="75936-147-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43233" displayName="PACKAGE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="75936-147-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43178" displayName="BOX" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180115"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20180115"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="part352" root="2.16.840.1.113883.3.149"/>
+                           <code code="C73603" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC monograph final"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="L4d807d09-45dd-48d4-871d-db5705a9af15">
+               <id root="8d6f6438-65c9-4500-98d9-97a6c6f8e973"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Active ingredients      Purpose</content>
+                  </paragraph>
+                  <paragraph>Zinc Oxide 24.5%      Sunscreen            </paragraph>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L2c74fa1d-c61a-4c1d-8752-cd0c8be4031e">
+               <id root="15a7d33f-0fd8-4537-90e9-7518f0aca7b9"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Uses</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Helps Prevent Sunburn</item>
+                  </list>
+                  <list listType="unordered">
+                     <item>If used as directed with other sun protection measures (see Directions), decreases the risk of skin cancer and early skin aging caused by the sun.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Le30873d8-ad9c-4e37-bc5b-9cead9946b43">
+               <id root="7e26eeda-7565-4187-aa73-28cea5dc1ffb"/>
+               <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Keep out of reach of children.</content>  If product is swallowed, get medical help or contact a Poison Control Center right away.</paragraph>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L85b8012b-4712-4fa2-998c-fb34cc1f0b42">
+               <id root="2d32c003-ac2e-4a35-9f94-a9beecfb15b7"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <text>
+                  <paragraph>Stop use and ask a doctor if rash occurs</paragraph>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L898ff4ca-dcc9-4957-b443-05e508e33bcc">
+               <id root="5e3ab452-8919-41dd-ac80-ba9e063368e9"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Warnings</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For external use only</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use</content> on damaged or broken skin</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">When using this product</content> keep out of eyes. Rinse with water to remove.</paragraph>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L35566c22-34a4-48c9-89f2-c6bdbaa3a06f">
+               <id root="38816b29-8a95-4cf3-a9d2-5fed7a69a064"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>Directions</paragraph>
+                  <list listType="unordered">
+                     <item>apply generously and evenly 15 minutes before sun exposure</item>
+                  </list>
+                  <list listType="unordered">
+                     <item>reapply </item>
+                     <item>after 40 minutes of swimming or sweating</item>
+                     <item>immediately after towel drying</item>
+                     <item>at least every 2 hours</item>
+                     <item>
+                        <content styleCode="bold">Sun Protection Measures </content>​Spending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a Broad Spectrum value of 15 or higher and other sun protections measures including:</item>
+                     <item>Limit time in the sun, especially from 10a.m. -2p.m.</item>
+                     <item>Wear long-sleeved shirts, pants, hats, and sunglasses</item>
+                     <item>Children under 6 months: Ask a doctor</item>
+                  </list>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L6f6f0629-4fb9-4999-9f65-6b59c1233912">
+               <id root="94636bf5-6ea4-4341-82eb-47f278deb66e"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Inactive Ingredients</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Calcium Aluminum Borosilicate, Silica, Polymethyl Methacrylate, Ethylhexylglycerin, Triethoxycaprylysilane, Nylon-6/12, Sodium Dehydroacetate, Olive Glycerides, Ascorbyl Palmitate, Ceramide 3. May contain +/- Iron Oxides (CI 77492, CI 77491, CI 77499), Titanium Dioxide (CI 77891)</paragraph>
+               </text>
+               <effectiveTime value="20180115"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lddb26464-3fbd-4cc9-8040-6bcd981593d6">
+               <id root="8ac754a8-662b-4977-9179-6a1cca22c46e"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>Invincible Setting Powder SPF 45</paragraph>
+                  <paragraph>100% Mineral + Sweat resistant  </paragraph>
+                  <paragraph>Medium</paragraph>
+                  <paragraph>0.15 oz./ 4.25 g</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L9c4d16a4-9d65-4ed9-983b-30ab5675f0a7"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L656d1873-97f8-4eff-b255-d7b51b45743d"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20180115"/>
+               <component>
+                  <observationMedia ID="L9c4d16a4-9d65-4ed9-983b-30ab5675f0a7">
+                     <text>Secondary</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="SG_InvinciblePowder_Secondary_Medium_12.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L656d1873-97f8-4eff-b255-d7b51b45743d">
+                     <text>Wrap</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="invin setting powder wrap.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

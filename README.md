@@ -31,6 +31,15 @@ one sources the checkable half instead: the stability testing a formula must pas
 it can ship (deliberately thin; see `ISSUES.md`'s own framing of it as color, not a
 pillar).
 
+A fourth pillar, **setting powders and talc**, grew out of asking whether the
+industry's well-publicized talc reformulations show up in the primary-source
+corpus the same way everything else here does. They don't: every SPF setting
+powder with an FDA filing turns out to be a mineral sunscreen that never used
+talc, while the brands actually reformulating away from talc (Chanel, Laura
+Mercier, CoverGirl, Airspun, Givenchy) carry no SPF claim and have no primary
+filing to check. `/setting-powders/` sources both halves separately rather
+than blending them into one number.
+
 Every figure carries a citation to a primary source, chicken-wings style. See
 `ISSUES.md` for the feature/epic backlog.
 
@@ -70,6 +79,8 @@ python tools/fetch_rd.py                    # SEC + annual reports -> data/rd.js
 python tools/analyze.py                     # issues #9 #14 #15  -> data/analysis.json
 python tools/cost_quality.py                # issues #10 #12 #13 -> data/cost-quality.json
 python tools/analyze_regulatory.py          # issues #16 #17 #18 -> data/regulatory-analysis.json
+python tools/build_setting_powder_corpus.py # setting-powder SPF filings   -> data/setting-powder-corpus.json
+python tools/analyze_talc.py                # talc presence in that corpus -> data/talc-analysis.json
 python tools/build_site.py                  # render site/*/index.html
 ```
 
