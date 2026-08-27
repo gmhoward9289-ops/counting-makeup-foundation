@@ -1,0 +1,133 @@
+{
+  "dataset": "setting-powder-talc-reformulation",
+  "description": "Hand-read primary and press material on talc in setting powders, paired with data/setting-powder-corpus.json and data/talc-analysis.json. Same rule as the other hand-read files in this repo (README.md, 'Hand-read primary sources'): nothing derived is entered here, only sources that cannot be fetched by script. FDA's own asbestos-testing results are the primary-source half; the named-brand reformulations are press/company-statement sourced because none of those products carry an SPF claim, so none has an FDA filing to check directly.",
+  "retrieved": "2026-08-26",
+
+  "fda_asbestos_testing": {
+    "programs": [
+      {
+        "period": "2009-2010",
+        "source": {
+          "type": "FDA survey report",
+          "publisher": "U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/media/122418/download",
+          "note": "First FDA-commissioned asbestos survey of talc-containing cosmetics, tested by AMA Laboratories."
+        }
+      },
+      {
+        "period": "FY19",
+        "setting_powder_findings": [
+          {"brand": "Revlon", "product": "New Photoready Candid Anti-Pollution Setting Powder (shade 002)", "result": "negative (PLM and TEM)"}
+        ],
+        "notable_positive_findings_not_setting_powder": [
+          {"brand": "Claire's", "product": "Claire's Compact Powder", "result": "positive for tremolite (PLM); positive for asbestos (TEM); product recalled"},
+          {"brand": "Claire's", "product": "JoJo Siwa Makeup Set", "result": "negative (PLM); positive for asbestos (TEM); product recalled"},
+          {"brand": "Johnson & Johnson", "product": "Johnson's Baby Powder (lot 22318RB)", "result": "negative (PLM); positive for asbestos (TEM); product recalled"}
+        ],
+        "source": {
+          "type": "FDA testing summary (AMA Laboratories, on behalf of FDA)",
+          "publisher": "U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/media/135911/download",
+          "note": "None of the positive findings in this FY19 batch were setting/finishing powders; the only setting powder tested (Revlon Photoready Candid) was negative on both methods. Listed here for context on what 'FDA found asbestos in cosmetic talc' actually referred to that year -- compacts, palettes and a body powder, not the products this study's corpus covers."
+        }
+      },
+      {
+        "period": "FY20-FY21",
+        "setting_powder_findings": [
+          {"brand": "Makeup Revolution", "product": "Translucent Baking Powder", "result": "negative (PLM and TEM)"}
+        ],
+        "source": {
+          "type": "FDA testing summary (AMA Laboratories, on behalf of FDA)",
+          "publisher": "U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/media/153415/download",
+          "note": "Also tested a Givenchy Prisme Libre entry (name garbled in the source PDF's table extraction) with an illegible result in this copy; not counted here because it could not be read with confidence. Flagged as a null rather than guessed."
+        }
+      },
+      {
+        "period": "2023",
+        "setting_powder_findings": [
+          {"brand": "Skin Illustrator (Premiere Products, Inc.)", "product": "Zerocolor Loose Setting Powder", "result": "negative (PLM and TEM)"},
+          {"brand": "One/Size", "product": "Ultimate Setting Powder", "result": "negative (PLM and TEM)"}
+        ],
+        "corpus_wide_result": "Asbestos was not detected in any of the 50 samples FDA tested in this 2023 round.",
+        "source": {
+          "type": "FDA testing summary (AMA Laboratories, on behalf of FDA)",
+          "publisher": "U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/cosmetics/cosmetic-ingredients/fda-summary-results-testing-official-samples-talc-containing-cosmetics-asbestiform-fibers-completed",
+          "note": "URL confirmed reachable (HTTP 200 via curl); page content read through a search-engine cache of its rendered table rather than this project's own HTML fetch tool, which errored on this particular page. Constituent Update announcing this round: https://www.fda.gov/cosmetics/cosmetics-news-events/fda-releases-data-agencys-2023-testing-talc-containing-cosmetic-products-asbestos (2024-04-05). Full lab reports are three large PDFs linked from https://www.fda.gov/cosmetics/cosmetic-ingredients/talc; only the summary-table page was read, not the raw PDFs."
+        }
+      }
+    ],
+    "regulatory_status": {
+      "fact": "FDA proposed a rule (published in the Federal Register 2024-12-27) to standardize asbestos-testing methods for talc-containing cosmetics under MoCRA section 3505, then withdrew the proposal after the comment period.",
+      "source": {
+        "type": "FDA regulatory notice",
+        "publisher": "U.S. Food and Drug Administration",
+        "url": "https://www.fda.gov/cosmetics/cosmetic-ingredients/talc",
+        "note": "As of this page's retrieval (2026-08-26), no standardized testing method has been finalized; FDA continues ad hoc testing rounds via AMA Analytical Services instead."
+      }
+    }
+  },
+
+  "named_reformulations": [
+    {
+      "brand": "CoverGirl",
+      "product": "Clean Invisible Loose Powder",
+      "claim": "\"NOW TALC & FRAGRANCE FREE\" -- reformulated to a 15-ingredient formula with no talc.",
+      "asbestos_or_litigation_link_stated_by_company": false,
+      "source": {
+        "type": "Manufacturer product page",
+        "publisher": "covergirl.com",
+        "url": "https://www.covergirl.com/face-makeup/powder/clean-invisible-loose-powder",
+        "note": "Retrieved 2026-08-26. The page markets the change as clean-formula/pore-friendly; it does not itself attribute the change to litigation."
+      }
+    },
+    {
+      "brand": "Airspun (Coty)",
+      "product": "Airspun Loose Face Powder",
+      "claim": "\"Your favorite powder is now talc-free\" -- ingredient list on the reformulated product lists mica, kaolin, zinc stearate, oat kernel flour and tapioca starch, no talc.",
+      "asbestos_or_litigation_link_stated_by_company": false,
+      "source": {
+        "type": "Retailer product page (manufacturer-supplied copy)",
+        "publisher": "Target.com",
+        "url": "https://www.target.com/p/airspun-loose-powder-naturally-neutral-1-2oz/-/A-86750400",
+        "note": "Retrieved 2026-08-26. Coty has not published its own statement connecting the change to asbestos litigation; consumer discussion (r/drugstoreMUA) dates the swap to 2023, not independently confirmed here."
+      }
+    },
+    {
+      "brand": "Laura Mercier",
+      "product": "Translucent Loose Setting Powder Ultra-Blur",
+      "claim": "\"The cult-favorite Translucent Loose Setting Powder, now talc-free\" -- launched as a reformulated line extension alongside the original rather than a same-name overwrite.",
+      "asbestos_or_litigation_link_stated_by_company": false,
+      "source": {
+        "type": "Manufacturer product page",
+        "publisher": "lauramercier.com",
+        "url": "https://www.lauramercier.com/products/translucent-loose-setting-powder-ultra-blur",
+        "note": "Retrieved 2026-08-26. Ingredient list leads with mica, lauroyl lysine, zinc stearate, aluminum starch octenylsuccinate, silica -- no talc."
+      }
+    },
+    {
+      "brand": "Chanel",
+      "product": "Poudre Universelle Libre Natural Finish Loose Powder",
+      "claim": "Removed talc from the loose face powder and discontinued its talc-based Chanel No. 5 dusting powder.",
+      "asbestos_or_litigation_link_stated_by_company": true,
+      "quote": "\"We determined from public perception to remove it from the market.\" (Chanel representative)",
+      "source": {
+        "type": "News report quoting a company representative",
+        "publisher": "Al Jazeera",
+        "url": "https://www.aljazeera.com/economy/2020/6/9/beauty-brands-moving-away-from-talc-as-us-cancer-lawsuits-mount",
+        "note": "Retrieved 2026-08-26. Reported 2020-06-09; the article states the removals came amid mounting US talc/asbestos litigation and also reports that Revlon removed talc from body products (165 pending lawsuits per its own securities filings) and that Avon had 128 pending talc suits, while L'Oréal said it was exploring alternatives but that 'none meet the same performance.' Chanel's representative could not say when reformulated stock would reach shelves; the article does not give an exact reformulation completion date."
+      }
+    }
+  ],
+
+  "litigation_scale": {
+    "fact": "Johnson & Johnson has faced tens of thousands of talc/ovarian-cancer and mesothelioma lawsuits since roughly 2013-2016, and proposed a bankruptcy-channeled settlement of approximately $6.475 billion for present and future talc claimants (2025), the third such attempt after two prior bankruptcy filings were rejected by courts.",
+    "source": {
+      "type": "News report",
+      "publisher": "Reuters (via search index; article itself blocked to automated fetch)",
+      "url": "https://www.reuters.com/investigates/special-report/johnsonandjohnson-cancer/",
+      "note": "Not independently re-verified against the original article text in this pass (Reuters blocks automated fetching from this environment); included as directional scale context, not as a precise, individually re-checked figure. Treat the exact settlement dollar amount as reported, not corpus-grade verified."
+    }
+  }
+}

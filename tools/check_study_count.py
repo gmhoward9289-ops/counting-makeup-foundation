@@ -32,6 +32,7 @@ CARDINALS = {
     10: "Ten",
     11: "Eleven",
     12: "Twelve",
+    13: "Thirteen",
 }
 
 LIVE_CARD = re.compile(

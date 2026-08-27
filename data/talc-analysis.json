@@ -1,0 +1,19 @@
+{
+  "computed_from": "data/setting-powder-corpus.json",
+  "corpus": "setting-powder-spf-us",
+  "product_count": 10,
+  "products_containing_talc": [],
+  "products_talc_free": [
+    "baremineral-veil-original",
+    "baremineral-ready-touchup",
+    "supergoop-resetting-light",
+    "supergoop-resetting-medium",
+    "supergoop-resetting-deep",
+    "supergoop-invincible-2017",
+    "supergoop-invincible-2018",
+    "topix-mineral-finishing",
+    "sugargirl-set-screen",
+    "younique-touch-behold"
+  ],
+  "talc_free_count": 10
+}
