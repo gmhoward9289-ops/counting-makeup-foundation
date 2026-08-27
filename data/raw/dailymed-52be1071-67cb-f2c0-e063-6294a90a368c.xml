@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="52be248d-e594-f817-e063-6294a90a7be6"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+   <effectiveTime value="20260526"/>
+   <setId root="52be1071-67cb-f2c0-e063-6294a90a368c"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="119295757"/>
+            <name>NewAlley Innovations Inc</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="52be3aba-7d7a-477a-e063-6394a90a3d8a"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260526"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="84830-7210" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Alleyoop Sun Serum Lip Oil - Daylight</name>
+                        <formCode code="C29167" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LOTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Zinc Oxide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="V8A1AW0880" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICA</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EX438O2MRT" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE YELLOW</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="N8F53B3R4R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METHYLPROPANEDIOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="1DI56QDM62" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LECITHIN, SOYBEAN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="GW89575KF9" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SQUALANE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2EH13UN8D3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BUTYLOCTYL SALICYLATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0F897O3O4M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PHENYLPROPANOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="132"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="SOI2LOH54Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ZINC OXIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="SOI2LOH54Z" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ZINC OXIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="255PIF62MS" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="918X1OUF1E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ISOHEXADECANE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="105S6I733Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>.ALPHA.-BISABOLOL, (+)-</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="1K09F3G675" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE RED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="A9EJ3J61HQ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ALKYL (C12-15) BENZOATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C9H2L21V7U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLIC/CAPRIC TRIGLYCERIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="00YIU5438U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLYL GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="687U3PEB2Y" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLYGLYCERYL-4 DIISOSTEARATE/POLYHYDROXYSTEARATE/SEBACATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="412ZHA4T4Y" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LIMNANTHES ALBA (MEADOWFOAM) SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="4.5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="84830-7210-1" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43177" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, WITH APPLICATOR"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="84830-7210-2" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20241028"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M020" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC Monograph Drug"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20241028"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48328" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="pink" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be385e-da30-c2cf-e063-6394a90a1a2e">
+               <id root="52be385e-da2f-c2cf-e063-6394a90a1a2e"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be4262-27ec-46ae-e063-6294a90a7cca"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be4262-27ec-46ae-e063-6294a90a7cca">
+                     <text>Dosage and Administration</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be41a8-ffd5-5d5b-e063-6394a90a53f6">
+               <id root="52be41a8-ffd4-5d5b-e063-6394a90a53f6"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be41a8-ffd3-5d5b-e063-6394a90a53f6"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be41a8-ffd3-5d5b-e063-6394a90a53f6">
+                     <text>Inactive Ingredient</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be15ab-580c-ec7a-e063-6294a90a13a4">
+               <id root="52be15ab-580b-ec7a-e063-6294a90a13a4"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be424b-2f97-ebf1-e063-6294a90a4dc2"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be424b-2f97-ebf1-e063-6294a90a4dc2">
+                     <text>Indications and Usage</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be4232-754b-3e98-e063-6294a90a10a9">
+               <id root="52be4232-754a-3e98-e063-6294a90a10a9"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52bdf4ca-2f5a-c50e-e063-6294a90aeb14"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52bdf4ca-2f5a-c50e-e063-6294a90aeb14">
+                     <text>Active Ingredient</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be385e-da32-c2cf-e063-6394a90a1a2e">
+               <id root="52be385e-da31-c2cf-e063-6394a90a1a2e"/>
+               <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be47bf-cf06-3fbb-e063-6294a90aa94b"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be47bf-cf06-3fbb-e063-6294a90aa94b">
+                     <text>Keep out of reach of children</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be41a8-ffd7-5d5b-e063-6394a90a53f6">
+               <id root="52be41a8-ffd6-5d5b-e063-6394a90a53f6"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be4a87-c069-2b0b-e063-6294a90aab8e"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be4a87-c069-2b0b-e063-6294a90aab8e">
+                     <text>Purpose</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_52be4be4-4240-5d5d-e063-6394a90a6d34">
+               <id root="52be4be4-423f-5d5d-e063-6394a90a6d34"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be41a8-ffd8-5d5b-e063-6394a90a53f6"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be41a8-ffd8-5d5b-e063-6394a90a53f6">
+                     <text>Warning</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_8f6381d2-084f-66a9-e053-2995a90ae819">
+               <id root="52be41e4-4c35-243f-e063-6294a90ad408"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Alleyoop Sun Serum Lip Oil - Daylight</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_52be30cf-11f1-3a5c-e063-6394a90ad8bc"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241028"/>
+               <component>
+                  <observationMedia ID="img_52be30cf-11f1-3a5c-e063-6394a90ad8bc">
+                     <text>PDP</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alleyoop Lip Oil daylight.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

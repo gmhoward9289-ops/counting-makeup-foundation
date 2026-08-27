@@ -79,6 +79,9 @@ python tools/fetch_rd.py                    # SEC + annual reports -> data/rd.js
 python tools/analyze.py                     # issues #9 #14 #15  -> data/analysis.json
 python tools/cost_quality.py                # issues #10 #12 #13 -> data/cost-quality.json
 python tools/analyze_regulatory.py          # issues #16 #17 #18 -> data/regulatory-analysis.json
+python tools/fetch_dailymed.py <setid>...   # lip gloss labels, same fetcher
+python tools/build_corpus.py lip-gloss      # -> data/corpus-lip-gloss.json
+python tools/analyze_lip_gloss.py           # -> data/analysis-lip-gloss.json
 python tools/build_setting_powder_corpus.py # setting-powder SPF filings   -> data/setting-powder-corpus.json
 python tools/analyze_talc.py                # talc presence in that corpus -> data/talc-analysis.json
 python tools/build_site.py                  # render site/*/index.html
@@ -105,6 +108,15 @@ python tools/build_corpus_eyeliner.py       # parse + normalize     -> data/corp
 python tools/analyze_eyeliner.py            # ingredient comparison -> data/analysis-eyeliner.json
 python tools/build_site.py                  # render site/*/index.html (both corpora)
 ```
+
+## The lip gloss corpus
+
+A second, smaller corpus lives alongside the foundation one: `data/corpus-lip-gloss.json`,
+five SPF lip glosses sourced the same DailyMed-filing way. It supports only the ingredient
+comparison at `/lip-gloss/` — true SPF lip gloss on DailyMed turns out to be a niche held by
+independent sun-care brands, not SEC-filing conglomerates, so there is no public filing to
+source a cost/margin or R&D study from. That gap is recorded in
+`data/manifest-lip-gloss.json`'s `known_limits`, not left silent.
 
 ## Hand-read primary sources
 
