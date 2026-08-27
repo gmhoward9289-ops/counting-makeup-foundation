@@ -294,6 +294,24 @@
           0.79
         ],
         "price_confidence": "high"
+      },
+      {
+        "id": "esteelauder-futurist-hydra-rescue",
+        "brand": "Est\u00e9e Lauder",
+        "price_tier": "prestige",
+        "list_usd": 55.0,
+        "price_per_ml": 1.571,
+        "parent_gross_margin_pct": 74.0,
+        "implied_cogs_usd": 14.3,
+        "estimated_formula_cost_usd": [
+          0.11,
+          0.551
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.2,
+          1.0
+        ],
+        "price_confidence": "high"
       }
     ]
   },
@@ -534,6 +552,32 @@
         "eu_declared_allergens": 0,
         "eu_declared_allergen_list": [],
         "ingredient_count": 36
+      },
+      {
+        "id": "esteelauder-futurist-hydra-rescue",
+        "brand": "Est\u00e9e Lauder",
+        "price_tier": "prestige",
+        "list_usd": 55.0,
+        "price_per_ml": 1.571,
+        "spf_filed": 45,
+        "uv_actives_declared": 4,
+        "named_actives_total": 16,
+        "named_actives_above_1pct_line": 10,
+        "named_actives_above_line_list": [
+          "polysilicone-11",
+          "lactobacillus ferment",
+          "cucumis sativus (cucumber) fruit extract",
+          "sodium hyaluronate",
+          "salvia hispanica seed extract",
+          "hylocereus undatus fruit extract",
+          "algae extract",
+          "euterpe oleracea fruit oil",
+          "carapa guaianensis seed oil",
+          "caffeine"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 73
       }
     ],
     "by_tier": {
@@ -554,12 +598,12 @@
         "mean_ingredient_count": 35
       },
       "prestige": {
-        "n": 5,
+        "n": 6,
         "mean_price_per_ml": 1.57,
-        "mean_spf": 20.2,
-        "mean_actives_above_line": 2.6,
-        "mean_allergens": 1.2,
-        "mean_ingredient_count": 42.4
+        "mean_spf": 24.33,
+        "mean_actives_above_line": 3.83,
+        "mean_allergens": 1,
+        "mean_ingredient_count": 47.5
       },
       "luxury": {
         "n": 1,
@@ -593,7 +637,7 @@
       },
       {
         "parent_company": "Est\u00e9e Lauder Companies",
-        "n_products": 3,
+        "n_products": 4,
         "rd_pct_of_revenue": 2.21,
         "rd_fiscal_year_end": "2025-06-30",
         "rd_source": {
@@ -603,10 +647,10 @@
           "url": "https://www.sec.gov/Archives/edgar/data/1001250/000100125026000041/el-20260630.htm",
           "note": "Est\u00e9e Lauder last tagged ResearchAndDevelopmentExpense as a discrete XBRL fact for fiscal 2014. Every year since, the dollar figure is still disclosed in prose in the 'Research and Development' note ('Research and development expenses of $316 million... in fiscal 2026, 2025 and 2024, respectively') but folded into Selling, general and administrative expenses on the face of the income statement, so it cannot be pulled structurally. Hand-read from the FY2026 10-K, which restates the FY2025 figure used here to align with the FY2025 revenue this project already cites for Est\u00e9e Lauder's gross margin."
         },
-        "mean_spf": 16.33,
-        "mean_actives_above_line": 2,
+        "mean_spf": 23.5,
+        "mean_actives_above_line": 4,
         "mean_allergens": 0,
-        "mean_ingredient_count": 41.67
+        "mean_ingredient_count": 49.5
       },
       {
         "parent_company": "L'Or\u00e9al",

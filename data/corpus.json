@@ -2910,6 +2910,443 @@
           "canonical": "titanium dioxide"
         }
       ]
+    },
+    {
+      "id": "esteelauder-futurist-hydra-rescue",
+      "brand": "Est\u00e9e Lauder",
+      "product": "Futurist Hydra Rescue Moisturizing Makeup SPF 45",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "82db54ba-3ebd-4b70-b41c-b0d2faad7daa",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82db54ba-3ebd-4b70-b41c-b0d2faad7daa",
+        "label_effective_date": "2024-08-13"
+      },
+      "active_ingredients_as_filed": "Active ingredients Purpose Ensulizole 2.7% Sunscreen Octinoxate 6.7% Sunscreen Octisalate 4.5% Sunscreen Zinc Oxide 3.8% Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive ingredients water\\aqua\\eau \u2022 dimethicone \u2022 phenyl trimethicone \u2022 butylene glycol \u2022 glycerin \u2022 polymethylsilsesquioxane \u2022 lauryl peg-9 polydimethylsiloxyethyl dimethicone \u2022 hdi/ppg/polycaprolactone crosspolymer \u2022 trimethylsiloxysilicate/dimethiconol crosspolymer \u2022 tromethamine \u2022 polysilicone-11 \u2022 hexyl laurate \u2022 cetyl peg/ppg-10/1 dimethicone \u2022 lactobacillus ferment \u2022 cucumis sativus (cucumber) fruit extract \u2022 sodium hyaluronate \u2022 salvia hispanica seed extract \u2022 hylocereus undatus fruit extract \u2022 helianthus annuus (sunflower) seedcake \u2022 algae extract \u2022 euterpe oleracea fruit oil \u2022 carapa guaianensis seed oil \u2022 caffeine \u2022 jojoba esters \u2022 tremella fuciformis sporocarp extract \u2022 camelina sativa seed oil \u2022 sapindus mukorossi fruit extract \u2022 caesalpinia spinosa gum \u2022 copaifera officinalis (balsam copaiba) resin \u2022 caprylic/capric triglyceride \u2022 propylene glycol dicaprate \u2022 acetyl glucosamine \u2022 tocopheryl acetate \u2022 acetyl hexapeptide-8 \u2022 lecithin \u2022 trehalose \u2022 disteardimonium hectorite \u2022 hydroxyethyl urea \u2022 neopentyl glycol diheptanoate \u2022 dimethicone/divinyldimethicone silsesquioxane crosspolymer \u2022 hydrogenated coco-glycerides \u2022 phospholipids \u2022 trimethylsiloxysilicate \u2022 polyhydroxystearic acid \u2022 polyglyceryl-4 isostearate \u2022 glyceryl stearate \u2022 triethoxycaprylylsilane \u2022 triethyl citrate \u2022 laureth-7 \u2022 linoleic acid \u2022 methicone \u2022 stearyl alcohol \u2022 cetearyl alcohol \u2022 ammonium polyacryloyldimethyl taurate \u2022 silica \u2022 hordeum vulgare (barley) extract\\extrait d'orge \u2022 tocopherol \u2022 palmitic acid \u2022 phytosteryl canola glycerides \u2022 stearic acid \u2022 oleic acid \u2022 sodium chloride \u2022 polysorbate 80 \u2022 polysorbate 20 \u2022 behenyl alcohol \u2022 triolein \u2022 betaine \u2022 fragrance (parfum) \u2022 disodium edta \u2022 bht \u2022 phenoxyethanol \u2022 sodium dehydroacetate \u2022 potassium sorbate \u2022 [+/- mica \u2022 iron oxides (ci 77491) \u2022 iron oxides (ci 77492) \u2022 iron oxides (ci 77499) \u2022 titanium dioxide (ci 77891)] <iln47153>",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water\\aqua\\eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 3,
+          "as_filed": "phenyl trimethicone",
+          "inci": "phenyl trimethicone"
+        },
+        {
+          "position": 4,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 5,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 6,
+          "as_filed": "polymethylsilsesquioxane",
+          "inci": "polymethylsilsesquioxane"
+        },
+        {
+          "position": 7,
+          "as_filed": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
+          "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone"
+        },
+        {
+          "position": 8,
+          "as_filed": "hdi/ppg/polycaprolactone crosspolymer",
+          "inci": "hdi/ppg/polycaprolactone crosspolymer"
+        },
+        {
+          "position": 9,
+          "as_filed": "trimethylsiloxysilicate/dimethiconol crosspolymer",
+          "inci": "trimethylsiloxysilicate/dimethiconol crosspolymer"
+        },
+        {
+          "position": 10,
+          "as_filed": "tromethamine",
+          "inci": "tromethamine"
+        },
+        {
+          "position": 11,
+          "as_filed": "polysilicone-11",
+          "inci": "polysilicone-11"
+        },
+        {
+          "position": 12,
+          "as_filed": "hexyl laurate",
+          "inci": "hexyl laurate"
+        },
+        {
+          "position": 13,
+          "as_filed": "cetyl peg/ppg-10/1 dimethicone",
+          "inci": "cetyl peg/ppg-10/1 dimethicone"
+        },
+        {
+          "position": 14,
+          "as_filed": "lactobacillus ferment",
+          "inci": "lactobacillus ferment"
+        },
+        {
+          "position": 15,
+          "as_filed": "cucumis sativus (cucumber) fruit extract",
+          "inci": "cucumis sativus (cucumber) fruit extract"
+        },
+        {
+          "position": 16,
+          "as_filed": "sodium hyaluronate",
+          "inci": "sodium hyaluronate"
+        },
+        {
+          "position": 17,
+          "as_filed": "salvia hispanica seed extract",
+          "inci": "salvia hispanica seed extract"
+        },
+        {
+          "position": 18,
+          "as_filed": "hylocereus undatus fruit extract",
+          "inci": "hylocereus undatus fruit extract"
+        },
+        {
+          "position": 19,
+          "as_filed": "helianthus annuus (sunflower) seedcake",
+          "inci": "helianthus annuus (sunflower) seedcake"
+        },
+        {
+          "position": 20,
+          "as_filed": "algae extract",
+          "inci": "algae extract"
+        },
+        {
+          "position": 21,
+          "as_filed": "euterpe oleracea fruit oil",
+          "inci": "euterpe oleracea fruit oil"
+        },
+        {
+          "position": 22,
+          "as_filed": "carapa guaianensis seed oil",
+          "inci": "carapa guaianensis seed oil"
+        },
+        {
+          "position": 23,
+          "as_filed": "caffeine",
+          "inci": "caffeine"
+        },
+        {
+          "position": 24,
+          "as_filed": "jojoba esters",
+          "inci": "jojoba esters"
+        },
+        {
+          "position": 25,
+          "as_filed": "tremella fuciformis sporocarp extract",
+          "inci": "tremella fuciformis sporocarp extract"
+        },
+        {
+          "position": 26,
+          "as_filed": "camelina sativa seed oil",
+          "inci": "camelina sativa seed oil"
+        },
+        {
+          "position": 27,
+          "as_filed": "sapindus mukorossi fruit extract",
+          "inci": "sapindus mukorossi fruit extract"
+        },
+        {
+          "position": 28,
+          "as_filed": "caesalpinia spinosa gum",
+          "inci": "caesalpinia spinosa gum"
+        },
+        {
+          "position": 29,
+          "as_filed": "copaifera officinalis (balsam copaiba) resin",
+          "inci": "copaifera officinalis (balsam copaiba) resin"
+        },
+        {
+          "position": 30,
+          "as_filed": "caprylic/capric triglyceride",
+          "inci": "caprylic/capric triglyceride"
+        },
+        {
+          "position": 31,
+          "as_filed": "propylene glycol dicaprate",
+          "inci": "propylene glycol dicaprate"
+        },
+        {
+          "position": 32,
+          "as_filed": "acetyl glucosamine",
+          "inci": "acetyl glucosamine"
+        },
+        {
+          "position": 33,
+          "as_filed": "tocopheryl acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 34,
+          "as_filed": "acetyl hexapeptide-8",
+          "inci": "acetyl hexapeptide-8"
+        },
+        {
+          "position": 35,
+          "as_filed": "lecithin",
+          "inci": "lecithin"
+        },
+        {
+          "position": 36,
+          "as_filed": "trehalose",
+          "inci": "trehalose"
+        },
+        {
+          "position": 37,
+          "as_filed": "disteardimonium hectorite",
+          "inci": "disteardimonium hectorite"
+        },
+        {
+          "position": 38,
+          "as_filed": "hydroxyethyl urea",
+          "inci": "hydroxyethyl urea"
+        },
+        {
+          "position": 39,
+          "as_filed": "neopentyl glycol diheptanoate",
+          "inci": "neopentyl glycol diheptanoate"
+        },
+        {
+          "position": 40,
+          "as_filed": "dimethicone/divinyldimethicone silsesquioxane crosspolymer",
+          "inci": "dimethicone/divinyldimethicone silsesquioxane crosspolymer"
+        },
+        {
+          "position": 41,
+          "as_filed": "hydrogenated coco-glycerides",
+          "inci": "hydrogenated coco-glycerides"
+        },
+        {
+          "position": 42,
+          "as_filed": "phospholipids",
+          "inci": "phospholipids"
+        },
+        {
+          "position": 43,
+          "as_filed": "trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 44,
+          "as_filed": "polyhydroxystearic acid",
+          "inci": "polyhydroxystearic acid"
+        },
+        {
+          "position": 45,
+          "as_filed": "polyglyceryl-4 isostearate",
+          "inci": "polyglyceryl-4 isostearate"
+        },
+        {
+          "position": 46,
+          "as_filed": "glyceryl stearate",
+          "inci": "glyceryl stearate"
+        },
+        {
+          "position": 47,
+          "as_filed": "triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        },
+        {
+          "position": 48,
+          "as_filed": "triethyl citrate",
+          "inci": "triethyl citrate"
+        },
+        {
+          "position": 49,
+          "as_filed": "laureth-7",
+          "inci": "laureth-7"
+        },
+        {
+          "position": 50,
+          "as_filed": "linoleic acid",
+          "inci": "linoleic acid"
+        },
+        {
+          "position": 51,
+          "as_filed": "methicone",
+          "inci": "methicone"
+        },
+        {
+          "position": 52,
+          "as_filed": "stearyl alcohol",
+          "inci": "stearyl alcohol"
+        },
+        {
+          "position": 53,
+          "as_filed": "cetearyl alcohol",
+          "inci": "cetearyl alcohol"
+        },
+        {
+          "position": 54,
+          "as_filed": "ammonium polyacryloyldimethyl taurate",
+          "inci": "ammonium polyacryloyldimethyl taurate"
+        },
+        {
+          "position": 55,
+          "as_filed": "silica",
+          "inci": "silica"
+        },
+        {
+          "position": 56,
+          "as_filed": "hordeum vulgare (barley) extract\\extrait d'orge",
+          "inci": "hordeum vulgare (barley) extract\\extrait d'orge"
+        },
+        {
+          "position": 57,
+          "as_filed": "tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 58,
+          "as_filed": "palmitic acid",
+          "inci": "palmitic acid"
+        },
+        {
+          "position": 59,
+          "as_filed": "phytosteryl canola glycerides",
+          "inci": "phytosteryl canola glycerides"
+        },
+        {
+          "position": 60,
+          "as_filed": "stearic acid",
+          "inci": "stearic acid"
+        },
+        {
+          "position": 61,
+          "as_filed": "oleic acid",
+          "inci": "oleic acid"
+        },
+        {
+          "position": 62,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 63,
+          "as_filed": "polysorbate 80",
+          "inci": "polysorbate 80"
+        },
+        {
+          "position": 64,
+          "as_filed": "polysorbate 20",
+          "inci": "polysorbate 20"
+        },
+        {
+          "position": 65,
+          "as_filed": "behenyl alcohol",
+          "inci": "behenyl alcohol"
+        },
+        {
+          "position": 66,
+          "as_filed": "triolein",
+          "inci": "triolein"
+        },
+        {
+          "position": 67,
+          "as_filed": "betaine",
+          "inci": "betaine"
+        },
+        {
+          "position": 68,
+          "as_filed": "fragrance (parfum)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 69,
+          "as_filed": "disodium edta",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 70,
+          "as_filed": "bht",
+          "inci": "bht"
+        },
+        {
+          "position": 71,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 72,
+          "as_filed": "sodium dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 73,
+          "as_filed": "potassium sorbate",
+          "inci": "potassium sorbate"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "mica",
+          "inci": "mica"
+        },
+        {
+          "position": 2,
+          "as_filed": "iron oxides (ci 77491)",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 3,
+          "as_filed": "iron oxides (ci 77492)",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 4,
+          "as_filed": "iron oxides (ci 77499)",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 5,
+          "as_filed": "titanium dioxide (ci 77891)",
+          "inci": "titanium dioxide"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "water\\aqua\\eau",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "fragrance (parfum)",
+          "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "iron oxides (ci 77491)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "iron oxides (ci 77492)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "iron oxides (ci 77499)",
+          "canonical": "iron oxides"
+        },
+        {
+          "as_filed": "titanium dioxide (ci 77891)",
+          "canonical": "titanium dioxide"
+        }
+      ]
     }
   ]
 }

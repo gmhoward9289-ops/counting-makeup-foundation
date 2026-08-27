@@ -1,14 +1,13 @@
 {
   "generated_from": "data/corpus.json",
-  "n_products": 12,
+  "n_products": 13,
   "issue_9_ingredient_comparison": {
-    "distinct_base_ingredients": 191,
-    "appearing_in_one_product_only": 105,
+    "distinct_base_ingredients": 226,
+    "appearing_in_one_product_only": 126,
     "shared_core_75pct": [
       "butylene glycol",
       "dimethicone",
       "disteardimonium hectorite",
-      "peg-10 dimethicone",
       "phenoxyethanol",
       "trimethylsiloxysilicate",
       "water"
@@ -16,958 +15,1133 @@
     "prevalence": [
       {
         "inci": "water",
-        "products": 12,
+        "products": 13,
         "share": 1.0
       },
       {
         "inci": "dimethicone",
-        "products": 11,
-        "share": 0.917
+        "products": 12,
+        "share": 0.923
       },
       {
         "inci": "phenoxyethanol",
-        "products": 11,
-        "share": 0.917
+        "products": 12,
+        "share": 0.923
       },
       {
         "inci": "trimethylsiloxysilicate",
-        "products": 11,
-        "share": 0.917
+        "products": 12,
+        "share": 0.923
       },
       {
         "inci": "butylene glycol",
-        "products": 10,
-        "share": 0.833
+        "products": 11,
+        "share": 0.846
       },
       {
         "inci": "disteardimonium hectorite",
-        "products": 10,
-        "share": 0.833
+        "products": 11,
+        "share": 0.846
       },
       {
         "inci": "peg-10 dimethicone",
         "products": 9,
-        "share": 0.75
+        "share": 0.692
+      },
+      {
+        "inci": "silica",
+        "products": 9,
+        "share": 0.692
+      },
+      {
+        "inci": "glycerin",
+        "products": 8,
+        "share": 0.615
       },
       {
         "inci": "isododecane",
         "products": 8,
-        "share": 0.667
+        "share": 0.615
       },
       {
-        "inci": "silica",
+        "inci": "sodium hyaluronate",
         "products": 8,
-        "share": 0.667
+        "share": 0.615
+      },
+      {
+        "inci": "tocopherol",
+        "products": 8,
+        "share": 0.615
       },
       {
         "inci": "aluminum hydroxide",
         "products": 7,
-        "share": 0.583
+        "share": 0.538
       },
       {
-        "inci": "glycerin",
+        "inci": "bht",
         "products": 7,
-        "share": 0.583
+        "share": 0.538
       },
       {
         "inci": "magnesium sulfate",
         "products": 7,
-        "share": 0.583
+        "share": 0.538
       },
       {
-        "inci": "sodium hyaluronate",
+        "inci": "parfum/fragrance",
         "products": 7,
-        "share": 0.583
-      },
-      {
-        "inci": "tocopherol",
-        "products": 7,
-        "share": 0.583
+        "share": 0.538
       },
       {
         "inci": "alcohol denat",
         "products": 6,
-        "share": 0.5
+        "share": 0.462
       },
       {
-        "inci": "bht",
+        "inci": "laureth-7",
         "products": 6,
-        "share": 0.5
+        "share": 0.462
       },
       {
-        "inci": "parfum/fragrance",
+        "inci": "lecithin",
         "products": 6,
-        "share": 0.5
+        "share": 0.462
+      },
+      {
+        "inci": "sodium chloride",
+        "products": 6,
+        "share": 0.462
+      },
+      {
+        "inci": "tocopheryl acetate",
+        "products": 6,
+        "share": 0.462
       },
       {
         "inci": "alumina",
         "products": 5,
-        "share": 0.417
+        "share": 0.385
       },
       {
         "inci": "disodium stearoyl glutamate",
         "products": 5,
-        "share": 0.417
-      },
-      {
-        "inci": "laureth-7",
-        "products": 5,
-        "share": 0.417
-      },
-      {
-        "inci": "lecithin",
-        "products": 5,
-        "share": 0.417
+        "share": 0.385
       },
       {
         "inci": "silica silylate",
         "products": 5,
-        "share": 0.417
-      },
-      {
-        "inci": "sodium chloride",
-        "products": 5,
-        "share": 0.417
+        "share": 0.385
       },
       {
         "inci": "synthetic fluorphlogopite",
         "products": 5,
-        "share": 0.417
+        "share": 0.385
       },
       {
-        "inci": "tocopheryl acetate",
+        "inci": "triethoxycaprylylsilane",
         "products": 5,
-        "share": 0.417
+        "share": 0.385
       },
       {
         "inci": "alpha-isomethyl ionone",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "bis-peg/ppg-14/14 dimethicone",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "caprylyl glycol",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
+      },
+      {
+        "inci": "cetyl peg/ppg-10/1 dimethicone",
+        "products": 4,
+        "share": 0.308
       },
       {
         "inci": "citric acid",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "dimethicone/peg-10/15 crosspolymer",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "dipropylene glycol",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "hydrogen dimethicone",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "linalool",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
+      },
+      {
+        "inci": "methicone",
+        "products": 4,
+        "share": 0.308
       },
       {
         "inci": "methyl trimethicone",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "nylon-12",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
-        "inci": "triethoxycaprylylsilane",
+        "inci": "phenyl trimethicone",
         "products": 4,
-        "share": 0.333
+        "share": 0.308
       },
       {
         "inci": "benzyl alcohol",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "benzyl salicylate",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "c12-15 alkyl benzoate",
         "products": 3,
-        "share": 0.25
-      },
-      {
-        "inci": "cetyl peg/ppg-10/1 dimethicone",
-        "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "chlorphenesin",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "citronellol",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "cyclopentasiloxane",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "diisopropyl sebacate",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "dipentaerythrityl tetrahydroxystearate/tetraisostearate",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
+      },
+      {
+        "inci": "disodium edta",
+        "products": 3,
+        "share": 0.231
       },
       {
         "inci": "hdi/trimethylol hexyllactone crosspolymer",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "hexyl cinnamal",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "isopropyl lauroyl sarcosinate",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
+      },
+      {
+        "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
+        "products": 3,
+        "share": 0.231
       },
       {
         "inci": "maltodextrin",
         "products": 3,
-        "share": 0.25
-      },
-      {
-        "inci": "methicone",
-        "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "perlite",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
-        "inci": "phenyl trimethicone",
+        "inci": "polysilicone-11",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
+      },
+      {
+        "inci": "potassium sorbate",
+        "products": 3,
+        "share": 0.231
       },
       {
         "inci": "propylene carbonate",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
       },
       {
         "inci": "xanthan gum",
         "products": 3,
-        "share": 0.25
+        "share": 0.231
+      },
+      {
+        "inci": "acetyl glucosamine",
+        "products": 2,
+        "share": 0.154
+      },
+      {
+        "inci": "acetyl hexapeptide-8",
+        "products": 2,
+        "share": 0.154
+      },
+      {
+        "inci": "algae extract",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "alpha-glucan oligosaccharide",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "ammonium polyacryloyldimethyl taurate",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "ascorbyl glucoside",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "butyloctyl salicylate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "caffeine",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "calcium aluminum borosilicate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "caprylic/capric triglyceride",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "cellulose",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "dimethicone/vinyl dimethicone crosspolymer",
         "products": 2,
-        "share": 0.167
-      },
-      {
-        "inci": "disodium edta",
-        "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "disodium phosphate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "ethylhexylglycerin",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "geraniol",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "lactobacillus",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "laminaria saccharina extract",
         "products": 2,
-        "share": 0.167
-      },
-      {
-        "inci": "lauryl peg-9 polydimethylsiloxyethyl dimethicone",
-        "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "limonene",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "moringa oleifera seed extract",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "neopentyl glycol diheptanoate",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "niacinamide",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "peg-9 polydimethylsiloxyethyl dimethicone",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "pentylene glycol",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "polyhydroxystearic acid",
+        "products": 2,
+        "share": 0.154
+      },
+      {
+        "inci": "polymethylsilsesquioxane",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "polymnia sonchifolia root juice",
         "products": 2,
-        "share": 0.167
-      },
-      {
-        "inci": "polysilicone-11",
-        "products": 2,
-        "share": 0.167
-      },
-      {
-        "inci": "potassium sorbate",
-        "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "propylene glycol",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "salicylic acid",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "sodium benzoate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "sodium citrate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "sodium dehydroacetate",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "sodium hydroxide",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "sodium lactate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "sodium pca",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
       },
       {
         "inci": "sorbitan sesquioleate",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "stearic acid",
+        "products": 2,
+        "share": 0.154
+      },
+      {
+        "inci": "trehalose",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "tribehenin",
         "products": 2,
-        "share": 0.167
+        "share": 0.154
+      },
+      {
+        "inci": "triethyl citrate",
+        "products": 2,
+        "share": 0.154
+      },
+      {
+        "inci": "tromethamine",
+        "products": 2,
+        "share": 0.154
       },
       {
         "inci": "zinc stearate",
         "products": 2,
-        "share": 0.167
-      },
-      {
-        "inci": "acetyl glucosamine",
-        "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "acetyl hexapeptide-8",
-        "products": 1,
-        "share": 0.083
+        "share": 0.154
       },
       {
         "inci": "acrylates/c10-30 alkyl acrylate crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "acrylonitrile/methyl methacrylate/vinylidene chloride copolymer",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "algae extract",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "allantoin",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "ammonium polyacryloyldimethyl taurate",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "amodimethicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "astrocaryum murumuru seed butter",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "behenyl alcohol",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "betaine",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "betula alba (birch) bark extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "boron nitride",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "c12-15 alkyl ethylhexanoate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "c24-28 alkyl methicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
-        "inci": "caffeine",
+        "inci": "caesalpinia spinosa gum",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "camelina sativa seed oil",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "camellia sinensis leaf extract",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "caprylic/capric triglyceride",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "caprylyl methicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "carapa guaianensis seed oil",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "carvone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "cellulose acetate butyrate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "cetearyl alcohol",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "cetyl dimethicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "chloroxylenol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "citral",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "citrullus lanatus (watermelon) fruit extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "citrus aurantium bergamia peel oil",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "citrus aurantium peel oil",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "citrus grandis (grapefruit) peel extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "copaifera officinalis (balsam copaiba) resin",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "cucumis sativus (cucumber) fruit extract",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "cyclohexasiloxane",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "dextrin",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "dimethicone crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "dimethicone crosspolymer-3",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "dimethicone silylate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "dimethicone/divinyldimethicone silsesquioxane crosspolymer",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "dimethicone/polyglycerin-3 crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "dimethiconol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "diphenyl dimethicone/vinyl diphenyl dimethicone/silsesquioxane crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "ethylene brassylate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "ethylparaben",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "euterpe oleracea fruit oil",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "fructose",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "glucose",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "glyceryl stearate",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "hdi/ppg/polycaprolactone crosspolymer",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "helianthus annuus (sunflower) seedcake",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "hexyl laurate",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "hexylene glycol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "hordeum vulgare (barley) extract\\extrait d'orge",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "hydrogenated coco-glycerides",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "hydrogenated lecithin",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "hydrolyzed vegetable protein",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "hydroxyethyl urea",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "hydroxyethylcellulose",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "hydroxyethylpiperazine ethane sulfonic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "hylocereus undatus fruit extract",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "iris florentina root extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "isobutane",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "isopropyl titanium triisostearate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "isostearic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "isotridecyl isononanoate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "jojoba esters",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "lactobacillus ferment",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "lens esculenta (lentil) fruit extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "linoleic acid",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "litchi chinensis seed extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "magnesium aluminum silicate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "magnesium ascorbyl phosphate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "magnesium stearate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "maltose",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "mandelic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "methoxy amodimethicone/silsesquioxane copolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "methyl methacrylate crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "methyldihydrojasmonate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "methylparaben",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
-        "inci": "neopentyl glycol diheptanoate",
+        "inci": "oleic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "palmitic acid",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "peg/ppg-15/15 dimethicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "peg/ppg-18/18 dimethicone",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "pelargonium graveolens flower oil",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "phospholipids",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "phytosteryl canola glycerides",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "pinene",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyaminopropyl biguanide",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyethylene",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyglutamic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyglyceryl-10 decaisostearate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyglyceryl-3 diisostearate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyglyceryl-3 polyricinoleate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "polyglyceryl-4 isostearate",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "polyglyceryl-6 polyricinoleate",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "polyhydroxystearic acid",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polymethyl methacrylate",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "polymethylsilsesquioxane",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "polyphosphorylcholine glycol acrylate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "polysorbate 20",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "polysorbate 80",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "polyvinyl alcohol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "propanediol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "propylene glycol dicaprate",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "pyrus malus (apple) fruit extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "rose flower oil/extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "saccharomyces lysate extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "salix nigra (willow) bark extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "salvia hispanica seed extract",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "sapindus mukorossi fruit extract",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "silica dimethyl silylate",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "sodium dehydroacetate",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "sodium myristoyl glutamate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "sodium myristoyl sarcosinate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "sorbic acid",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "sorbitol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
-        "inci": "stearic acid",
+        "inci": "stearyl alcohol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "talc",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "tetrahexyldecyl ascorbate",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "tetramethyl acetyloctahydronaphthalenes",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "tetrasodium edta",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "thermus thermophilus ferment",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
-        "inci": "trehalose",
+        "inci": "tremella fuciformis sporocarp extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "tridecyl trimellitate",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "triethyl citrate",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "triethylhexanoin",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "trihydroxystearin",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "trimethylcyclopentenyl methylisopentenol",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
+      },
+      {
+        "inci": "trimethylsiloxysilicate/dimethiconol crosspolymer",
+        "products": 1,
+        "share": 0.077
+      },
+      {
+        "inci": "triolein",
+        "products": 1,
+        "share": 0.077
       },
       {
         "inci": "trisodium ethylenediamine disuccinate",
         "products": 1,
-        "share": 0.083
-      },
-      {
-        "inci": "tromethamine",
-        "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "tropaeolum majus flower/leaf/stem extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "urea",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "vinyl dimethicone/methicone silsesquioxane crosspolymer",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       },
       {
         "inci": "yeast extract",
         "products": 1,
-        "share": 0.083
+        "share": 0.077
       }
     ]
   },
@@ -1095,6 +1269,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "elf-flawless-finish",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "e.l.f. Beauty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.099,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
         "a": "maybelline-fit-me-dewy",
         "b": "rimmel-lasting-finish",
         "a_parent": "L'Or\u00e9al",
@@ -1205,6 +1390,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "maybelline-fit-me-dewy",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.097,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
         "a": "rimmel-lasting-finish",
         "b": "revlon-colorstay",
         "a_parent": "Coty",
@@ -1304,6 +1500,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "rimmel-lasting-finish",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "Coty",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.15,
+        "head10_overlap": 0.2,
+        "identical_prefix": 1
+      },
+      {
         "a": "revlon-colorstay",
         "b": "loreal-infallible-24h",
         "a_parent": "Revlon",
@@ -1392,6 +1599,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "revlon-colorstay",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "Revlon",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.124,
+        "head10_overlap": 0.4,
+        "identical_prefix": 1
+      },
+      {
         "a": "loreal-infallible-24h",
         "b": "loreal-infallible-32h",
         "a_parent": "L'Or\u00e9al",
@@ -1469,6 +1687,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "loreal-infallible-24h",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.103,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
         "a": "loreal-infallible-32h",
         "b": "mac-studio-fix-fluid",
         "a_parent": "L'Or\u00e9al",
@@ -1535,6 +1764,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "loreal-infallible-32h",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.102,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
         "a": "mac-studio-fix-fluid",
         "b": "clinique-even-better",
         "a_parent": "Est\u00e9e Lauder Companies",
@@ -1590,6 +1830,17 @@
         "identical_prefix": 2
       },
       {
+        "a": "mac-studio-fix-fluid",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.168,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
+      },
+      {
         "a": "clinique-even-better",
         "b": "esteelauder-double-wear-sheer",
         "a_parent": "Est\u00e9e Lauder Companies",
@@ -1634,6 +1885,17 @@
         "identical_prefix": 2
       },
       {
+        "a": "clinique-even-better",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": false,
+        "jaccard": 0.17,
+        "head10_overlap": 0.5,
+        "identical_prefix": 1
+      },
+      {
         "a": "esteelauder-double-wear-sheer",
         "b": "lancome-teint-idole-breathable",
         "a_parent": "Est\u00e9e Lauder Companies",
@@ -1667,6 +1929,17 @@
         "identical_prefix": 2
       },
       {
+        "a": "esteelauder-double-wear-sheer",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "Est\u00e9e Lauder Companies",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": true,
+        "same_brand": true,
+        "jaccard": 0.255,
+        "head10_overlap": 0.6,
+        "identical_prefix": 1
+      },
+      {
         "a": "lancome-teint-idole-breathable",
         "b": "lancome-teint-idole-care-glow",
         "a_parent": "L'Or\u00e9al",
@@ -1689,6 +1962,17 @@
         "identical_prefix": 1
       },
       {
+        "a": "lancome-teint-idole-breathable",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.112,
+        "head10_overlap": 0.3,
+        "identical_prefix": 2
+      },
+      {
         "a": "lancome-teint-idole-care-glow",
         "b": "dior-forever-skin-wear",
         "a_parent": "L'Or\u00e9al",
@@ -1698,60 +1982,82 @@
         "jaccard": 0.145,
         "head10_overlap": 0.5,
         "identical_prefix": 0
+      },
+      {
+        "a": "lancome-teint-idole-care-glow",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "L'Or\u00e9al",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.117,
+        "head10_overlap": 0.3,
+        "identical_prefix": 0
+      },
+      {
+        "a": "dior-forever-skin-wear",
+        "b": "esteelauder-futurist-hydra-rescue",
+        "a_parent": "LVMH",
+        "b_parent": "Est\u00e9e Lauder Companies",
+        "same_parent": false,
+        "same_brand": false,
+        "jaccard": 0.16,
+        "head10_overlap": 0.3,
+        "identical_prefix": 1
       }
     ],
     "tests": [
       {
         "metric": "head10_overlap",
-        "observed_gap": 0.1962,
-        "same_parent_mean": 0.6,
-        "diff_parent_mean": 0.4038,
+        "observed_gap": 0.1863,
+        "same_parent_mean": 0.575,
+        "diff_parent_mean": 0.3887,
         "permutations": 20000,
-        "p_value": 0.0096
+        "p_value": 0.003
       },
       {
         "metric": "jaccard",
-        "observed_gap": 0.2065,
-        "same_parent_mean": 0.3671,
-        "diff_parent_mean": 0.1606,
+        "observed_gap": 0.1809,
+        "same_parent_mean": 0.3353,
+        "diff_parent_mean": 0.1544,
         "permutations": 20000,
         "p_value": 0.0
       },
       {
         "metric": "identical_prefix",
-        "observed_gap": 2.4412,
-        "same_parent_mean": 3.3846,
-        "diff_parent_mean": 0.9434,
+        "observed_gap": 1.9375,
+        "same_parent_mean": 2.9375,
+        "diff_parent_mean": 1,
         "permutations": 20000,
-        "p_value": 0.0057
+        "p_value": 0.0099
       }
     ],
     "tests_excluding_same_brand_pairs": [
       {
         "metric": "head10_overlap",
-        "observed_gap": 0.1599,
-        "same_parent_mean": 0.5636,
-        "diff_parent_mean": 0.4038,
+        "observed_gap": 0.1498,
+        "same_parent_mean": 0.5385,
+        "diff_parent_mean": 0.3887,
         "permutations": 20000,
-        "p_value": 0.0152,
+        "p_value": 0.0056,
         "scope": "cross-brand pairs only"
       },
       {
         "metric": "jaccard",
-        "observed_gap": 0.162,
-        "same_parent_mean": 0.3225,
-        "diff_parent_mean": 0.1606,
+        "observed_gap": 0.1445,
+        "same_parent_mean": 0.2989,
+        "diff_parent_mean": 0.1544,
         "permutations": 20000,
         "p_value": 0.0,
         "scope": "cross-brand pairs only"
       },
       {
         "metric": "identical_prefix",
-        "observed_gap": 1.9657,
-        "same_parent_mean": 2.9091,
-        "diff_parent_mean": 0.9434,
+        "observed_gap": 1.6154,
+        "same_parent_mean": 2.6154,
+        "diff_parent_mean": 1,
         "permutations": 20000,
-        "p_value": 0.0006,
+        "p_value": 0.0018,
         "scope": "cross-brand pairs only"
       }
     ],
@@ -1856,7 +2162,7 @@
         "price_tier": "budget",
         "length": 27,
         "structural_share": 0.593,
-        "mean_rarity": 0.617,
+        "mean_rarity": 0.621,
         "exclusive_ingredients": 7,
         "hero_count": 0,
         "hero_share": 0.0,
@@ -1872,7 +2178,7 @@
         "price_tier": "mass",
         "length": 29,
         "structural_share": 0.379,
-        "mean_rarity": 0.575,
+        "mean_rarity": 0.584,
         "exclusive_ingredients": 5,
         "hero_count": 4,
         "hero_share": 0.138,
@@ -1909,8 +2215,8 @@
         "price_tier": "mass",
         "length": 50,
         "structural_share": 0.44,
-        "mean_rarity": 0.69,
-        "exclusive_ingredients": 13,
+        "mean_rarity": 0.689,
+        "exclusive_ingredients": 12,
         "hero_count": 4,
         "hero_share": 0.08,
         "hero_median_relative_position": 0.8,
@@ -1946,7 +2252,7 @@
         "price_tier": "mass",
         "length": 27,
         "structural_share": 0.741,
-        "mean_rarity": 0.605,
+        "mean_rarity": 0.604,
         "exclusive_ingredients": 6,
         "hero_count": 2,
         "hero_share": 0.074,
@@ -1973,7 +2279,7 @@
         "price_tier": "mass",
         "length": 34,
         "structural_share": 0.5,
-        "mean_rarity": 0.527,
+        "mean_rarity": 0.541,
         "exclusive_ingredients": 2,
         "hero_count": 0,
         "hero_share": 0.0,
@@ -1989,7 +2295,7 @@
         "price_tier": "mass",
         "length": 35,
         "structural_share": 0.514,
-        "mean_rarity": 0.531,
+        "mean_rarity": 0.545,
         "exclusive_ingredients": 0,
         "hero_count": 1,
         "hero_share": 0.029,
@@ -2011,8 +2317,8 @@
         "price_tier": "prestige",
         "length": 38,
         "structural_share": 0.553,
-        "mean_rarity": 0.616,
-        "exclusive_ingredients": 10,
+        "mean_rarity": 0.613,
+        "exclusive_ingredients": 8,
         "hero_count": 6,
         "hero_share": 0.158,
         "hero_median_relative_position": 0.355,
@@ -2058,8 +2364,8 @@
         "price_tier": "prestige",
         "length": 37,
         "structural_share": 0.595,
-        "mean_rarity": 0.662,
-        "exclusive_ingredients": 15,
+        "mean_rarity": 0.655,
+        "exclusive_ingredients": 14,
         "hero_count": 7,
         "hero_share": 0.189,
         "hero_median_relative_position": 0.378,
@@ -2110,8 +2416,8 @@
         "price_tier": "prestige",
         "length": 50,
         "structural_share": 0.66,
-        "mean_rarity": 0.677,
-        "exclusive_ingredients": 15,
+        "mean_rarity": 0.663,
+        "exclusive_ingredients": 11,
         "hero_count": 9,
         "hero_share": 0.18,
         "hero_median_relative_position": 0.38,
@@ -2172,7 +2478,7 @@
         "price_tier": "prestige",
         "length": 36,
         "structural_share": 0.5,
-        "mean_rarity": 0.537,
+        "mean_rarity": 0.549,
         "exclusive_ingredients": 0,
         "hero_count": 5,
         "hero_share": 0.139,
@@ -2214,8 +2520,8 @@
         "price_tier": "prestige",
         "length": 51,
         "structural_share": 0.275,
-        "mean_rarity": 0.676,
-        "exclusive_ingredients": 17,
+        "mean_rarity": 0.682,
+        "exclusive_ingredients": 16,
         "hero_count": 11,
         "hero_share": 0.216,
         "hero_median_relative_position": 0.373,
@@ -2286,8 +2592,8 @@
         "price_tier": "luxury",
         "length": 36,
         "structural_share": 0.472,
-        "mean_rarity": 0.66,
-        "exclusive_ingredients": 15,
+        "mean_rarity": 0.654,
+        "exclusive_ingredients": 10,
         "hero_count": 4,
         "hero_share": 0.111,
         "hero_median_relative_position": 0.764,
@@ -2314,35 +2620,132 @@
             "inci": "tropaeolum majus flower/leaf/stem extract"
           }
         ]
+      },
+      {
+        "id": "esteelauder-futurist-hydra-rescue",
+        "brand": "Est\u00e9e Lauder",
+        "product": "Futurist Hydra Rescue Moisturizing Makeup SPF 45",
+        "parent_company": "Est\u00e9e Lauder Companies",
+        "price_tier": "prestige",
+        "length": 73,
+        "structural_share": 0.384,
+        "mean_rarity": 0.753,
+        "exclusive_ingredients": 35,
+        "hero_count": 16,
+        "hero_share": 0.219,
+        "hero_median_relative_position": 0.295,
+        "heroes_in_top_third": 10,
+        "heroes": [
+          {
+            "position": 11,
+            "of": 73,
+            "inci": "polysilicone-11"
+          },
+          {
+            "position": 14,
+            "of": 73,
+            "inci": "lactobacillus ferment"
+          },
+          {
+            "position": 15,
+            "of": 73,
+            "inci": "cucumis sativus (cucumber) fruit extract"
+          },
+          {
+            "position": 16,
+            "of": 73,
+            "inci": "sodium hyaluronate"
+          },
+          {
+            "position": 17,
+            "of": 73,
+            "inci": "salvia hispanica seed extract"
+          },
+          {
+            "position": 18,
+            "of": 73,
+            "inci": "hylocereus undatus fruit extract"
+          },
+          {
+            "position": 20,
+            "of": 73,
+            "inci": "algae extract"
+          },
+          {
+            "position": 21,
+            "of": 73,
+            "inci": "euterpe oleracea fruit oil"
+          },
+          {
+            "position": 22,
+            "of": 73,
+            "inci": "carapa guaianensis seed oil"
+          },
+          {
+            "position": 23,
+            "of": 73,
+            "inci": "caffeine"
+          },
+          {
+            "position": 25,
+            "of": 73,
+            "inci": "tremella fuciformis sporocarp extract"
+          },
+          {
+            "position": 26,
+            "of": 73,
+            "inci": "camelina sativa seed oil"
+          },
+          {
+            "position": 27,
+            "of": 73,
+            "inci": "sapindus mukorossi fruit extract"
+          },
+          {
+            "position": 36,
+            "of": 73,
+            "inci": "trehalose"
+          },
+          {
+            "position": 38,
+            "of": 73,
+            "inci": "hydroxyethyl urea"
+          },
+          {
+            "position": 56,
+            "of": 73,
+            "inci": "hordeum vulgare (barley) extract\\extrait d'orge"
+          }
+        ]
       }
     ],
     "mean_length_by_tier": {
       "budget": 27,
       "mass": 35,
-      "prestige": 42.4,
+      "prestige": 47.5,
       "luxury": 36
     },
     "mean_rarity_by_tier": {
-      "budget": 0.617,
-      "mass": 0.586,
-      "prestige": 0.634,
-      "luxury": 0.66
+      "budget": 0.621,
+      "mass": 0.593,
+      "prestige": 0.653,
+      "luxury": 0.654
     },
     "mean_hero_share_by_tier": {
       "budget": 0.0,
       "mass": 0.064,
-      "prestige": 0.176,
+      "prestige": 0.183,
       "luxury": 0.111
     },
     "mean_structural_share_by_tier": {
       "budget": 0.593,
       "mass": 0.515,
-      "prestige": 0.517,
+      "prestige": 0.494,
       "luxury": 0.472
     },
     "mean_hero_position_by_tier": {
       "mass": 0.778,
-      "prestige": 0.381,
+      "prestige": 0.366,
       "luxury": 0.764
     },
     "hero_patterns": [
