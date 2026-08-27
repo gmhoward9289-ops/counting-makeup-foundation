@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:v="http://validator.pragmaticdata.com/result" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="d43b3c91-84e0-44a0-9b88-03e38256b256"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <effectiveTime value="20130329"/>
+   <setId root="58626b79-60fd-4a75-be8a-4461a881ebf6"/>
+   <versionNumber value="1"/>
+   <author>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="001468693"/>
+            <name>Avon Products, Inc</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="883457061"/>
+                        <name>Intercos America, Inc</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="10096-0298" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="ad98d7a9-a785-4bad-981a-c66cbe9631b0"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL listing data elements section"/>
+               <effectiveTime value="20130329"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="10096-0298" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>mark<suffix>Glossworks Lip Gloss</suffix>
+                        </name>
+                        <formCode code="C42952" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LIPSTICK"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Octinoxate, Avobenzone, Octisalate</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="10" unit="mg"/>
+                              <denominator value="1" unit="g"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4Y5P7MUD51" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>OCTINOXATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4Y5P7MUD51" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>OCTINOXATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="5" unit="mg"/>
+                              <denominator value="1" unit="g"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AVOBENZONE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AVOBENZONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="5" unit="mg"/>
+                              <denominator value="1" unit="g"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>OCTISALATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>OCTISALATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="3" unit="g"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="10096-0298-1" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="10096-0298-2" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20130329"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="part352" root="2.16.840.1.113883.3.149"/>
+                           <code code="C73604" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC monograph not final"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="L327c9167-b146-4a57-87c1-0a39c0c99cd1">
+               <id root="e891d2b7-f1b7-45c0-bda7-7c6c7f3efd21"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Active ingredient</content>
+                     </content>
+                     <br/>Octinoxate 1.0%................................</paragraph>
+                  <paragraph>Avobenzone 0.5%................................</paragraph>
+                  <paragraph>Octisalate 0.5%................................</paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+               <component>
+                  <section ID="L14d7eb96-8279-46b3-aae6-eba8399e3321">
+                     <id root="d2c4160d-6acf-4faa-ad56-758f4ea62367"/>
+                     <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">
+                              <content styleCode="bold"> Purpose</content>
+                           </content>
+                           <br/>.................................Sunscreen</paragraph>
+                        <paragraph>
+                           <br/>.................................Sunscreen</paragraph>
+                        <paragraph>
+                           <br/>.................................Sunscreen</paragraph>
+                     </text>
+                     <effectiveTime value="20130329"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L3b5250c0-029a-439e-b757-c7f1bc4f51a1">
+               <id root="d06c25f3-0996-4466-b8e4-28cbce5bf871"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Uses</content>
+                     </content>
+                     <br/>• helps prevent sunburn</paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb9eacb4c-4143-4f0a-a6a4-f8a3ea9d21d9">
+               <id root="f94102eb-1d09-4e0e-a8a0-8d3da46949c4"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Warnings</content>
+                     </content>
+                     <br/>
+                     <content styleCode="bold">For external use only</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+               <component>
+                  <section ID="L020d7fda-9da8-49d6-9082-067e9516bb06">
+                     <id root="80230b67-b671-4357-af88-7e2b539cacd2"/>
+                     <code code="50570-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - DO NOT USE SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Do not use</content> on damaged or broken skin</paragraph>
+                     </text>
+                     <effectiveTime value="20130329"/>
+                     <component>
+                        <section ID="Lcf705fda-4575-433b-9905-2a3bb0acc68e">
+                           <id root="bb9950de-71c0-4dda-92f5-5f3c81267070"/>
+                           <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="bold">When using this product</content> keep out of eyes. Rinse with water to remove.</paragraph>
+                           </text>
+                           <effectiveTime value="20130329"/>
+                           <component>
+                              <section ID="L4390e10f-eda2-4e3b-bf36-ef7a5e367ae9">
+                                 <id root="c8d1d625-9757-4614-8dcf-8f03a6e1e2b7"/>
+                                 <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="bold">Stop use and ask a doctor if</content> rash occurs</paragraph>
+                                 </text>
+                                 <effectiveTime value="20130329"/>
+                                 <component>
+                                    <section ID="Lc43c666c-76ae-420f-87d8-c98f3cf3a561">
+                                       <id root="4b5dc8ca-b09d-4918-9882-d73929106006"/>
+                                       <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="bold">Keep out of reach of children.</content> If swallowed, get medical help or contact a Poison Control Center right away.</paragraph>
+                                       </text>
+                                       <effectiveTime value="20130329"/>
+                                    </section>
+                                 </component>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Lc03d517b-45e4-4712-b0da-5dd1fcf93ddd">
+               <id root="b4a5c16a-61e6-4a02-af9e-a496f133f7c9"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Directions</content>
+                     </content>
+                     <br/>• apply liberally 15 minutes before sun exposure<br/>• children under 6 months of age: ask a doctor<br/>• reapply at least every 2 hours<br/>• use a water resistant sunscreen if swimming or sweating<br/>•<content styleCode="bold"> Sun Protection Measures.</content> Spending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a Broad Spectrum SPF value of 15 or higher and other sun protection measures including:<br/>• limit time in the sun, especially from 10 a.m. – 2 p.m.<br/>• wear long-sleeved shirts, pants, hats, and sunglasses</paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+            </section>
+         </component>
+         <component>
+            <section ID="La4576643-3f99-4972-9245-507f27884fb7">
+               <id root="e43b0003-27f4-43a9-80e2-918964707ce2"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Other information</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>• protect the product in this container from excessive heat and direct sun</paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lb0613dfd-0756-4a52-9d8e-d1c14c750a73">
+               <id root="43e0daa2-4541-4b31-9097-6e351991871c"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Inactive Ingredients:</content>
+                     </content>
+                     <br/>ETHYLHEXYL ISONONANOATE, HYDROGENATED STYRENE/BUTADIENE COPOLYMER, HYDROGENATED POLYISOBUTENE, SILICA SILYLATE,  CAPRYLIC/CAPRIC TRIGLYCERIDE, DICALCIUM PHOSPHATE, PARFUM/FRAGRANCE, STEARALKONIUM HECTORITE, PROPYLENE CARBONATE, <br/>SILICA, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE <content styleCode="bold">SPARKLE SHADES MAY ALSO CONTAIN:</content> TIN OXIDE, CALCIUM ALUMINUM BOROSILICATE<content styleCode="bold"> MAY CONTAIN:</content> MICA/CI 77019, TITANIUM DIOXIDE/CI 7789, IRON OXIDES, RED 7 LAKE/CI 15850, RED 30 LAKE/CI 73360, YELLOW 5 LAKE/CI 19140, BLUE 1 LAKE/CI 42090</paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20130329"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lebbeb6b4-3331-4d4e-ad1b-c5ee006af604">
+               <id root="e98bd412-8470-4376-ae95-88b2e3233050"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">
+                        <content styleCode="bold">Questions or Comments?</content>
+                     </content>
+                     <br/>Call toll free <content styleCode="bold">1-800-FOR-AVON</content> or <content styleCode="bold">1-800-265-AVON</content> in Canada</paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L536490a4-9971-4407-8411-09c3183a0499">
+               <id root="f26ff8c4-e40a-4732-b1f7-026821974e2d"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L8067fec9-77b3-4211-80ae-72b97d836e55"/>
+                     <renderMultiMedia referencedObject="L6f9fc932-65ac-4949-a915-5e5800b85085"/>
+                     <renderMultiMedia referencedObject="L7292bfea-e39d-4eff-88fc-423cdca85a43"/>
+                     <renderMultiMedia referencedObject="Ld80b373d-6f94-4906-8c9a-baf67c8d50ba"/>
+                     <renderMultiMedia referencedObject="Lf6785a4b-a1c9-4d8b-b531-e378c2f239be"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20130329"/>
+               <component>
+                  <observationMedia ID="L8067fec9-77b3-4211-80ae-72b97d836e55">
+                     <text>image of PDP</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="PDP.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L6f9fc932-65ac-4949-a915-5e5800b85085">
+                     <text>image of DFB</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="DFB1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L7292bfea-e39d-4eff-88fc-423cdca85a43">
+                     <text>image of DFB</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="DFB2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Ld80b373d-6f94-4906-8c9a-baf67c8d50ba">
+                     <text>iimage of DFB</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="DFB3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lf6785a4b-a1c9-4d8b-b531-e378c2f239be">
+                     <text>image of DFB</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="DFB4.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

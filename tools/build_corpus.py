@@ -171,8 +171,11 @@ def parse_product(entry):
         "id": entry["id"],
         "brand": entry["brand"],
         "product": entry["product"],
-        "parent_company": entry["parent"],
-        "price_tier": entry["tier"],
+        # Foundation's manifest carries parent-company/price-tier for the
+        # ownership and price studies; other manifests (e.g. lip gloss) may
+        # not have that axis to source and simply omit "parent"/"tier".
+        "parent_company": entry.get("parent"),
+        "price_tier": entry.get("tier"),
         "source": {
             "type": "FDA-filed OTC drug label (SPL)",
             "publisher": "DailyMed, U.S. National Library of Medicine",
@@ -207,7 +210,7 @@ def main():
         "description": manifest["description"],
         "inclusion_criteria": manifest["inclusion_criteria"],
         "known_limits": manifest["known_limits"],
-        "retrieved": retrieved,
+        "retrieved": manifest.get("retrieved", retrieved),
         "products": products,
     }
     (ROOT / "data" / ("corpus%s.json" % suffix)).write_text(json.dumps(out, indent=2), encoding="utf-8")

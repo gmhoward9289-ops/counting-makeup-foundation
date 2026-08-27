@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What&#x27;s in my lip gloss? — Foundation</title>
+<meta name="description" content="Five SPF lip glosses compared ingredient by ingredient, every list taken from the manufacturer&#x27;s own FDA filing — plus why this category can&#x27;t support a cost or R&amp;D study the way SPF foundation can.">
+<link rel="canonical" href="https://foundation.swamplink.com/lip-gloss/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  img.figure-chart { width: 100%; height: auto; display: block; margin: 1rem 0; border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  table.brands td:nth-child(2), table.brands td:nth-child(4) { white-space: normal; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .chrome {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+    max-width: 940px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+  }
+  .chrome .home {
+    color: var(--ink); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chrome .home:hover { color: var(--accent); }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
+  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav a:hover { color: var(--ink); }
+
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.84rem; }
+  .cmp .col h4 { margin:0 0 .4rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+  .cmp ol { margin:0; padding-left:1.9rem; }
+  .cmp li { padding:.1rem .3rem; border-radius:3px; }
+  .cmp li.match { background:var(--ok-bg); color:var(--ok); }
+  .cmp li.only { color:var(--muted); }
+  @media (max-width:640px) { .cmp { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="chrome">
+  <a class="home" href="https://www.swamplink.com/">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    swamplink
+  </a>
+  <nav aria-label="site">
+    <a href="https://www.swamplink.com/data/">data</a>
+    <a href="https://www.swamplink.com/tools/">tools</a>
+    <a href="https://blog.swamplink.com/">blog</a>
+    <a href="https://www.swamplink.com/news/">news</a>
+  </nav>
+</div>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>What's in my lip gloss?</h1>
+    <p class="lede">The same sourcing discipline as the foundation study, applied to a much smaller, less standardized category: five SPF lip glosses, every ingredient list from the manufacturer's own FDA filing.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/rd/">Does R&amp;D pay off</a><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a><a href="/development/">How long it takes</a><span aria-current="page">Lip gloss ingredients</span><a href="/setting-powders/">The talc question</a></nav>
+
+  <section>
+    <h2>The corpus</h2>
+    <div class="finding"><p><strong>66 distinct ingredients
+    appear across 5 SPF lip glosses, and 48 of them
+    (72%) appear in
+    exactly one product.</strong> With only 1 ingredient reaching
+    three-quarters of the corpus, these five formulas share far less of a common spine than the
+    twelve <a href="/ingredients/">SPF foundations</a> do — a smaller, less standardized
+    category, built by brands without a shared house style to converge on.</p></div>
+
+    <p>The sourcing discipline is identical to the foundation study: every product here carries
+    an SPF claim, which in the United States makes it an over-the-counter drug, and the
+    manufacturer must file the complete ingredient declaration with the FDA. Nothing in this
+    corpus comes from a retailer listing or a transcription site.</p>
+
+    <div class="panel">
+      <table class="brands">
+        <thead><tr><th>Brand</th><th>Product</th><th class="num">Ingredients</th>
+          <th class="num">Label filed</th><th>Source</th></tr></thead>
+        <tbody><tr><td>Supergoop!</td><td class='note'>Glow Gloss Lip Balm SPF 40 (Caramel Glaze)</td><td class='num'>24</td><td class='num'>2026-06-04</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26d2897f-46a7-52b2-e063-6394a90aed32">FDA filing</a></td></tr><tr><td>mark. (Avon)</td><td class='note'>Glossworks Lip Gloss SPF 15</td><td class='num'>12</td><td class='num'>2013-03-29</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58626b79-60fd-4a75-be8a-4461a881ebf6">FDA filing</a></td></tr><tr><td>SugarGirl</td><td class='note'>Sun Gloss SPF 15 Tinted Lip Gloss Sunscreen (Pink Ice)</td><td class='num'>22</td><td class='num'>2026-01-27</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea23616f-1d59-4e32-88bb-d035af727728">FDA filing</a></td></tr><tr><td>Poolside</td><td class='note'>Frostbite Sunscreen SPF 15 Scented Lip Gloss (Coconut)</td><td class='num'>15</td><td class='num'>2026-01-09</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee045b64-7a95-4378-8183-e6e556f3b184">FDA filing</a></td></tr><tr><td>Luxe Gloss</td><td class='note'>Hydrating Lip Gloss SPF 35 (Naked Honey)</td><td class='num'>16</td><td class='num'>2026-08-03</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=581fb0cd-c55d-d562-e063-6394a90a7f11">FDA filing</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Slide between two glosses</h2>
+    <p>Pick any two and watch the formulas converge or diverge. Matching ingredients line up;
+    the rest is where the products actually differ.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>A <select id="selA"></select></label>
+        <label>B <select id="selB"></select></label>
+      </div>
+      <div id="stats" class="stats"></div>
+      <div class="cmp" id="cmp"></div>
+      <p class="note" id="srcs"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The common spine — such as it is</h2>
+    <p>These ingredients appear in at least 75% of the corpus.</p>
+    <div class="sunken"><ul class="tight"><li>parfum/fragrance</li></ul></div>
+
+    <h3>Thirty most common ingredients</h3>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Ingredient (INCI)</th><th class="num">Products</th><th class="num">Share</th></tr></thead>
+        <tbody><tr><td>parfum/fragrance</td><td class='num'>4</td><td class='num'>80%</td></tr><tr><td>aluminum hydroxide</td><td class='num'>3</td><td class='num'>60%</td></tr><tr><td>hydrogenated polyisobutene</td><td class='num'>3</td><td class='num'>60%</td></tr><tr><td>tocopherol</td><td class='num'>3</td><td class='num'>60%</td></tr><tr><td>bisabolol</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>butyloctyl salicylate</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>euphorbia cerifera (candelilla) wax</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>menthol</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>menthoxypropanediol</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>octyldodecanol</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>silica</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>sodium chloride</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>sodium sulfate</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>sorbitan isostearate</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>sucrose cocoate</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>synthetic wax</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>water</td><td class='num'>2</td><td class='num'>40%</td></tr><tr><td>acrylates/octylacrylamide copolymer</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>bht</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>butylene/ethylene/styrene copolymer</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>butyrospermum parkii (shea) butter</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>c12-15 alkyl benzoate</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>c18-38 alkyl hydroxystearoyl stearate</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>calcium aluminum borosilicate</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>calcium sulfate</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>caprylic/capric triglyceride</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>cetearyl ethylhexanoate</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>ci 77491</td><td class='num'>1</td><td class='num'>20%</td></tr><tr><td>ci15850</td><td class='num'>1</td><td class='num'>20%</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why there's no cost, margin or R&amp;D study here</h2>
+    <div class="caveat"><p><strong>Unlike SPF foundation, no product in this corpus is made by a
+    company that files financial statements with the SEC.</strong> True SPF lip gloss on
+    DailyMed turns out to be a niche held almost entirely by small, independent or
+    direct-to-consumer sun-care brands — not the L'Oréal / Estée Lauder / Coty / LVMH
+    conglomerates that make up the foundation corpus. That rules out a cost-to-make/gross-margin
+    comparison and an R&amp;D-vs-quality comparison the same way this project ran them for
+    foundation: there is no public filing to source either one from. That's recorded here as a
+    negative result, not left as a silent gap.</p></div>
+    <ul class="tight"><li>This corpus supports the ingredient-comparison study only. Unlike SPF foundation, true SPF lip gloss on DailyMed is held almost entirely by small, independent or direct-to-consumer sun-care brands -- not one product here is made by a company that files financial statements with the SEC the way L&#x27;Oréal, Estée Lauder, Coty or LVMH do for foundation. That rules out a cost-to-make/gross-margin comparison and an R&amp;D-vs-quality comparison for this category; there is no public filing to source either from. Recorded as a negative result, not a silent gap.</li><li>The category is small: a DailyMed search across &#x27;lip gloss&#x27;, &#x27;gloss&#x27; and &#x27;lip shine&#x27; SPF filings turned up roughly a dozen distinct lip-gloss-format OTC labels total, of which five met every inclusion criterion below.</li><li>Three otherwise-eligible filings were excluded rather than guessed at, each for a different filing defect: LALICIOUS Hydrating Butter Gloss SPF 30 and Good Weather Skin Daily Lip Sun Gloss SPF 30 each concatenate two shades&#x27; full ingredient lists back-to-back in one untagged block with no structural marker reliable enough to split on; PURE SOL SPF15 Lip Gloss files its inactive-ingredient declaration as a run of names with no separating punctuation at all (commas, bullets), which cannot be split into ingredient tokens without guessing where one multi-word INCI name ends and the next begins; Alleyoop Sun Serum Lip Oil files its entire ingredient section as an embedded label photo with no machine-readable text, so there is nothing to parse.</li><li>No retail price is recorded for this corpus (unlike data/prices.json for foundation) -- these are indie brands sold through their own sites and small retailers where a stable, citable list price is harder to establish than for the mass/prestige lines in the foundation corpus, and price was not load-bearing for the one study this corpus supports.</li><li>An FDA filing is verbatim what the manufacturer submitted, including typos. Corrections are recorded per-ingredient in the normalization layer, never silently.</li></ul>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink:family:begin — GENERATED, do not edit by hand.
+         Source: claude-rules/family-strip/properties.json
+         Regenerate: python swamp-ops/scripts/sync_family_strip.py --write -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/trust/">ai trust</a>
+      <a href="https://iq.swamplink.com/">iq-check — the intelligence one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+    <!-- swamplink:family:end -->
+  </footer>
+
+</div>
+
+<script>
+const DATA = [{"id": "luxe-gloss-hydrating", "brand": "Luxe Gloss", "product": "Hydrating Lip Gloss SPF 35 (Naked Honey)", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=581fb0cd-c55d-d562-e063-6394a90a7f11", "date": "2026-08-03", "base": ["hydrogenated polyisobutene", "polybutene", "c12-15 alkyl benzoate", "microcrystalline wax", "acrylates/octylacrylamide copolymer", "trimethylsiloxysilicate", "silica dimethyl silylate", "ci 77491", "ci15850", "ci77492", "ci77499", "tocopherol", "bisabolol", "parfum/fragrance", "aluminum hydroxide", "triethoxycaprylylsilane"]}, {"id": "poolside-frostbite", "brand": "Poolside", "product": "Frostbite Sunscreen SPF 15 Scented Lip Gloss (Coconut)", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee045b64-7a95-4378-8183-e6e556f3b184", "date": "2026-01-09", "base": ["polyisobutene", "hydrogenated polyisobutene", "vp/hexadecene copolymer", "octyldodecanol", "menthol", "parfum/fragrance", "glyceryl caprylate", "menthoxypropanediol", "bht", "aluminum hydroxide", "water", "tocopherol", "sodium sulfate", "sodium chloride", "fd&c blue 1 aluminum lake"]}, {"id": "sugargirl-sun-gloss", "brand": "SugarGirl", "product": "Sun Gloss SPF 15 Tinted Lip Gloss Sunscreen (Pink Ice)", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea23616f-1d59-4e32-88bb-d035af727728", "date": "2026-01-27", "base": ["hydrogenated poly (c6-14 olefin)", "hydrogenated styrene/isoprene copolymer", "butyloctyl salicylate", "silica", "pentaerythrityl tetraisostearate", "synthetic wax", "euphorbia cerifera (candelilla) wax", "menthol", "parfum/fragrance", "menthoxypropanediol", "sorbitan isostearate", "sorbitan stearate", "sucrose cocoate", "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate", "aluminum hydroxide", "rosin", "calcium sulfate", "water", "sodium chloride", "sodium sulfate", "red 7 lake", "red 28 lake"]}, {"id": "supergoop-glow-gloss", "brand": "Supergoop!", "product": "Glow Gloss Lip Balm SPF 40 (Caramel Glaze)", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26d2897f-46a7-52b2-e063-6394a90aed32", "date": "2026-06-04", "base": ["hydrogenated poly(c6-14 olefin)", "ethylene/propylene/styrene copolymer", "butyloctyl salicylate", "c18-38 alkyl hydroxystearoyl stearate", "euphorbia cerifera (candelilla) wax", "synthetic wax", "flavor", "triisostearyl citrate", "octyldodecanol", "tocopherol", "cocos nucifera (coconut) oil", "butyrospermum parkii (shea) butter", "simmondsia chinensis (jojoba) seed oil", "stevia rebaudiana leaf/stem extract", "portulaca pilosa extract", "citric acid", "bisabolol", "sorbitan isostearate", "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate", "sucrose cocoate", "sorbitan oleate", "palmitoyl tripeptide-38", "butylene/ethylene/styrene copolymer", "cetearyl ethylhexanoate"]}, {"id": "mark-glossworks", "brand": "mark. (Avon)", "product": "Glossworks Lip Gloss SPF 15", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58626b79-60fd-4a75-be8a-4461a881ebf6", "date": "2013-03-29", "base": ["ethylhexyl isononanoate", "hydrogenated styrene/butadiene copolymer", "hydrogenated polyisobutene", "silica silylate", "caprylic/capric triglyceride", "dicalcium phosphate", "parfum/fragrance", "stearalkonium hectorite", "propylene carbonate", "silica", "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate sparkle shades may also contain: tin oxide", "calcium aluminum borosilicate"]}];
+const byId = Object.fromEntries(DATA.map(p => [p.id, p]));
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+for (const p of DATA) {
+  const label = p.brand + ' — ' + p.product;
+  for (const s of [selA, selB]) s.add(new Option(label, p.id));
+}
+selA.value = DATA[0].id;
+selB.value = DATA[1].id;
+
+function render() {
+  const a = byId[selA.value], b = byId[selB.value];
+  const sb = new Set(b.base);
+  const shared = a.base.filter(x => sb.has(x));
+  const union = new Set([...a.base, ...b.base]);
+  let prefix = 0;
+  while (prefix < a.base.length && prefix < b.base.length && a.base[prefix] === b.base[prefix]) prefix++;
+
+  document.getElementById('stats').innerHTML = [
+    ['<b>' + prefix + '</b><span>identical from the top</span>'],
+    ['<b>' + shared.length + '</b><span>ingredients shared</span>'],
+    ['<b>' + Math.round(100 * shared.length / union.size) + '%</b><span>of all ingredients shared</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  const col = (p, other) => {
+    const s = new Set(other.base);
+    return '<div class="col"><h4>' + p.brand + '</h4><ol>' +
+      p.base.map((x, i) => {
+        const m = (i < prefix) || s.has(x);
+        return '<li class="' + (m ? 'match' : 'only') + '">' + x + '</li>';
+      }).join('') + '</ol></div>';
+  };
+  document.getElementById('cmp').innerHTML = col(a, b) + col(b, a);
+  document.getElementById('srcs').innerHTML =
+    'Sources: <a href="' + a.url + '">' + a.brand + ' label filed ' + a.date + '</a> · ' +
+    '<a href="' + b.url + '">' + b.brand + ' label filed ' + b.date + '</a>';
+}
+selA.addEventListener('change', render);
+selB.addEventListener('change', render);
+render();
+</script>
+
+</body>
+</html>

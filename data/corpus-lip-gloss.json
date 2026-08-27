@@ -1,0 +1,659 @@
+{
+  "corpus": "lip-gloss-spf-us",
+  "description": "US lip glosses that carry an SPF claim, sourced the same way as the foundation corpus: an SPF claim makes a cosmetic an OTC drug in the United States, so the manufacturer files the complete ingredient declaration with the FDA, and that filing is public on DailyMed.",
+  "inclusion_criteria": [
+    "Marketed as a lip gloss, lip oil or gloss-format lip balm (not a lipstick, solid balm stick or lip liner) -- a liquid or semi-liquid film, not a solid pigmented stick.",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "The SPL text carries one shade's/flavor's full ingredient declaration without being merged with another shade's list in the same untagged block -- see known_limits for the two real candidates excluded on this basis."
+  ],
+  "known_limits": [
+    "This corpus supports the ingredient-comparison study only. Unlike SPF foundation, true SPF lip gloss on DailyMed is held almost entirely by small, independent or direct-to-consumer sun-care brands -- not one product here is made by a company that files financial statements with the SEC the way L'Or\u00e9al, Est\u00e9e Lauder, Coty or LVMH do for foundation. That rules out a cost-to-make/gross-margin comparison and an R&D-vs-quality comparison for this category; there is no public filing to source either from. Recorded as a negative result, not a silent gap.",
+    "The category is small: a DailyMed search across 'lip gloss', 'gloss' and 'lip shine' SPF filings turned up roughly a dozen distinct lip-gloss-format OTC labels total, of which five met every inclusion criterion below.",
+    "Three otherwise-eligible filings were excluded rather than guessed at, each for a different filing defect: LALICIOUS Hydrating Butter Gloss SPF 30 and Good Weather Skin Daily Lip Sun Gloss SPF 30 each concatenate two shades' full ingredient lists back-to-back in one untagged block with no structural marker reliable enough to split on; PURE SOL SPF15 Lip Gloss files its inactive-ingredient declaration as a run of names with no separating punctuation at all (commas, bullets), which cannot be split into ingredient tokens without guessing where one multi-word INCI name ends and the next begins; Alleyoop Sun Serum Lip Oil files its entire ingredient section as an embedded label photo with no machine-readable text, so there is nothing to parse.",
+    "No retail price is recorded for this corpus (unlike data/prices.json for foundation) -- these are indie brands sold through their own sites and small retailers where a stable, citable list price is harder to establish than for the mass/prestige lines in the foundation corpus, and price was not load-bearing for the one study this corpus supports.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos. Corrections are recorded per-ingredient in the normalization layer, never silently."
+  ],
+  "retrieved": "2026-08-26",
+  "products": [
+    {
+      "id": "supergoop-glow-gloss",
+      "brand": "Supergoop!",
+      "product": "Glow Gloss Lip Balm SPF 40 (Caramel Glaze)",
+      "parent_company": null,
+      "price_tier": null,
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "26d2897f-46a7-52b2-e063-6394a90aed32",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26d2897f-46a7-52b2-e063-6394a90aed32",
+        "label_effective_date": "2026-06-04"
+      },
+      "active_ingredients_as_filed": "Avobenzone 3%, Homosalate 5%, Octisalate 4%, Octocrylene 4.5%",
+      "inactive_ingredients_as_filed": "Inactive Ingredients: Hydrogenated Poly(C6-14 Olefin), Ethylene/Propylene/Styrene Copolymer, Butyloctyl Salicylate, C18-38 Alkyl Hydroxystearoyl Stearate, Euphorbia Cerifera (Candelilla) Wax, Synthetic Wax, Flavor, Triisostearyl Citrate, Octyldodecanol, Tocopherol, Cocos Nucifera (Coconut) Oil, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Stevia Rebaudiana Leaf/Stem Extract, Portulaca Pilosa Extract, Citric Acid, Bisabolol, Sorbitan Isostearate, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Sucrose Cocoate, Sorbitan Oleate, Palmitoyl Tripeptide-38, Butylene/Ethylene/Styrene Copolymer, Cetearyl Ethylhexanoate. May Contain: Titanium Dioxide, Red 28 Lake, Iron Oxides, Red 7 Lake, Yellow 5 Lake.",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Hydrogenated Poly(C6-14 Olefin)",
+          "inci": "hydrogenated poly(c6-14 olefin)"
+        },
+        {
+          "position": 2,
+          "as_filed": "Ethylene/Propylene/Styrene Copolymer",
+          "inci": "ethylene/propylene/styrene copolymer"
+        },
+        {
+          "position": 3,
+          "as_filed": "Butyloctyl Salicylate",
+          "inci": "butyloctyl salicylate"
+        },
+        {
+          "position": 4,
+          "as_filed": "C18-38 Alkyl Hydroxystearoyl Stearate",
+          "inci": "c18-38 alkyl hydroxystearoyl stearate"
+        },
+        {
+          "position": 5,
+          "as_filed": "Euphorbia Cerifera (Candelilla) Wax",
+          "inci": "euphorbia cerifera (candelilla) wax"
+        },
+        {
+          "position": 6,
+          "as_filed": "Synthetic Wax",
+          "inci": "synthetic wax"
+        },
+        {
+          "position": 7,
+          "as_filed": "Flavor",
+          "inci": "flavor"
+        },
+        {
+          "position": 8,
+          "as_filed": "Triisostearyl Citrate",
+          "inci": "triisostearyl citrate"
+        },
+        {
+          "position": 9,
+          "as_filed": "Octyldodecanol",
+          "inci": "octyldodecanol"
+        },
+        {
+          "position": 10,
+          "as_filed": "Tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 11,
+          "as_filed": "Cocos Nucifera (Coconut) Oil",
+          "inci": "cocos nucifera (coconut) oil"
+        },
+        {
+          "position": 12,
+          "as_filed": "Butyrospermum Parkii (Shea) Butter",
+          "inci": "butyrospermum parkii (shea) butter"
+        },
+        {
+          "position": 13,
+          "as_filed": "Simmondsia Chinensis (Jojoba) Seed Oil",
+          "inci": "simmondsia chinensis (jojoba) seed oil"
+        },
+        {
+          "position": 14,
+          "as_filed": "Stevia Rebaudiana Leaf/Stem Extract",
+          "inci": "stevia rebaudiana leaf/stem extract"
+        },
+        {
+          "position": 15,
+          "as_filed": "Portulaca Pilosa Extract",
+          "inci": "portulaca pilosa extract"
+        },
+        {
+          "position": 16,
+          "as_filed": "Citric Acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 17,
+          "as_filed": "Bisabolol",
+          "inci": "bisabolol"
+        },
+        {
+          "position": 18,
+          "as_filed": "Sorbitan Isostearate",
+          "inci": "sorbitan isostearate"
+        },
+        {
+          "position": 19,
+          "as_filed": "Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        },
+        {
+          "position": 20,
+          "as_filed": "Sucrose Cocoate",
+          "inci": "sucrose cocoate"
+        },
+        {
+          "position": 21,
+          "as_filed": "Sorbitan Oleate",
+          "inci": "sorbitan oleate"
+        },
+        {
+          "position": 22,
+          "as_filed": "Palmitoyl Tripeptide-38",
+          "inci": "palmitoyl tripeptide-38"
+        },
+        {
+          "position": 23,
+          "as_filed": "Butylene/Ethylene/Styrene Copolymer",
+          "inci": "butylene/ethylene/styrene copolymer"
+        },
+        {
+          "position": 24,
+          "as_filed": "Cetearyl Ethylhexanoate",
+          "inci": "cetearyl ethylhexanoate"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Titanium Dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 2,
+          "as_filed": "Red 28 Lake",
+          "inci": "red 28 lake"
+        },
+        {
+          "position": 3,
+          "as_filed": "Iron Oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 4,
+          "as_filed": "Red 7 Lake",
+          "inci": "red 7 lake"
+        },
+        {
+          "position": 5,
+          "as_filed": "Yellow 5 Lake",
+          "inci": "yellow 5 lake"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "mark-glossworks",
+      "brand": "mark. (Avon)",
+      "product": "Glossworks Lip Gloss SPF 15",
+      "parent_company": null,
+      "price_tier": null,
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "58626b79-60fd-4a75-be8a-4461a881ebf6",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58626b79-60fd-4a75-be8a-4461a881ebf6",
+        "label_effective_date": "2013-03-29"
+      },
+      "active_ingredients_as_filed": "Active ingredient Octinoxate 1.0%................................ Avobenzone 0.5%................................ Octisalate 0.5%................................ Purpose .................................Sunscreen .................................Sunscreen .................................Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive Ingredients: ETHYLHEXYL ISONONANOATE, HYDROGENATED STYRENE/BUTADIENE COPOLYMER, HYDROGENATED POLYISOBUTENE, SILICA SILYLATE, CAPRYLIC/CAPRIC TRIGLYCERIDE, DICALCIUM PHOSPHATE, PARFUM/FRAGRANCE, STEARALKONIUM HECTORITE, PROPYLENE CARBONATE, SILICA, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE SPARKLE SHADES MAY ALSO CONTAIN: TIN OXIDE, CALCIUM ALUMINUM BOROSILICATE MAY CONTAIN: MICA/CI 77019, TITANIUM DIOXIDE/CI 7789, IRON OXIDES, RED 7 LAKE/CI 15850, RED 30 LAKE/CI 73360, YELLOW 5 LAKE/CI 19140, BLUE 1 LAKE/CI 42090",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "ETHYLHEXYL ISONONANOATE",
+          "inci": "ethylhexyl isononanoate"
+        },
+        {
+          "position": 2,
+          "as_filed": "HYDROGENATED STYRENE/BUTADIENE COPOLYMER",
+          "inci": "hydrogenated styrene/butadiene copolymer"
+        },
+        {
+          "position": 3,
+          "as_filed": "HYDROGENATED POLYISOBUTENE",
+          "inci": "hydrogenated polyisobutene"
+        },
+        {
+          "position": 4,
+          "as_filed": "SILICA SILYLATE",
+          "inci": "silica silylate"
+        },
+        {
+          "position": 5,
+          "as_filed": "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+          "inci": "caprylic/capric triglyceride"
+        },
+        {
+          "position": 6,
+          "as_filed": "DICALCIUM PHOSPHATE",
+          "inci": "dicalcium phosphate"
+        },
+        {
+          "position": 7,
+          "as_filed": "PARFUM/FRAGRANCE",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 8,
+          "as_filed": "STEARALKONIUM HECTORITE",
+          "inci": "stearalkonium hectorite"
+        },
+        {
+          "position": 9,
+          "as_filed": "PROPYLENE CARBONATE",
+          "inci": "propylene carbonate"
+        },
+        {
+          "position": 10,
+          "as_filed": "SILICA",
+          "inci": "silica"
+        },
+        {
+          "position": 11,
+          "as_filed": "PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE SPARKLE SHADES MAY ALSO CONTAIN: TIN OXIDE",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate sparkle shades may also contain: tin oxide"
+        },
+        {
+          "position": 12,
+          "as_filed": "CALCIUM ALUMINUM BOROSILICATE",
+          "inci": "calcium aluminum borosilicate"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "MICA/CI 77019",
+          "inci": "mica/ci 77019"
+        },
+        {
+          "position": 2,
+          "as_filed": "TITANIUM DIOXIDE/CI 7789",
+          "inci": "titanium dioxide/ci 7789"
+        },
+        {
+          "position": 3,
+          "as_filed": "IRON OXIDES",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 4,
+          "as_filed": "RED 7 LAKE/CI 15850",
+          "inci": "red 7 lake/ci 15850"
+        },
+        {
+          "position": 5,
+          "as_filed": "RED 30 LAKE/CI 73360",
+          "inci": "red 30 lake/ci 73360"
+        },
+        {
+          "position": 6,
+          "as_filed": "YELLOW 5 LAKE/CI 19140",
+          "inci": "yellow 5 lake/ci 19140"
+        },
+        {
+          "position": 7,
+          "as_filed": "BLUE 1 LAKE/CI 42090",
+          "inci": "blue 1 lake/ci 42090"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "sugargirl-sun-gloss",
+      "brand": "SugarGirl",
+      "product": "Sun Gloss SPF 15 Tinted Lip Gloss Sunscreen (Pink Ice)",
+      "parent_company": null,
+      "price_tier": null,
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "ea23616f-1d59-4e32-88bb-d035af727728",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea23616f-1d59-4e32-88bb-d035af727728",
+        "label_effective_date": "2026-01-27"
+      },
+      "active_ingredients_as_filed": "Active ingredients Homosalate 5%, Octocrylene 4.5%, Octisalate 4%, Avobenzone 3% Purpose Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive ingredients HYDROGENATED POLY (C6-14 OLEFIN), HYDROGENATED STYRENE/ISOPRENE COPOLYMER, BUTYLOCTYL SALICYLATE, SILICA, PENTAERYTHRITYL TETRAISOSTEARATE, SYNTHETIC WAX, EUPHORBIA CERIFERA (CANDELILLA) WAX, MENTHOL, FRAGRANCE (PARFUM), MENTHOXYPROPANEDIOL, SORBITAN ISOSTEARATE, SORBITAN STEARATE, SUCROSE COCOATE, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE, ALUMINUM HYDROXIDE, ROSIN, CALCIUM SULFATE, WATER, SODIUM CHLORIDE, SODIUM SULFATE, RED 7 LAKE (CI 15850), RED 28 LAKE (CI 45410).",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "HYDROGENATED POLY (C6-14 OLEFIN)",
+          "inci": "hydrogenated poly (c6-14 olefin)"
+        },
+        {
+          "position": 2,
+          "as_filed": "HYDROGENATED STYRENE/ISOPRENE COPOLYMER",
+          "inci": "hydrogenated styrene/isoprene copolymer"
+        },
+        {
+          "position": 3,
+          "as_filed": "BUTYLOCTYL SALICYLATE",
+          "inci": "butyloctyl salicylate"
+        },
+        {
+          "position": 4,
+          "as_filed": "SILICA",
+          "inci": "silica"
+        },
+        {
+          "position": 5,
+          "as_filed": "PENTAERYTHRITYL TETRAISOSTEARATE",
+          "inci": "pentaerythrityl tetraisostearate"
+        },
+        {
+          "position": 6,
+          "as_filed": "SYNTHETIC WAX",
+          "inci": "synthetic wax"
+        },
+        {
+          "position": 7,
+          "as_filed": "EUPHORBIA CERIFERA (CANDELILLA) WAX",
+          "inci": "euphorbia cerifera (candelilla) wax"
+        },
+        {
+          "position": 8,
+          "as_filed": "MENTHOL",
+          "inci": "menthol"
+        },
+        {
+          "position": 9,
+          "as_filed": "FRAGRANCE (PARFUM)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 10,
+          "as_filed": "MENTHOXYPROPANEDIOL",
+          "inci": "menthoxypropanediol"
+        },
+        {
+          "position": 11,
+          "as_filed": "SORBITAN ISOSTEARATE",
+          "inci": "sorbitan isostearate"
+        },
+        {
+          "position": 12,
+          "as_filed": "SORBITAN STEARATE",
+          "inci": "sorbitan stearate"
+        },
+        {
+          "position": 13,
+          "as_filed": "SUCROSE COCOATE",
+          "inci": "sucrose cocoate"
+        },
+        {
+          "position": 14,
+          "as_filed": "PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        },
+        {
+          "position": 15,
+          "as_filed": "ALUMINUM HYDROXIDE",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 16,
+          "as_filed": "ROSIN",
+          "inci": "rosin"
+        },
+        {
+          "position": 17,
+          "as_filed": "CALCIUM SULFATE",
+          "inci": "calcium sulfate"
+        },
+        {
+          "position": 18,
+          "as_filed": "WATER",
+          "inci": "water"
+        },
+        {
+          "position": 19,
+          "as_filed": "SODIUM CHLORIDE",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 20,
+          "as_filed": "SODIUM SULFATE",
+          "inci": "sodium sulfate"
+        },
+        {
+          "position": 21,
+          "as_filed": "RED 7 LAKE (CI 15850)",
+          "inci": "red 7 lake"
+        },
+        {
+          "position": 22,
+          "as_filed": "RED 28 LAKE (CI 45410)",
+          "inci": "red 28 lake"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "FRAGRANCE (PARFUM)",
+          "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "RED 7 LAKE (CI 15850)",
+          "canonical": "red 7 lake"
+        },
+        {
+          "as_filed": "RED 28 LAKE (CI 45410)",
+          "canonical": "red 28 lake"
+        }
+      ]
+    },
+    {
+      "id": "poolside-frostbite",
+      "brand": "Poolside",
+      "product": "Frostbite Sunscreen SPF 15 Scented Lip Gloss (Coconut)",
+      "parent_company": null,
+      "price_tier": null,
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "ee045b64-7a95-4378-8183-e6e556f3b184",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee045b64-7a95-4378-8183-e6e556f3b184",
+        "label_effective_date": "2026-01-09"
+      },
+      "active_ingredients_as_filed": "Active ingredients Homosalate 5%, Octocrylene 4.5%, Octisalate 4%, Avobenzone 3% Purpose Sunscreen",
+      "inactive_ingredients_as_filed": "Inactive ingredients POLYISOBUTENE, HYDROGENATED POLYISOBUTENE, VP/HEXADECENE COPOLYMER, OCTYLDODECANOL, MENTHOL, FRAGRANCE, GLYCERYL CAPRYLATE, MENTHOXYPROPANEDIOL, BHT, ALUMINUM HYDROXIDE, WATER, TOCOPHEROL, SODIUM SULFATE, SODIUM CHLORIDE, FD&C BLUE 1 ALUMINUM LAKE (CI 42090).",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "POLYISOBUTENE",
+          "inci": "polyisobutene"
+        },
+        {
+          "position": 2,
+          "as_filed": "HYDROGENATED POLYISOBUTENE",
+          "inci": "hydrogenated polyisobutene"
+        },
+        {
+          "position": 3,
+          "as_filed": "VP/HEXADECENE COPOLYMER",
+          "inci": "vp/hexadecene copolymer"
+        },
+        {
+          "position": 4,
+          "as_filed": "OCTYLDODECANOL",
+          "inci": "octyldodecanol"
+        },
+        {
+          "position": 5,
+          "as_filed": "MENTHOL",
+          "inci": "menthol"
+        },
+        {
+          "position": 6,
+          "as_filed": "FRAGRANCE",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 7,
+          "as_filed": "GLYCERYL CAPRYLATE",
+          "inci": "glyceryl caprylate"
+        },
+        {
+          "position": 8,
+          "as_filed": "MENTHOXYPROPANEDIOL",
+          "inci": "menthoxypropanediol"
+        },
+        {
+          "position": 9,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 10,
+          "as_filed": "ALUMINUM HYDROXIDE",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 11,
+          "as_filed": "WATER",
+          "inci": "water"
+        },
+        {
+          "position": 12,
+          "as_filed": "TOCOPHEROL",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 13,
+          "as_filed": "SODIUM SULFATE",
+          "inci": "sodium sulfate"
+        },
+        {
+          "position": 14,
+          "as_filed": "SODIUM CHLORIDE",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 15,
+          "as_filed": "FD&C BLUE 1 ALUMINUM LAKE (CI 42090)",
+          "inci": "fd&c blue 1 aluminum lake"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "FRAGRANCE",
+          "canonical": "parfum/fragrance"
+        },
+        {
+          "as_filed": "FD&C BLUE 1 ALUMINUM LAKE (CI 42090)",
+          "canonical": "fd&c blue 1 aluminum lake"
+        }
+      ]
+    },
+    {
+      "id": "luxe-gloss-hydrating",
+      "brand": "Luxe Gloss",
+      "product": "Hydrating Lip Gloss SPF 35 (Naked Honey)",
+      "parent_company": null,
+      "price_tier": null,
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "581fb0cd-c55d-d562-e063-6394a90a7f11",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=581fb0cd-c55d-d562-e063-6394a90a7f11",
+        "label_effective_date": "2026-08-03"
+      },
+      "active_ingredients_as_filed": "Octocrylene 8% Octisalate 5% Titanium Dioxide 6% Zinc Oxide 8%",
+      "inactive_ingredients_as_filed": "Hydrogenated Polyisobutene, Polybutene, C12-15 Alkyl Benzoate, Microcrystalline Wax, Acrylates/Octylacrylamide Copolymer, Trimethylsiloxysilicate, Silica Dimethyl Silylate, CI 77491, CI15850, CI77492, CI77499, Tocopherol, Bisabolol, Fragrance, Aluminum Hydroxide, Triethoxycaprylylsilane",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Hydrogenated Polyisobutene",
+          "inci": "hydrogenated polyisobutene"
+        },
+        {
+          "position": 2,
+          "as_filed": "Polybutene",
+          "inci": "polybutene"
+        },
+        {
+          "position": 3,
+          "as_filed": "C12-15 Alkyl Benzoate",
+          "inci": "c12-15 alkyl benzoate"
+        },
+        {
+          "position": 4,
+          "as_filed": "Microcrystalline Wax",
+          "inci": "microcrystalline wax"
+        },
+        {
+          "position": 5,
+          "as_filed": "Acrylates/Octylacrylamide Copolymer",
+          "inci": "acrylates/octylacrylamide copolymer"
+        },
+        {
+          "position": 6,
+          "as_filed": "Trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 7,
+          "as_filed": "Silica Dimethyl Silylate",
+          "inci": "silica dimethyl silylate"
+        },
+        {
+          "position": 8,
+          "as_filed": "CI 77491",
+          "inci": "ci 77491"
+        },
+        {
+          "position": 9,
+          "as_filed": "CI15850",
+          "inci": "ci15850"
+        },
+        {
+          "position": 10,
+          "as_filed": "CI77492",
+          "inci": "ci77492"
+        },
+        {
+          "position": 11,
+          "as_filed": "CI77499",
+          "inci": "ci77499"
+        },
+        {
+          "position": 12,
+          "as_filed": "Tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 13,
+          "as_filed": "Bisabolol",
+          "inci": "bisabolol"
+        },
+        {
+          "position": 14,
+          "as_filed": "Fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 15,
+          "as_filed": "Aluminum Hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 16,
+          "as_filed": "Triethoxycaprylylsilane",
+          "inci": "triethoxycaprylylsilane"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    }
+  ]
+}

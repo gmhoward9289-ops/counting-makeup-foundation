@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="3cbe6bab-6b0e-0c9f-e063-6294a90a4c4b"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>LALICIOUS HYDRATING BUTTER GLOSS SPF 30</title>
+   <effectiveTime value="20250819"/>
+   <setId root="3cbe6bab-6b0d-0c9f-e063-6294a90a4c4b"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="015910981"/>
+            <name>Lalicious, LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="3cd08f73-d271-8c69-e063-6394a90a8590"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250819"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="87042-001" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>LALICIOUS HYDRATING BUTTER GLOSS SPF 30 BERRY BOMB</name>
+                        <formCode code="C42952" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LIPSTICK"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>AVOBENZONE, HOMOSALATE, OCTISALATE</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9E8X80D2L0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>.ALPHA.-TOCOPHEROL ACETATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C9H2L21V7U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLIC/CAPRIC TRIGLYCERIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="481744AI4O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CI 15850</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2EH13UN8D3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BUTYLOCTYL SALICYLATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9S8867952A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>RASPBERRY SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="KFR5QEN0N9" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>VP/HEXADECENE COPOLYMER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="YSE9PPT4TH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYALURONATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D5340Y2I9G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ZF94AP8MEY" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROGENATED CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="8OC9U7TQZ0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIBEHENIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="01S2G2C1E4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SORBITAN ISOSTEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="Y98611C087" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GLYCERYL LAURATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="MCA43PK7MH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>OCTYLDODECYL OLEATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="72M48QQV8Q" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MANGANESE VIOLET</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="KM7N50LOS6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TIN OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="SAS9Z1SVUK" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ZINGIBER OFFICINALE (GINGER) ROOT OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2865993309" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ETHYLHEXYL PALMITATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="80"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="V06SV4M95S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HOMOSALATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="V06SV4M95S" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HOMOSALATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RV743D216M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PALMITOYL TRIPEPTIDE-1</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="00YIU5438U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLYL GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="08MNR5YE2R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SYNTHETIC BEESWAX</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="30"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AVOBENZONE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AVOBENZONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WW4FVB2PEM" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>C18-38 ALKYL HYDROXYSTEAROYL STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ZZV3NWA4A3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SAMBUCUS NIGRA SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7YR4ZFS62E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROGENATED POLYISOBUTENE (450 MW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="CID8Z8N95N" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CI 75470</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="71503RH8KG" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIISOSTEARIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="54JB35T06A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>APRICOT KERNEL OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="933ANU3H2S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROXYSTEARIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9I73N69W76" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STRAWBERRY SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="K49155WL9Y" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHEA BUTTER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0E2D5DBT7M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DIMER DILINOLEYL DIMER DILINOLEATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>OCTISALATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>OCTISALATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="V8A1AW0880" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICA</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="YK3DC63Y5M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM POTASSIUM ALUMINOSILICATE FLUORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="12" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43207" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TUBE, WITH APPLICATOR"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="87042-001-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20250901"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M020" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC Monograph Drug"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20250901"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="87042-002" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>LALICIOUS HYDRATING BUTTER GLOSS SPF 30 COOL MINT</name>
+                        <formCode code="C42952" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LIPSTICK"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>AVOBENZONE, HOMOSALATE, OCTISALATE</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9E8X80D2L0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>.ALPHA.-TOCOPHEROL ACETATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C9H2L21V7U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLIC/CAPRIC TRIGLYCERIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="AV092KU4JH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PEPPERMINT OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2EH13UN8D3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BUTYLOCTYL SALICYLATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9S8867952A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>RASPBERRY SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="KFR5QEN0N9" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>VP/HEXADECENE COPOLYMER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="YSE9PPT4TH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYALURONATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D5340Y2I9G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ZF94AP8MEY" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROGENATED CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="8OC9U7TQZ0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIBEHENIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="01S2G2C1E4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SORBITAN ISOSTEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="Y98611C087" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GLYCERYL LAURATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="SAS9Z1SVUK" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ZINGIBER OFFICINALE (GINGER) ROOT OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2865993309" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ETHYLHEXYL PALMITATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="80"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="V06SV4M95S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HOMOSALATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="V06SV4M95S" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HOMOSALATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RV743D216M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PALMITOYL TRIPEPTIDE-1</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="00YIU5438U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CAPRYLYL GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="08MNR5YE2R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SYNTHETIC BEESWAX</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="30"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AVOBENZONE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="G63QQF2NOX" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>AVOBENZONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WW4FVB2PEM" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>C18-38 ALKYL HYDROXYSTEAROYL STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ZZV3NWA4A3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SAMBUCUS NIGRA SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7YR4ZFS62E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROGENATED POLYISOBUTENE (450 MW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="71503RH8KG" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRIISOSTEARIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="54JB35T06A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>APRICOT KERNEL OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="933ANU3H2S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROXYSTEARIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="9I73N69W76" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STRAWBERRY SEED OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="K49155WL9Y" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHEA BUTTER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0E2D5DBT7M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DIMER DILINOLEYL DIMER DILINOLEATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>OCTISALATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4X49Y0596W" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>OCTISALATE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6U422Y08O2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STEVIA REBAUDIANA WHOLE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="12" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43207" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TUBE, WITH APPLICATOR"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="87042-002-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20250901"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M020" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC Monograph Drug"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20250901"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc2f75d-fdf8-69ca-e063-6294a90a1b54">
+               <id root="3cc2f75d-fdf7-69ca-e063-6294a90a1b54"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>Active Ingredients</title>
+               <text>
+                  <paragraph>Avobenzone 3%</paragraph>
+                  <paragraph>Homosalate 8%</paragraph>
+                  <paragraph>Octisalate 5%</paragraph>
+               </text>
+               <effectiveTime value="20250801"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc2fb6f-9384-2910-e063-6394a90a9d4e">
+               <id root="3cc2fb6f-9383-2910-e063-6394a90a9d4e"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>Purpose</title>
+               <text>
+                  <paragraph>Sunscreen</paragraph>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc304c7-74ca-3b85-e063-6294a90a458e">
+               <id root="3cc304c7-74c9-3b85-e063-6294a90a458e"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>Uses</title>
+               <text>
+                  <list listType="unordered">
+                     <item>Helps prevent sunburn.</item>
+                     <item>If used as directed with other sun protection measures (see 
+   <content styleCode="bold">Directions</content>), decreases the risk of skin cancer and early skin aging caused by the sun
+  </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc30675-e6d5-74e9-e063-6294a90a155c">
+               <id root="3cc30675-e6d4-74e9-e063-6294a90a155c"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Warnings</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">For external use only.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250819"/>
+               <component>
+                  <section ID="id_link_3cc300d7-f4dc-32a2-e063-6394a90a7dc1">
+                     <id root="3cc300d7-f4db-32a2-e063-6394a90a7dc1"/>
+                     <code code="50570-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - DO NOT USE SECTION"/>
+                     <title>Do not use</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>on damaged or broken skin.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250819"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_3cc310a7-c2e7-5192-e063-6394a90aea8e">
+                     <id root="3cc310a7-c2e6-5192-e063-6394a90aea8e"/>
+                     <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                     <title>When using this product</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>keep out of eyes. Rinse with water to remove.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250819"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_3cc30a15-c583-4788-e063-6294a90acdf5">
+                     <id root="3cc30a15-c582-4788-e063-6294a90acdf5"/>
+                     <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                     <title>Stop use and ask a doctor if</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>rash occurs. Rinse with water to remove.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250819"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="id_link_3cc3198a-8e21-b807-e063-6294a90a4910">
+                     <id root="3cc3198a-8e20-b807-e063-6294a90a4910"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <title>Keep out of reach of children.</title>
+                     <text>
+                        <paragraph>If product is swallowed, get medical help or contact a Poison Control Center right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20250819"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc33616-8783-797c-e063-6394a90a8f5c">
+               <id root="3cc33616-8782-797c-e063-6394a90a8f5c"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Directions</title>
+               <text>
+                  <list listType="unordered">
+                     <item>Apply liberally 15 minutes before sun exposure</item>
+                     <item>Reapply:</item>
+                     <item>Immediately after towel drying </item>
+                     <item>At least every 2 hours</item>
+                     <item>Use a water resistant sunscreen if swimming or sweating</item>
+                     <item>
+                        <content styleCode="bold">Sun Protection Measures</content>. Spending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a broad spectrum SPF of 15 or higher and other sun protection measures including:
+  </item>
+                     <item>Limit time in the sun, expecially from 10 am - 2 pm</item>
+                     <item>Wear long-sleeve shirts, pants, hats, and sunglasses</item>
+                     <item>Children under 6 months: Ask a doctor</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc339b0-f8f1-eaa8-e063-6294a90a0b5c">
+               <id root="3cc339b0-f8f0-eaa8-e063-6294a90a0b5c"/>
+               <code code="60561-8" codeSystem="2.16.840.1.113883.6.1" displayName="OTHER SAFETY INFORMATION"/>
+               <title>Other Information</title>
+               <text>
+                  <list listType="unordered">
+                     <item>Protect this product from excessive heat and direct sun.</item>
+                     <item>Report serious adverse effects to: 3425 Jack Northrop Ave. Hawthorne, CA 90250</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc372b3-0cd2-60f1-e063-6294a90af888">
+               <id root="3cd09cec-f044-f1fe-e063-6394a90a1a00"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>Inactive Ingredients</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Berry Bomb</content>
+                  </paragraph>
+                  <paragraph>Hydrogenated Polyisobutene, Dimer Dilinoleyl Dimer Dilinoleate, Triisostearin, Hydroxystearic Acid, C18-38 Alkyl Hydroxystearoyl Stearate, Capric/Caprylic Triglycerides, CI 15850, Butyrospermum Parkii (Shea) Butter, Butyloctyl Salicylate, Flavor, Prunus Armeniaca (Apricot) Kernel Oil, Fragaria Vesca (Strawberry) Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Sambucus Nigra Seed Oil, VP/Hexadecene Copolymer, Tocopheryl Acetate, Zingiber Officinale (Ginger) Root Oil, Sodium Hyaluronate, Ricinus Communis (Castor) Seed Oil, Hydrogenated Castor Oil, Palmitoyl Tripeptide-1, Ethylhexyl Palmitate, Tribehenin, Sorbitan Isostearate, Caprylyl Glycol, Glyceryl Laurate, Glyceryl Undecylenate, Synthetic Beeswax, Octyldodecyl Oleate, Mica, Manganese Violet, Synthetic Fluorphlogopite, Titanium Dioxide, Tin Oxide, Carmine.</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Cool Mint</content>
+                  </paragraph>
+                  <paragraph>Hydrogenated Polyisobutene, Dimer Dilinoleyl Dimer Dilinoleate, Triisostearin, Hydroxystearic Acid, C18-38 Alkyl Hydroxystearoyl Stearate, Butyrospermum Parkii (Shea) Butter, Mentha Piperita (Peppermint) Oil, Butyloctyl Salicylate, Prunus Armeniaca (Apricot) Kernel Oil, Fragaria Vesca (Strawberry) Seed Oil, Rubus Idaeus (Raspberry) Seed Oil, Sambucus Nigra Seed Oil, Flavor, VP/Hexadecene Copolymer, Tocopheryl Acetate, Zingiber Officinale (Ginger) Root Oil, Sodium Hyaluronate, Ricinus Communis (Castor) Seed Oil, Hydrogenated Castor Oil, Palmitoyl Tripeptide-1, Ethylhexyl Palmitate, Tribehenin, Sorbitan Isostearate, Caprylyl Glycol, Glyceryl Laurate, Glyceryl Undecylenate, Synthetic Beeswax, Stevia Rebaudiana Extract.</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc37798-1f4b-44f4-e063-6294a90ad5c3">
+               <id root="3cc37798-1f4a-44f4-e063-6294a90ad5c3"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <title>Questions or comments?</title>
+               <text>
+                  <paragraph>CALL 1-888-LICIOUS</paragraph>
+               </text>
+               <effectiveTime value="20250819"/>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc383d0-e3d1-cbc1-e063-6394a90a2251">
+               <id root="3cc38ecb-92f3-b553-e063-6394a90a04a3"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Product Labeling Berry Bomb</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_3cc372b3-0cd4-60f1-e063-6294a90af888"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250819"/>
+               <component>
+                  <observationMedia ID="img_3cc372b3-0cd4-60f1-e063-6294a90af888">
+                     <text>1</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="berrybomb.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="id_link_3cc385a1-aa81-b48c-e063-6394a90a5e78">
+               <id root="3cd077fd-8476-5781-e063-6294a90af483"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Product Labeling Cool Mint</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_3cc3857a-3ee7-c251-e063-6394a90a716c"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250819"/>
+               <component>
+                  <observationMedia ID="img_3cc3857a-3ee7-c251-e063-6394a90a716c">
+                     <text>1</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="coolmint.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>
