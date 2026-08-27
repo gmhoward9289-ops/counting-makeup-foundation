@@ -1,0 +1,637 @@
+{
+  "corpus": "toner-acne-monograph-us",
+  "description": "US liquid facial toners that carry an FDA acne-treatment monograph claim (salicylic acid, an OTC drug active). SPF is foundation's and lotion's OTC trigger; toners are almost never sold with an SPF claim, so this corpus uses the other route by which a cosmetic becomes an FDA-filed OTC drug: an acne-treatment (salicylic acid) claim under 21 CFR Part 333. Every product is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid toner/astringent with a formulated cosmetic vehicle (surfactants, humectants, preservatives) -- not a single-ingredient solution.",
+    "Carries a salicylic acid acne-treatment claim under the FDA OTC monograph, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "Monograph-only inclusion is a selection bias, the same shape as foundation's SPF-only rule: it excludes non-drug toners (Kiehl's, Clinique, Paula's Choice, most prestige lines), which have no primary filing and are excluded rather than sourced more weakly. This corpus is therefore budget/mass-tier-heavy; no prestige-counter brand carries a qualifying filing.",
+    "The FDA's astringent monograph (plain witch hazel: T.N. Dickinson's, CVS Health, Equate, and Biore Witch Hazel Pore Clarifying Toner) also produces FDA-filed toner labels, but those products declare only witch hazel and alcohol as ingredients with no formulated vehicle -- there is nothing to cross-brand-compare at the inactive-ingredient level, so they are excluded here as a different formulation type, not sourced more weakly (mirrors the foundation corpus excluding powders/sticks as 'different vehicle, not comparable').",
+    "Biore Witch Hazel Pore Clarifying Toner (Kao USA) has a live DailyMed web page (setid 6edb3b74-e694-fe90-e053-2991aa0ab8ea) but no entry in the DailyMed SPL REST API this project's fetch tool uses -- the underlying XML is not retrievable through the pipeline this project requires, so it is excluded on sourcing-mechanics grounds as well as the vehicle-type exclusion above.",
+    "Stridex Maximum's SPL (setid a3b16d52-76a5-438b-a120-bb59ce062cc1) filed under the same 'toner' branding is not a pourable liquid: its packaging section lists jars of 55/70/90/110 pre-saturated pads, not a fluid ounce/mL fill. Same dosage-form exclusion as powders/sticks in the foundation corpus -- excluded as a different vehicle, not sourced more weakly.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos and inconsistent separator characters. Corrections are recorded per-ingredient in the normalization layer, never silently.",
+    "Burt's Bees Natural Acne Solutions Clarifying Toner's SPL label has an effective date of 2010-08-16, the oldest filing in any corpus this project uses; DailyMed has no newer version indexed, so this is treated as the current filing rather than superseded."
+  ],
+  "retrieved": "2026-08-26",
+  "products": [
+    {
+      "id": "upandup-deep-clean-toner",
+      "brand": "Up & Up",
+      "product": "Deep Clean Toner",
+      "parent_company": "Target Corporation",
+      "price_tier": "budget",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "945b0588-6864-27bc-e053-2995a90a73e3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=945b0588-6864-27bc-e053-2995a90a73e3",
+        "label_effective_date": "2024-10-14"
+      },
+      "active_ingredients_as_filed": "Active ingredient Salicylic Acid 0.5%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, alcohol denat. (24.5 %), glycerin, isoceteth-20, PEG-32, sodium citrate, fragrance, propylene glycol, dimethicone propyl PG-betaine, benozphenone-4, algae extract, aloe barbadenis leaf juice, blue 1",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "alcohol denat. (24.5 %)",
+          "inci": "alcohol denat. (24.5 %)"
+        },
+        {
+          "position": 3,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 4,
+          "as_filed": "isoceteth-20",
+          "inci": "isoceteth-20"
+        },
+        {
+          "position": 5,
+          "as_filed": "PEG-32",
+          "inci": "peg-32"
+        },
+        {
+          "position": 6,
+          "as_filed": "sodium citrate",
+          "inci": "sodium citrate"
+        },
+        {
+          "position": 7,
+          "as_filed": "fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 8,
+          "as_filed": "propylene glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 9,
+          "as_filed": "dimethicone propyl PG-betaine",
+          "inci": "dimethicone propyl pg-betaine"
+        },
+        {
+          "position": 10,
+          "as_filed": "benozphenone-4",
+          "inci": "benzophenone-4"
+        },
+        {
+          "position": 11,
+          "as_filed": "algae extract",
+          "inci": "algae extract"
+        },
+        {
+          "position": 12,
+          "as_filed": "aloe barbadenis leaf juice",
+          "inci": "aloe barbadenis leaf juice"
+        },
+        {
+          "position": 13,
+          "as_filed": "blue 1",
+          "inci": "blue 1"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [
+        {
+          "as_filed": "benozphenone-4",
+          "read_as": "benzophenone-4"
+        }
+      ],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "cleanandclear-deep-cleaning-astringent",
+      "brand": "Clean & Clear",
+      "product": "Essentials Deep Cleaning Astringent",
+      "parent_company": "Kenvue",
+      "price_tier": "budget",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "0beeddf8-8fd5-4ea1-a181-b07c360ddcd3",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0beeddf8-8fd5-4ea1-a181-b07c360ddcd3",
+        "label_effective_date": "2024-11-06"
+      },
+      "active_ingredients_as_filed": "ACTIVE INGREDIENT Salicylic Acid 2%",
+      "inactive_ingredients_as_filed": "INACTIVE INGREDIENTS Water, SD Alcohol 40-B, Isoceteth-20, Fragrance, Propylene Glycol, Dimethicone Propyl PG-Betaine, Benzophenone-4, Red 4",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "SD Alcohol 40-B",
+          "inci": "sd alcohol 40-b"
+        },
+        {
+          "position": 3,
+          "as_filed": "Isoceteth-20",
+          "inci": "isoceteth-20"
+        },
+        {
+          "position": 4,
+          "as_filed": "Fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 5,
+          "as_filed": "Propylene Glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 6,
+          "as_filed": "Dimethicone Propyl PG-Betaine",
+          "inci": "dimethicone propyl pg-betaine"
+        },
+        {
+          "position": 7,
+          "as_filed": "Benzophenone-4",
+          "inci": "benzophenone-4"
+        },
+        {
+          "position": 8,
+          "as_filed": "Red 4",
+          "inci": "red 4"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "neutrogena-oil-free-acne-toner",
+      "brand": "Neutrogena",
+      "product": "Oil-Free Acne Stress Control Triple Action Toner",
+      "parent_company": "Kenvue",
+      "price_tier": "budget",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "817a9746-df57-4b11-b580-f57fe9940a68",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=817a9746-df57-4b11-b580-f57fe9940a68",
+        "label_effective_date": "2024-11-01"
+      },
+      "active_ingredients_as_filed": "Active ingredient Salicylic Acid (2%)",
+      "inactive_ingredients_as_filed": "Inactive ingredients Water, Alcohol Denat., Butylene Glycol, PPG-5-Ceteth-20, C12-15 Alkyl Lactate, Fragrance, Sodium Citrate, Cocamidopropyl PG-Dimonium Chloride Phosphate, PEG/PPG-20/6 Dimethicone, Sodium Hydroxide, Benzalkonium Chloride, Cetyl Lactate, Sodium Benzotriazolyl Butylphenol Sulfonate, Disodium EDTA, Camellia Sinensis Leaf Extract, Glycerin, Cucumis Sativus (Cucumber) Fruit Extract, Yellow 5, Blue 1, Green 5",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Alcohol Denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 3,
+          "as_filed": "Butylene Glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 4,
+          "as_filed": "PPG-5-Ceteth-20",
+          "inci": "ppg-5-ceteth-20"
+        },
+        {
+          "position": 5,
+          "as_filed": "C12-15 Alkyl Lactate",
+          "inci": "c12-15 alkyl lactate"
+        },
+        {
+          "position": 6,
+          "as_filed": "Fragrance",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 7,
+          "as_filed": "Sodium Citrate",
+          "inci": "sodium citrate"
+        },
+        {
+          "position": 8,
+          "as_filed": "Cocamidopropyl PG-Dimonium Chloride Phosphate",
+          "inci": "cocamidopropyl pg-dimonium chloride phosphate"
+        },
+        {
+          "position": 9,
+          "as_filed": "PEG/PPG-20/6 Dimethicone",
+          "inci": "peg/ppg-20/6 dimethicone"
+        },
+        {
+          "position": 10,
+          "as_filed": "Sodium Hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 11,
+          "as_filed": "Benzalkonium Chloride",
+          "inci": "benzalkonium chloride"
+        },
+        {
+          "position": 12,
+          "as_filed": "Cetyl Lactate",
+          "inci": "cetyl lactate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Sodium Benzotriazolyl Butylphenol Sulfonate",
+          "inci": "sodium benzotriazolyl butylphenol sulfonate"
+        },
+        {
+          "position": 14,
+          "as_filed": "Disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 15,
+          "as_filed": "Camellia Sinensis Leaf Extract",
+          "inci": "camellia sinensis leaf extract"
+        },
+        {
+          "position": 16,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 17,
+          "as_filed": "Cucumis Sativus (Cucumber) Fruit Extract",
+          "inci": "cucumis sativus (cucumber) fruit extract"
+        },
+        {
+          "position": 18,
+          "as_filed": "Yellow 5",
+          "inci": "yellow 5"
+        },
+        {
+          "position": 19,
+          "as_filed": "Blue 1",
+          "inci": "blue 1"
+        },
+        {
+          "position": 20,
+          "as_filed": "Green 5",
+          "inci": "green 5"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Fragrance",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "thayers-witch-hazel-blemish",
+      "brand": "Thayers",
+      "product": "Witch Hazel Aloe Vera Formula Toner, Blemish Clearing",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "a2dc3cf4-23d2-4cb7-8fdc-615420db5710",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2dc3cf4-23d2-4cb7-8fdc-615420db5710",
+        "label_effective_date": "2026-05-14"
+      },
+      "active_ingredients_as_filed": "Active ingredient Salicylic acid 2%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, hamamelis virginiana (witch hazel) bark/leaf/twig extract, aloe barbadensis leaf extract, sodium borate, melalecua alternifolia (tea tree) leaf oil, cymbopogon flexuosus oil, glycerin, decyl glucoside, cocamidopropyl betaine, citric acid, caprylyl glycol, phenoxyethanol, ethylhexylglycerin",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "hamamelis virginiana (witch hazel) bark/leaf/twig extract",
+          "inci": "hamamelis virginiana (witch hazel) bark/leaf/twig extract"
+        },
+        {
+          "position": 3,
+          "as_filed": "aloe barbadensis leaf extract",
+          "inci": "aloe barbadensis leaf extract"
+        },
+        {
+          "position": 4,
+          "as_filed": "sodium borate",
+          "inci": "sodium borate"
+        },
+        {
+          "position": 5,
+          "as_filed": "melalecua alternifolia (tea tree) leaf oil",
+          "inci": "melaleuca alternifolia (tea tree) leaf oil"
+        },
+        {
+          "position": 6,
+          "as_filed": "cymbopogon flexuosus oil",
+          "inci": "cymbopogon flexuosus oil"
+        },
+        {
+          "position": 7,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 8,
+          "as_filed": "decyl glucoside",
+          "inci": "decyl glucoside"
+        },
+        {
+          "position": 9,
+          "as_filed": "cocamidopropyl betaine",
+          "inci": "cocamidopropyl betaine"
+        },
+        {
+          "position": 10,
+          "as_filed": "citric acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 11,
+          "as_filed": "caprylyl glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 12,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 13,
+          "as_filed": "ethylhexylglycerin",
+          "inci": "ethylhexylglycerin"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [
+        {
+          "as_filed": "melalecua alternifolia (tea tree) leaf oil",
+          "read_as": "melaleuca alternifolia (tea tree) leaf oil"
+        }
+      ],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "burtsbees-clarifying-toner",
+      "brand": "Burt's Bees",
+      "product": "Natural Acne Solutions Clarifying Toner",
+      "parent_company": "The Clorox Company",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "f009d082-947f-455d-912f-c2c111001a30",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f009d082-947f-455d-912f-c2c111001a30",
+        "label_effective_date": "2010-08-16"
+      },
+      "active_ingredients_as_filed": "Active Ingredients Salicylic Acid 1.0%",
+      "inactive_ingredients_as_filed": "Inactive Ingredients aqua (water, eau), alcohol denat., glycerin, salix nigra (willow) bark extract, cymbopogon schoenanthus extract, equisetum hiemale extract, parfum (fragrance), hamamelis virginiana (witch hazel) leaf extract, humulus lupulus (hops) extract, hydrastis canadensis (goldenseal) extract, glucose, sodium chloride, glucose oxidase, lactoperoxidase",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "aqua (water, eau)",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 3,
+          "as_filed": "glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 4,
+          "as_filed": "salix nigra (willow) bark extract",
+          "inci": "salix nigra (willow) bark extract"
+        },
+        {
+          "position": 5,
+          "as_filed": "cymbopogon schoenanthus extract",
+          "inci": "cymbopogon schoenanthus extract"
+        },
+        {
+          "position": 6,
+          "as_filed": "equisetum hiemale extract",
+          "inci": "equisetum hiemale extract"
+        },
+        {
+          "position": 7,
+          "as_filed": "parfum (fragrance)",
+          "inci": "parfum/fragrance"
+        },
+        {
+          "position": 8,
+          "as_filed": "hamamelis virginiana (witch hazel) leaf extract",
+          "inci": "hamamelis virginiana (witch hazel) leaf extract"
+        },
+        {
+          "position": 9,
+          "as_filed": "humulus lupulus (hops) extract",
+          "inci": "humulus lupulus (hops) extract"
+        },
+        {
+          "position": 10,
+          "as_filed": "hydrastis canadensis (goldenseal) extract",
+          "inci": "hydrastis canadensis (goldenseal) extract"
+        },
+        {
+          "position": 11,
+          "as_filed": "glucose",
+          "inci": "glucose"
+        },
+        {
+          "position": 12,
+          "as_filed": "sodium chloride",
+          "inci": "sodium chloride"
+        },
+        {
+          "position": 13,
+          "as_filed": "glucose oxidase",
+          "inci": "glucose oxidase"
+        },
+        {
+          "position": 14,
+          "as_filed": "lactoperoxidase",
+          "inci": "lactoperoxidase"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "aqua (water, eau)",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "parfum (fragrance)",
+          "canonical": "parfum/fragrance"
+        }
+      ]
+    },
+    {
+      "id": "marykay-clear-proof-toner",
+      "brand": "Mary Kay",
+      "product": "Clear Proof Blemish Control Toner",
+      "parent_company": "Mary Kay Inc.",
+      "price_tier": "mass",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "22ead982-2073-4df2-bc18-a2389f9425dd",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22ead982-2073-4df2-bc18-a2389f9425dd",
+        "label_effective_date": "2024-12-17"
+      },
+      "active_ingredients_as_filed": "Active ingredient Salicylic Acid (2% W/W) Purpose Acne Medication",
+      "inactive_ingredients_as_filed": "Inactive ingredients alcohol denat., citric acid, diethylhexyl sodium sulfosuccinate, eucalyptus globulus leaf oil, menthol, propylene glycol, simethicone, water",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "alcohol denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 2,
+          "as_filed": "citric acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 3,
+          "as_filed": "diethylhexyl sodium sulfosuccinate",
+          "inci": "diethylhexyl sodium sulfosuccinate"
+        },
+        {
+          "position": 4,
+          "as_filed": "eucalyptus globulus leaf oil",
+          "inci": "eucalyptus globulus leaf oil"
+        },
+        {
+          "position": 5,
+          "as_filed": "menthol",
+          "inci": "menthol"
+        },
+        {
+          "position": 6,
+          "as_filed": "propylene glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 7,
+          "as_filed": "simethicone",
+          "inci": "simethicone"
+        },
+        {
+          "position": 8,
+          "as_filed": "water",
+          "inci": "water"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    },
+    {
+      "id": "proactiv-retexturizing-toner",
+      "brand": "Proactiv",
+      "product": "Plus Retexturizing Toner",
+      "parent_company": "Alchemee LLC",
+      "price_tier": "prestige",
+      "source": {
+        "type": "FDA-filed OTC drug label (SPL)",
+        "publisher": "DailyMed, U.S. National Library of Medicine",
+        "setid": "7c211ff7-920f-407b-ad8d-60d14803b857",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7c211ff7-920f-407b-ad8d-60d14803b857",
+        "label_effective_date": "2026-01-07"
+      },
+      "active_ingredients_as_filed": "Active ingredients Salicylic Acid 2%",
+      "inactive_ingredients_as_filed": "Inactive ingredients water, butylene glycol, hamamelis virginiana (witch hazel) water, glycolic acid, sodium hydroxide, phenoxyethanol, polysorbate 20, sodium benzoate, disodium EDTA, ethylhexylglycerin, portulaca oleracea extract",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "water",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "butylene glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 3,
+          "as_filed": "hamamelis virginiana (witch hazel) water",
+          "inci": "hamamelis virginiana (witch hazel) water"
+        },
+        {
+          "position": 4,
+          "as_filed": "glycolic acid",
+          "inci": "glycolic acid"
+        },
+        {
+          "position": 5,
+          "as_filed": "sodium hydroxide",
+          "inci": "sodium hydroxide"
+        },
+        {
+          "position": 6,
+          "as_filed": "phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 7,
+          "as_filed": "polysorbate 20",
+          "inci": "polysorbate 20"
+        },
+        {
+          "position": 8,
+          "as_filed": "sodium benzoate",
+          "inci": "sodium benzoate"
+        },
+        {
+          "position": 9,
+          "as_filed": "disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 10,
+          "as_filed": "ethylhexylglycerin",
+          "inci": "ethylhexylglycerin"
+        },
+        {
+          "position": 11,
+          "as_filed": "portulaca oleracea extract",
+          "inci": "portulaca oleracea extract"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": []
+    }
+  ]
+}

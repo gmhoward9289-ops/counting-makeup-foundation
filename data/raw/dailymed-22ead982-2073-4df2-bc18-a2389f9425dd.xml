@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="297cbca4-ed76-2031-e063-6394a90a9b5f"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>Clear Proof Blemish Control Toner
+ <br/>
+      <br/>
+Drug Facts
+</title>
+   <effectiveTime value="20241217"/>
+   <setId root="22ead982-2073-4df2-bc18-a2389f9425dd"/>
+   <versionNumber value="7"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="049994452"/>
+            <name>Mary Kay Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="001535103"/>
+                        <name>Port Jervis Laboratories Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="51531-6743" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="103978839"/>
+                        <name>Mary Kay Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="51531-6743" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="29b46d98-6a71-1ca3-e063-6294a90ad5ba"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20241217"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="51531-6743" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Clear Proof Blemish Control Toner<suffix>Acne Medication</suffix>
+                        </name>
+                        <formCode code="C42953" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LIQUID"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Salicylic Acid</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3K9958V90M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="4YK5Z54AT2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DENATONIUM BENZOATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="MD83SFE959" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TERT-BUTYL ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2968PHW8QP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CITRIC ACID MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="F05Q2T2JA0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DOCUSATE SODIUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2R04ONI662" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>EUCALYPTUS OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="L7T10EIP3A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MENTHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="92RU3N3Y1O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DIMETHICONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="g" value="2"/>
+                              <denominator unit="mL" value="100"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="O414PZ4LPZ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SALICYLIC ACID</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="O414PZ4LPZ" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SALICYLIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="147" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="51531-6743-5" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20130815"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="26" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="51531-6743-9" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20130815"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="M006" root="2.16.840.1.113883.3.9421"/>
+                           <code code="C200263" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC Monograph Drug"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20130815"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="L8ab132ad-39fd-4c3f-a85b-ab9508169d7a">
+               <id root="ac9f704e-d53e-4c33-e053-2995a90aa69d"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>
+                  <content styleCode="italics">Active ingredient</content>
+               </title>
+               <text>
+                  <paragraph>Salicylic Acid (2% W/W)</paragraph>
+               </text>
+               <effectiveTime value="20140307"/>
+               <component>
+                  <section ID="L2c551c71-3af7-4a50-8aee-2f9e5f7dacc3">
+                     <id root="ac9f704e-d53f-4c33-e053-2995a90aa69d"/>
+                     <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+                     <title>
+                        <content styleCode="italics">Purpose</content>
+                     </title>
+                     <text>
+                        <paragraph>Acne Medication</paragraph>
+                     </text>
+                     <effectiveTime value="20140307"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Lc73d8f6d-b75c-4bd3-bf37-65d66aeb50c6">
+               <id root="ac9f704e-d540-4c33-e053-2995a90aa69d"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>
+                  <content styleCode="italics">Uses</content>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item>for the management of acne</item>
+                     <item>helps prevent new acne pimples</item>
+                  </list>
+               </text>
+               <effectiveTime value="20140307"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Ld862770c-7120-43ad-98a3-51df646a63e7">
+               <id root="ac9f704e-d541-4c33-e053-2995a90aa69d"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>
+                  <content styleCode="italics">Warnings</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">For external use only</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20140307"/>
+               <component>
+                  <section ID="Lc4e10c86-e784-4374-ab30-4f8674364c19">
+                     <id root="ac9f704e-d542-4c33-e053-2995a90aa69d"/>
+                     <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                     <title>When using this product</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>skin irritation and dryness is more likely to occur if you use another topical acne medication at the same time. If irritation occurs, only use one topical acne medication at a time.</item>
+                           <item>avoid contact with the eyes</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20140307"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L27bba597-2707-4e57-b742-accb14c0d08b">
+                     <id root="ac9f704e-d543-4c33-e053-2995a90aa69d"/>
+                     <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                     <title>Stop use and ask a doctor</title>
+                     <text>
+                        <paragraph>if irritation or sensitivity develops or increases</paragraph>
+                     </text>
+                     <effectiveTime value="20140307"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L04322db0-c2a3-4111-b4f0-7653cc7c3722">
+                     <id root="ac9f704e-d544-4c33-e053-2995a90aa69d"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <title>Keep out of reach of children.</title>
+                     <text>
+                        <paragraph>If swallowed, get medical help or contact a Poison Control Center right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20140307"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L55fc23b9-47fd-4b14-aefe-235812eeb2fd">
+               <id root="ac9f704e-d545-4c33-e053-2995a90aa69d"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>
+                  <content styleCode="italics">Directions</content>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item>clean the skin thoroughly before applying this product</item>
+                     <item>cover the entire affected area with a thin layer one to three times daily</item>
+                     <item>because excessive drying of the skin may occur, start with one application daily, then gradually increase to two or three times daily if needed or as directed by a doctor</item>
+                     <item>if bothersome dryness or peeling occurs, reduce application to once a day or every other day</item>
+                  </list>
+               </text>
+               <effectiveTime value="20140307"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lcb31f1a6-beb1-462f-a2fb-af05289d8611">
+               <id root="ac9f704e-d546-4c33-e053-2995a90aa69d"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>
+                  <content styleCode="italics">Inactive ingredients</content>
+               </title>
+               <text>
+                  <paragraph>alcohol denat., citric acid, diethylhexyl sodium sulfosuccinate, eucalyptus globulus leaf oil, menthol, propylene glycol, simethicone, water</paragraph>
+               </text>
+               <effectiveTime value="20140307"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Lf0c5c1a3-71d2-402c-85a3-ab1ddc146842">
+               <id root="ac9f704e-d547-4c33-e053-2995a90aa69d"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel - 147 mL bottle</title>
+               <text>
+                  <paragraph>clearproof</paragraph>
+                  <paragraph>blemish control toner</paragraph>
+                  <paragraph>acne medication</paragraph>
+                  <paragraph>2% salicylic acid</paragraph>
+                  <paragraph>liquid</paragraph>
+                  <paragraph>5 FL. OZ. / 147 mL</paragraph>
+                  <paragraph>Mary Kay</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="Lc63dfdeb-7dac-47eb-a960-71c7f183109b"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20200518"/>
+               <component>
+                  <observationMedia ID="Lc63dfdeb-7dac-47eb-a960-71c7f183109b">
+                     <text>image of carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cp blemish control toner carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -21,6 +21,7 @@ Writes data/rd.json.
 """
 import datetime as dt
 import json
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -29,8 +30,20 @@ UA = {"User-Agent": "foundation.swamplink.com research (dev@swamplink.com)"}
 FACTS = "https://data.sec.gov/api/xbrl/companyconcept/CIK{cik}/us-gaap/{tag}.json"
 FILING = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik}&type=10-K"
 
-FILERS = {
-    "Coty": "0001024305",
+FILERS_BY_CATEGORY = {
+    "foundation": {
+        "Coty": "0001024305",
+    },
+    "toner": {
+        "Kenvue": "0001944048",
+        "The Clorox Company": "0000021076",
+        # Target Corporation deliberately excluded: it does not tag or
+        # disclose a research-and-development expense at all, consistent
+        # with a retailer that sources private-label goods from contract
+        # manufacturers rather than formulating its own products. Recorded
+        # as a null-with-reason in data/rd-manual-toner.json instead of a
+        # silent absence here.
+    },
 }
 REVENUE_TAGS = ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet"]
 
@@ -78,15 +91,17 @@ def latest_rd(cik):
 
 
 def main():
+    category = sys.argv[1] if len(sys.argv) > 1 else "foundation"
+    suffix = "" if category == "foundation" else "-%s" % category
     out = {}
-    for name, cik in FILERS.items():
+    for name, cik in FILERS_BY_CATEGORY.get(category, {}).items():
         r = latest_rd(cik)
         if r:
             out[name] = r
-    manual = ROOT / "data" / "rd-manual.json"
+    manual = ROOT / "data" / ("rd-manual%s.json" % suffix)
     if manual.exists():
         out.update(json.loads(manual.read_text(encoding="utf-8")))
-    (ROOT / "data" / "rd.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    (ROOT / "data" / ("rd%s.json" % suffix)).write_text(json.dumps(out, indent=2), encoding="utf-8")
     for k, v in sorted(out.items(), key=lambda kv: -(kv[1].get("rd_pct_of_revenue") or -1)):
         pct = v.get("rd_pct_of_revenue")
         if pct is None:

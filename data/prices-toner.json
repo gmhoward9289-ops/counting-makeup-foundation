@@ -1,0 +1,15 @@
+{
+  "_note": "US list prices observed 2026-08-26, same caveat as data/prices.json: price is the softest input in this project, not of the same evidential class as the FDA-filed ingredient declarations. Analyses use price_tier as the primary axis and treat price-per-mL as indicative only.",
+  "currency": "USD",
+  "observed": "2026-08-26",
+  "volume_source": "Package volume is taken from the FDA-filed label (SPL packaging section: <asContent> fill quantity), not from the retailer listing.",
+  "prices": {
+    "upandup-deep-clean-toner":              {"list_usd": 3.99,  "volume_ml": 236.5, "seen_at": "Target",   "confidence": "high",   "note": "Target's own product page, 2026-08-26. Target store brand; no competing retailer to cross-check."},
+    "cleanandclear-deep-cleaning-astringent": {"list_usd": 5.67, "volume_ml": 240,   "seen_at": "Walmart",  "confidence": "high",   "note": "Single-unit price consistent with multi-pack listings scaling proportionally."},
+    "neutrogena-oil-free-acne-toner":        {"list_usd": 9.77,  "volume_ml": 237,   "seen_at": "Walmart",  "confidence": "high",   "note": "Single-unit price and multi-pack listings agree."},
+    "thayers-witch-hazel-blemish":           {"list_usd": 14.90, "volume_ml": 355,   "seen_at": "Walmart",  "confidence": "medium", "note": "Walmart and H-E-B agree closely (~$14.9); Target/Ulta price not independently confirmed."},
+    "burtsbees-clarifying-toner":            {"list_usd": null,  "volume_ml": 175,   "seen_at": "Walmart",  "confidence": "low",    "note": "Two Walmart listings for the nominally same item showed materially different prices ($8.97 and $17.90); no single figure could be confirmed as current, so list price is left null rather than picked arbitrarily. Filed package volume (175 mL) is also larger than the 5 fl oz (~148 mL) size current retail listings advertise -- this label's effective date is 2010-08-16, the oldest in any corpus this project uses, and DailyMed has no newer version indexed, so the product may have been repackaged to a smaller size since this filing."},
+    "marykay-clear-proof-toner":             {"list_usd": 20.00, "volume_ml": 147,   "seen_at": "marykay.com", "confidence": "medium", "note": "Direct-sales fixed price from marykay.com; single-source, not independently cross-checked against a second load of the page."},
+    "proactiv-retexturizing-toner":          {"list_usd": 40.00, "volume_ml": 180,   "seen_at": "pay.proactiv.com", "confidence": "low", "note": "Official Proactiv checkout page listed this SKU temporarily out of stock at time of observation. Proactiv also sells a similarly-named 'Solution Revitalizing Toner' ($30.60-$36.00) that is a different product; this price is for the Plus Retexturizing Toner, the SKU whose setid is in this corpus."}
+  }
+}

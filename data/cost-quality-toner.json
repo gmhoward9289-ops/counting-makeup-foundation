@@ -1,0 +1,450 @@
+{
+  "issue_10_cost_vs_price": {
+    "assumptions": [
+      "Formula density assumed 0.98 g/mL. A water/alcohol/glycerin toner sits close to but slightly below water's density, driven down by the alcohol fraction; this is an assumption, not a filed figure.",
+      "Blended formula cost assumed $1.00-3.50/kg across the whole mass.",
+      "Anchors for that band: bulk ethanol traded at roughly $0.68-2.02/kg by region in 2026 (ChemAnalyst, Selina Wamucii commodity price reporting), and bulk USP glycerin at roughly $1.81/kg (Selina Wamucii, August 2026). Trade-listing prices are materially weaker evidence than the FDA filings this project is otherwise built on, which is exactly why the output is a band.",
+      "Implied cost of goods uses the PARENT COMPANY's group gross margin, not a product-level margin -- same method and same caveat as the foundation corpus. For Target Corporation this is a whole-RETAIL margin across every category Target sells, not a cosmetics or manufacturing margin.",
+      "Gross margin covers packaging, filling, labour, freight, duty and factory overhead as well as ingredients. Ingredient cost is a fraction of it."
+    ],
+    "gross_margins": {
+      "Kenvue": {
+        "fiscal_year_end": "2025-12-28",
+        "revenue_usd": 15124000000,
+        "gross_profit_usd": 8792000000,
+        "gross_margin_pct": 58.1,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0001944048",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001944048&type=10-K",
+          "note": "Kenvue was spun off from Johnson & Johnson in 2023 and owns both Clean & Clear and Neutrogena, the two Kenvue brands in this corpus. Figure is Kenvue's whole-company consumer-health margin (self-care, skin health & beauty, essential health combined), not a skincare-only line."
+        }
+      },
+      "Target Corporation": {
+        "fiscal_year_end": "2026-01-31",
+        "revenue_usd": 104780000000,
+        "cost_of_goods_sold_usd": 75511000000,
+        "gross_profit_usd": 29269000000,
+        "gross_margin_pct": 27.9,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0000027419",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+          "note": "Target stopped tagging a discrete GrossProfit fact in XBRL after FY2018; this figure is computed as Revenue minus the tagged CostOfGoodsAndServicesSold. This is a whole-company RETAIL gross margin across every category Target sells (groceries, electronics, apparel, home goods), not a cosmetics-specific or manufacturing margin -- for a store-brand product like Up & Up, the retail margin is a defensible stand-in for cost of goods (Target's COGS genuinely is what it paid its contract manufacturer for the bottle), but it is diluted across an unrelated product mix and should be read as company economics, not toner economics."
+        }
+      },
+      "The Clorox Company": {
+        "fiscal_year_end": "2025-06-30",
+        "revenue_usd": 7104000000,
+        "gross_profit_usd": 3213000000,
+        "gross_margin_pct": 45.2,
+        "source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0000021076",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021076&type=10-K",
+          "note": "Clorox owns Burt's Bees as one brand within a household- and consumer-products portfolio (bleach, cleaning products, Kingsford, Glad); this is Clorox's whole-company margin, not a Burt's Bees or personal-care-segment figure, which Clorox does not break out separately."
+        }
+      },
+      "L'Or\u00e9al": {
+        "fiscal_year_end": "2025-12-31",
+        "revenue_usd": null,
+        "revenue_eur": 44052000000,
+        "cost_of_sales_eur": 11313400000,
+        "gross_profit_eur": 32738600000,
+        "gross_margin_pct": 74.3,
+        "source": {
+          "type": "Annual results press release, consolidated profit and loss account",
+          "publisher": "L'Or\u00e9al (loreal-finance.com)",
+          "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+          "note": "Same group-wide figure this project already cites for L'Or\u00e9al's foundation business (data/margins-manual.json); Thayers is a L'Or\u00e9al USA brand, so no new figure is derived, only reused."
+        }
+      },
+      "Mary Kay Inc.": {
+        "gross_margin_pct": null,
+        "source": {
+          "type": "not available",
+          "note": "Mary Kay Inc. is privately held (founding family ownership) and does not file a 10-K or publish audited financial statements, so no current primary gross-margin figure exists."
+        }
+      },
+      "Alchemee LLC": {
+        "gross_margin_pct": null,
+        "source": {
+          "type": "not available",
+          "note": "Alchemee LLC (operator of the Proactiv and Murad brands, formed 2023) is a privately held, private-equity-backed company and does not file a 10-K or publish audited financial statements, so no current primary gross-margin figure exists."
+        }
+      }
+    },
+    "per_product": [
+      {
+        "id": "upandup-deep-clean-toner",
+        "brand": "Up & Up",
+        "price_tier": "budget",
+        "list_usd": 3.99,
+        "price_per_ml": 0.017,
+        "parent_gross_margin_pct": 27.9,
+        "implied_cogs_usd": 2.88,
+        "estimated_formula_cost_usd": [
+          0.232,
+          0.811
+        ],
+        "formula_cost_share_of_list_pct": [
+          5.81,
+          20.33
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "cleanandclear-deep-cleaning-astringent",
+        "brand": "Clean & Clear",
+        "price_tier": "budget",
+        "list_usd": 5.67,
+        "price_per_ml": 0.024,
+        "parent_gross_margin_pct": 58.1,
+        "implied_cogs_usd": 2.38,
+        "estimated_formula_cost_usd": [
+          0.235,
+          0.823
+        ],
+        "formula_cost_share_of_list_pct": [
+          4.14,
+          14.51
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "neutrogena-oil-free-acne-toner",
+        "brand": "Neutrogena",
+        "price_tier": "budget",
+        "list_usd": 9.77,
+        "price_per_ml": 0.041,
+        "parent_gross_margin_pct": 58.1,
+        "implied_cogs_usd": 4.09,
+        "estimated_formula_cost_usd": [
+          0.232,
+          0.813
+        ],
+        "formula_cost_share_of_list_pct": [
+          2.37,
+          8.32
+        ],
+        "price_confidence": "high"
+      },
+      {
+        "id": "thayers-witch-hazel-blemish",
+        "brand": "Thayers",
+        "price_tier": "mass",
+        "list_usd": 14.9,
+        "price_per_ml": 0.042,
+        "parent_gross_margin_pct": 74.3,
+        "implied_cogs_usd": 3.83,
+        "estimated_formula_cost_usd": [
+          0.348,
+          1.218
+        ],
+        "formula_cost_share_of_list_pct": [
+          2.34,
+          8.17
+        ],
+        "price_confidence": "medium"
+      },
+      {
+        "id": "burtsbees-clarifying-toner",
+        "brand": "Burt's Bees",
+        "price_tier": "mass",
+        "list_usd": null,
+        "price_per_ml": null,
+        "parent_gross_margin_pct": 45.2,
+        "implied_cogs_usd": null,
+        "estimated_formula_cost_usd": [
+          0.172,
+          0.6
+        ],
+        "formula_cost_share_of_list_pct": null,
+        "price_confidence": "low"
+      },
+      {
+        "id": "marykay-clear-proof-toner",
+        "brand": "Mary Kay",
+        "price_tier": "mass",
+        "list_usd": 20.0,
+        "price_per_ml": 0.136,
+        "parent_gross_margin_pct": null,
+        "implied_cogs_usd": null,
+        "estimated_formula_cost_usd": [
+          0.144,
+          0.504
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.72,
+          2.52
+        ],
+        "price_confidence": "medium"
+      },
+      {
+        "id": "proactiv-retexturizing-toner",
+        "brand": "Proactiv",
+        "price_tier": "prestige",
+        "list_usd": 40.0,
+        "price_per_ml": 0.222,
+        "parent_gross_margin_pct": null,
+        "implied_cogs_usd": null,
+        "estimated_formula_cost_usd": [
+          0.176,
+          0.617
+        ],
+        "formula_cost_share_of_list_pct": [
+          0.44,
+          1.54
+        ],
+        "price_confidence": "low"
+      }
+    ]
+  },
+  "issue_13_price_quality_matrix": {
+    "quality_definition": "Formulation-derived and primary-sourced only: every component is read off the FDA-filed OTC drug label, same principle as the foundation corpus. Toner carries no SPF, so the anchor figure here is the declared salicylic acid concentration -- a monograph-compliant quantity, but self-declared within the FDA's permitted band, not independently lab-tested the way SPF is. It describes what is in the bottle and how it is arranged, not whether wearers like it. It is not a satisfaction score, a dermatological rating, or a safety verdict.",
+    "components": {
+      "salicylic_acid_pct_filed": "The declared acne-treatment active concentration on the filing. A monograph-compliant declared quantity, not an independently tested measurement like SPF.",
+      "named_actives_above_1pct_line": "Marketing-facing actives (botanicals, humectants, named acids) sitting in the top third of the declared order, where the descending-concentration rule still binds. An active below that line is present at under about 1%.",
+      "eu_declared_allergens": "Count of the 26 fragrance sensitisers the EU requires to be named. Lower is better. Every product in this corpus declares its scent only as generic 'fragrance'/'parfum', so this is 0 for all seven products -- a real finding, not a missing computation.",
+      "ingredient_count": "Length of the base formula."
+    },
+    "per_product": [
+      {
+        "id": "upandup-deep-clean-toner",
+        "brand": "Up & Up",
+        "price_tier": "budget",
+        "list_usd": 3.99,
+        "price_per_ml": 0.017,
+        "salicylic_acid_pct_filed": 0.5,
+        "named_actives_total": 2,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 13
+      },
+      {
+        "id": "cleanandclear-deep-cleaning-astringent",
+        "brand": "Clean & Clear",
+        "price_tier": "budget",
+        "list_usd": 5.67,
+        "price_per_ml": 0.024,
+        "salicylic_acid_pct_filed": 2.0,
+        "named_actives_total": 0,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 8
+      },
+      {
+        "id": "neutrogena-oil-free-acne-toner",
+        "brand": "Neutrogena",
+        "price_tier": "budget",
+        "list_usd": 9.77,
+        "price_per_ml": 0.041,
+        "salicylic_acid_pct_filed": 2.0,
+        "named_actives_total": 2,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 20
+      },
+      {
+        "id": "thayers-witch-hazel-blemish",
+        "brand": "Thayers",
+        "price_tier": "mass",
+        "list_usd": 14.9,
+        "price_per_ml": 0.042,
+        "salicylic_acid_pct_filed": 2.0,
+        "named_actives_total": 4,
+        "named_actives_above_1pct_line": 2,
+        "named_actives_above_line_list": [
+          "hamamelis virginiana (witch hazel) bark/leaf/twig extract",
+          "aloe barbadensis leaf extract"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 13
+      },
+      {
+        "id": "burtsbees-clarifying-toner",
+        "brand": "Burt's Bees",
+        "price_tier": "mass",
+        "list_usd": null,
+        "price_per_ml": null,
+        "salicylic_acid_pct_filed": 1.0,
+        "named_actives_total": 6,
+        "named_actives_above_1pct_line": 1,
+        "named_actives_above_line_list": [
+          "salix nigra (willow) bark extract"
+        ],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 14
+      },
+      {
+        "id": "marykay-clear-proof-toner",
+        "brand": "Mary Kay",
+        "price_tier": "mass",
+        "list_usd": 20.0,
+        "price_per_ml": 0.136,
+        "salicylic_acid_pct_filed": 2.0,
+        "named_actives_total": 1,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 8
+      },
+      {
+        "id": "proactiv-retexturizing-toner",
+        "brand": "Proactiv",
+        "price_tier": "prestige",
+        "list_usd": 40.0,
+        "price_per_ml": 0.222,
+        "salicylic_acid_pct_filed": 2.0,
+        "named_actives_total": 1,
+        "named_actives_above_1pct_line": 0,
+        "named_actives_above_line_list": [],
+        "eu_declared_allergens": 0,
+        "eu_declared_allergen_list": [],
+        "ingredient_count": 11
+      }
+    ],
+    "by_tier": {
+      "budget": {
+        "n": 3,
+        "mean_price_per_ml": 0.03,
+        "mean_salicylic_acid_pct": 1.5,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 13.67
+      },
+      "mass": {
+        "n": 3,
+        "mean_price_per_ml": 0.09,
+        "mean_salicylic_acid_pct": 1.67,
+        "mean_actives_above_line": 1,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 11.67
+      },
+      "prestige": {
+        "n": 1,
+        "mean_price_per_ml": 0.22,
+        "mean_salicylic_acid_pct": 2.0,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 11
+      },
+      "luxury": {
+        "n": 0,
+        "mean_price_per_ml": null,
+        "mean_salicylic_acid_pct": null,
+        "mean_actives_above_line": null,
+        "mean_allergens": null,
+        "mean_ingredient_count": null
+      }
+    }
+  },
+  "issue_12_rd_vs_quality": {
+    "quality_definition": "The same formulation-derived quality proxy as issue #13, above, averaged across each parent company's products in this corpus.",
+    "rd_definition": "Group-wide R&D expense as a percentage of group-wide revenue, in the most recent fiscal year each company discloses it. Company-wide, not product-line-wide. Target Corporation is omitted (not a null row): it discloses no R&D figure at all, consistent with a retailer sourcing private-label goods from contract manufacturers rather than formulating its own products.",
+    "per_company": [
+      {
+        "parent_company": "Alchemee LLC",
+        "n_products": 1,
+        "rd_pct_of_revenue": null,
+        "rd_fiscal_year_end": null,
+        "rd_source": {
+          "type": "not available",
+          "note": "Alchemee LLC is privately held and does not file a 10-K or publish an R&D figure."
+        },
+        "mean_salicylic_acid_pct": 2.0,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 11
+      },
+      {
+        "parent_company": "Kenvue",
+        "n_products": 2,
+        "rd_pct_of_revenue": 2.53,
+        "rd_fiscal_year_end": "2025-12-28",
+        "rd_source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0001944048",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001944048&type=10-K"
+        },
+        "mean_salicylic_acid_pct": 2.0,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 14
+      },
+      {
+        "parent_company": "L'Or\u00e9al",
+        "n_products": 1,
+        "rd_pct_of_revenue": 3.1,
+        "rd_fiscal_year_end": "2025-12-31",
+        "rd_source": {
+          "type": "Annual results press release, consolidated profit and loss account",
+          "publisher": "L'Or\u00e9al (loreal-finance.com)",
+          "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+          "note": "Same group-wide 'Research & Innovation' figure this project already cites for L'Or\u00e9al's foundation business (data/rd-manual.json); Thayers is a L'Or\u00e9al USA brand, so no new figure is derived, only reused."
+        },
+        "mean_salicylic_acid_pct": 2.0,
+        "mean_actives_above_line": 2,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 13
+      },
+      {
+        "parent_company": "Mary Kay Inc.",
+        "n_products": 1,
+        "rd_pct_of_revenue": null,
+        "rd_fiscal_year_end": null,
+        "rd_source": {
+          "type": "not available",
+          "note": "Mary Kay Inc. is privately held and does not file a 10-K or publish an R&D figure."
+        },
+        "mean_salicylic_acid_pct": 2.0,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 8
+      },
+      {
+        "parent_company": "Target Corporation",
+        "n_products": 1,
+        "rd_pct_of_revenue": null,
+        "rd_fiscal_year_end": null,
+        "rd_source": {
+          "type": "not available",
+          "note": "Target's 10-K discloses no research-and-development expense line, in prose or in XBRL. Target sells private-label goods (including Up & Up) sourced from contract manufacturers rather than formulating its own products, so a company-wide R&D figure would not describe the same activity this project's other R&D rows measure."
+        },
+        "mean_salicylic_acid_pct": 0.5,
+        "mean_actives_above_line": 0,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 13
+      },
+      {
+        "parent_company": "The Clorox Company",
+        "n_products": 1,
+        "rd_pct_of_revenue": 1.7,
+        "rd_fiscal_year_end": "2025-06-30",
+        "rd_source": {
+          "type": "SEC Form 10-K (XBRL company facts)",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "cik": "0000021076",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021076&type=10-K"
+        },
+        "mean_salicylic_acid_pct": 1.0,
+        "mean_actives_above_line": 1,
+        "mean_allergens": 0,
+        "mean_ingredient_count": 14
+      }
+    ]
+  }
+}

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What&#x27;s in my toner? — Foundation</title>
+<meta name="description" content="Seven acne-treatment facial toners compared ingredient by ingredient, sourced from the FDA&#x27;s salicylic acid monograph instead of an SPF claim — plus the margin, cost and EU-concentration-limit findings that follow from having real, public parent companies behind them.">
+<link rel="canonical" href="https://foundation.swamplink.com/toner/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  img.figure-chart { width: 100%; height: auto; display: block; margin: 1rem 0; border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  table.brands td:nth-child(2), table.brands td:nth-child(4) { white-space: normal; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .chrome {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+    max-width: 940px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+  }
+  .chrome .home {
+    color: var(--ink); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chrome .home:hover { color: var(--accent); }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
+  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav a:hover { color: var(--ink); }
+
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.84rem; }
+  .cmp .col h4 { margin:0 0 .4rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+  .cmp ol { margin:0; padding-left:1.9rem; }
+  .cmp li { padding:.1rem .3rem; border-radius:3px; }
+  .cmp li.match { background:var(--ok-bg); color:var(--ok); }
+  .cmp li.only { color:var(--muted); }
+  @media (max-width:640px) { .cmp { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="chrome">
+  <a class="home" href="https://www.swamplink.com/">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    swamplink
+  </a>
+  <nav aria-label="site">
+    <a href="https://www.swamplink.com/data/">data</a>
+    <a href="https://www.swamplink.com/tools/">tools</a>
+    <a href="https://blog.swamplink.com/">blog</a>
+    <a href="https://www.swamplink.com/news/">news</a>
+  </nav>
+</div>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>What's in my toner?</h1>
+    <p class="lede">Toner almost never carries an SPF claim, so this corpus uses the FDA's other route to an OTC drug filing: an acne-treatment salicylic acid claim. Seven products, sourced the same way as SPF foundation.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/eyeliner/">Eyeliner</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/rd/">Does R&amp;D pay off</a><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a><a href="/development/">How long it takes</a><a href="/lip-gloss/">Lip gloss ingredients</a><a href="/setting-powders/">The talc question</a><span aria-current="page">Toner ingredients</span></nav>
+
+  <section>
+    <h2>The corpus, and why it isn't SPF this time</h2>
+    <div class="finding"><p><strong>Toner is almost never sold with an SPF claim, so this
+    corpus uses the FDA's other monograph route to an OTC drug label: salicylic acid, an
+    acne-treatment active.</strong> All 7 products here are liquid toners with a
+    formulated cosmetic vehicle, filed the same way the SPF foundations are — a manufacturer's
+    own declaration to the FDA, never a retailer listing.</p></div>
+
+    <p>Two populations of "toner" turned out not to be comparable and are excluded rather
+    than blended in: plain witch-hazel astringents (T.N. Dickinson's, CVS Health, Equate)
+    declare only witch hazel and alcohol, with no formulated vehicle to compare; and
+    Stridex Maximum's FDA filing is for pre-saturated pads, not a pourable liquid, despite
+    sharing the "toner" branding. Both are the same kind of exclusion the foundation corpus
+    already makes for powders and sticks: a different vehicle, not sourced more weakly.</p>
+
+    <div class="panel">
+      <table class="brands">
+        <thead><tr><th>Brand</th><th>Product</th><th class="num">Ingredients</th>
+          <th class="num">Label filed</th><th>Source</th></tr></thead>
+        <tbody><tr><td>Up &amp; Up</td><td class='note'>Deep Clean Toner</td><td class='num'>13</td><td class='num'>2024-10-14</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=945b0588-6864-27bc-e053-2995a90a73e3">FDA filing</a></td></tr><tr><td>Clean &amp; Clear</td><td class='note'>Essentials Deep Cleaning Astringent</td><td class='num'>8</td><td class='num'>2024-11-06</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0beeddf8-8fd5-4ea1-a181-b07c360ddcd3">FDA filing</a></td></tr><tr><td>Neutrogena</td><td class='note'>Oil-Free Acne Stress Control Triple Action Toner</td><td class='num'>20</td><td class='num'>2024-11-01</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=817a9746-df57-4b11-b580-f57fe9940a68">FDA filing</a></td></tr><tr><td>Thayers</td><td class='note'>Witch Hazel Aloe Vera Formula Toner, Blemish Clearing</td><td class='num'>13</td><td class='num'>2026-05-14</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2dc3cf4-23d2-4cb7-8fdc-615420db5710">FDA filing</a></td></tr><tr><td>Burt&#x27;s Bees</td><td class='note'>Natural Acne Solutions Clarifying Toner</td><td class='num'>14</td><td class='num'>2010-08-16</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f009d082-947f-455d-912f-c2c111001a30">FDA filing</a></td></tr><tr><td>Mary Kay</td><td class='note'>Clear Proof Blemish Control Toner</td><td class='num'>8</td><td class='num'>2024-12-17</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22ead982-2073-4df2-bc18-a2389f9425dd">FDA filing</a></td></tr><tr><td>Proactiv</td><td class='note'>Plus Retexturizing Toner</td><td class='num'>11</td><td class='num'>2026-01-07</td><td><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7c211ff7-920f-407b-ad8d-60d14803b857">FDA filing</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Slide between two toners</h2>
+    <p>Pick any two and watch the formulas converge or diverge.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>A <select id="selA"></select></label>
+        <label>B <select id="selB"></select></label>
+      </div>
+      <div id="stats" class="stats"></div>
+      <div class="cmp" id="cmp"></div>
+      <p class="note" id="srcs"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The common spine</h2>
+    <p>These ingredients appear in at least 75% of the corpus.</p>
+    <div class="sunken"><ul class="tight"><li>water</li></ul></div>
+
+    <h3>Most common ingredients</h3>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Ingredient (INCI)</th><th class="num">Products</th><th class="num">Share</th></tr></thead>
+        <tbody><tr><td>water</td><td class='num'>7</td><td class='num'>100%</td></tr><tr><td>glycerin</td><td class='num'>4</td><td class='num'>57%</td></tr><tr><td>parfum/fragrance</td><td class='num'>4</td><td class='num'>57%</td></tr><tr><td>alcohol denat</td><td class='num'>3</td><td class='num'>43%</td></tr><tr><td>propylene glycol</td><td class='num'>3</td><td class='num'>43%</td></tr><tr><td>benzophenone-4</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>blue 1</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>butylene glycol</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>citric acid</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>dimethicone propyl pg-betaine</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>disodium edta</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>ethylhexylglycerin</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>isoceteth-20</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>phenoxyethanol</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>sodium citrate</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>sodium hydroxide</td><td class='num'>2</td><td class='num'>29%</td></tr><tr><td>alcohol denat. (24.5 %)</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>algae extract</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>aloe barbadenis leaf juice</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>aloe barbadensis leaf extract</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>benzalkonium chloride</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>c12-15 alkyl lactate</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>camellia sinensis leaf extract</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>caprylyl glycol</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cetyl lactate</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cocamidopropyl betaine</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cocamidopropyl pg-dimonium chloride phosphate</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cucumis sativus (cucumber) fruit extract</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cymbopogon flexuosus oil</td><td class='num'>1</td><td class='num'>14%</td></tr><tr><td>cymbopogon schoenanthus extract</td><td class='num'>1</td><td class='num'>14%</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Margin, cost and price</h2>
+    <p>Same method as the foundation study: nobody publishes per-bottle cost, so the ceiling
+    of what can be said with a citation is the parent company's group gross margin — and,
+    unlike lip gloss, four of this corpus's six parent companies do file one.</p>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Parent company</th><th class="num">Gross margin</th><th>Source</th></tr></thead>
+        <tbody><tr><td>L&#x27;Oréal</td><td class='num'>74.3%</td><td class='note'>Annual results press release, consolidated profit and loss account</td></tr><tr><td>Kenvue</td><td class='num'>58.1%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr><tr><td>The Clorox Company</td><td class='num'>45.2%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr><tr><td>Target Corporation</td><td class='num'>27.9%</td><td class='note'>SEC Form 10-K (XBRL company facts)</td></tr><tr><td>Mary Kay Inc.</td><td class='num'>—</td><td class='note'>not available</td></tr><tr><td>Alchemee LLC</td><td class='num'>—</td><td class='note'>not available</td></tr></tbody>
+      </table>
+    </div>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Brand</th><th>Tier</th><th class="num">List price</th>
+          <th class="num">Parent margin</th><th class="num">Implied COGS</th>
+          <th class="num">Est. formula cost</th></tr></thead>
+        <tbody><tr><td>Up &amp; Up</td><td><span class='tier'>budget</span></td><td class='num'>$3.99</td><td class='num'>27.9%</td><td class='num'>$2.88</td><td class='num'>$0.23–$0.81</td></tr><tr><td>Clean &amp; Clear</td><td><span class='tier'>budget</span></td><td class='num'>$5.67</td><td class='num'>58.1%</td><td class='num'>$2.38</td><td class='num'>$0.23–$0.82</td></tr><tr><td>Neutrogena</td><td><span class='tier'>budget</span></td><td class='num'>$9.77</td><td class='num'>58.1%</td><td class='num'>$4.09</td><td class='num'>$0.23–$0.81</td></tr><tr><td>Thayers</td><td><span class='tier'>mass</span></td><td class='num'>$14.90</td><td class='num'>74.3%</td><td class='num'>$3.83</td><td class='num'>$0.35–$1.22</td></tr><tr><td>Burt&#x27;s Bees</td><td><span class='tier'>mass</span></td><td class='num'>—</td><td class='num'>45.2%</td><td class='num'>—</td><td class='num'>$0.17–$0.60</td></tr><tr><td>Mary Kay</td><td><span class='tier'>mass</span></td><td class='num'>$20.00</td><td class='num'>—</td><td class='num'>—</td><td class='num'>$0.14–$0.50</td></tr><tr><td>Proactiv</td><td><span class='tier'>prestige</span></td><td class='num'>$40.00</td><td class='num'>—</td><td class='num'>—</td><td class='num'>$0.18–$0.62</td></tr></tbody>
+      </table>
+    </div>
+    <ul class="tight"><li>Formula density assumed 0.98 g/mL. A water/alcohol/glycerin toner sits close to but slightly below water&#x27;s density, driven down by the alcohol fraction; this is an assumption, not a filed figure.</li><li>Blended formula cost assumed $1.00-3.50/kg across the whole mass.</li><li>Anchors for that band: bulk ethanol traded at roughly $0.68-2.02/kg by region in 2026 (ChemAnalyst, Selina Wamucii commodity price reporting), and bulk USP glycerin at roughly $1.81/kg (Selina Wamucii, August 2026). Trade-listing prices are materially weaker evidence than the FDA filings this project is otherwise built on, which is exactly why the output is a band.</li><li>Implied cost of goods uses the PARENT COMPANY&#x27;s group gross margin, not a product-level margin -- same method and same caveat as the foundation corpus. For Target Corporation this is a whole-RETAIL margin across every category Target sells, not a cosmetics or manufacturing margin.</li><li>Gross margin covers packaging, filling, labour, freight, duty and factory overhead as well as ingredients. Ingredient cost is a fraction of it.</li></ul>
+  </section>
+
+  <section>
+    <h2>The one rule this corpus actually triggers</h2>
+    <div class="finding"><p><strong>5 of
+    7 toners are filed at the FDA acne monograph's
+    2.0% salicylic acid ceiling</strong> — which happens to equal the EU's leave-on
+    concentration limit (Annex III entry 98, as amended by Regulation (EU) 2019/1966). The
+    EU rule carries one condition the US monograph doesn't: a ban on use in preparations for
+    children under 3. None of these labels carry that restriction.</p></div>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Brand</th><th class="num">Salicylic acid (filed)</th><th>Vs. ceiling</th></tr></thead>
+        <tbody><tr><td>Up &amp; Up</td><td class='num'>0.5%</td><td>under the ceiling</td></tr><tr><td>Clean &amp; Clear</td><td class='num'>2.0%</td><td>at the EU/US ceiling</td></tr><tr><td>Neutrogena</td><td class='num'>2.0%</td><td>at the EU/US ceiling</td></tr><tr><td>Thayers</td><td class='num'>2.0%</td><td>at the EU/US ceiling</td></tr><tr><td>Burt&#x27;s Bees</td><td class='num'>1.0%</td><td>under the ceiling</td></tr><tr><td>Mary Kay</td><td class='num'>2.0%</td><td>at the EU/US ceiling</td></tr><tr><td>Proactiv</td><td class='num'>2.0%</td><td>at the EU/US ceiling</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note">Every product in this corpus declares its scent only as generic
+    "fragrance"/"parfum" rather than naming an individual allergen, so the same EU-declarable
+    fragrance-allergen check already run for the foundation corpus finds zero matches here —
+    a real finding, not a skipped computation. A full EU Annex II general-prohibition sweep,
+    like the one run for the foundation corpus, has not yet been done for this category; see
+    the corpus's known limits.</p>
+    <ul class="tight"><li>Monograph-only inclusion is a selection bias, the same shape as foundation&#x27;s SPF-only rule: it excludes non-drug toners (Kiehl&#x27;s, Clinique, Paula&#x27;s Choice, most prestige lines), which have no primary filing and are excluded rather than sourced more weakly. This corpus is therefore budget/mass-tier-heavy; no prestige-counter brand carries a qualifying filing.</li><li>The FDA&#x27;s astringent monograph (plain witch hazel: T.N. Dickinson&#x27;s, CVS Health, Equate, and Biore Witch Hazel Pore Clarifying Toner) also produces FDA-filed toner labels, but those products declare only witch hazel and alcohol as ingredients with no formulated vehicle -- there is nothing to cross-brand-compare at the inactive-ingredient level, so they are excluded here as a different formulation type, not sourced more weakly (mirrors the foundation corpus excluding powders/sticks as &#x27;different vehicle, not comparable&#x27;).</li><li>Biore Witch Hazel Pore Clarifying Toner (Kao USA) has a live DailyMed web page (setid 6edb3b74-e694-fe90-e053-2991aa0ab8ea) but no entry in the DailyMed SPL REST API this project&#x27;s fetch tool uses -- the underlying XML is not retrievable through the pipeline this project requires, so it is excluded on sourcing-mechanics grounds as well as the vehicle-type exclusion above.</li><li>Stridex Maximum&#x27;s SPL (setid a3b16d52-76a5-438b-a120-bb59ce062cc1) filed under the same &#x27;toner&#x27; branding is not a pourable liquid: its packaging section lists jars of 55/70/90/110 pre-saturated pads, not a fluid ounce/mL fill. Same dosage-form exclusion as powders/sticks in the foundation corpus -- excluded as a different vehicle, not sourced more weakly.</li><li>An FDA filing is verbatim what the manufacturer submitted, including typos and inconsistent separator characters. Corrections are recorded per-ingredient in the normalization layer, never silently.</li><li>Burt&#x27;s Bees Natural Acne Solutions Clarifying Toner&#x27;s SPL label has an effective date of 2010-08-16, the oldest filing in any corpus this project uses; DailyMed has no newer version indexed, so this is treated as the current filing rather than superseded.</li></ul>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink:family:begin — GENERATED, do not edit by hand.
+         Source: claude-rules/family-strip/properties.json
+         Regenerate: python swamp-ops/scripts/sync_family_strip.py --write -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/trust/">ai trust</a>
+      <a href="https://iq.swamplink.com/">iq-check — the intelligence one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+    <!-- swamplink:family:end -->
+  </footer>
+
+</div>
+
+<script>
+const DATA = [{"id": "burtsbees-clarifying-toner", "brand": "Burt's Bees", "product": "Natural Acne Solutions Clarifying Toner", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f009d082-947f-455d-912f-c2c111001a30", "date": "2010-08-16", "base": ["water", "alcohol denat", "glycerin", "salix nigra (willow) bark extract", "cymbopogon schoenanthus extract", "equisetum hiemale extract", "parfum/fragrance", "hamamelis virginiana (witch hazel) leaf extract", "humulus lupulus (hops) extract", "hydrastis canadensis (goldenseal) extract", "glucose", "sodium chloride", "glucose oxidase", "lactoperoxidase"]}, {"id": "cleanandclear-deep-cleaning-astringent", "brand": "Clean & Clear", "product": "Essentials Deep Cleaning Astringent", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0beeddf8-8fd5-4ea1-a181-b07c360ddcd3", "date": "2024-11-06", "base": ["water", "sd alcohol 40-b", "isoceteth-20", "parfum/fragrance", "propylene glycol", "dimethicone propyl pg-betaine", "benzophenone-4", "red 4"]}, {"id": "marykay-clear-proof-toner", "brand": "Mary Kay", "product": "Clear Proof Blemish Control Toner", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22ead982-2073-4df2-bc18-a2389f9425dd", "date": "2024-12-17", "base": ["alcohol denat", "citric acid", "diethylhexyl sodium sulfosuccinate", "eucalyptus globulus leaf oil", "menthol", "propylene glycol", "simethicone", "water"]}, {"id": "neutrogena-oil-free-acne-toner", "brand": "Neutrogena", "product": "Oil-Free Acne Stress Control Triple Action Toner", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=817a9746-df57-4b11-b580-f57fe9940a68", "date": "2024-11-01", "base": ["water", "alcohol denat", "butylene glycol", "ppg-5-ceteth-20", "c12-15 alkyl lactate", "parfum/fragrance", "sodium citrate", "cocamidopropyl pg-dimonium chloride phosphate", "peg/ppg-20/6 dimethicone", "sodium hydroxide", "benzalkonium chloride", "cetyl lactate", "sodium benzotriazolyl butylphenol sulfonate", "disodium edta", "camellia sinensis leaf extract", "glycerin", "cucumis sativus (cucumber) fruit extract", "yellow 5", "blue 1", "green 5"]}, {"id": "proactiv-retexturizing-toner", "brand": "Proactiv", "product": "Plus Retexturizing Toner", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7c211ff7-920f-407b-ad8d-60d14803b857", "date": "2026-01-07", "base": ["water", "butylene glycol", "hamamelis virginiana (witch hazel) water", "glycolic acid", "sodium hydroxide", "phenoxyethanol", "polysorbate 20", "sodium benzoate", "disodium edta", "ethylhexylglycerin", "portulaca oleracea extract"]}, {"id": "thayers-witch-hazel-blemish", "brand": "Thayers", "product": "Witch Hazel Aloe Vera Formula Toner, Blemish Clearing", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2dc3cf4-23d2-4cb7-8fdc-615420db5710", "date": "2026-05-14", "base": ["water", "hamamelis virginiana (witch hazel) bark/leaf/twig extract", "aloe barbadensis leaf extract", "sodium borate", "melaleuca alternifolia (tea tree) leaf oil", "cymbopogon flexuosus oil", "glycerin", "decyl glucoside", "cocamidopropyl betaine", "citric acid", "caprylyl glycol", "phenoxyethanol", "ethylhexylglycerin"]}, {"id": "upandup-deep-clean-toner", "brand": "Up & Up", "product": "Deep Clean Toner", "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=945b0588-6864-27bc-e053-2995a90a73e3", "date": "2024-10-14", "base": ["water", "alcohol denat. (24.5 %)", "glycerin", "isoceteth-20", "peg-32", "sodium citrate", "parfum/fragrance", "propylene glycol", "dimethicone propyl pg-betaine", "benzophenone-4", "algae extract", "aloe barbadenis leaf juice", "blue 1"]}];
+const byId = Object.fromEntries(DATA.map(p => [p.id, p]));
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+for (const p of DATA) {
+  const label = p.brand + ' — ' + p.product;
+  for (const s of [selA, selB]) s.add(new Option(label, p.id));
+}
+selA.value = DATA[0].id;
+selB.value = DATA[1].id;
+
+function render() {
+  const a = byId[selA.value], b = byId[selB.value];
+  const sb = new Set(b.base);
+  const shared = a.base.filter(x => sb.has(x));
+  const union = new Set([...a.base, ...b.base]);
+  let prefix = 0;
+  while (prefix < a.base.length && prefix < b.base.length && a.base[prefix] === b.base[prefix]) prefix++;
+
+  document.getElementById('stats').innerHTML = [
+    ['<b>' + prefix + '</b><span>identical from the top</span>'],
+    ['<b>' + shared.length + '</b><span>ingredients shared</span>'],
+    ['<b>' + Math.round(100 * shared.length / union.size) + '%</b><span>of all ingredients shared</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  const col = (p, other) => {
+    const s = new Set(other.base);
+    return '<div class="col"><h4>' + p.brand + '</h4><ol>' +
+      p.base.map((x, i) => {
+        const m = (i < prefix) || s.has(x);
+        return '<li class="' + (m ? 'match' : 'only') + '">' + x + '</li>';
+      }).join('') + '</ol></div>';
+  };
+  document.getElementById('cmp').innerHTML = col(a, b) + col(b, a);
+  document.getElementById('srcs').innerHTML =
+    'Sources: <a href="' + a.url + '">' + a.brand + ' label filed ' + a.date + '</a> · ' +
+    '<a href="' + b.url + '">' + b.brand + ' label filed ' + b.date + '</a>';
+}
+selA.addEventListener('change', render);
+selB.addEventListener('change', render);
+render();
+</script>
+
+</body>
+</html>

@@ -181,3 +181,46 @@ asbestos-testing rounds and named-brand reformulation claims in
 raw SPL file in `data/raw/`; `contains_talc` on each product is computed by
 `tools/analyze_talc.py` from the filed ingredient list, never hand-entered;
 every fact in `data/talc.json` carries its own `source` block.
+
+## FR-12 — Toner corpus, sourced through the acne monograph instead of SPF
+
+The system shall build a third, separate corpus of US liquid facial toners,
+using the FDA's acne-treatment (salicylic acid) OTC monograph as the filing
+trigger in place of an SPF claim, and shall carry the full FR-3/FR-4/FR-5/FR-6
+treatment (ingredient comparison, cost-vs-price, quality proxy, and the one
+regulatory divergence the corpus actually triggers) rather than ingestion
+alone.
+
+*Rationale:* toner is almost never sold with an SPF claim, so FR-1's original
+trigger does not produce a corpus for this category at all. The FDA's other
+route to an OTC drug label — a salicylic acid acne-treatment claim under 21
+CFR Part 333 — does, and unlike the lip-gloss corpus, several of the resulting
+parent companies (Kenvue, The Clorox Company, Target Corporation, in addition
+to L'Oréal) are public filers, so the cost/margin/R&D treatment FR-4/FR-5
+already run for foundation carries over. Two populations that shared the
+"toner" label turned out not to be comparable and are excluded rather than
+blended in: plain witch-hazel astringents (filed under the FDA's separate
+astringent monograph) declare no formulated vehicle to compare, and Stridex
+Maximum's filing turned out to be pre-saturated pads, not a pourable liquid,
+on inspection of its packaging section.
+
+*Status:* implemented — `tools/build_corpus.py toner` (now parameterized
+by category, shared with foundation/lotion/setting-powder) →
+`data/corpus-toner.json`; `tools/analyze.py toner` → `data/analysis-toner.json`;
+`tools/fetch_margins.py toner` / `tools/fetch_rd.py toner` (also parameterized)
+plus `data/margins-manual-toner.json` / `data/rd-manual-toner.json` for the
+private parent companies → `data/margins-toner.json` / `data/rd-toner.json`;
+`tools/cost_quality_toner.py` → `data/cost-quality-toner.json`;
+`tools/analyze_regulatory_toner.py` against `data/regulatory-toner.json` →
+`data/regulatory-analysis-toner.json`; rendered by `tools/build_site.py`'s
+`build_toner()`, live at `/toner/`.
+*Verified by:* every product in `data/corpus-toner.json` traces to a raw SPL
+file in `data/raw/`; re-running `tools/build_corpus.py foundation` and
+`tools/build_corpus.py lotion` after the shared-tool changes reproduces
+`data/corpus.json` and `data/corpus-lotion.json` byte-for-byte; every null
+margin/R&D figure in the manual files carries a "privately held, no 10-K"
+reason rather than a silent gap. Known open gap, stated on the page itself:
+unlike foundation's `data/regulatory.json`, a full EU Annex II
+general-prohibition sweep across this corpus's ~50 distinct ingredients has
+not yet been performed — `data/regulatory-toner.json` covers the salicylic
+acid concentration limit and the fragrance-allergen check only.

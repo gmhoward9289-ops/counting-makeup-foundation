@@ -1,0 +1,70 @@
+{
+  "L'Oréal": {
+    "fiscal_year_end": "2025-12-31",
+    "revenue_usd": null,
+    "revenue_eur": 44052000000,
+    "cost_of_sales_eur": 11313400000,
+    "gross_profit_eur": 32738600000,
+    "gross_margin_pct": 74.3,
+    "source": {
+      "type": "Annual results press release, consolidated profit and loss account",
+      "publisher": "L'Oréal (loreal-finance.com)",
+      "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+      "note": "Same group-wide figure this project already cites for L'Oréal's foundation business (data/margins-manual.json); Thayers is a L'Oréal USA brand, so no new figure is derived, only reused."
+    }
+  },
+  "Target Corporation": {
+    "fiscal_year_end": "2026-01-31",
+    "revenue_usd": 104780000000,
+    "cost_of_goods_sold_usd": 75511000000,
+    "gross_profit_usd": 29269000000,
+    "gross_margin_pct": 27.9,
+    "source": {
+      "type": "SEC Form 10-K (XBRL company facts)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "cik": "0000027419",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000027419&type=10-K",
+      "note": "Target stopped tagging a discrete GrossProfit fact in XBRL after FY2018; this figure is computed as Revenue minus the tagged CostOfGoodsAndServicesSold. This is a whole-company RETAIL gross margin across every category Target sells (groceries, electronics, apparel, home goods), not a cosmetics-specific or manufacturing margin -- for a store-brand product like Up & Up, the retail margin is a defensible stand-in for cost of goods (Target's COGS genuinely is what it paid its contract manufacturer for the bottle), but it is diluted across an unrelated product mix and should be read as company economics, not toner economics."
+    }
+  },
+  "Kenvue": {
+    "fiscal_year_end": "2025-12-28",
+    "revenue_usd": 15124000000,
+    "gross_profit_usd": 8792000000,
+    "gross_margin_pct": 58.1,
+    "source": {
+      "type": "SEC Form 10-K (XBRL company facts)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "cik": "0001944048",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001944048&type=10-K",
+      "note": "Kenvue was spun off from Johnson & Johnson in 2023 and owns both Clean & Clear and Neutrogena, the two Kenvue brands in this corpus. Figure is Kenvue's whole-company consumer-health margin (self-care, skin health & beauty, essential health combined), not a skincare-only line."
+    }
+  },
+  "The Clorox Company": {
+    "fiscal_year_end": "2025-06-30",
+    "revenue_usd": 7104000000,
+    "gross_profit_usd": 3213000000,
+    "gross_margin_pct": 45.2,
+    "source": {
+      "type": "SEC Form 10-K (XBRL company facts)",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "cik": "0000021076",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021076&type=10-K",
+      "note": "Clorox owns Burt's Bees as one brand within a household- and consumer-products portfolio (bleach, cleaning products, Kingsford, Glad); this is Clorox's whole-company margin, not a Burt's Bees or personal-care-segment figure, which Clorox does not break out separately."
+    }
+  },
+  "Mary Kay Inc.": {
+    "gross_margin_pct": null,
+    "source": {
+      "type": "not available",
+      "note": "Mary Kay Inc. is privately held (founding family ownership) and does not file a 10-K or publish audited financial statements, so no current primary gross-margin figure exists."
+    }
+  },
+  "Alchemee LLC": {
+    "gross_margin_pct": null,
+    "source": {
+      "type": "not available",
+      "note": "Alchemee LLC (operator of the Proactiv and Murad brands, formed 2023) is a privately held, private-equity-backed company and does not file a 10-K or publish audited financial statements, so no current primary gross-margin figure exists."
+    }
+  }
+}

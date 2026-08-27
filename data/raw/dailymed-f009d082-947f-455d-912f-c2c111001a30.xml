@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="fe5af802-5290-442f-a715-7b8c54fa2e38"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>Drug Facts</title>
+   <effectiveTime value="20100816"/>
+   <setId root="f009d082-947f-455d-912f-c2c111001a30"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="026865087" root="1.3.6.1.4.1.519.1"/>
+            <name>Burt's Bees, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="1c2ab845-5132-4003-b8c6-921ab5675e74"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL listing data elements section"/>
+               <effectiveTime value="20100816"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="26052-017" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Natural Acne Solutions Clarifying Toner<suffix/>
+                        </name>
+                        <formCode code="C42953" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LIQUID"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>salicylic acid</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="1.0" unit="mL"/>
+                              <denominator value="100" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="O414PZ4LPZ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SALICYLIC ACID</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="O414PZ4LPZ" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>SALICYLIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="175" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="26052-017-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1">
+                                       <translation code="C48477" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                                    </numerator>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="26052-017-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43178" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOX"/>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20100601"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="part333" root="2.16.840.1.113883.3.149"/>
+                           <code code="C73603" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OTC monograph final"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38304" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TOPICAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5810a71a-740a-4071-8f30-5ae0e8bcf82c"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>Active Ingredients</title>
+               <text>
+                  <paragraph>Salicylic Acid 1.0%</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="1a909f27-cc82-4835-8245-9152f5f74356"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>Purpose</title>
+               <text>
+                  <paragraph>Acne Treatment</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="85601945-9a9d-41f7-8730-515ddb6a3253"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>Uses</title>
+               <text>
+                  <list listType="unordered" ID="if532e513-5019-4f2c-8fab-f67d93db31aa">
+                     <item>Penetrates pores to control acne</item>
+                     <item>Helps prevent the development of new blemishes<br/>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="061ea7f8-fd03-4ec5-b771-94a8cdd0ddae"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Warnings</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">For external use only.</content>
+                  </paragraph>
+                  <paragraph>Using other topical acne medication at the same time or immediately following use of this product may increase dryness or irritation of the skin. If this occurs, only one medication should be used unless directed by a doctor.</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+               <component>
+                  <section>
+                     <id root="bf6a365a-5c56-4037-8f73-cdda77ed0471"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <title>Keep out of reach of children</title>
+                     <text>
+                        <paragraph>f swallowed, get medical help or contact a Poison Control Center right away.</paragraph>
+                     </text>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b0a56e67-d1e2-45ee-b499-9724aed3123c"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Directions</title>
+               <text>
+                  <paragraph>After cleansing and/or exfoliating, moisten a cotton pad with toner and apply to face and neck using upward movements, avoiding the eye area.</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="9774d120-cf5e-4d68-913c-8e3103f35613"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>Inactive Ingredients</title>
+               <text>
+                  <paragraph>aqua (water, eau), alcohol denat., glycerin, salix nigra (willow) bark extract, cymbopogon schoenanthus extract, equisetum hiemale extract, parfum (fragrance), hamamelis virginiana (witch hazel) leaf extract, humulus lupulus (hops) extract, hydrastis canadensis (goldenseal) extract, glucose, sodium chloride, glucose oxidase, lactoperoxidase</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="a02b65a3-c315-4418-af2d-ab11a123e26c"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <text>
+                  <paragraph>800-849-7112 or www.burtsbees.com</paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="56b9a6bc-a20a-4ea1-9053-ca1c5132b625"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PDP Package Label</title>
+               <text>
+                  <paragraph>bottle<renderMultiMedia referencedObject="BB017"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20100816"/>
+               <component>
+                  <observationMedia classCode="OBS" moodCode="EVN" ID="BB017">
+                     <text>Package Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="AcneToner.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

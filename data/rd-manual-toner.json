@@ -1,0 +1,35 @@
+{
+  "L'Oréal": {
+    "fiscal_year_end": "2025-12-31",
+    "rd_eur": 1380600000,
+    "revenue_eur": 44052000000,
+    "rd_pct_of_revenue": 3.1,
+    "source": {
+      "type": "Annual results press release, consolidated profit and loss account",
+      "publisher": "L'Oréal (loreal-finance.com)",
+      "url": "https://www.loreal-finance.com/eng/press-release/2025-annual-results",
+      "note": "Same group-wide 'Research & Innovation' figure this project already cites for L'Oréal's foundation business (data/rd-manual.json); Thayers is a L'Oréal USA brand, so no new figure is derived, only reused."
+    }
+  },
+  "Target Corporation": {
+    "rd_usd": null,
+    "source": {
+      "type": "not available",
+      "note": "Target's 10-K discloses no research-and-development expense line, in prose or in XBRL. Target sells private-label goods (including Up & Up) sourced from contract manufacturers rather than formulating its own products, so a company-wide R&D figure would not describe the same activity this project's other R&D rows measure."
+    }
+  },
+  "Mary Kay Inc.": {
+    "rd_usd": null,
+    "source": {
+      "type": "not available",
+      "note": "Mary Kay Inc. is privately held and does not file a 10-K or publish an R&D figure."
+    }
+  },
+  "Alchemee LLC": {
+    "rd_usd": null,
+    "source": {
+      "type": "not available",
+      "note": "Alchemee LLC is privately held and does not file a 10-K or publish an R&D figure."
+    }
+  }
+}
