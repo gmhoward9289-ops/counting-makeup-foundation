@@ -149,6 +149,7 @@ PAGES = [
     ("/sourcing/", "Where it came from"),
     ("/mocra/", "Who's watching"),
     ("/development/", "How long it takes"),
+    ("/setting-powders/", "The talc question"),
 ]
 
 
@@ -231,6 +232,11 @@ def load_regulatory():
 
 def load_development():
     return json.loads((ROOT / "data" / "development.json").read_text(encoding="utf-8"))
+
+
+def load_talc():
+    j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
+    return j("setting-powder-corpus.json"), j("talc-analysis.json"), j("talc.json")
 
 
 def longdate(iso):
@@ -1168,6 +1174,116 @@ def build_rd(cq):
 
 
 # ----------------------------------------------------------------- disclaimer
+def build_talc(spcorpus, ta, talc):
+    """Setting powders and talc: a corpus that's exhaustive against DailyMed's
+    own SPF-setting-powder filings, paired with press/FDA context for the
+    reformulation story those filings can't reach. See data/talc.json's own
+    description for why the two halves barely overlap."""
+    products = spcorpus["products"]
+    rows = "".join(
+        '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td>'
+        '<td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr>'
+        % (escape(p["brand"]), escape(p["product"]), escape(p["parent_company"]),
+           '<span class="tier">%s</span>' % escape(p["price_tier"]))
+        for p in products
+    )
+
+    fda = talc["fda_asbestos_testing"]
+    fda_rounds = "".join(
+        "<li><strong>%s</strong> (%s): %s</li>" % (
+            escape(rnd["period"]),
+            cite(rnd["source"], rnd["source"]["publisher"]),
+            escape(rnd.get("corpus_wide_result") or (
+                "%d setting-powder result(s) checked, all negative" % len(rnd.get("setting_powder_findings", []))
+                if rnd.get("setting_powder_findings") else "context round, see source")),
+        )
+        for rnd in fda["programs"]
+    )
+
+    reform_rows = "".join(
+        '<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+            escape(r["brand"]), escape(r["product"]), escape(r["claim"]),
+            cite(r["source"], r["source"]["publisher"]),
+        )
+        for r in talc["named_reformulations"]
+    )
+
+    body = f"""
+  <section>
+    <h2>Two questions that turn out not to share a corpus</h2>
+    <div class="caveat"><p><strong>Every US setting or finishing powder we could find that
+    carries an SPF claim tested negative for talc in its own FDA-filed ingredient
+    declaration -- because none of them use talc to begin with.</strong> They're mineral
+    sunscreen powders built around zinc oxide or titanium dioxide, a different
+    formulation tradition from the talc-based translucent powders that Chanel, Laura
+    Mercier, CoverGirl, Airspun and Givenchy have spent the last several years
+    reformulating away from. None of those reformulated products carries an SPF claim,
+    so none has a primary FDA filing to check the same way the rest of this site checks
+    things. The corpus and the headline story are, structurally, almost disjoint
+    sets.</p></div>
+    <p>This page keeps both halves separate rather than blending them into one number.
+    The table below is this site's actual corpus: {len(products)} SPF setting/finishing
+    powders, checked directly against their FDA filings, all talc-free. Under it is the
+    talc-reformulation story as it's actually documented — FDA's own asbestos-testing
+    program, and named brands' own talc-free claims — with every figure carrying its
+    source, same as everywhere else on this site.</p>
+  </section>
+
+  <section>
+    <h2>The primary-source corpus: {len(products)} SPF setting powders, {ta['talc_free_count']}/{ta['product_count']} talc-free</h2>
+    <div class="scroll"><table class="brands">
+      <thead><tr><th>Brand</th><th>Product</th><th>Parent</th><th>Tier</th><th>Talc</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table></div>
+    <p class="note">Computed from <code>data/setting-powder-corpus.json</code> by
+    <code>tools/analyze_talc.py</code> on every run — see
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation/blob/master/data/setting-powder-corpus.json">the corpus</a>
+    for each product's FDA filing.</p>
+  </section>
+
+  <section>
+    <h2>What FDA's own asbestos testing actually found in setting powders</h2>
+    <ul class="tight">{fda_rounds}</ul>
+    <p>The best-known asbestos findings in cosmetic talc — Claire's compacts and palettes,
+    a lot of Johnson's Baby Powder, both recalled in 2019 — were not setting or finishing
+    powders. Every setting/finishing powder FDA has published a named result for came back
+    negative on both testing methods (PLM and TEM). That's a narrow, checkable claim about
+    the samples FDA happened to test, not a claim that no setting powder anywhere has ever
+    contained contaminated talc.</p>
+    <p class="note">{cite(fda['regulatory_status']['source'], 'FDA — Talc')}:
+    {escape(fda['regulatory_status']['fact'])}</p>
+  </section>
+
+  <section>
+    <h2>The reformulation story, as brands themselves describe it</h2>
+    <div class="scroll"><table class="brands">
+      <thead><tr><th>Brand</th><th>Product</th><th>Claim</th><th>Source</th></tr></thead>
+      <tbody>{reform_rows}</tbody>
+    </table></div>
+    <div class="caveat"><p><strong>Only Chanel's statement, reported by Al Jazeera in 2020,
+    explicitly links a reformulation to litigation and public perception</strong>
+    ("We determined from public perception to remove it from the market"). CoverGirl,
+    Airspun and Laura Mercier all market their reformulations as clean-ingredient or
+    performance improvements, not as a response to lawsuits — which may be accurate, or
+    may be the same decision described differently for a product page than for a
+    reporter.</p></div>
+    <p class="note">For scale: {escape(talc['litigation_scale']['fact'])}
+    {cite(talc['litigation_scale']['source'], talc['litigation_scale']['source']['publisher'])}
+    — {escape(talc['litigation_scale']['source']['note'])}</p>
+  </section>
+"""
+    write("setting-powders", page(
+        "The talc question — Foundation",
+        "Every SPF setting powder with an FDA filing tested talc-free -- because none "
+        "use talc. The brands actually reformulating away from talc carry no SPF claim, "
+        "so this page sources both halves separately instead of blending them.",
+        "The talc question",
+        "The setting powders with a primary-source filing don't use talc. The ones "
+        "reformulating away from talc don't have a filing. Both halves, sourced "
+        "separately.",
+        body, current="/setting-powders/"))
+
+
 def build_disclaimer():
     """Render DISCLAIMER.md as a site page.
 
@@ -1773,6 +1889,7 @@ def main():
     eyeliner_corpus, eyeliner_analysis = load_eyeliner()
     reg, src, ra = load_regulatory()
     dev = load_development()
+    spcorpus, ta, talc = load_talc()
     build_ingredients(corpus, analysis, prices)
     build_eyeliner_ingredients(eyeliner_corpus, eyeliner_analysis)
     build_ownership(corpus, analysis, prices)
@@ -1783,6 +1900,7 @@ def main():
     build_sourcing(src, ra)
     build_mocra(reg, ra)
     build_development(dev)
+    build_talc(spcorpus, ta, talc)
     build_disclaimer()
     # Homepage is hand-written, but the study-count badge is derived from
     # its live cards so it cannot sit at "Eight" after a ninth page ships.

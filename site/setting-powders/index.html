@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The talc question — Foundation</title>
+<meta name="description" content="Every SPF setting powder with an FDA filing tested talc-free -- because none use talc. The brands actually reformulating away from talc carry no SPF claim, so this page sources both halves separately instead of blending them.">
+<link rel="canonical" href="https://foundation.swamplink.com/setting-powders/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #f2eef1; --panel: #fbf8fa; --sunken: #ece6ea;
+    --ink: #241a22; --muted: #6e5d69; --line: #dfd6dc;
+    --accent: #8a3b66; --accent-soft: #f2dfe9;
+    --petal: #9a4f2a; --petal-soft: #f4e3d4;
+    --ok: #175b4f; --ok-bg: #dfeeea;
+    --warn: #755208; --warn-bg: #f4e8cd; --warn-line: #e3cf9e;
+    --bad: #983434; --bad-bg: #f6e2e2;
+    --none: #6e5d69; --none-bg: #eae4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141014; --panel: #1d171c; --sunken: #171217;
+      --ink: #e6dee3; --muted: #9a8a94; --line: #332a31;
+      --accent: #c77ba4; --accent-soft: #331f2b;
+      --petal: #dfa26b; --petal-soft: #34241a;
+      --ok: #6fc4b1; --ok-bg: #15302b;
+      --warn: #e8b13f; --warn-bg: #33270f; --warn-line: #4a3b17;
+      --bad: #ee8f8f; --bad-bg: #361c1c;
+      --none: #9a8a94; --none-bg: #241d22;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink);
+    font: 15px/1.55 system-ui, "Segoe UI", sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; }
+  .wrap { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.2rem; }
+  a { color: var(--petal); }
+  header .eyebrow { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .5rem; }
+  header .eyebrow a { color: var(--muted); text-decoration: none; }
+  header .eyebrow a:hover { text-decoration: underline; }
+  header h1 { margin: 0 0 .5rem; font-size: 1.95rem; letter-spacing: -.01em; text-wrap: balance; }
+  header p.lede { margin: 0; color: var(--muted); max-width: 68ch; font-size: 1.02rem; }
+  h2 { font-size: 1.15rem; color: var(--accent); margin: 0 0 .7rem; }
+  h3 { font-size: .95rem; margin: 1.4rem 0 .5rem; }
+  section > p { margin: 0 0 .8rem; max-width: 72ch; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .sunken { background: var(--sunken); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1.1rem 1.2rem; }
+  .finding { border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 0 0 1rem; }
+  .finding p { margin: 0; }
+  .finding strong { color: var(--ink); }
+  .caveat { border-left: 3px solid var(--warn); background: var(--warn-bg);
+    border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; color: var(--warn); }
+  .caveat strong { color: var(--warn); }
+  .scroll { overflow-x: auto; }
+  img.figure-chart { width: 100%; height: auto; display: block; margin: 1rem 0; border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { text-align: left; padding: .42rem .6rem; border-bottom: 1px solid var(--line);
+    white-space: nowrap; }
+  table.brands td:nth-child(2), table.brands td:nth-child(4) { white-space: normal; }
+  th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.hi td { background: var(--accent-soft); }
+  .tier { font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: .1rem .4rem; border-radius: 3px; background: var(--none-bg); color: var(--none); }
+  .note { color: var(--muted); font-size: .85rem; }
+  ul.tight { margin: .3rem 0; padding-left: 1.1rem; }
+  ul.tight li { margin: .25rem 0; color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted);
+    font-size: .85rem; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+  .chrome {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+    max-width: 940px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+  }
+  .chrome .home {
+    color: var(--ink); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+  }
+  .chrome .home:hover { color: var(--accent); }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
+  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav a:hover { color: var(--ink); }
+
+  .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
+  .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
+    border: 1px solid var(--line); text-decoration: none; }
+  .pagenav a { color: var(--muted); background: var(--panel); }
+  .pagenav a:hover { color: var(--ink); border-color: var(--accent); }
+  .pagenav span[aria-current] { color: var(--accent); background: var(--accent-soft);
+    border-color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="chrome">
+  <a class="home" href="https://www.swamplink.com/">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+    swamplink
+  </a>
+  <nav aria-label="site">
+    <a href="https://www.swamplink.com/data/">data</a>
+    <a href="https://www.swamplink.com/tools/">tools</a>
+    <a href="https://blog.swamplink.com/">blog</a>
+    <a href="https://www.swamplink.com/news/">news</a>
+  </nav>
+</div>
+<div class="wrap">
+  <header>
+    <p class="eyebrow"><a href="/">Foundation</a> — a swamplink research property</p>
+    <h1>The talc question</h1>
+    <p class="lede">The setting powders with a primary-source filing don't use talc. The ones reformulating away from talc don't have a filing. Both halves, sourced separately.</p>
+  </header>
+  <nav class="pagenav" aria-label="Research pages"><a href="/ingredients/">What&#x27;s in it</a><a href="/eyeliner/">Eyeliner</a><a href="/complexity/">Is it better</a><a href="/price/">What you pay for</a><a href="/rd/">Does R&amp;D pay off</a><a href="/ownership/">Who makes it</a><a href="/banned/">What&#x27;s banned</a><a href="/sourcing/">Where it came from</a><a href="/mocra/">Who&#x27;s watching</a><a href="/development/">How long it takes</a><span aria-current="page">The talc question</span></nav>
+
+  <section>
+    <h2>Two questions that turn out not to share a corpus</h2>
+    <div class="caveat"><p><strong>Every US setting or finishing powder we could find that
+    carries an SPF claim tested negative for talc in its own FDA-filed ingredient
+    declaration -- because none of them use talc to begin with.</strong> They're mineral
+    sunscreen powders built around zinc oxide or titanium dioxide, a different
+    formulation tradition from the talc-based translucent powders that Chanel, Laura
+    Mercier, CoverGirl, Airspun and Givenchy have spent the last several years
+    reformulating away from. None of those reformulated products carries an SPF claim,
+    so none has a primary FDA filing to check the same way the rest of this site checks
+    things. The corpus and the headline story are, structurally, almost disjoint
+    sets.</p></div>
+    <p>This page keeps both halves separate rather than blending them into one number.
+    The table below is this site's actual corpus: 10 SPF setting/finishing
+    powders, checked directly against their FDA filings, all talc-free. Under it is the
+    talc-reformulation story as it's actually documented — FDA's own asbestos-testing
+    program, and named brands' own talc-free claims — with every figure carrying its
+    source, same as everywhere else on this site.</p>
+  </section>
+
+  <section>
+    <h2>The primary-source corpus: 10 SPF setting powders, 10/10 talc-free</h2>
+    <div class="scroll"><table class="brands">
+      <thead><tr><th>Brand</th><th>Product</th><th>Parent</th><th>Tier</th><th>Talc</th></tr></thead>
+      <tbody><tr><td>bareMinerals</td><td>Original Mineral Veil Protecting Loose Setting Powder SPF 25</td><td>e.l.f. Beauty</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>bareMinerals</td><td>READY Touch Up Veil Broad Spectrum SPF 15</td><td>e.l.f. Beauty</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Supergoop!</td><td>(Re)setting 100% Mineral Powder Light Broad Spectrum SPF 35</td><td>Supergoop, LLC</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Supergoop!</td><td>(Re)setting 100% Mineral Powder Medium Broad Spectrum SPF 35</td><td>Supergoop, LLC</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Supergoop!</td><td>(Re)setting 100% Mineral Powder Deep Broad Spectrum SPF 35</td><td>Supergoop, LLC</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Supergoop!</td><td>Invincible Setting Powder SPF 45 (predecessor to Re/setting)</td><td>Supergoop, LLC</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Supergoop!</td><td>Invincible Setting Powder SPF 45 Medium</td><td>Supergoop, LLC</td><td><span class="tier">prestige</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>TOPIX</td><td>Mineral Finishing Sunscreen SPF 30</td><td>Topix Pharmaceuticals</td><td><span class="tier">professional</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Sugargirl</td><td>Set Screen SPF 30 Setting Powder Sunscreen (Light)</td><td>I World LLC</td><td><span class="tier">mass</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr><tr><td>Younique</td><td>SPF 25 Finishing Powder (Touch Behold)</td><td>Younique LLC</td><td><span class="tier">mass</span></td><td><span class="tier" style="background:var(--ok-bg);color:var(--ok)">no talc</span></td></tr></tbody>
+    </table></div>
+    <p class="note">Computed from <code>data/setting-powder-corpus.json</code> by
+    <code>tools/analyze_talc.py</code> on every run — see
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation/blob/master/data/setting-powder-corpus.json">the corpus</a>
+    for each product's FDA filing.</p>
+  </section>
+
+  <section>
+    <h2>What FDA's own asbestos testing actually found in setting powders</h2>
+    <ul class="tight"><li><strong>2009-2010</strong> (<a href="https://www.fda.gov/media/122418/download">U.S. Food and Drug Administration</a> <span class="note">— U.S. Food and Drug Administration</span>): context round, see source</li><li><strong>FY19</strong> (<a href="https://www.fda.gov/media/135911/download">U.S. Food and Drug Administration</a> <span class="note">— U.S. Food and Drug Administration</span>): 1 setting-powder result(s) checked, all negative</li><li><strong>FY20-FY21</strong> (<a href="https://www.fda.gov/media/153415/download">U.S. Food and Drug Administration</a> <span class="note">— U.S. Food and Drug Administration</span>): 1 setting-powder result(s) checked, all negative</li><li><strong>2023</strong> (<a href="https://www.fda.gov/cosmetics/cosmetic-ingredients/fda-summary-results-testing-official-samples-talc-containing-cosmetics-asbestiform-fibers-completed">U.S. Food and Drug Administration</a> <span class="note">— U.S. Food and Drug Administration</span>): Asbestos was not detected in any of the 50 samples FDA tested in this 2023 round.</li></ul>
+    <p>The best-known asbestos findings in cosmetic talc — Claire's compacts and palettes,
+    a lot of Johnson's Baby Powder, both recalled in 2019 — were not setting or finishing
+    powders. Every setting/finishing powder FDA has published a named result for came back
+    negative on both testing methods (PLM and TEM). That's a narrow, checkable claim about
+    the samples FDA happened to test, not a claim that no setting powder anywhere has ever
+    contained contaminated talc.</p>
+    <p class="note"><a href="https://www.fda.gov/cosmetics/cosmetic-ingredients/talc">FDA — Talc</a> <span class="note">— U.S. Food and Drug Administration</span>:
+    FDA proposed a rule (published in the Federal Register 2024-12-27) to standardize asbestos-testing methods for talc-containing cosmetics under MoCRA section 3505, then withdrew the proposal after the comment period.</p>
+  </section>
+
+  <section>
+    <h2>The reformulation story, as brands themselves describe it</h2>
+    <div class="scroll"><table class="brands">
+      <thead><tr><th>Brand</th><th>Product</th><th>Claim</th><th>Source</th></tr></thead>
+      <tbody><tr><td>CoverGirl</td><td>Clean Invisible Loose Powder</td><td>&quot;NOW TALC &amp; FRAGRANCE FREE&quot; -- reformulated to a 15-ingredient formula with no talc.</td><td><a href="https://www.covergirl.com/face-makeup/powder/clean-invisible-loose-powder">covergirl.com</a> <span class="note">— covergirl.com</span></td></tr><tr><td>Airspun (Coty)</td><td>Airspun Loose Face Powder</td><td>&quot;Your favorite powder is now talc-free&quot; -- ingredient list on the reformulated product lists mica, kaolin, zinc stearate, oat kernel flour and tapioca starch, no talc.</td><td><a href="https://www.target.com/p/airspun-loose-powder-naturally-neutral-1-2oz/-/A-86750400">Target.com</a> <span class="note">— Target.com</span></td></tr><tr><td>Laura Mercier</td><td>Translucent Loose Setting Powder Ultra-Blur</td><td>&quot;The cult-favorite Translucent Loose Setting Powder, now talc-free&quot; -- launched as a reformulated line extension alongside the original rather than a same-name overwrite.</td><td><a href="https://www.lauramercier.com/products/translucent-loose-setting-powder-ultra-blur">lauramercier.com</a> <span class="note">— lauramercier.com</span></td></tr><tr><td>Chanel</td><td>Poudre Universelle Libre Natural Finish Loose Powder</td><td>Removed talc from the loose face powder and discontinued its talc-based Chanel No. 5 dusting powder.</td><td><a href="https://www.aljazeera.com/economy/2020/6/9/beauty-brands-moving-away-from-talc-as-us-cancer-lawsuits-mount">Al Jazeera</a> <span class="note">— Al Jazeera</span></td></tr></tbody>
+    </table></div>
+    <div class="caveat"><p><strong>Only Chanel's statement, reported by Al Jazeera in 2020,
+    explicitly links a reformulation to litigation and public perception</strong>
+    ("We determined from public perception to remove it from the market"). CoverGirl,
+    Airspun and Laura Mercier all market their reformulations as clean-ingredient or
+    performance improvements, not as a response to lawsuits — which may be accurate, or
+    may be the same decision described differently for a product page than for a
+    reporter.</p></div>
+    <p class="note">For scale: Johnson &amp; Johnson has faced tens of thousands of talc/ovarian-cancer and mesothelioma lawsuits since roughly 2013-2016, and proposed a bankruptcy-channeled settlement of approximately $6.475 billion for present and future talc claimants (2025), the third such attempt after two prior bankruptcy filings were rejected by courts.
+    <a href="https://www.reuters.com/investigates/special-report/johnsonandjohnson-cancer/">Reuters (via search index; article itself blocked to automated fetch)</a> <span class="note">— Reuters (via search index; article itself blocked to automated fetch)</span>
+    — Not independently re-verified against the original article text in this pass (Reuters blocks automated fetching from this environment); included as directional scale context, not as a precise, individually re-checked figure. Treat the exact settlement dollar amount as reported, not corpus-grade verified.</p>
+  </section>
+
+
+  <footer>
+    <p class="note" style="margin:0 0 1rem">Every figure on this page is generated from
+    <a href="https://github.com/gmhoward9289-ops/counting-makeup-foundation">the corpus in the repo</a>
+    by the scripts in <code>tools/</code>, and traces to a primary filing. Read the
+    <a href="/disclaimer/">disclaimer</a> — nothing here is medical, dermatological or
+    safety advice, and cost figures are estimates, not company data.</p>
+    <!-- swamplink:family:begin — GENERATED, do not edit by hand.
+         Source: claude-rules/family-strip/properties.json
+         Regenerate: python swamp-ops/scripts/sync_family_strip.py --write -->
+    <div class="family">
+      <span>Foundation · a swamplink research property</span>
+      <a href="https://swamplink.com/">swamplink.com</a>
+      <a href="https://wings.swamplink.com/">wings — the chicken one</a>
+      <a href="https://swamplink.com/data/plates/">plates — the surveillance one</a>
+      <a href="https://swamplink.com/data/trust/">ai trust</a>
+      <a href="https://iq.swamplink.com/">iq-check — the intelligence one</a>
+      <a href="https://swamplink.com/data/policy/">data policy</a>
+      <a href="https://blog.swamplink.com/">the blog</a>
+    </div>
+    <!-- swamplink:family:end -->
+  </footer>
+
+</div>
+
+</body>
+</html>
