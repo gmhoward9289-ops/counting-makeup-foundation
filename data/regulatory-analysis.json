@@ -5,7 +5,7 @@
     "sourcing.json"
   ],
   "as_of": "2026-08-19",
-  "products": 12,
+  "products": 13,
   "issue_16_banned_ingredients": {
     "corpus_ingredients_tested": 191,
     "eu_prohibited_entries": 1760,
@@ -137,7 +137,7 @@
         "count": 1
       }
     ],
-    "products_declaring_octinoxate": 8,
+    "products_declaring_octinoxate": 9,
     "octinoxate_max_declared_pct": 6.7,
     "octinoxate_eu_limit_pct": 10,
     "products_over_eu_octinoxate_limit": 0,
@@ -341,12 +341,37 @@
         ],
         "octinoxate_pct": null,
         "octinoxate_over_eu_limit": false
+      },
+      {
+        "id": "esteelauder-futurist-hydra-rescue",
+        "brand": "Est\u00e9e Lauder",
+        "tier": "prestige",
+        "filters": [
+          {
+            "filter": "ensulizole",
+            "pct": 2.7
+          },
+          {
+            "filter": "octinoxate",
+            "pct": 6.7
+          },
+          {
+            "filter": "octisalate",
+            "pct": 4.5
+          },
+          {
+            "filter": "zinc oxide",
+            "pct": 3.8
+          }
+        ],
+        "octinoxate_pct": 6.7,
+        "octinoxate_over_eu_limit": false
       }
     ]
   },
   "issue_17_sourcing": {
     "palm_derivable_ingredients_defined": 22,
-    "mean_palm_derivable_per_product": 3.67,
+    "mean_palm_derivable_per_product": 3.77,
     "max_palm_derivable_in_one_product": 9,
     "products_with_no_palm_derivable": 0,
     "per_product": [
@@ -401,6 +426,22 @@
         "count": 5,
         "formula_length": 37,
         "share_of_formula": 0.1351
+      },
+      {
+        "id": "esteelauder-futurist-hydra-rescue",
+        "brand": "Est\u00e9e Lauder",
+        "tier": "prestige",
+        "parent": "Est\u00e9e Lauder Companies",
+        "palm_derivable": [
+          "caprylic/capric triglyceride",
+          "glycerin",
+          "lecithin",
+          "polyhydroxystearic acid",
+          "stearic acid"
+        ],
+        "count": 5,
+        "formula_length": 73,
+        "share_of_formula": 0.0685
       },
       {
         "id": "elf-flawless-finish",
@@ -529,7 +570,8 @@
     ],
     "natural_mica_products": [
       "loreal-infallible-32h",
-      "clinique-even-better"
+      "clinique-even-better",
+      "esteelauder-futurist-hydra-rescue"
     ],
     "synthetic_mica_products": [
       "maybelline-fit-me-dewy",
