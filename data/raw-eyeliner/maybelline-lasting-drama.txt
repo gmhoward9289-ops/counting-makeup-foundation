@@ -1,0 +1,14 @@
+id: maybelline-lasting-drama
+brand: Maybelline
+product: Lasting Drama Matte Waterproof Eyeliner
+parent: L'Oréal
+tier: mass
+url: https://www.maybelline.com/eye-makeup/eyeliner/lasting-drama-matte-eyeliner-makeup
+accessed: 2026-08-26
+method: brand's official product page, Ingredients section (static fetch succeeded).
+
+INGREDIENTS:
+Isododecane, Cera Microcristallina/Microcrystalline Wax, Hydrogenated Polycyclopentadiene, Synthetic Fluorphlogopite, Cera Alba/Beeswax, Methyl Methacrylate Crosspolymer, Polyethylene, Hydrogenated Polyisobutene, Vinyldimethyl/Trimethylsiloxysilicate Stearyl Dimethicone Crosspolymer, Copernicia Cerifera Cera/Carnauba Wax, Alumina, Aluminum Hydroxide, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Tocopherol.
+
+MAY CONTAIN:
+Iron Oxides, Ultramarines, Titanium Dioxide, Carmine, Ferric Ammonium Ferrocyanide, Black 2, Manganese Violet, Yellow 5 Lake, Blue 1 Lake

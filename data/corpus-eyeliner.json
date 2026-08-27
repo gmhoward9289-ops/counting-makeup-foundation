@@ -1,0 +1,1003 @@
+{
+  "corpus": "eyeliner-liquid-pencil-us",
+  "description": "Eyeliners (liquid or pencil/kohl) sold in the US, chosen to span the same price tiers and parent companies as the foundation corpus. Eyeliner carries no SPF claim and is not regulated as an OTC drug in the United States, so there is no FDA filing to source from. Every product here is instead sourced from the manufacturer's own official product page, where INCI ingredient declarations are legally required under the FPLA labeling law -- not from a retailer listing (Sephora, Ulta, Amazon) or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid or pencil/kohl eyeliner (no powder or gel-pot liners -- different vehicle, not comparable).",
+    "Full INCI ingredient list published on the brand's own official website.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, mirroring the foundation corpus so ownership effects are testable across two product categories."
+  ],
+  "known_limits": [
+    "No government filing exists for these products (no SPF claim, not an OTC drug), so sourcing rests on the manufacturer's own published declaration rather than a regulator's copy of it. Four of the eight brand pages (e.l.f., MAC, Lanc\u00f4me, Dior) render the Ingredients panel client-side or block a plain HTTP fetch; those were read directly from the rendered page in a browser rather than an automated script, and each raw snapshot in data/raw-eyeliner/ records which.",
+    "e.l.f.'s Expert Liquid Liner and Satin Eyeliner Pencil do not publish ingredients online (\"refer to the packaging\") -- a second e.l.f. product (No Budge Retractable Waterline Eyeliner) does and is used instead. Not every eyeliner SKU from a given brand publishes ingredients; the specific product/URL recorded here is the one that does.",
+    "A brand's own page is what the manufacturer chose to publish, not a document filed under legal penalty like an FDA SPL. Corrections are recorded per-ingredient in the normalization layer, never silently, same as the foundation corpus."
+  ],
+  "retrieved": "2026-08-26",
+  "products": [
+    {
+      "id": "elf-no-budge-waterline",
+      "brand": "e.l.f. Cosmetics",
+      "product": "No Budge Retractable Waterline Eyeliner",
+      "parent_company": "e.l.f. Beauty",
+      "price_tier": "budget",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "e.l.f. Cosmetics",
+        "url": "https://www.elfcosmetics.com/no-budge-retractable-eyeliner/200180.html",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Dimethicone, Trimethylsiloxysilicate, Synthetic Wax, Euphorbia Cerifera (Candelilla) Wax, VP/Hexadecene Copolymer, Octyldodecanol, Diisostearyl Malate, Polyisobutene, Ozokerite, Paraffin, Tocopheryl Acetate, Phenoxyethanol, Caprylyl Glycol.",
+      "may_contain_as_listed": "Black 2 (CI 77266)(NANO), Blue 1 Lake (CI 42090)",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Dimethicone",
+          "inci": "dimethicone"
+        },
+        {
+          "position": 2,
+          "as_filed": "Trimethylsiloxysilicate",
+          "inci": "trimethylsiloxysilicate"
+        },
+        {
+          "position": 3,
+          "as_filed": "Synthetic Wax",
+          "inci": "synthetic wax"
+        },
+        {
+          "position": 4,
+          "as_filed": "Euphorbia Cerifera (Candelilla) Wax",
+          "inci": "euphorbia cerifera (candelilla) wax"
+        },
+        {
+          "position": 5,
+          "as_filed": "VP/Hexadecene Copolymer",
+          "inci": "vp/hexadecene copolymer"
+        },
+        {
+          "position": 6,
+          "as_filed": "Octyldodecanol",
+          "inci": "octyldodecanol"
+        },
+        {
+          "position": 7,
+          "as_filed": "Diisostearyl Malate",
+          "inci": "diisostearyl malate"
+        },
+        {
+          "position": 8,
+          "as_filed": "Polyisobutene",
+          "inci": "polyisobutene"
+        },
+        {
+          "position": 9,
+          "as_filed": "Ozokerite",
+          "inci": "ozokerite"
+        },
+        {
+          "position": 10,
+          "as_filed": "Paraffin",
+          "inci": "paraffin"
+        },
+        {
+          "position": 11,
+          "as_filed": "Tocopheryl Acetate",
+          "inci": "tocopheryl acetate"
+        },
+        {
+          "position": 12,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 13,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Black 2 (CI 77266)(NANO)",
+          "inci": "black 2 (ci 77266)(nano)"
+        },
+        {
+          "position": 2,
+          "as_filed": "Blue 1 Lake (CI 42090)",
+          "inci": "blue 1 lake"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Blue 1 Lake (CI 42090)",
+          "canonical": "blue 1 lake"
+        }
+      ]
+    },
+    {
+      "id": "maybelline-lasting-drama",
+      "brand": "Maybelline",
+      "product": "Lasting Drama Matte Waterproof Eyeliner",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "Maybelline",
+        "url": "https://www.maybelline.com/eye-makeup/eyeliner/lasting-drama-matte-eyeliner-makeup",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Isododecane, Cera Microcristallina/Microcrystalline Wax, Hydrogenated Polycyclopentadiene, Synthetic Fluorphlogopite, Cera Alba/Beeswax, Methyl Methacrylate Crosspolymer, Polyethylene, Hydrogenated Polyisobutene, Vinyldimethyl/Trimethylsiloxysilicate Stearyl Dimethicone Crosspolymer, Copernicia Cerifera Cera/Carnauba Wax, Alumina, Aluminum Hydroxide, Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate, Tocopherol.",
+      "may_contain_as_listed": "Iron Oxides, Ultramarines, Titanium Dioxide, Carmine, Ferric Ammonium Ferrocyanide, Black 2, Manganese Violet, Yellow 5 Lake, Blue 1 Lake",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Isododecane",
+          "inci": "isododecane"
+        },
+        {
+          "position": 2,
+          "as_filed": "Cera Microcristallina/Microcrystalline Wax",
+          "inci": "microcrystalline wax"
+        },
+        {
+          "position": 3,
+          "as_filed": "Hydrogenated Polycyclopentadiene",
+          "inci": "hydrogenated polycyclopentadiene"
+        },
+        {
+          "position": 4,
+          "as_filed": "Synthetic Fluorphlogopite",
+          "inci": "synthetic fluorphlogopite"
+        },
+        {
+          "position": 5,
+          "as_filed": "Cera Alba/Beeswax",
+          "inci": "cera alba"
+        },
+        {
+          "position": 6,
+          "as_filed": "Methyl Methacrylate Crosspolymer",
+          "inci": "methyl methacrylate crosspolymer"
+        },
+        {
+          "position": 7,
+          "as_filed": "Polyethylene",
+          "inci": "polyethylene"
+        },
+        {
+          "position": 8,
+          "as_filed": "Hydrogenated Polyisobutene",
+          "inci": "hydrogenated polyisobutene"
+        },
+        {
+          "position": 9,
+          "as_filed": "Vinyldimethyl/Trimethylsiloxysilicate Stearyl Dimethicone Crosspolymer",
+          "inci": "vinyldimethyl/trimethylsiloxysilicate stearyl dimethicone crosspolymer"
+        },
+        {
+          "position": 10,
+          "as_filed": "Copernicia Cerifera Cera/Carnauba Wax",
+          "inci": "copernicia cerifera (carnauba) wax"
+        },
+        {
+          "position": 11,
+          "as_filed": "Alumina",
+          "inci": "alumina"
+        },
+        {
+          "position": 12,
+          "as_filed": "Aluminum Hydroxide",
+          "inci": "aluminum hydroxide"
+        },
+        {
+          "position": 13,
+          "as_filed": "Pentaerythrityl Tetra-Di-T-Butyl Hydroxyhydrocinnamate",
+          "inci": "pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate"
+        },
+        {
+          "position": 14,
+          "as_filed": "Tocopherol",
+          "inci": "tocopherol"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Iron Oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 2,
+          "as_filed": "Ultramarines",
+          "inci": "ultramarines"
+        },
+        {
+          "position": 3,
+          "as_filed": "Titanium Dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 4,
+          "as_filed": "Carmine",
+          "inci": "carmine"
+        },
+        {
+          "position": 5,
+          "as_filed": "Ferric Ammonium Ferrocyanide",
+          "inci": "ferric ammonium ferrocyanide"
+        },
+        {
+          "position": 6,
+          "as_filed": "Black 2",
+          "inci": "black 2"
+        },
+        {
+          "position": 7,
+          "as_filed": "Manganese Violet",
+          "inci": "manganese violet"
+        },
+        {
+          "position": 8,
+          "as_filed": "Yellow 5 Lake",
+          "inci": "yellow 5 lake"
+        },
+        {
+          "position": 9,
+          "as_filed": "Blue 1 Lake",
+          "inci": "blue 1 lake"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Cera Microcristallina/Microcrystalline Wax",
+          "canonical": "microcrystalline wax"
+        },
+        {
+          "as_filed": "Cera Alba/Beeswax",
+          "canonical": "cera alba"
+        },
+        {
+          "as_filed": "Copernicia Cerifera Cera/Carnauba Wax",
+          "canonical": "copernicia cerifera (carnauba) wax"
+        }
+      ]
+    },
+    {
+      "id": "loreal-haute-precision",
+      "brand": "L'Or\u00e9al Paris",
+      "product": "Haute Precision Liquid Eyeliner",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "mass",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "L'Or\u00e9al Paris",
+        "url": "https://www.lorealparisusa.com/makeup/eye/eyeliner/haute-precision-liquid-eyeliner",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Aqua/Water/Eau, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Methylpropanediol, CI 77266 [NANO]/Black 2, Styrene/Acrylates Copolymer, Alcohol Denat., Acrylates Copolymer, Poloxamer 407, Coco-Glucoside, Phenoxyethanol, PEG-12 Dimethicone, Caprylyl Glycol, Sodium Dehydroacetate, Xanthan Gum, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Iodopropynyl Butylcarbamate, BHT, Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate.",
+      "may_contain_as_listed": "",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua/Water/Eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Styrene/Acrylates/Ammonium Methacrylate Copolymer",
+          "inci": "styrene/acrylates/ammonium methacrylate copolymer"
+        },
+        {
+          "position": 3,
+          "as_filed": "Methylpropanediol",
+          "inci": "methylpropanediol"
+        },
+        {
+          "position": 4,
+          "as_filed": "CI 77266 [NANO]/Black 2",
+          "inci": "black 2 (ci 77266) [nano]"
+        },
+        {
+          "position": 5,
+          "as_filed": "Styrene/Acrylates Copolymer",
+          "inci": "styrene/acrylates copolymer"
+        },
+        {
+          "position": 6,
+          "as_filed": "Alcohol Denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 7,
+          "as_filed": "Acrylates Copolymer",
+          "inci": "acrylates copolymer"
+        },
+        {
+          "position": 8,
+          "as_filed": "Poloxamer 407",
+          "inci": "poloxamer 407"
+        },
+        {
+          "position": 9,
+          "as_filed": "Coco-Glucoside",
+          "inci": "coco-glucoside"
+        },
+        {
+          "position": 10,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 11,
+          "as_filed": "PEG-12 Dimethicone",
+          "inci": "peg-12 dimethicone"
+        },
+        {
+          "position": 12,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 13,
+          "as_filed": "Sodium Dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 14,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 15,
+          "as_filed": "Sodium Laureth Sulfate",
+          "inci": "sodium laureth sulfate"
+        },
+        {
+          "position": 16,
+          "as_filed": "Sodium Lauryl Sulfate",
+          "inci": "sodium lauryl sulfate"
+        },
+        {
+          "position": 17,
+          "as_filed": "Iodopropynyl Butylcarbamate",
+          "inci": "iodopropynyl butylcarbamate"
+        },
+        {
+          "position": 18,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 19,
+          "as_filed": "Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate",
+          "inci": "octadecyl di-t-butyl-4-hydroxyhydrocinnamate"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua/Water/Eau",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "CI 77266 [NANO]/Black 2",
+          "canonical": "black 2 (ci 77266) [nano]"
+        }
+      ]
+    },
+    {
+      "id": "rimmel-scandaleyes-exaggerate",
+      "brand": "Rimmel London",
+      "product": "Scandaleyes Exaggerate Liquid Eyeliner",
+      "parent_company": "Coty",
+      "price_tier": "mass",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "Rimmel London",
+        "url": "https://www.rimmellondon.com/en-us/eyes/eye-linerspencils/scandaleyes-exaggerate-liquid-eyeliner",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Aqua/Water/Eau, Propylene Glycol, Ammonium Acrylates Copolymer, Butylene Glycol, Phenoxyethanol, Magnesium Aluminum Silicate, Cellulose Gum, Talc, Panthenol, Simethicone, Pantolactone.",
+      "may_contain_as_listed": "Iron Oxides (CI 77491, 77492, 77499), Black 2 [Nano]",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua/Water/Eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Propylene Glycol",
+          "inci": "propylene glycol"
+        },
+        {
+          "position": 3,
+          "as_filed": "Ammonium Acrylates Copolymer",
+          "inci": "ammonium acrylates copolymer"
+        },
+        {
+          "position": 4,
+          "as_filed": "Butylene Glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 5,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 6,
+          "as_filed": "Magnesium Aluminum Silicate",
+          "inci": "magnesium aluminum silicate"
+        },
+        {
+          "position": 7,
+          "as_filed": "Cellulose Gum",
+          "inci": "cellulose gum"
+        },
+        {
+          "position": 8,
+          "as_filed": "Talc",
+          "inci": "talc"
+        },
+        {
+          "position": 9,
+          "as_filed": "Panthenol",
+          "inci": "panthenol"
+        },
+        {
+          "position": 10,
+          "as_filed": "Simethicone",
+          "inci": "simethicone"
+        },
+        {
+          "position": 11,
+          "as_filed": "Pantolactone",
+          "inci": "pantolactone"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Iron Oxides (CI 77491, 77492, 77499)",
+          "inci": "iron oxides (ci 77491, 77492, 77499)"
+        },
+        {
+          "position": 2,
+          "as_filed": "Black 2 [Nano",
+          "inci": "black 2 [nano"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua/Water/Eau",
+          "canonical": "water"
+        }
+      ]
+    },
+    {
+      "id": "revlon-colorstay-liner",
+      "brand": "Revlon",
+      "product": "ColorStay Liquid Eyeliner Pen (Blackest Black)",
+      "parent_company": "Revlon Inc.",
+      "price_tier": "mass",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "Revlon",
+        "url": "https://www.revlon.com/products/colorstay-liquid-eyeliner-pen?shade=blackest-black",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Aqua/Water/Eau, Methylpropanediol, Styrene/Acrylates Copolymer, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Cellulose, PEG-60 Hydrogenated Castor Oil, Coco-Glucoside, Poloxamer 407, Citric Acid, Phenylpropanol, Sodium Laureth-12 Sulfate, Sodium Lauryl Sulfate, Caprylyl Glycol, Phenoxyethanol, Potassium Sorbate, Sodium Benzoate, Sodium Dehydroacetate, Black 2 (CI 77266) [nano].",
+      "may_contain_as_listed": "",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua/Water/Eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Methylpropanediol",
+          "inci": "methylpropanediol"
+        },
+        {
+          "position": 3,
+          "as_filed": "Styrene/Acrylates Copolymer",
+          "inci": "styrene/acrylates copolymer"
+        },
+        {
+          "position": 4,
+          "as_filed": "Styrene/Acrylates/Ammonium Methacrylate Copolymer",
+          "inci": "styrene/acrylates/ammonium methacrylate copolymer"
+        },
+        {
+          "position": 5,
+          "as_filed": "Cellulose",
+          "inci": "cellulose"
+        },
+        {
+          "position": 6,
+          "as_filed": "PEG-60 Hydrogenated Castor Oil",
+          "inci": "peg-60 hydrogenated castor oil"
+        },
+        {
+          "position": 7,
+          "as_filed": "Coco-Glucoside",
+          "inci": "coco-glucoside"
+        },
+        {
+          "position": 8,
+          "as_filed": "Poloxamer 407",
+          "inci": "poloxamer 407"
+        },
+        {
+          "position": 9,
+          "as_filed": "Citric Acid",
+          "inci": "citric acid"
+        },
+        {
+          "position": 10,
+          "as_filed": "Phenylpropanol",
+          "inci": "phenylpropanol"
+        },
+        {
+          "position": 11,
+          "as_filed": "Sodium Laureth-12 Sulfate",
+          "inci": "sodium laureth-12 sulfate"
+        },
+        {
+          "position": 12,
+          "as_filed": "Sodium Lauryl Sulfate",
+          "inci": "sodium lauryl sulfate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 14,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 15,
+          "as_filed": "Potassium Sorbate",
+          "inci": "potassium sorbate"
+        },
+        {
+          "position": 16,
+          "as_filed": "Sodium Benzoate",
+          "inci": "sodium benzoate"
+        },
+        {
+          "position": 17,
+          "as_filed": "Sodium Dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 18,
+          "as_filed": "Black 2 (CI 77266) [nano",
+          "inci": "black 2 (ci 77266) [nano"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua/Water/Eau",
+          "canonical": "water"
+        }
+      ]
+    },
+    {
+      "id": "mac-eye-kohl",
+      "brand": "MAC",
+      "product": "Eye Kohl Eyeliner (Teddy)",
+      "parent_company": "Est\u00e9e Lauder Companies",
+      "price_tier": "prestige",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "MAC",
+        "url": "https://www.maccosmetics.com/products/eye-kohl-eyeliner",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Hydrogenated Coco-Glycerides, Triethylhexanoin, Beeswax/Cera Alba, Ricinus Communis (Castor) Seed Oil, Dipentaerythrityl Hexahydroxystearate/Hexastearate/Hexarosinate, Copernicia Cerifera (Carnauba) Wax, Polymethyl Methacrylate, Ozokerite, Tocopherol, Ascorbyl Palmitate, Lecithin, Citric Acid.",
+      "may_contain_as_listed": "Mica, Titanium Dioxide, Iron Oxides, Aluminum Powder, Blue 1 Lake, Bismuth Oxychloride, Carmine, Chromium Hydroxide/Oxide Greens, Ferric Ferrocyanide, Manganese Violet, Ultramarines, Yellow 5 Lake",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Hydrogenated Coco-Glycerides",
+          "inci": "hydrogenated coco-glycerides"
+        },
+        {
+          "position": 2,
+          "as_filed": "Triethylhexanoin",
+          "inci": "triethylhexanoin"
+        },
+        {
+          "position": 3,
+          "as_filed": "Beeswax/Cera Alba",
+          "inci": "cera alba"
+        },
+        {
+          "position": 4,
+          "as_filed": "Ricinus Communis (Castor) Seed Oil",
+          "inci": "ricinus communis (castor) seed oil"
+        },
+        {
+          "position": 5,
+          "as_filed": "Dipentaerythrityl Hexahydroxystearate/Hexastearate/Hexarosinate",
+          "inci": "dipentaerythrityl hexahydroxystearate/hexastearate/hexarosinate"
+        },
+        {
+          "position": 6,
+          "as_filed": "Copernicia Cerifera (Carnauba) Wax",
+          "inci": "copernicia cerifera (carnauba) wax"
+        },
+        {
+          "position": 7,
+          "as_filed": "Polymethyl Methacrylate",
+          "inci": "polymethyl methacrylate"
+        },
+        {
+          "position": 8,
+          "as_filed": "Ozokerite",
+          "inci": "ozokerite"
+        },
+        {
+          "position": 9,
+          "as_filed": "Tocopherol",
+          "inci": "tocopherol"
+        },
+        {
+          "position": 10,
+          "as_filed": "Ascorbyl Palmitate",
+          "inci": "ascorbyl palmitate"
+        },
+        {
+          "position": 11,
+          "as_filed": "Lecithin",
+          "inci": "lecithin"
+        },
+        {
+          "position": 12,
+          "as_filed": "Citric Acid",
+          "inci": "citric acid"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "Mica",
+          "inci": "mica"
+        },
+        {
+          "position": 2,
+          "as_filed": "Titanium Dioxide",
+          "inci": "titanium dioxide"
+        },
+        {
+          "position": 3,
+          "as_filed": "Iron Oxides",
+          "inci": "iron oxides"
+        },
+        {
+          "position": 4,
+          "as_filed": "Aluminum Powder",
+          "inci": "aluminum powder"
+        },
+        {
+          "position": 5,
+          "as_filed": "Blue 1 Lake",
+          "inci": "blue 1 lake"
+        },
+        {
+          "position": 6,
+          "as_filed": "Bismuth Oxychloride",
+          "inci": "bismuth oxychloride"
+        },
+        {
+          "position": 7,
+          "as_filed": "Carmine",
+          "inci": "carmine"
+        },
+        {
+          "position": 8,
+          "as_filed": "Chromium Hydroxide/Oxide Greens",
+          "inci": "chromium hydroxide/oxide greens"
+        },
+        {
+          "position": 9,
+          "as_filed": "Ferric Ferrocyanide",
+          "inci": "ferric ferrocyanide"
+        },
+        {
+          "position": 10,
+          "as_filed": "Manganese Violet",
+          "inci": "manganese violet"
+        },
+        {
+          "position": 11,
+          "as_filed": "Ultramarines",
+          "inci": "ultramarines"
+        },
+        {
+          "position": 12,
+          "as_filed": "Yellow 5 Lake",
+          "inci": "yellow 5 lake"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Beeswax/Cera Alba",
+          "canonical": "cera alba"
+        }
+      ]
+    },
+    {
+      "id": "lancome-idole-liner",
+      "brand": "Lanc\u00f4me",
+      "product": "Id\u00f4le Liner (Ultra-Precise Waterproof Felt Tip)",
+      "parent_company": "L'Or\u00e9al",
+      "price_tier": "prestige",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "Lanc\u00f4me",
+        "url": "https://www.lancome-usa.com/makeup/eye-makeup/eye-liners-and-eye-pencils/idole-liner/00538-LAC.html",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Aqua/Water/Eau, Styrene/Acrylates/Ammonium Methacrylate Copolymer, CI 77266 [NANO]/Black 2, Methylpropanediol, Styrene/Acrylates Copolymer, Alcohol Denat., Acrylates Copolymer, Poloxamer 407, Coco-Glucoside, PEG-12 Dimethicone, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Caprylyl Glycol, Xanthan Gum, BHT, Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate, Sodium Dehydroacetate, Phenoxyethanol, Iodopropynyl Butylcarbamate.",
+      "may_contain_as_listed": "",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua/Water/Eau",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Styrene/Acrylates/Ammonium Methacrylate Copolymer",
+          "inci": "styrene/acrylates/ammonium methacrylate copolymer"
+        },
+        {
+          "position": 3,
+          "as_filed": "CI 77266 [NANO]/Black 2",
+          "inci": "black 2 (ci 77266) [nano]"
+        },
+        {
+          "position": 4,
+          "as_filed": "Methylpropanediol",
+          "inci": "methylpropanediol"
+        },
+        {
+          "position": 5,
+          "as_filed": "Styrene/Acrylates Copolymer",
+          "inci": "styrene/acrylates copolymer"
+        },
+        {
+          "position": 6,
+          "as_filed": "Alcohol Denat",
+          "inci": "alcohol denat"
+        },
+        {
+          "position": 7,
+          "as_filed": "Acrylates Copolymer",
+          "inci": "acrylates copolymer"
+        },
+        {
+          "position": 8,
+          "as_filed": "Poloxamer 407",
+          "inci": "poloxamer 407"
+        },
+        {
+          "position": 9,
+          "as_filed": "Coco-Glucoside",
+          "inci": "coco-glucoside"
+        },
+        {
+          "position": 10,
+          "as_filed": "PEG-12 Dimethicone",
+          "inci": "peg-12 dimethicone"
+        },
+        {
+          "position": 11,
+          "as_filed": "Sodium Laureth Sulfate",
+          "inci": "sodium laureth sulfate"
+        },
+        {
+          "position": 12,
+          "as_filed": "Sodium Lauryl Sulfate",
+          "inci": "sodium lauryl sulfate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 14,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 15,
+          "as_filed": "BHT",
+          "inci": "bht"
+        },
+        {
+          "position": 16,
+          "as_filed": "Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate",
+          "inci": "octadecyl di-t-butyl-4-hydroxyhydrocinnamate"
+        },
+        {
+          "position": 17,
+          "as_filed": "Sodium Dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 18,
+          "as_filed": "Phenoxyethanol",
+          "inci": "phenoxyethanol"
+        },
+        {
+          "position": 19,
+          "as_filed": "Iodopropynyl Butylcarbamate",
+          "inci": "iodopropynyl butylcarbamate"
+        }
+      ],
+      "may_contain": [],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua/Water/Eau",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "CI 77266 [NANO]/Black 2",
+          "canonical": "black 2 (ci 77266) [nano]"
+        }
+      ]
+    },
+    {
+      "id": "dior-diorshow-liquid-liner",
+      "brand": "Dior",
+      "product": "Diorshow Liquid Liner (091 Matte Black)",
+      "parent_company": "LVMH",
+      "price_tier": "luxury",
+      "source": {
+        "type": "Manufacturer's own product page (INCI declaration, FPLA labeling)",
+        "publisher": "Dior",
+        "url": "https://www.dior.com/en_us/beauty/products/diorshow-liquid-liner-Y0000006.html",
+        "accessed_date": "2026-08-26"
+      },
+      "ingredients_as_listed": "Aqua (Water), Butylene Glycol, Ammonium Styrene/Acrylates Copolymer, Acrylates Copolymer, Pentylene Glycol, Ammonium Acrylates Copolymer, Beheneth-30, Glycerin, 1,2-Hexanediol, Centaurea Cyanus Flower Water, Alcohol, Sodium Dehydroacetate, Hydroxyacetophenone, Caprylyl Glycol, Ethylhexylglycerin, Bentonite, Disodium EDTA, Xanthan Gum, Sodium Benzoate, Potassium Sorbate.",
+      "may_contain_as_listed": "CI 77266 [NANO] (Black 2)",
+      "base_formula": [
+        {
+          "position": 1,
+          "as_filed": "Aqua (Water)",
+          "inci": "water"
+        },
+        {
+          "position": 2,
+          "as_filed": "Butylene Glycol",
+          "inci": "butylene glycol"
+        },
+        {
+          "position": 3,
+          "as_filed": "Ammonium Styrene/Acrylates Copolymer",
+          "inci": "ammonium styrene/acrylates copolymer"
+        },
+        {
+          "position": 4,
+          "as_filed": "Acrylates Copolymer",
+          "inci": "acrylates copolymer"
+        },
+        {
+          "position": 5,
+          "as_filed": "Pentylene Glycol",
+          "inci": "pentylene glycol"
+        },
+        {
+          "position": 6,
+          "as_filed": "Ammonium Acrylates Copolymer",
+          "inci": "ammonium acrylates copolymer"
+        },
+        {
+          "position": 7,
+          "as_filed": "Beheneth-30",
+          "inci": "beheneth-30"
+        },
+        {
+          "position": 8,
+          "as_filed": "Glycerin",
+          "inci": "glycerin"
+        },
+        {
+          "position": 9,
+          "as_filed": "1,2-Hexanediol",
+          "inci": "1,2-hexanediol"
+        },
+        {
+          "position": 10,
+          "as_filed": "Centaurea Cyanus Flower Water",
+          "inci": "centaurea cyanus flower water"
+        },
+        {
+          "position": 11,
+          "as_filed": "Alcohol",
+          "inci": "alcohol"
+        },
+        {
+          "position": 12,
+          "as_filed": "Sodium Dehydroacetate",
+          "inci": "sodium dehydroacetate"
+        },
+        {
+          "position": 13,
+          "as_filed": "Hydroxyacetophenone",
+          "inci": "hydroxyacetophenone"
+        },
+        {
+          "position": 14,
+          "as_filed": "Caprylyl Glycol",
+          "inci": "caprylyl glycol"
+        },
+        {
+          "position": 15,
+          "as_filed": "Ethylhexylglycerin",
+          "inci": "ethylhexylglycerin"
+        },
+        {
+          "position": 16,
+          "as_filed": "Bentonite",
+          "inci": "bentonite"
+        },
+        {
+          "position": 17,
+          "as_filed": "Disodium EDTA",
+          "inci": "disodium edta"
+        },
+        {
+          "position": 18,
+          "as_filed": "Xanthan Gum",
+          "inci": "xanthan gum"
+        },
+        {
+          "position": 19,
+          "as_filed": "Sodium Benzoate",
+          "inci": "sodium benzoate"
+        },
+        {
+          "position": 20,
+          "as_filed": "Potassium Sorbate",
+          "inci": "potassium sorbate"
+        }
+      ],
+      "may_contain": [
+        {
+          "position": 1,
+          "as_filed": "CI 77266 [NANO] (Black 2)",
+          "inci": "black 2 (ci 77266) [nano]"
+        }
+      ],
+      "label_corrections": [],
+      "synonyms_collapsed": [
+        {
+          "as_filed": "Aqua (Water)",
+          "canonical": "water"
+        },
+        {
+          "as_filed": "CI 77266 [NANO] (Black 2)",
+          "canonical": "black 2 (ci 77266) [nano]"
+        }
+      ]
+    }
+  ]
+}

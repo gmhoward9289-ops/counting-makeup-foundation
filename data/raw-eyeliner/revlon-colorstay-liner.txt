@@ -1,0 +1,11 @@
+id: revlon-colorstay-liner
+brand: Revlon
+product: ColorStay Liquid Eyeliner Pen (Blackest Black)
+parent: Revlon Inc.
+tier: mass
+url: https://www.revlon.com/products/colorstay-liquid-eyeliner-pen?shade=blackest-black
+accessed: 2026-08-26
+method: brand's official product page, Ingredients section (static fetch succeeded).
+
+INGREDIENTS:
+Aqua/Water/Eau, Methylpropanediol, Styrene/Acrylates Copolymer, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Cellulose, PEG-60 Hydrogenated Castor Oil, Coco-Glucoside, Poloxamer 407, Citric Acid, Phenylpropanol, Sodium Laureth-12 Sulfate, Sodium Lauryl Sulfate, Caprylyl Glycol, Phenoxyethanol, Potassium Sorbate, Sodium Benzoate, Sodium Dehydroacetate, Black 2 (CI 77266) [nano].

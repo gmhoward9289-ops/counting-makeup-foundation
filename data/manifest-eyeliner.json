@@ -1,0 +1,25 @@
+{
+  "corpus": "eyeliner-liquid-pencil-us",
+  "description": "Eyeliners (liquid or pencil/kohl) sold in the US, chosen to span the same price tiers and parent companies as the foundation corpus. Eyeliner carries no SPF claim and is not regulated as an OTC drug in the United States, so there is no FDA filing to source from. Every product here is instead sourced from the manufacturer's own official product page, where INCI ingredient declarations are legally required under the FPLA labeling law -- not from a retailer listing (Sephora, Ulta, Amazon) or a transcription site.",
+  "inclusion_criteria": [
+    "Liquid or pencil/kohl eyeliner (no powder or gel-pot liners -- different vehicle, not comparable).",
+    "Full INCI ingredient list published on the brand's own official website.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, mirroring the foundation corpus so ownership effects are testable across two product categories."
+  ],
+  "known_limits": [
+    "No government filing exists for these products (no SPF claim, not an OTC drug), so sourcing rests on the manufacturer's own published declaration rather than a regulator's copy of it. Four of the eight brand pages (e.l.f., MAC, Lancôme, Dior) render the Ingredients panel client-side or block a plain HTTP fetch; those were read directly from the rendered page in a browser rather than an automated script, and each raw snapshot in data/raw-eyeliner/ records which.",
+    "e.l.f.'s Expert Liquid Liner and Satin Eyeliner Pencil do not publish ingredients online (\"refer to the packaging\") -- a second e.l.f. product (No Budge Retractable Waterline Eyeliner) does and is used instead. Not every eyeliner SKU from a given brand publishes ingredients; the specific product/URL recorded here is the one that does.",
+    "A brand's own page is what the manufacturer chose to publish, not a document filed under legal penalty like an FDA SPL. Corrections are recorded per-ingredient in the normalization layer, never silently, same as the foundation corpus."
+  ],
+  "products": [
+    {"id": "elf-no-budge-waterline",       "brand": "e.l.f. Cosmetics", "product": "No Budge Retractable Waterline Eyeliner",              "parent": "e.l.f. Beauty",          "tier": "budget",   "url": "https://www.elfcosmetics.com/no-budge-retractable-eyeliner/200180.html"},
+    {"id": "maybelline-lasting-drama",     "brand": "Maybelline",      "product": "Lasting Drama Matte Waterproof Eyeliner",               "parent": "L'Oréal",                "tier": "mass",     "url": "https://www.maybelline.com/eye-makeup/eyeliner/lasting-drama-matte-eyeliner-makeup"},
+    {"id": "loreal-haute-precision",       "brand": "L'Oréal Paris",   "product": "Haute Precision Liquid Eyeliner",                       "parent": "L'Oréal",                "tier": "mass",     "url": "https://www.lorealparisusa.com/makeup/eye/eyeliner/haute-precision-liquid-eyeliner"},
+    {"id": "rimmel-scandaleyes-exaggerate","brand": "Rimmel London",   "product": "Scandaleyes Exaggerate Liquid Eyeliner",                "parent": "Coty",                   "tier": "mass",     "url": "https://www.rimmellondon.com/en-us/eyes/eye-linerspencils/scandaleyes-exaggerate-liquid-eyeliner"},
+    {"id": "revlon-colorstay-liner",       "brand": "Revlon",          "product": "ColorStay Liquid Eyeliner Pen (Blackest Black)",        "parent": "Revlon Inc.",            "tier": "mass",     "url": "https://www.revlon.com/products/colorstay-liquid-eyeliner-pen?shade=blackest-black"},
+    {"id": "mac-eye-kohl",                 "brand": "MAC",             "product": "Eye Kohl Eyeliner (Teddy)",                             "parent": "Estée Lauder Companies", "tier": "prestige", "url": "https://www.maccosmetics.com/products/eye-kohl-eyeliner"},
+    {"id": "lancome-idole-liner",          "brand": "Lancôme",         "product": "Idôle Liner (Ultra-Precise Waterproof Felt Tip)",       "parent": "L'Oréal",                "tier": "prestige", "url": "https://www.lancome-usa.com/makeup/eye-makeup/eye-liners-and-eye-pencils/idole-liner/00538-LAC.html"},
+    {"id": "dior-diorshow-liquid-liner",   "brand": "Dior",            "product": "Diorshow Liquid Liner (091 Matte Black)",               "parent": "LVMH",                   "tier": "luxury",   "url": "https://www.dior.com/en_us/beauty/products/diorshow-liquid-liner-Y0000006.html"}
+  ]
+}

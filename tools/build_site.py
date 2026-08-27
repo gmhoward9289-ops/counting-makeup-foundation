@@ -140,6 +140,7 @@ FOOTER = """
 
 PAGES = [
     ("/ingredients/", "What's in it"),
+    ("/eyeliner/", "Eyeliner"),
     ("/complexity/", "Is it better"),
     ("/price/", "What you pay for"),
     ("/rd/", "Does R&D pay off"),
@@ -219,6 +220,11 @@ def write(slug, html):
 def load():
     j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
     return j("corpus.json"), j("analysis.json"), j("cost-quality.json"), j("prices.json")
+
+
+def load_eyeliner():
+    j = lambda n: json.loads((ROOT / "data" / n).read_text(encoding="utf-8"))
+    return j("corpus-eyeliner.json"), j("analysis-eyeliner.json")
 
 
 def load_regulatory():
@@ -466,6 +472,205 @@ render();
         "Twelve foundations, from a $8 drugstore bottle to a $60 one, compared ingredient by "
         "ingredient. Every list is the manufacturer's own declaration to the FDA.",
         body, extra_css, script, "/ingredients/"))
+
+
+# ------------------------------------------------------------ eyeliner (ingredients)
+def src_link_brand(p):
+    return '<a href="%s">brand page</a>' % p["source"]["url"]
+
+
+def build_eyeliner_ingredients(corpus, analysis):
+    i9 = analysis["issue_9_ingredient_comparison"]
+    n = len(corpus["products"])
+    tier_order = {"budget": 0, "mass": 1, "prestige": 2, "luxury": 3}
+    slim = [{
+        "id": p["id"], "brand": p["brand"], "product": p["product"],
+        "parent": p["parent_company"], "tier": p["price_tier"],
+        "url": p["source"]["url"], "date": p["source"]["accessed_date"],
+        "vehicle": "liquid" if p["base_formula"] and p["base_formula"][0]["inci"] == "water" else "pencil/kohl",
+        "base": [i["inci"] for i in p["base_formula"]],
+    } for p in corpus["products"]]
+    slim.sort(key=lambda x: (tier_order[x["tier"]], x["brand"]))
+    by_id = {p["id"]: p for p in corpus["products"]}
+
+    rows = "".join(
+        "<tr><td>{b}</td><td class='note'>{pr}</td><td><span class='tier'>{t}</span></td>"
+        "<td>{par}</td><td>{v}</td><td class='num'>{n}</td><td class='num'>{d}</td><td>{lnk}</td></tr>".format(
+            b=escape(p["brand"]), pr=escape(p["product"]), t=p["price_tier"],
+            par=escape(p["parent_company"]), v=s["vehicle"], n=len(p["base_formula"]),
+            d=p["source"]["accessed_date"], lnk=src_link_brand(p))
+        for s in slim for p in [by_id[s["id"]]])
+
+    prev = "".join(
+        "<tr><td>{i}</td><td class='num'>{c}</td><td class='num'>{s:.0%}</td></tr>".format(
+            i=escape(r["inci"]), c=r["products"], s=r["share"])
+        for r in i9["prevalence"][:30])
+
+    core = ("".join("<li>%s</li>" % escape(x) for x in i9["shared_core_75pct"])
+            if i9["shared_core_75pct"] else
+            "<li class='note'>None. Nothing in this corpus reaches even a 75% share — see "
+            "\"Two vehicles, one category\" below.</li>")
+
+    n_liquid = sum(1 for s in slim if s["vehicle"] == "liquid")
+    n_pencil = n - n_liquid
+
+    body = f"""
+  <section>
+    <h2>The corpus</h2>
+    <div class="finding"><p><strong>{i9['distinct_base_ingredients']} distinct ingredients
+    appear across {n} eyeliners, and {i9['appearing_in_one_product_only']} of them
+    ({i9['appearing_in_one_product_only'] * 100 // i9['distinct_base_ingredients']}%) appear in
+    exactly one product.</strong> Not one ingredient reaches a 75% share of the corpus — the
+    common spine that foundation has (7 ingredients in three-quarters of the corpus) does not
+    exist here.</p></div>
+
+    <p>Eyeliner carries no SPF claim, so unlike foundation it is not regulated as an OTC drug in
+    the United States and files nothing with the FDA. Every ingredient list here instead comes
+    from the manufacturer's own official product page — still a first-party declaration, legally
+    required under the FPLA labeling law, just not a government filing. Retailer listings
+    (Sephora, Ulta, Amazon) are not used as sources, same standard as the foundation corpus.</p>
+
+    <div class="panel">
+      <table class="brands">
+        <thead><tr><th>Brand</th><th>Product</th><th>Tier</th><th>Parent</th><th>Vehicle</th>
+          <th class="num">Ingredients</th><th class="num">Accessed</th><th>Source</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:.7rem">Selection: liquid or pencil/kohl eyeliner only,
+    chosen to span the same price tiers and parent companies as the foundation corpus. The
+    ingredient list had to be published on the brand's own site — e.l.f.'s own flagship liquid
+    liner does not publish ingredients online at all ("refer to the packaging"), so a different
+    e.l.f. product stands in; see <code>data/manifest-eyeliner.json</code> for the full account.</p>
+  </section>
+
+  <section>
+    <h2>Slide between two brands</h2>
+    <p>Pick any two and watch the formulas converge or diverge. Matching ingredients line up;
+    the rest is where the products actually differ.</p>
+    <div class="panel">
+      <div class="controls">
+        <label>A <select id="selA"></select></label>
+        <label>B <select id="selB"></select></label>
+      </div>
+      <div class="slider-row">
+        <span class="note">budget</span>
+        <input type="range" id="slider" min="0" max="{len(slim) - 1}" value="0">
+        <span class="note">luxury</span>
+      </div>
+      <p class="note" id="sliderHint"></p>
+      <div id="stats" class="stats"></div>
+      <div class="cmp" id="cmp"></div>
+      <p class="note" id="srcs"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Two vehicles, one category</h2>
+    <p>{n_liquid} of these {n} are liquid liners (water-based); {n_pencil} are pencil or kohl
+    liners (wax-based, no water at all). Foundation's corpus is one vehicle — liquid, lotion,
+    cream or emulsion — so its formulas share a real spine. Eyeliner's does not: a wax pencil and
+    a water-based liquid liner are built from different chemistry to do the same job on the same
+    part of the face, so "eyeliner" turns out to be two categories wearing one name.</p>
+  </section>
+
+  <section>
+    <h2>The common spine (or lack of one)</h2>
+    <div class="sunken"><ul class="tight">{core}</ul></div>
+
+    <h3>Thirty most common ingredients</h3>
+    <div class="panel scroll">
+      <table>
+        <thead><tr><th>Ingredient (INCI)</th><th class="num">Products</th><th class="num">Share</th></tr></thead>
+        <tbody>{prev}</tbody>
+      </table>
+    </div>
+  </section>
+"""
+
+    extra_css = """
+  .controls { display:flex; gap:1.2rem; flex-wrap:wrap; margin-bottom:.9rem; }
+  .controls label { font-size:.8rem; color:var(--muted); display:flex; gap:.4rem; align-items:center; }
+  .controls select { font:inherit; font-size:.85rem; padding:.3rem .4rem; background:var(--bg);
+    color:var(--ink); border:1px solid var(--line); border-radius:5px; max-width:20rem; }
+  .slider-row { display:flex; align-items:center; gap:.8rem; margin-bottom:.5rem; }
+  .slider-row input { flex:1; accent-color: var(--accent); }
+  .stats { display:flex; flex-wrap:wrap; gap:1.4rem; margin:.8rem 0 1rem;
+    padding:.8rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat b { display:block; font-size:1.4rem; color:var(--accent); font-variant-numeric:tabular-nums; }
+  .stat span { font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); }
+  .cmp { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.84rem; }
+  .cmp .col h4 { margin:0 0 .4rem; font-size:.8rem; color:var(--muted); font-weight:600; }
+  .cmp ol { margin:0; padding-left:1.9rem; }
+  .cmp li { padding:.1rem .3rem; border-radius:3px; }
+  .cmp li.match { background:var(--ok-bg); color:var(--ok); }
+  .cmp li.only { color:var(--muted); }
+  @media (max-width:640px) { .cmp { grid-template-columns:1fr; } }
+"""
+
+    script = """
+<script>
+const DATA = __DATA__;
+const byId = Object.fromEntries(DATA.map(p => [p.id, p]));
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+const slider = document.getElementById('slider');
+for (const p of DATA) {
+  const label = p.brand + ' — ' + p.product + ' (' + p.vehicle + ')';
+  for (const s of [selA, selB]) s.add(new Option(label, p.id));
+}
+selA.value = DATA[0].id;
+selB.value = DATA[DATA.length - 1].id;
+
+function render() {
+  const a = byId[selA.value], b = byId[selB.value];
+  const sa = new Set(a.base), sb = new Set(b.base);
+  const shared = a.base.filter(x => sb.has(x));
+  const union = new Set([...a.base, ...b.base]);
+  let prefix = 0;
+  while (prefix < a.base.length && prefix < b.base.length && a.base[prefix] === b.base[prefix]) prefix++;
+  const head = a.base.slice(0, 10).filter(x => new Set(b.base.slice(0, 10)).has(x)).length;
+
+  document.getElementById('stats').innerHTML = [
+    ['<b>' + prefix + '</b><span>identical from the top</span>'],
+    ['<b>' + (head * 10) + '%</b><span>of the top 10 shared</span>'],
+    ['<b>' + Math.round(100 * shared.length / union.size) + '%</b><span>of all ingredients shared</span>'],
+    ['<b>' + (a.parent === b.parent ? 'yes' : 'no') + '</b><span>same parent company</span>'],
+  ].map(x => '<div class="stat">' + x + '</div>').join('');
+
+  const col = (p, other) => {
+    const s = new Set(other.base);
+    return '<div class="col"><h4>' + p.brand + ' — ' + p.vehicle + '</h4><ol>' +
+      p.base.map((x, i) => {
+        const m = (i < prefix) || s.has(x);
+        return '<li class="' + (m ? 'match' : 'only') + '">' + x + '</li>';
+      }).join('') + '</ol></div>';
+  };
+  document.getElementById('cmp').innerHTML = col(a, b) + col(b, a);
+  document.getElementById('srcs').innerHTML =
+    'Sources: <a href="' + a.url + '">' + a.brand + ' — accessed ' + a.date + '</a> · ' +
+    '<a href="' + b.url + '">' + b.brand + ' — accessed ' + b.date + '</a>';
+  const idx = DATA.findIndex(p => p.id === b.id);
+  if (idx >= 0) slider.value = idx;
+  document.getElementById('sliderHint').textContent =
+    'The slider moves B through the corpus from budget to luxury — currently ' + b.brand + '.';
+}
+slider.addEventListener('input', () => { selB.value = DATA[slider.value].id; render(); });
+selA.addEventListener('change', render);
+selB.addEventListener('change', render);
+render();
+</script>
+""".replace("__DATA__", json.dumps(slim))
+
+    write("eyeliner", page(
+        "What's in my eyeliner? — Foundation",
+        "Eight eyeliners compared ingredient by ingredient, every list taken from the "
+        "manufacturer's own product page.",
+        "What's in my eyeliner?",
+        "Eight eyeliners, from a budget pencil to a luxury felt-tip, compared ingredient by "
+        "ingredient. No SPF claim means no FDA filing, so every list here is the manufacturer's "
+        "own published declaration instead.",
+        body, extra_css, script, "/eyeliner/"))
+
 
 
 # ----------------------------------------------------------------- lip gloss
@@ -2096,12 +2301,14 @@ def margins_sort(m):
 
 def main():
     corpus, analysis, cq, prices = load()
+    eyeliner_corpus, eyeliner_analysis = load_eyeliner()
     reg, src, ra = load_regulatory()
     dev = load_development()
     lg_corpus, lg_analysis = load_lip_gloss()
     spcorpus, ta, talc = load_talc()
     tn_corpus, tn_analysis, tn_cq, tn_ra = load_toner()
     build_ingredients(corpus, analysis, prices)
+    build_eyeliner_ingredients(eyeliner_corpus, eyeliner_analysis)
     build_lip_gloss(lg_corpus, lg_analysis)
     build_toner(tn_corpus, tn_analysis, tn_cq, tn_ra)
     build_ownership(corpus, analysis, prices)

@@ -1,0 +1,14 @@
+id: rimmel-scandaleyes-exaggerate
+brand: Rimmel London
+product: Scandaleyes Exaggerate Liquid Eyeliner
+parent: Coty
+tier: mass
+url: https://www.rimmellondon.com/en-us/eyes/eye-linerspencils/scandaleyes-exaggerate-liquid-eyeliner
+accessed: 2026-08-26
+method: brand's official product page, Ingredients section (static fetch succeeded).
+
+INGREDIENTS:
+Aqua/Water/Eau, Propylene Glycol, Ammonium Acrylates Copolymer, Butylene Glycol, Phenoxyethanol, Magnesium Aluminum Silicate, Cellulose Gum, Talc, Panthenol, Simethicone, Pantolactone.
+
+MAY CONTAIN:
+Iron Oxides (CI 77491, 77492, 77499), Black 2 [Nano]

@@ -1,0 +1,11 @@
+id: loreal-haute-precision
+brand: L'Oréal Paris
+product: Haute Precision Liquid Eyeliner
+parent: L'Oréal
+tier: mass
+url: https://www.lorealparisusa.com/makeup/eye/eyeliner/haute-precision-liquid-eyeliner
+accessed: 2026-08-26
+method: brand's official product page, Ingredients section (static fetch succeeded).
+
+INGREDIENTS:
+Aqua/Water/Eau, Styrene/Acrylates/Ammonium Methacrylate Copolymer, Methylpropanediol, CI 77266 [NANO]/Black 2, Styrene/Acrylates Copolymer, Alcohol Denat., Acrylates Copolymer, Poloxamer 407, Coco-Glucoside, Phenoxyethanol, PEG-12 Dimethicone, Caprylyl Glycol, Sodium Dehydroacetate, Xanthan Gum, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Iodopropynyl Butylcarbamate, BHT, Octadecyl Di-T-Butyl-4-Hydroxyhydrocinnamate.

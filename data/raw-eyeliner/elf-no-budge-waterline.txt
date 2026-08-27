@@ -1,0 +1,17 @@
+id: elf-no-budge-waterline
+brand: e.l.f. Cosmetics
+product: No Budge Retractable Waterline Eyeliner
+parent: e.l.f. Beauty
+tier: budget
+url: https://www.elfcosmetics.com/no-budge-retractable-eyeliner/200180.html
+accessed: 2026-08-26
+method: brand's official product page, Ingredients accordion. Static HTTP fetch
+  returns the panel empty; content was read from the rendered DOM in a browser.
+  e.l.f.'s Expert Liquid Liner and Satin Eyeliner Pencil pages were checked first
+  and do not publish ingredients ("refer to the packaging"); this product does.
+
+INGREDIENTS:
+Dimethicone, Trimethylsiloxysilicate, Synthetic Wax, Euphorbia Cerifera (Candelilla) Wax, VP/Hexadecene Copolymer, Octyldodecanol, Diisostearyl Malate, Polyisobutene, Ozokerite, Paraffin, Tocopheryl Acetate, Phenoxyethanol, Caprylyl Glycol.
+
+MAY CONTAIN:
+Black 2 (CI 77266)(NANO), Blue 1 Lake (CI 42090)

@@ -89,6 +89,28 @@ python tools/build_site.py                  # render site/*/index.html
 
 Pages are generated from the data so no published figure can drift from its source.
 
+## The eyeliner corpus
+
+`data/corpus-eyeliner.json` is a second, smaller corpus: eight US liquid and pencil/kohl
+eyeliners, chosen to span the same price tiers and parent companies as the foundation
+corpus. Eyeliner carries no SPF claim, so it is not an OTC drug and has no FDA filing to
+source from — every ingredient list here is instead the manufacturer's own declaration on
+their official product page (still first-party, required under FPLA labeling law, just
+not a government filing). Four of the eight brand pages render the ingredients panel
+client-side or block a plain fetch; those were read from the rendered page in a browser
+and archived as a text snapshot rather than an automated one — declared in
+`data/manifest-eyeliner.json`'s `known_limits`, not silent. Live at `/eyeliner/`; only the
+ingredients study exists for this corpus so far — see `ISSUES.md` for what's deferred.
+
+```
+python tools/fetch_eyeliner.py              # best-effort re-fetch -> data/raw-eyeliner/*.raw.html
+python tools/build_corpus_eyeliner.py       # parse + normalize     -> data/corpus-eyeliner.json
+python tools/analyze_eyeliner.py            # ingredient comparison -> data/analysis-eyeliner.json
+python tools/build_site.py                  # render site/*/index.html (both corpora)
+```
+
+## The lip gloss corpus
+
 A second, smaller corpus lives alongside the foundation one: `data/corpus-lip-gloss.json`,
 five SPF lip glosses sourced the same DailyMed-filing way. It supports only the ingredient
 comparison at `/lip-gloss/` — true SPF lip gloss on DailyMed turns out to be a niche held by
