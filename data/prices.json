@@ -15,6 +15,7 @@
     "esteelauder-double-wear-sheer":  {"list_usd": 52.00, "volume_ml": 30, "seen_at": "Ulta",     "confidence": "high",   "note": "Observed 2025-08-12."},
     "lancome-teint-idole-breathable": {"list_usd": 53.00, "volume_ml": 30, "seen_at": "Macy's",   "confidence": "medium", "note": "Macy's lists the Teint Idole Ultra Wear line from $53 to $57."},
     "lancome-teint-idole-care-glow":  {"list_usd": 53.00, "volume_ml": 30, "seen_at": "Sephora",  "confidence": "high",   "note": "Observed 2026-08-11."},
-    "dior-forever-skin-wear":         {"list_usd": 60.00, "volume_ml": 30, "seen_at": "dior.com", "confidence": "high",   "note": "Brand's own US site."}
+    "dior-forever-skin-wear":         {"list_usd": 60.00, "volume_ml": 30, "seen_at": "dior.com", "confidence": "high",   "note": "Brand's own US site."},
+    "esteelauder-futurist-hydra-rescue": {"list_usd": 55.00, "volume_ml": 35, "seen_at": "Ulta", "confidence": "high", "note": "Observed 2026-08-26."}
   }
 }

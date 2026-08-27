@@ -1,0 +1,26 @@
+{
+  "corpus": "lotion-spf-us",
+  "description": "US daily moisturizing lotions (face and body) that carry an SPF claim. SPF cosmetics are regulated as OTC drugs in the United States, so the manufacturer files the complete ingredient declaration with the FDA. Every product in this corpus is sourced from that filing (DailyMed SPL), not from a retailer listing or a transcription site.",
+  "inclusion_criteria": [
+    "Marketed as a daily face or body moisturizing lotion (not a dedicated sunscreen, primer, foundation, or serum), in lotion, fluid or emulsion form.",
+    "Carries an SPF claim, and therefore has an FDA-filed OTC drug label.",
+    "Sold in the US market.",
+    "Chosen to span price tiers and parent companies, so ownership effects are testable."
+  ],
+  "known_limits": [
+    "SPF-only inclusion is a selection bias, same as the foundation corpus: it excludes SPF-free daily moisturizers (Cetaphil Daily Facial Moisturizer, Vaseline Intensive Care lines), which have no primary filing and are excluded rather than sourced more weakly.",
+    "The category concentrates in the mass tier -- prestige and luxury lines more often package SPF moisturizer as a 'cream' or 'emulsion' than a 'lotion', and several searched prestige lotion-form candidates (e.g. discontinued Neutrogena Healthy Skin Face Lotion SPF 15) no longer have a live DailyMed filing at all and were excluded.",
+    "An FDA filing is verbatim what the manufacturer submitted, including typos and inconsistent separator characters. Corrections are recorded per-ingredient in the normalization layer, never silently.",
+    "Jergens Natural Glow and Olay Complete UV365 are gradual self-tanning and skin-type-specific formulas respectively; both are still marketed and labeled primarily as a daily facial moisturizer with SPF, so they meet inclusion criteria despite the secondary claim."
+  ],
+  "products": [
+    {"id": "upandup-morning-facial",    "brand": "Up & Up",     "product": "Morning Facial Moisturizing Lotion with SPF 30 Sunscreen and Ceramides", "parent": "Target Corporation",       "tier": "budget",   "setid": "23598ad1-12a3-fe65-e063-6394a90a4f6f"},
+    {"id": "cerave-am-facial",          "brand": "CeraVe",      "product": "AM Facial Moisturizing Lotion Broad Spectrum SPF 30",                  "parent": "L'Oréal",                  "tier": "mass",     "setid": "2138f86b-3937-4c2b-9568-d40a745b637d"},
+    {"id": "aveeno-daily-moisturizing", "brand": "Aveeno",      "product": "Daily Moisturizing Lotion Broad Spectrum SPF 15",                      "parent": "Kenvue",                   "tier": "mass",     "setid": "54a13b85-32b5-439d-a27a-8fba2cf44251"},
+    {"id": "olay-complete-uv365",       "brand": "Olay",        "product": "Complete UV365 Daily Moisturizer Normal Broad Spectrum SPF 15",        "parent": "Procter & Gamble",         "tier": "mass",     "setid": "59187729-c166-58fe-e053-2991aa0abe47"},
+    {"id": "eucerin-daily-protection",  "brand": "Eucerin",     "product": "Daily Protection Face Lotion Broad Spectrum SPF 30",                  "parent": "Beiersdorf",               "tier": "mass",     "setid": "76403f03-aee9-4c0b-b331-f79b6953118c"},
+    {"id": "jergens-natural-glow-face", "brand": "Jergens",     "product": "Natural Glow Face Daily Moisturizer SPF 20, Fair/Medium",              "parent": "Kao Corporation",          "tier": "mass",     "setid": "365a98e0-737b-12b3-e054-00144ff8d46c"},
+    {"id": "clinique-for-men-moisturizer", "brand": "Clinique", "product": "For Men Broad Spectrum SPF 21 Moisturizer",                            "parent": "Estée Lauder Companies",   "tier": "prestige", "setid": "2e9463df-1c71-465f-9820-6cedefe07ad7"},
+    {"id": "lamer-uv-protecting-fluid", "brand": "La Mer",      "product": "The Broad Spectrum SPF 50 UV Protecting Fluid",                        "parent": "Estée Lauder Companies",   "tier": "luxury",   "setid": "e06bb578-475c-4169-ac09-cefb6a37d392"}
+  ]
+}

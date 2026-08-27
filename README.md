@@ -80,7 +80,7 @@ python tools/analyze.py                     # issues #9 #14 #15  -> data/analysi
 python tools/cost_quality.py                # issues #10 #12 #13 -> data/cost-quality.json
 python tools/analyze_regulatory.py          # issues #16 #17 #18 -> data/regulatory-analysis.json
 python tools/fetch_dailymed.py <setid>...   # lip gloss labels, same fetcher
-python tools/build_corpus.py data/manifest-lip-gloss.json data/corpus-lip-gloss.json
+python tools/build_corpus.py lip-gloss      # -> data/corpus-lip-gloss.json
 python tools/analyze_lip_gloss.py           # -> data/analysis-lip-gloss.json
 python tools/build_setting_powder_corpus.py # setting-powder SPF filings   -> data/setting-powder-corpus.json
 python tools/analyze_talc.py                # talc presence in that corpus -> data/talc-analysis.json
@@ -111,6 +111,21 @@ and every figure in those files carries its own `source` block with the URL, the
 publisher and a note on how a count was arrived at. `data/development.json` also carries
 its own caveat on the one trade-press figure it uses (a reader poll, not a survey) and
 says plainly what it did not find: a sourced iteration count.
+
+## Second corpus: SPF lotions
+
+`data/corpus-lotion.json` is the same discipline applied to a second product
+category: eight US daily moisturizing lotions (face and body) carrying an SPF
+claim, spanning budget to luxury and six parent companies. It reuses the
+foundation corpus's ingestion and normalization tooling
+(`tools/build_corpus.py <category>` reads `data/manifest-<category>.json` and
+writes `data/corpus-<category>.json`; a bare invocation still targets the
+original foundation category). Inclusion criteria and known limits are
+recorded in `data/manifest-lotion.json`, same as the foundation manifest.
+
+*Status:* corpus ingestion only (FR-1/FR-2 equivalent for this category) —
+the analysis, cost, and regulatory stages (FR-3 through FR-10) have not yet
+been run against it, and it is not yet published to `site/`.
 
 The rule that keeps this honest is that nothing *derived* is hand-entered. Which
 products a rule actually touches, how many months a deadline is overdue, how the corpus

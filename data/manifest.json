@@ -24,6 +24,7 @@
     {"id": "esteelauder-double-wear-sheer", "brand": "Estée Lauder","product": "Double Wear Sheer Long-Wear Makeup SPF 19",  "parent": "Estée Lauder Companies",  "tier": "prestige", "setid": "2f93580c-c8e9-4822-91bf-a749cf4deb4e"},
     {"id": "lancome-teint-idole-breathable", "brand": "Lancôme",    "product": "Teint Idole Ultra Wear Breathable Coverage SPF 25", "parent": "L'Oréal",          "tier": "prestige", "setid": "be2a83fb-e4f8-4313-b5bd-150f351fb345"},
     {"id": "lancome-teint-idole-care-glow", "brand": "Lancôme",     "product": "Teint Idole Ultra Wear Care & Glow SPF 27",  "parent": "L'Oréal",                 "tier": "prestige", "setid": "3ff286c0-4515-4cab-9b93-a782545b2f36"},
-    {"id": "dior-forever-skin-wear",    "brand": "Dior",            "product": "Forever Skin Wear Foundation SPF 20 (10N)",  "parent": "LVMH",                    "tier": "luxury",   "setid": "038939d6-b9a5-4cb6-a818-6f7cf3f106fa"}
+    {"id": "dior-forever-skin-wear",    "brand": "Dior",            "product": "Forever Skin Wear Foundation SPF 20 (10N)",  "parent": "LVMH",                    "tier": "luxury",   "setid": "038939d6-b9a5-4cb6-a818-6f7cf3f106fa"},
+    {"id": "esteelauder-futurist-hydra-rescue", "brand": "Estée Lauder", "product": "Futurist Hydra Rescue Moisturizing Makeup SPF 45", "parent": "Estée Lauder Companies", "tier": "prestige", "setid": "82db54ba-3ebd-4b70-b41c-b0d2faad7daa"}
   ]
 }
