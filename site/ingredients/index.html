@@ -92,9 +92,14 @@
   }
   .chrome .home:hover { color: var(--accent); }
   .chrome .home svg { width: 0.95rem; height: 0.95rem; }
-  .chrome nav { display: flex; gap: 1.1rem; }
-  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav { display: flex; flex: 1; align-items: center; gap: 1.1rem; min-width: 0; }
+  .chrome nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
   .chrome nav a:hover { color: var(--ink); }
+  #swampid-link { flex: none; }
+  @media (max-width: 400px) {
+    .chrome { gap: 0.5rem; }
+    .chrome nav { gap: 0.55rem; }
+  }
 
   .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
   .pagenav a, .pagenav span { font-size: .82rem; padding: .3rem .7rem; border-radius: 20px;
@@ -134,6 +139,7 @@
     <a href="https://www.swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
     <a href="https://www.swamplink.com/news/">news</a>
+    <a id="swampid-link" href="https://auth.swamplink.com/login" style="margin-left:auto">sign in</a>
   </nav>
 </div>
 <div class="wrap">
@@ -301,5 +307,6 @@ selB.addEventListener('change', render);
 render();
 </script>
 
+<script src="https://swamplink.com/swampid-nav.js" defer></script>
 </body>
 </html>

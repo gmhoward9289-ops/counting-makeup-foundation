@@ -55,9 +55,14 @@
   }
   .chrome .home:hover { color: var(--accent); }
   .chrome .home svg { width: 0.95rem; height: 0.95rem; }
-  .chrome nav { display: flex; gap: 1.1rem; }
-  .chrome nav a { color: var(--muted); text-decoration: none; }
+  .chrome nav { display: flex; flex: 1; align-items: center; gap: 1.1rem; min-width: 0; }
+  .chrome nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
   .chrome nav a:hover { color: var(--ink); }
+  #swampid-link { flex: none; }
+  @media (max-width: 400px) {
+    .chrome { gap: 0.5rem; }
+    .chrome nav { gap: 0.55rem; }
+  }
 
   .brand-icon-link { display: inline-block; margin: 0 0 .7rem; line-height: 0; }
   .brand-icon { width: 40px; height: 40px; display: block; transition: opacity .15s; }
@@ -158,6 +163,7 @@
     <a href="https://www.swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
     <a href="https://www.swamplink.com/news/">news</a>
+    <a id="swampid-link" href="https://auth.swamplink.com/login" style="margin-left:auto">sign in</a>
   </nav>
 </div>
 <div class="wrap">
@@ -313,5 +319,6 @@
   </footer>
 
 </div>
+<script src="https://swamplink.com/swampid-nav.js" defer></script>
 </body>
 </html>
