@@ -134,6 +134,7 @@ FOOTER = """
       <a href="https://blog.swamplink.com/">the blog</a>
     </div>
     <!-- swamplink:family:end -->
+    <p class="llc">SwampLink LLC</p>
   </footer>
 """
 
