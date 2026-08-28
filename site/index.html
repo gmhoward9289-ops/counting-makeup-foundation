@@ -55,7 +55,7 @@
   }
   .chrome .home:hover { color: var(--accent); }
   .chrome .home svg { width: 0.95rem; height: 0.95rem; }
-  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav { display: flex; gap: 1.1rem; flex: 1; }
   .chrome nav a { color: var(--muted); text-decoration: none; }
   .chrome nav a:hover { color: var(--ink); }
 
@@ -158,6 +158,7 @@
     <a href="https://www.swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
     <a href="https://www.swamplink.com/news/">news</a>
+    <a id="swampid-link" href="https://auth.swamplink.com/login" style="margin-left:auto">sign in</a>
   </nav>
 </div>
 <div class="wrap">
@@ -312,5 +313,6 @@
   </footer>
 
 </div>
+<script src="https://swamplink.com/swampid-nav.js" defer></script>
 </body>
 </html>
