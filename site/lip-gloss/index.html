@@ -79,8 +79,9 @@
   footer a:hover { text-decoration: underline; }
   footer .family { display: flex; flex-wrap: wrap; gap: 1.2rem; }
   .chrome {
-    display: flex; align-items: baseline; justify-content: space-between;
-    gap: 1rem; flex-wrap: wrap;
+    display: flex; flex-direction: row; flex-wrap: nowrap;
+    justify-content: flex-start; align-items: center;
+    gap: 1rem;
     max-width: 940px; margin: 0 auto 1.1rem; padding: 0 0 0.7rem;
     border-bottom: 1px solid var(--line);
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -91,14 +92,20 @@
     display: inline-flex; align-items: center; gap: 0.45rem;
   }
   .chrome .home:hover { color: var(--accent); }
-  .chrome .home svg { width: 0.95rem; height: 0.95rem; }
-  .chrome nav { display: flex; flex: 1; align-items: center; gap: 1.1rem; min-width: 0; }
+  .chrome .home svg { width: 0.95rem; height: 0.95rem; flex: none; }
+  .chrome nav {
+    display: flex; flex-direction: row; flex-wrap: nowrap;
+    justify-content: flex-start; align-items: center;
+    gap: 1.1rem; flex: 1; min-width: 0; margin: 0; border: 0;
+  }
   .chrome nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
   .chrome nav a:hover { color: var(--ink); }
   #swampid-link { flex: none; }
   @media (max-width: 400px) {
-    .chrome { gap: 0.5rem; }
-    .chrome nav { gap: 0.55rem; }
+    .chrome { gap: 0.4rem; font-size: 0.7rem; }
+    .chrome nav { gap: 0.45rem; }
+    .chrome .home .word { display: none; }
+    #swampid-link { margin-left: 0.35rem !important; }
   }
 
   .pagenav { display: flex; flex-wrap: wrap; gap: .5rem; margin: -1.2rem 0 0; }
@@ -127,16 +134,16 @@
 </style>
 </head>
 <body>
-<div class="chrome">
-  <a class="home" href="https://www.swamplink.com/">
+<div class="chrome" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center">
+  <a class="home" href="https://swamplink.com/">
     <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
-    swamplink
+    <span class="word">swamplink</span>
   </a>
-  <nav aria-label="site">
-    <a href="https://www.swamplink.com/data/">data</a>
-    <a href="https://www.swamplink.com/tools/">tools</a>
+  <nav aria-label="site" style="flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;margin:0;border:0">
+    <a href="https://swamplink.com/data/">data</a>
+    <a href="https://swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
-    <a href="https://www.swamplink.com/news/">news</a>
+    <a href="https://swamplink.com/news/">news</a>
     <a id="swampid-link" href="https://auth.swamplink.com/login" style="margin-left:auto">sign in</a>
   </nav>
 </div>
