@@ -100,7 +100,7 @@ BASE_CSS = """
   }
   .chrome .home:hover { color: var(--accent); }
   .chrome .home svg { width: 0.95rem; height: 0.95rem; }
-  .chrome nav { display: flex; gap: 1.1rem; }
+  .chrome nav { display: flex; gap: 1.1rem; flex: 1; }
   .chrome nav a { color: var(--muted); text-decoration: none; }
   .chrome nav a:hover { color: var(--ink); }
 
@@ -193,6 +193,7 @@ def page(title, desc, h1, lede, body, extra_css="", script="", current=""):
     <a href="https://www.swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
     <a href="https://www.swamplink.com/news/">news</a>
+    <a id="swampid-link" href="https://auth.swamplink.com/login" style="margin-left:auto">sign in</a>
   </nav>
 </div>
 <div class="wrap">
@@ -205,6 +206,7 @@ def page(title, desc, h1, lede, body, extra_css="", script="", current=""):
 {FOOTER}
 </div>
 {script}
+<script src="https://swamplink.com/swampid-nav.js" defer></script>
 </body>
 </html>
 """
