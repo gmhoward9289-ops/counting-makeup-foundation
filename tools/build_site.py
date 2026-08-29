@@ -196,12 +196,12 @@ def page(title, desc, h1, lede, body, extra_css="", script="", current=""):
 <style>{TOKENS}{BASE_CSS}{extra_css}</style>
 </head>
 <body>
-<div class="chrome" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center">
-  <a class="home" href="https://swamplink.com/">
+<div class="chrome" style="display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-items:center">
+  <a class="home" href="/">
     <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c0 8-9 10-9 18s5 12 5 20M32 10c0 8 9 10 9 18s-5 12-5 20" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 46c6-4 10-2 18-2s12-2 18 2" stroke="var(--petal)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
-    <span class="word">swamplink</span>
+    <span class="word">foundation</span>
   </a>
-  <nav aria-label="site" style="flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;margin:0;border:0">
+  <nav aria-label="site" style="flex:1;display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-items:center;margin:0;border:0">
     <a href="https://swamplink.com/data/">data</a>
     <a href="https://swamplink.com/tools/">tools</a>
     <a href="https://blog.swamplink.com/">blog</a>
