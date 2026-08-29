@@ -1182,7 +1182,7 @@ def build_ownership(corpus, analysis, prices):
 """
     write("ownership", page(
         "Who really makes it? — Foundation",
-        "Do sibling brands under one conglomerate share base formulas? Tested across twelve "
+        "Do sibling brands under one conglomerate share base formulas? Tested across thirteen "
         "FDA-filed foundation labels.",
         "Who really makes it?",
         "A $19 drugstore foundation and a $53 prestige one, both owned by L'Oréal, declare the "
