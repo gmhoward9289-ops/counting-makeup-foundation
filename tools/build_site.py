@@ -331,7 +331,7 @@ def build_ingredients(corpus, analysis, prices):
     appear across {n} foundations, and {i9['appearing_in_one_product_only']} of them
     ({i9['appearing_in_one_product_only'] * 100 // i9['distinct_base_ingredients']}%) appear in
     exactly one product.</strong> Only {len(i9['shared_core_75pct'])} ingredients show up in
-    three-quarters or more of them. Foundations are not one formula in twelve bottles — but
+    three-quarters or more of them. Foundations are not one formula in thirteen bottles — but
     they are built on a very small common spine.</p></div>
 
     <p>Every product here carries an SPF claim, which in the United States makes it an
