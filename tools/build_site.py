@@ -481,10 +481,10 @@ render();
 
     write("ingredients", page(
         "What's in my makeup? — Foundation",
-        "Twelve foundations compared ingredient by ingredient, every list taken from the "
+        "Thirteen foundations compared ingredient by ingredient, every list taken from the "
         "manufacturer's own FDA filing.",
         "What's in my makeup?",
-        "Twelve foundations, from a $8 drugstore bottle to a $60 one, compared ingredient by "
+        "Thirteen foundations, from a $8 drugstore bottle to a $60 one, compared ingredient by "
         "ingredient. Every list is the manufacturer's own declaration to the FDA.",
         body, extra_css, script, "/ingredients/"))
 
